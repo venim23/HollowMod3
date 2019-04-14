@@ -1,0 +1,270 @@
+{
+	"entity": [
+		{
+			"animation": [
+				{
+					"id": 0,
+					"interval": 100,
+					"length": 1000,
+					"mainline": {
+						"key": [
+							{
+								"bone_ref": [],
+								"id": 0,
+								"object_ref": [
+									{
+										"id": 0,
+										"key": 0,
+										"timeline": "4",
+										"z_index": "0"
+									},
+									{
+										"id": 1,
+										"key": 0,
+										"timeline": "0",
+										"z_index": "1"
+									},
+									{
+										"id": 2,
+										"key": 0,
+										"timeline": "1",
+										"z_index": "2"
+									},
+									{
+										"id": 3,
+										"key": 0,
+										"timeline": "2",
+										"z_index": "3"
+									},
+									{
+										"id": 4,
+										"key": 0,
+										"timeline": "3",
+										"z_index": "4"
+									}
+								]
+							},
+							{
+								"bone_ref": [],
+								"id": 1,
+								"object_ref": [
+									{
+										"id": 0,
+										"key": 1,
+										"timeline": "4",
+										"z_index": "0"
+									},
+									{
+										"id": 1,
+										"key": 0,
+										"timeline": "0",
+										"z_index": "1"
+									},
+									{
+										"id": 2,
+										"key": 1,
+										"timeline": "1",
+										"z_index": "2"
+									},
+									{
+										"id": 3,
+										"key": 1,
+										"timeline": "2",
+										"z_index": "3"
+									},
+									{
+										"id": 4,
+										"key": 1,
+										"timeline": "3",
+										"z_index": "4"
+									}
+								],
+								"time": 500
+							}
+						]
+					},
+					"name": "IdleAnim1",
+					"timeline": [
+						{
+							"id": 0,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"file": 2,
+										"folder": 0,
+										"x": 2.608695652173914,
+										"y": -28.695652173913047
+									},
+									"spin": 0
+								}
+							],
+							"name": "Body"
+						},
+						{
+							"id": 1,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"file": 3,
+										"folder": 0,
+										"x": -14.78260869565218,
+										"y": -12.173913043478258
+									}
+								},
+								{
+									"id": 1,
+									"object": {
+										"angle": 2,
+										"file": 3,
+										"folder": 0,
+										"x": -14.78260869565218,
+										"y": -12.173913043478258
+									},
+									"spin": -1,
+									"time": 500
+								}
+							],
+							"name": "Blade"
+						},
+						{
+							"id": 2,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"file": 1,
+										"folder": 0,
+										"x": -1.3478260869565255,
+										"y": -14.521739130434781
+									},
+									"spin": -1
+								},
+								{
+									"id": 1,
+									"object": {
+										"angle": 358,
+										"file": 1,
+										"folder": 0,
+										"x": -1.3478260869565255,
+										"y": -15.52174
+									},
+									"time": 500
+								}
+							],
+							"name": "Cloak"
+						},
+						{
+							"id": 3,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"file": 0,
+										"folder": 0,
+										"y": 5.217391304347842
+									}
+								},
+								{
+									"id": 1,
+									"object": {
+										"angle": 1,
+										"file": 0,
+										"folder": 0,
+										"y": 4.21739
+									},
+									"spin": -1,
+									"time": 500
+								}
+							],
+							"name": "Head"
+						},
+						{
+							"id": 4,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"file": 4,
+										"folder": 0,
+										"x": 3.608695652173921,
+										"y": -24.21739130434782
+									},
+									"spin": -1
+								},
+								{
+									"id": 1,
+									"object": {
+										"angle": 358,
+										"file": 4,
+										"folder": 0,
+										"x": 3.608695652173921,
+										"y": -25.21739
+									},
+									"time": 500
+								}
+							],
+							"name": "BackCloak"
+						}
+					]
+				}
+			],
+			"character_map": [],
+			"id": 0,
+			"name": "entity_000",
+			"obj_info": []
+		}
+	],
+	"folder": [
+		{
+			"file": [
+				{
+					"height": 120,
+					"id": 0,
+					"name": "Knight/Head.png",
+					"pivot_x": 0.441667,
+					"pivot_y": 0.07499999999999996,
+					"width": 120
+				},
+				{
+					"height": 120,
+					"id": 1,
+					"name": "Knight/Cloak.png",
+					"pivot_x": 0.475,
+					"pivot_y": 0.575,
+					"width": 120
+				},
+				{
+					"height": 120,
+					"id": 2,
+					"name": "Knight/Body.png",
+					"pivot_x": 0.49166666666666664,
+					"pivot_y": 0.583333,
+					"width": 120
+				},
+				{
+					"height": 120,
+					"id": 3,
+					"name": "Knight/Blade.png",
+					"pivot_x": 0.583333,
+					"pivot_y": 0.4666666666666667,
+					"width": 120
+				},
+				{
+					"height": 120,
+					"id": 4,
+					"name": "Knight/BackCloak.png",
+					"pivot_x": 0.5,
+					"pivot_y": 0.5,
+					"width": 120
+				}
+			],
+			"id": 0,
+			"name": "Knight"
+		}
+	],
+	"generator": "BrashMonkey Spriter",
+	"generator_version": "r11",
+	"scon_version": "1.0"
+}

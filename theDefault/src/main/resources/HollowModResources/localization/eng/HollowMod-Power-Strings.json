@@ -1,0 +1,175 @@
+{
+  "HollowMod:CommonPower": {
+    "NAME": "Placeholder Power",
+    "DESCRIPTIONS": [
+      "You applied #b",
+      " keyword.",
+      " keywords."
+    ]
+  },
+  "HollowMod:InfectionPower": {
+    "NAME": "Infection Level",
+    "DESCRIPTIONS": [
+      "at the end of the round take #b",
+      " damage and reduce the infection level by #b1"
+    ]
+  },
+  "HollowMod:GrubsongPower": {
+    "NAME": "Grubsong",
+    "DESCRIPTIONS": [
+      "The first #b",
+      " Time you take damage each turn, gain 1 #ySoul.",
+      " Times you take damage each turn, gain 1 #ySoul."
+    ]
+  },
+  "HollowMod:GrimmGiftPower": {
+    "NAME": "Grimm's Gift",
+    "DESCRIPTIONS": [
+      "Applies #b1 Vulnerable to any enemy attacked this turn."
+    ]
+  },
+  "HollowMod:BaldurShellPower": {
+    "NAME": "Baldur Shell",
+    "DESCRIPTIONS": [
+      "At the start of your turn, TOUCH #b",
+      " enemy.",
+      " enemies."
+    ]
+  },
+  "HollowMod:NailsmithPower": {
+    "NAME": "The Nailsmith",
+    "DESCRIPTIONS": [
+      "Each time you play an attack this turn, it is upgraded"
+    ]
+  },
+  "HollowMod:MothsMistakePower": {
+    "NAME": "Moth's Mistake",
+    "DESCRIPTIONS": [
+      "Playing a Spell Applies #b",
+      " Poison to all enemies, and #b1 [#FFA200]Infection to you."
+    ]
+  },
+  "HollowMod:MonarchWingsPower": {
+    "NAME": "Monarch Wings",
+    "DESCRIPTIONS": [
+      "For the next #b",
+      " Turns, the Block of all Dashes are Doubled."
+    ]
+  },
+  "HollowMod:BrokenVesselPower": {
+    "NAME": "Broken Vessel",
+    "DESCRIPTIONS": [
+      "Whenever you take damage from Infection, deal that damage to All Enemies"
+    ]
+  },
+  "HollowMod:SoulShamanPower": {
+    "NAME": "Soul Shaman",
+    "DESCRIPTIONS": [
+      "At the start of your turn, TOUCH #b",
+      " enemy.",
+      " enemies."
+    ]
+  },
+  "HollowMod:SlysStrikesPower": {
+    "NAME": "Sly's Strikes",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " Strength."
+    ]
+  },
+  "HollowMod:UnnPower": {
+    "NAME": "Unn's Shape",
+    "DESCRIPTIONS": [
+      "When you play a Spell, Return #b",
+      " #yDash card from your discard pile to your hand.",
+      " #yDash cards from your discard pile to your hand."
+    ]
+  },
+  "HollowMod:FlukenestPower": {
+    "NAME": "Flukenest",
+    "DESCRIPTIONS": [
+      "When you play a Spell: deal #b1 Damage to #b",
+      " Random Enemies."
+    ]
+  },
+  "HollowMod:ShadesPower": {
+    "NAME": "Lord of Shades",
+    "DESCRIPTIONS": [
+      "For #b", " Turns, 50% of all Block is gained as Thorns instead, at the end of your turn, lose half your thorns"
+    ]
+  },
+  "HollowMod:DungDefenderPower": {
+    "NAME": "Dung Defender's Aura",
+    "DESCRIPTIONS": [
+      "Apply #b", " Poison to any enemy who attacks you this turn"
+    ]
+  },
+  "HollowMod:ElderbugPower": {
+    "NAME": "Elderbugs Wisdom",
+    "DESCRIPTIONS": [
+      "Whenever you play an Ally, Draw #b1 Card."
+    ]
+  },
+  "HollowMod:WeaverSongPower": {
+    "NAME": "Weaversong",
+    "DESCRIPTIONS": [
+      "Each time you play an Attack, deal #b",
+      " Damage to a random enemy."
+    ]
+  },
+  "HollowMod:VoidPower": {
+    "NAME": "Void",
+    "DESCRIPTIONS": [
+      "Void  Increases Void Card Damage by, Increases Damage Taken by, and Lasts for #b",
+      " turns. Reducing by 1 at the end of each turn"
+    ]
+  },
+  "HollowMod:VoidDashPower": {
+    "NAME": "Shade Cloak",
+    "DESCRIPTIONS": [
+      "Deals #b", " Damage to anyone who's attacks you block this turn"
+    ]
+  },
+  "HollowMod:LifeCocoonPower": {
+    "NAME": "Lifeblood Cocoon",
+    "DESCRIPTIONS": [
+      "For the rest of this turn, whenever you play an Attack, gain #b",
+      " Temporary Health."
+    ]
+  },
+  "HollowMod:LifeHeartPower": {
+    "NAME": "Lifeblood Heart",
+    "DESCRIPTIONS": [
+      "If you take no Unblocked Damage this turn, gain #b",
+      " Temporary Health next round."
+    ]
+  },
+  "HollowMod:SoulPower": {
+    "NAME": "Soul",
+    "DESCRIPTIONS": [
+      "The amount of Soul Gathered. Used to activate spells. Current Max: #b",
+      " Soul."
+    ]
+  },
+  "HollowMod:SiblingSoulPower": {
+    "NAME": "Sibling's Souls",
+    "DESCRIPTIONS": [
+      "The next Attack or Skill card played will be copied"
+    ]
+  },
+  "HollowMod:RarePower": {
+    "NAME": "Placeholder Power2",
+    "DESCRIPTIONS": [
+      "At the start of your turn, TOUCH #b",
+      " enemy.",
+      " enemies."
+    ]
+  },
+
+  "HollowMod:SharpenedShadowsPower": {
+    "NAME": "Sharpened Shadows",
+    "DESCRIPTIONS": [
+      "While in [#ffffff]Pure [#ffffff}Void, When you play a #yDash deal #b", " damage to a random enemy."
+    ]
+  }
+}

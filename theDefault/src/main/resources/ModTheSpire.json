@@ -1,0 +1,13 @@
+{
+  "modid": "hollowmod",
+  "name": "Hollow Mod",
+  "author_list": ["Venim"," Gremious"," a Bunch of the STS Modding Discord for their help too"],
+  "description": "A mod that attempts to add the Knight from Hollow Knight as a Playable Character, NL All rights for Hollow Knight belong to Team Cherry. NL Please Support them by playing Hollow Knight: https://hollowknight.com/. NL Hollow Knight: Silksong is coming out later this year! ",
+
+  "version": "${project.version}",
+  "sts_version": "${SlayTheSpire.version}",
+  "mts_version": "${ModTheSpire.version}",
+  "dependencies": ["basemod", "stslib"],
+  "update_json": ""
+}
+

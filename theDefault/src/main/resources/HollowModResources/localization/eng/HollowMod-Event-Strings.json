@@ -1,0 +1,40 @@
+{
+  "HollowMod:MylasSongEvent": {
+    "NAME": "Mylas Song",
+    "DESCRIPTIONSPURE": [
+      "As you wander through The Spire, you meet a miner, mining for crystals,",
+      "Her voice breaks the silence.",
+	  "Ohhh, bury my mother, pale and slight, bury my father with his eyes shut tight!" ,
+	  "Bury my sisters, two by two, and then when you're done, let's bury me toooo!"
+    ],
+	"LYRICSPURE": [
+      "[Talk to Myla] #gRemove #ga #gCard #gfrom #gyour #gdeck.",
+      "[Listen] #gHeal #g", " #gHP.",
+      "[Dream Nail Myla] #gLearn More",
+      "[Leave]", 
+	  "Keep whispering, crystals! I can almost hear what you're saying!"
+    ],
+	"DESCRIPTIONSTAINTED": [
+      "As you wander through The Spire, you see Myla again, still singing.",
+      "the tune seems different somehow.",
+	  "...Bury... KNIGHT... DANGEROUS... nail? Bury... Lady... LIGHT... Pale??" ,
+	  "Darkness, No meaning... Still remain, I c-can't remember the rest of that one" 
+	 ],
+	"OPTIONSTAINTED": [
+      "[Talk to Myla] #gGain #ga #gRandom #gStarting #gRelic.",
+      "[Listen] #rLose #r", " #rHP, #gGain #y", " #yGold.",
+	  "[Dream Nail Myla] #gLearn More",
+      "[Leave]",
+	  "... how much longer... KILL IT... how much longer....how much longer... must I dig...?"
+    ],
+	"DESCRIPTIONSFALLEN": [
+      "As you wander through The Spire, you see Myla, she looks... different?",
+      "Her voice breaks the silence.",
+	  "KILL THE EMPTY ONE..."
+	],
+	"OPTIONSFALLEN": [ 
+      "[Kill Myla] #gGain #ga #gRelic.",
+      "[Leave]"
+    ]
+  }
+}
