@@ -59,7 +59,9 @@ public class VoidPower extends AbstractPower implements CloneablePowerInterface 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
-        AbstractDungeon.actionManager.addToTop(new ReducePowerAction(this.owner, this.owner, SoulPower.POWER_ID, owner.getPower(SoulPower.POWER_ID).amount));
+        if (owner.hasPower(SoulPower.POWER_ID)) {
+            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, SoulPower.POWER_ID));
+        }
 
         updateDescription();
 
@@ -113,7 +115,7 @@ public class VoidPower extends AbstractPower implements CloneablePowerInterface 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + (this.amount -1)  + DESCRIPTIONS[1]);
+        this.description = (DESCRIPTIONS[0] + this.amount  + DESCRIPTIONS[1]);
     }
 
     @Override

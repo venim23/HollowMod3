@@ -282,5 +282,6 @@
   "HollowMod:ChannelNail": "2",
   "HollowMod:SoulMaster": "2",
   "GUARDIAN": "2",
-  "GHOST": "2"
+  "GHOST": "2",
+  "AUTOMATON": "2"
 }
