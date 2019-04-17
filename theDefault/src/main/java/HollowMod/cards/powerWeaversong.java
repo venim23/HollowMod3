@@ -2,8 +2,6 @@ package HollowMod.cards;
 
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
-import HollowMod.patches.CardTagEnum;
-import HollowMod.powers.SlyStrikePower;
 import HollowMod.powers.WeaverSongPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,7 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class powerWeaversong extends AbstractDefaultCard {
+public class powerWeaversong extends AbstractHollowCard {
 
 
 
@@ -40,7 +38,7 @@ public class powerWeaversong extends AbstractDefaultCard {
     private static final int COST = 2;
 
     private static final int SPIDER_DAMAGE = 2;
-    private static final int UPGRADE_PLUS_SPIDER_DAMAGE = 1;
+    private static final int UPGRADE_PLUS_SPIDER_DAMAGE = 2;
 
     // /STAT DECLARATION/
 

@@ -15,7 +15,7 @@ import HollowMod.characters.TheBugKnight;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class attackDescendingDark extends AbstractDefaultCard {
+public class attackDescendingDark extends AbstractHollowCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.

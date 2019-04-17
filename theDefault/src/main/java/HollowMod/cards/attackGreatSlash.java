@@ -3,21 +3,16 @@ package HollowMod.cards;
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.DiscardAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class attackGreatSlash extends AbstractDefaultCard {
+public class attackGreatSlash extends AbstractHollowCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.

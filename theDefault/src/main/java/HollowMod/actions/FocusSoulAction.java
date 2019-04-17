@@ -1,8 +1,12 @@
 package HollowMod.actions;
 
 import HollowMod.hollowMod;
+import HollowMod.powers.BaldurShellPower;
+import HollowMod.powers.SoulMasterPower;
 import HollowMod.powers.SoulPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -29,8 +33,16 @@ public class FocusSoulAction
   public boolean canFocusSoulAction()
   {
     boolean canUse = false;
-    if (this.source.getPower(SoulPower.POWER_ID).amount >= this.cost) {
-      canUse = true;
+    if (this.source.hasPower(SoulMasterPower.POWER_ID)) {
+      this.cost -= this.source.getPower(SoulMasterPower.POWER_ID).amount;
+      if (this.cost < 1){
+        this.cost = 1;
+      }
+    }
+    if (this.source.hasPower(SoulPower.POWER_ID)){
+      if (this.source.getPower(SoulPower.POWER_ID).amount >= this.cost) {
+        canUse = true;
+      }
     }
     return canUse;
   }
@@ -40,11 +52,11 @@ public class FocusSoulAction
   {
     if (canFocusSoulAction())
     {
-      this.source.getPower(SoulPower.POWER_ID).reducePower(this.cost);
-      //Remove this, and use ReducePowerAction instead.
+      AbstractDungeon.actionManager.addToTop(new ReducePowerAction(this.source, this.source, SoulPower.POWER_ID ,this.cost));
       this.source.getPower(SoulPower.POWER_ID).updateDescription();
-      if (this.source.getPower(SoulPower.POWER_ID).amount == 0) {
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.source, this.source, SoulPower.POWER_ID));
+      if (this.source.hasPower(BaldurShellPower.POWER_ID)){
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(source, source, source.getPower(BaldurShellPower.POWER_ID).amount, true));
+        source.getPower(BaldurShellPower.POWER_ID).flash();
       }
     }
     this.isDone = true;

@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class attackQuirrelsAssistance extends AbstractDefaultCard {
+public class attackQuirrelsAssistance extends AbstractHollowCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.

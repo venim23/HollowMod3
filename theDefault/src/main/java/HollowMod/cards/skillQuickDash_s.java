@@ -13,7 +13,7 @@ import HollowMod.characters.TheBugKnight;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class skillQuickDash_s extends AbstractDefaultCard {
+public class skillQuickDash_s extends AbstractHollowCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.
@@ -55,7 +55,6 @@ public class skillQuickDash_s extends AbstractDefaultCard {
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
     private static final int COST = 1;  // COST = 1
-    private static final int UPGRADED_COST = 0; // UPGRADED_COST = 
 
     private static final int BLOCK = 5;
     private static final int UPGRADE_PLUS_BLOCK = 3;
@@ -86,7 +85,6 @@ public class skillQuickDash_s extends AbstractDefaultCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
-            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

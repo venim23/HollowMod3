@@ -4,18 +4,16 @@ import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class skillRadiancesLament extends AbstractDefaultCard {
+public class skillRadiancesLament extends AbstractHollowCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -26,7 +24,7 @@ public class skillRadiancesLament extends AbstractDefaultCard {
      * For how to create it, check out:
      * https://github.com/daviscook477/BaseMod/wiki/Dynamic-Variables
      * The files in this base that detail this are:
-     * variables.DefaultSecondMagicNumber and cards.AbstractDefaultCard
+     * variables.DefaultSecondMagicNumber and cards.AbstractHollowCard
      *
      * Apply 2(5) vulnerable and 4(9) poison to an enemy.
      */

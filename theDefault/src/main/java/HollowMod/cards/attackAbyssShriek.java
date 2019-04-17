@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.powers.EntanglePower;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class attackAbyssShriek extends AbstractDefaultCard {
+public class attackAbyssShriek extends AbstractHollowCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.

@@ -2,7 +2,6 @@ package HollowMod.cards;
 
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
-import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -15,7 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class attackPogoStrike extends AbstractDefaultCard {
+public class attackPogoStrike extends AbstractHollowCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.
@@ -57,13 +56,12 @@ public class attackPogoStrike extends AbstractDefaultCard {
     private static final CardType TYPE = CardType.ATTACK;       //
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
-    private static final int COST = 0;  // COST = 1
-
-    private static final int DAMAGE = 3;    // DAMAGE = 6
-    private static final int UPGRADE_PLUS_DMG = 2;  // UPGRADE_PLUS_DMG = 3
+    private static final int COST = 1;  // COST = 1
+    private static final int UPGRADE_BASE_COST = 0;
+    private static final int DAMAGE = 6;    // DAMAGE = 6
+     // UPGRADE_PLUS_DMG = 3
 
     private static final int CARDS = 1;    // DAMAGE = 6
-    private static final int UPGRADE_PLUS_CARDS = 1;  // UPGRADE_PLUS_DMG = 3
 
 
     // /STAT DECLARATION/
@@ -91,9 +89,7 @@ public class attackPogoStrike extends AbstractDefaultCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeMagicNumber(UPGRADE_PLUS_CARDS);
-            rawDescription = UPGRADE_DESCRIPTION;
+            upgradeBaseCost(UPGRADE_BASE_COST);
             initializeDescription();
         }
     }

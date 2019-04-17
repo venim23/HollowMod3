@@ -39,6 +39,7 @@ public class MothsMistakePower extends AbstractPower implements CloneablePowerIn
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("mothsmistake_power84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("mothsmistake_power32.png"));
     //public static int ElderbugDrawInt = 1;
+    public int INFECTEDVALUE;
 
     public MothsMistakePower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
@@ -48,6 +49,7 @@ public class MothsMistakePower extends AbstractPower implements CloneablePowerIn
         this.amount = amount;
         this.source = source;
 
+        INFECTEDVALUE = 1;
 
         type = PowerType.BUFF;
         isTurnBased = false;
@@ -62,25 +64,25 @@ public class MothsMistakePower extends AbstractPower implements CloneablePowerIn
     public void stackPower(int stackAmount)
     {
         this.amount += stackAmount;
+        INFECTEDVALUE += 1;
+
     }
 
     // On use card, apply (amount) of Dexterity. (Go to the actual power card for the amount.)
     @Override
-    public void onUseCard(final AbstractCard card, final UseCardAction action) {
-        if ((card.hasTag(CardTagEnum.SPELL))) {
-            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-                if ((!monster.isDead) && (!monster.isDying)) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, this.owner , new PoisonPower(monster, this.owner, this.amount), this.amount)); }
+    public void atStartOfTurnPostDraw() {
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            if ((!monster.isDead) && (!monster.isDying)) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, this.owner , new PoisonPower(monster, this.owner, this.amount), this.amount)); }
             }
-            AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(this.owner, this.owner, new InfectionPower(AbstractDungeon.player, 1 ), 1));
-        }
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(this.owner, this.owner, new InfectionPower(AbstractDungeon.player, INFECTEDVALUE ), INFECTEDVALUE));
     }
 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-            this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+            this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + INFECTEDVALUE + DESCRIPTIONS[2]);
         }
 
     @Override

@@ -2,7 +2,6 @@ package HollowMod.cards;
 
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
-import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.DungDefenderPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -11,11 +10,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class skillDungDefenderAura extends AbstractDefaultCard {
+public class skillDungDefenderAura extends AbstractHollowCard {
 
 
 
@@ -42,10 +40,10 @@ public class skillDungDefenderAura extends AbstractDefaultCard {
 
     private static final int COST = 2;  // COST = 1
 
-    private static final int BLOCK = 9;
-    private static final int UPGRADE_PLUS_BLOCK = 4;
+    private static final int BLOCK = 10;
+    private static final int UPGRADE_PLUS_BLOCK = 5;
 
-    private static final int POISON = 3;
+    private static final int POISON = 2;
 
 
 

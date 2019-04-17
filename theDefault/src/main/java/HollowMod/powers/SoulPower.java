@@ -5,7 +5,6 @@ import HollowMod.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -22,17 +21,23 @@ public class SoulPower extends AbstractPower implements CloneablePowerInterface 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public int SoulLimit = 6;
+    public int SOUL_METER;
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
     // There's a fallback "missing texture" image, so the game shouldn't crash if you accidentally put a non-existent file.
-    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("Soulvial84.png"));
-    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("Soulvial32.png"));
+    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("soulmeter_power84.png"));
+    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("soulmeter_power32.png"));
 
     public SoulPower(final AbstractCreature owner, int amount) {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;
+        if (owner.hasPower(SoulVialPower.POWER_ID)){
+            SOUL_METER = (6 + owner.getPower(SoulVialPower.POWER_ID).amount);
+        } else {
+            SOUL_METER = 6;
+        }
+
         if (owner.hasPower(VoidPower.POWER_ID)){
             this.amount = 0;
         } else {
@@ -49,24 +54,32 @@ public class SoulPower extends AbstractPower implements CloneablePowerInterface 
 
         updateDescription();
     }
+
     public void stackPower(int stackAmount)
     {
-        this.fontScale = 8.0F;
-        this.amount += stackAmount;
-        if (this.amount > SoulLimit) {
-            this.amount = SoulLimit;
+        if((!AbstractDungeon.player.hasPower(VoidPower.POWER_ID))) {
+            this.fontScale = 8.0F;
+
+            if (owner.hasPower(SoulVialPower.POWER_ID)){
+                SOUL_METER = (6 + owner.getPower(SoulVialPower.POWER_ID).amount);
+            } else {
+                SOUL_METER = 6;
+            }
+
+            if ((this.amount + stackAmount) > SOUL_METER) {
+                this.amount = SOUL_METER;
+            } else {
+                this.amount += stackAmount;
+            }
+        } else {
+            this.amount = 0;
         }
-        if((this.amount == 0) || (AbstractDungeon.player.hasPower(VoidPower.POWER_ID))) {
-            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, SoulPower.POWER_ID));
-        }
+        updateDescription();
     }
 
-    // On use card, apply (amount) of Dexterity. (Go to the actual power card for the amount.)
-
-    // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + SoulLimit + DESCRIPTIONS[1]);
+        this.description = (DESCRIPTIONS[0] + SOUL_METER + DESCRIPTIONS[1]);
     }
 
     @Override

@@ -40,7 +40,6 @@ public class VesselMask extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.CLINK);
     }
 
-
     // Gain 1 Strength on on equip.
     @Override
     public void onUseCard(final AbstractCard card, final UseCardAction action) {

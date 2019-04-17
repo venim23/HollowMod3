@@ -11,7 +11,7 @@
     "NAME": "Infection Level",
     "DESCRIPTIONS": [
       "at the end of the round take #b",
-      " damage and reduce the infection level by #b1"
+      " damage and reduce the infection level by #b2"
     ]
   },
   "HollowMod:GrubsongPower": {
@@ -31,9 +31,8 @@
   "HollowMod:BaldurShellPower": {
     "NAME": "Baldur Shell",
     "DESCRIPTIONS": [
-      "At the start of your turn, TOUCH #b",
-      " enemy.",
-      " enemies."
+      "Whenever you #yFocus Soul, Gain #b",
+      " Block."
     ]
   },
   "HollowMod:NailsmithPower": {
@@ -45,8 +44,9 @@
   "HollowMod:MothsMistakePower": {
     "NAME": "Moth's Mistake",
     "DESCRIPTIONS": [
-      "Playing a Spell Applies #b",
-      " Poison to all enemies, and #b1 [#FFA200]Infection to you."
+      "At the start of Each Turn: Apply #b",
+      " Poison to all enemies, and #b",
+      " [#FFA200]Infection to you."
     ]
   },
   "HollowMod:MonarchWingsPower": {
@@ -68,6 +68,28 @@
       "At the start of your turn, TOUCH #b",
       " enemy.",
       " enemies."
+    ]
+  },
+  "HollowMod:SoulEaterPower": {
+    "NAME": "Soul Eater",
+    "DESCRIPTIONS": [
+      "Gain an Extra #b",
+      " Soul whenever you use an attack (Doesn't apply to #ySpell or #yAlly Attacks)."
+    ]
+  },
+  "HollowMod:SoulMasterPower": {
+    "NAME": "Soul Twister",
+    "DESCRIPTIONS": [
+      "Soul Spells cost #b",
+      " Less Soul to cast (Minimum of 1), Void Spells Generate #b",
+      " Extra Void when cast."
+    ]
+  },
+  "HollowMod:SoulVialPower": {
+    "NAME": "Soul Vessels",
+    "DESCRIPTIONS": [
+      "Allows the Knight to store #b",
+      " Extra Soul."
     ]
   },
   "HollowMod:SlysStrikesPower": {
@@ -120,7 +142,7 @@
   "HollowMod:VoidPower": {
     "NAME": "Void",
     "DESCRIPTIONS": [
-      "Void  Increases Void Card Damage by, Increases Damage Taken by, and Lasts for #b",
+      "Void Increases Void Card Damage by, Increases Damage Taken by, and Lasts for #b",
       " turns. Reducing by 1 at the end of each turn"
     ]
   },
@@ -145,7 +167,7 @@
     ]
   },
   "HollowMod:SoulPower": {
-    "NAME": "Soul",
+    "NAME": "Soul Meter",
     "DESCRIPTIONS": [
       "The amount of Soul Gathered. Used to activate spells. Current Max: #b",
       " Soul."

@@ -12,11 +12,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class skillSoulSplash extends AbstractDefaultCard {
+public class skillSoulSplash extends AbstractHollowCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.
@@ -53,14 +54,14 @@ public class skillSoulSplash extends AbstractDefaultCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.BASIC; //  Up to you, I like auto-complete on these
+    private static final CardRarity RARITY = CardRarity.COMMON; //  Up to you, I like auto-complete on these
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;  //   since they don't change much.
     private static final CardType TYPE = CardType.SKILL;       //
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
     private static final int COST = 1;
     private static final int FOCUSCOST = 2;
-    private static final int UPGRADED_FOCUS = 2;
+    private static final int UPGRADED_FOCUS = 1;
     private static final int VULN_AMOUNT = 1;
     private static final int UPGRADED_VULN_AMOUNT = 1;
 
@@ -69,21 +70,21 @@ public class skillSoulSplash extends AbstractDefaultCard {
 
 
     public skillSoulSplash() {// This one and the one right under the imports are the most important ones, don't forget them
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET, FOCUSCOST);
         this.tags.add(CardTagEnum.SPELL);
         this.magicNumber = (this.baseMagicNumber = VULN_AMOUNT);
         this.defaultSecondMagicNumber = (this.defaultBaseSecondMagicNumber = FOCUSCOST);
-        this.exhaust = true;
+        this.hollowFocusCost = (hollowBaseFocusCost = FOCUSCOST);
 
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new FocusSoulAction(p, this.defaultSecondMagicNumber));
+        AbstractDungeon.actionManager.addToTop(new FocusSoulAction(p, hollowFocusCost));
 
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new VulnerablePower(mo, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
         }
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
@@ -95,8 +96,8 @@ public class skillSoulSplash extends AbstractDefaultCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeFocusCost(UPGRADED_FOCUS);
             upgradeMagicNumber(UPGRADED_VULN_AMOUNT);
-            upgradeDefaultSecondMagicNumber(UPGRADED_FOCUS);
             initializeDescription();
         }
     }

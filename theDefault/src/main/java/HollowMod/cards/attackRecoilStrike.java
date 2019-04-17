@@ -4,8 +4,6 @@ import HollowMod.patches.CardTagEnum;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.defect.DiscardPileToHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -17,7 +15,7 @@ import HollowMod.characters.TheBugKnight;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class attackRecoilStrike extends AbstractDefaultCard {
+public class attackRecoilStrike extends AbstractHollowCard {
 
 
     // TEXT DECLARATION

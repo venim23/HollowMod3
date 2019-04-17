@@ -1,6 +1,7 @@
 package HollowMod;
 
 import HollowMod.relics.*;
+import HollowMod.variables.FocusCostVariable;
 import basemod.BaseMod;
 import basemod.ModLabel;
 import basemod.ModPanel;
@@ -308,10 +309,10 @@ public class hollowMod implements
         //BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.HOLLOW_COLOR);
         //BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.HOLLOW_COLOR);
         BaseMod.addRelicToCustomPool(new VesselMask(), TheBugKnight.Enums.HOLLOW_COLOR);
+        BaseMod.addRelicToCustomPool(new DelicateFlowerRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
 
-
-        // This adds a relic to the Shared pool. Every character can find this relic.
-        BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
+        // This adds a relic to the Shared pool. Every character can find this relic
+        BaseMod.addRelic(new JonisBlessingRelic(), RelicType.SHARED);
 
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
         UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
@@ -333,6 +334,8 @@ public class hollowMod implements
         // Add the Custom Dynamic variabls
         BaseMod.addDynamicVariable(new DefaultCustomVariable());
         BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
+        BaseMod.addDynamicVariable(new FocusCostVariable());
+
 
         logger.info("Adding cards");
         // Add the cards
@@ -369,7 +372,11 @@ public class hollowMod implements
         BaseMod.addCard(new attackSharpenedNail());
         BaseMod.addCard(new attackGreatSlash());
         BaseMod.addCard(new attackFuryoftheFallen());
-
+        BaseMod.addCard(new attackHowlingWraiths());
+        BaseMod.addCard(new attackAwokenDreamNail());
+        BaseMod.addCard(new attackPureNailStrike());
+        BaseMod.addCard(new attackDesolateDive());
+        BaseMod.addCard(new attackVengefulSpirit());
 
 
         //Skills
@@ -395,7 +402,11 @@ public class hollowMod implements
         BaseMod.addCard(new skillPerfectDash());
         BaseMod.addCard(new skillSiblingsSouls());
         BaseMod.addCard(new skillMonarchWings());
-
+        BaseMod.addCard(new skillChannelNail());
+        //BaseMod.addCard(new skillSporeShroom());
+        BaseMod.addCard(new skillSoulShaman());
+        BaseMod.addCard(new skillOvercharmed());
+        BaseMod.addCard(new skillTaintedHusks());
         //Powers
         BaseMod.addCard(new powerElderbugsWisdom());
         BaseMod.addCard(new powerSharpenedShadows());
@@ -406,6 +417,10 @@ public class hollowMod implements
         BaseMod.addCard(new powerGrubsong());
         BaseMod.addCard(new powerThornsofAgony());
         BaseMod.addCard(new powerShapeofUnn());
+        BaseMod.addCard(new powerSoulMaster());
+        BaseMod.addCard(new powerSoulVessel());
+        BaseMod.addCard(new powerSoulEater());
+        BaseMod.addCard(new powerBaldurShell());
         //BaseMod.addCard(new powerLordofShades());
 
 
@@ -447,6 +462,8 @@ public class hollowMod implements
         UnlockTracker.unlockCard(attackSharpenedNail.ID);
         UnlockTracker.unlockCard(attackGreatSlash.ID);
         UnlockTracker.unlockCard(attackFuryoftheFallen.ID);
+        UnlockTracker.unlockCard(attackHowlingWraiths.ID);
+        UnlockTracker.unlockCard(attackAwokenDreamNail.ID);
 
         //Skills
         UnlockTracker.unlockCard(skillCloakDash.ID);
@@ -472,6 +489,7 @@ public class hollowMod implements
         UnlockTracker.unlockCard(skillLifebloodHeart.ID);
         UnlockTracker.unlockCard(skillMonarchWings.ID);
         UnlockTracker.unlockCard(skillSiblingsSouls.ID);
+        UnlockTracker.unlockCard(skillChannelNail.ID);
         // Powers
 
         UnlockTracker.unlockCard(powerSharpenedShadows.ID);
@@ -484,6 +502,7 @@ public class hollowMod implements
         UnlockTracker.unlockCard(powerGrubsong.ID);
         UnlockTracker.unlockCard(powerThornsofAgony.ID);
         UnlockTracker.unlockCard(powerShapeofUnn.ID);
+        UnlockTracker.unlockCard(powerSoulMaster.ID);
         //Deprecated
 
         //UnlockTracker.unlockCard(OrbSkill.ID);

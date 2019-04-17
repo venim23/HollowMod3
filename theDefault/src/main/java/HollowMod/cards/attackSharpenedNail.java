@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class attackSharpenedNail extends AbstractDefaultCard {
+public class attackSharpenedNail extends AbstractHollowCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.

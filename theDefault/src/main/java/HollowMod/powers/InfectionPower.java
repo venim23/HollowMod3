@@ -76,7 +76,7 @@ public class InfectionPower extends AbstractPower implements CloneablePowerInter
             }
         }
        //in theory this should deal damage (not lose hp but deal blockable damage) to the player at the end of his turn, and then decrement the value of infection by 1.
-        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(owner, owner, InfectionPower.POWER_ID, 1));
+        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(owner, owner, InfectionPower.POWER_ID, 2));
 
         //There might be a need to add some shit to check for specific powers or something at some point
 

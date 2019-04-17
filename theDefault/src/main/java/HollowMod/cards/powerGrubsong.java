@@ -2,7 +2,6 @@ package HollowMod.cards;
 
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
-import HollowMod.powers.BrokenVesselPower;
 import HollowMod.powers.GrubsongPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,7 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class powerGrubsong extends AbstractDefaultCard {
+public class powerGrubsong extends AbstractHollowCard {
 
 
 

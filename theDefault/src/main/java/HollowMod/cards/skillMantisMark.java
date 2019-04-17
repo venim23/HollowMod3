@@ -2,6 +2,7 @@ package HollowMod.cards;
 
 import HollowMod.hollowMod;
 import HollowMod.characters.TheBugKnight;
+import HollowMod.patches.CardTagEnum;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,7 +13,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class skillMantisMark extends AbstractDefaultCard {
+public class skillMantisMark extends AbstractHollowCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -23,7 +24,7 @@ public class skillMantisMark extends AbstractDefaultCard {
      * For how to create it, check out:
      * https://github.com/daviscook477/BaseMod/wiki/Dynamic-Variables
      * The files in this base that detail this are:
-     * variables.DefaultSecondMagicNumber and cards.AbstractDefaultCard
+     * variables.DefaultSecondMagicNumber and cards.AbstractHollowCard
      *
      * Apply 2(5) vulnerable and 4(9) poison to an enemy.
      */
@@ -48,7 +49,7 @@ public class skillMantisMark extends AbstractDefaultCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int STRENGTH = 1;
     private static final int UPGRADED_STRENGTH = 1;
 
@@ -58,7 +59,7 @@ public class skillMantisMark extends AbstractDefaultCard {
 
     public skillMantisMark() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-
+        this.tags.add(CardTagEnum.ALLY);
         this.magicNumber = this.baseMagicNumber = STRENGTH;
         this.exhaust = true;
 

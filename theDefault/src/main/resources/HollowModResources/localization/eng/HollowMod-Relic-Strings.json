@@ -53,11 +53,18 @@
       " #gHP."
     ]
   },
-  "HollowMod:JonisBlessingRelic": {
+  "HollowMod:JonisBlessing": {
     "NAME": "Joni's Blessing",
     "FLAVOR": "Blessed by Joni, the kindly heretic. Transfigures vital fluids into blue lifeblood.",
     "DESCRIPTIONS": [
-      "Begin Each Combat with 15 Temporary HP. You cannot Heal in Combat"
+      "Begin Each Combat with #b15 #bLifeblood. Healing in Combat instead increases #bLifeblood"
+    ]
+  },
+  "HollowMod:DelicateFlower": {
+    "NAME": "Delicate Flower",
+    "FLAVOR": "The Grey Mourner sends her Love.",
+    "DESCRIPTIONS": [
+      "If your HP is Full, gain Max Soul at the Beginning of Each turn."
     ]
   },
   "HollowMod:KingsSoulRelic": {

@@ -13,7 +13,7 @@ import HollowMod.characters.TheBugKnight;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class skillFocusHeal_s extends HollowMod.cards.AbstractDefaultCard {
+public class skillFocusHeal_s extends AbstractHollowCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.
@@ -57,28 +57,28 @@ public class skillFocusHeal_s extends HollowMod.cards.AbstractDefaultCard {
 
     private static final int COST = 1;
     private static final int FOCUSCOST = 3;
-    private static final int UPGRADED_FOCUS = (-1);
-    private static final int HEAL_AMOUNT = 2;
-    private static final int UPGRADED_HEAL = 1;
+    private static final int UPGRADED_FOCUS = 2;
+    private static final int HEAL_AMOUNT = 4;
+    private static final int UPGRADED_HEAL = 2;
 
 
     // /STAT DECLARATION/
 
 
     public skillFocusHeal_s() {// This one and the one right under the imports are the most important ones, don't forget them
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET, FOCUSCOST);
         this.tags.add(CardTags.HEALING);
         this.tags.add(CardTagEnum.SPELL);
         this.magicNumber = (this.baseMagicNumber = HEAL_AMOUNT);
-        this.defaultSecondMagicNumber = (this.defaultBaseSecondMagicNumber = FOCUSCOST);
         this.exhaust = true;
+        this.hollowFocusCost = (hollowBaseFocusCost = FOCUSCOST);
 
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new FocusSoulAction(p, this.defaultSecondMagicNumber));
+        AbstractDungeon.actionManager.addToTop(new FocusSoulAction(p,hollowFocusCost));
         AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, this.magicNumber));
     }
 
@@ -88,8 +88,8 @@ public class skillFocusHeal_s extends HollowMod.cards.AbstractDefaultCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeFocusCost(UPGRADED_FOCUS);
             upgradeMagicNumber(UPGRADED_HEAL);
-            upgradeDefaultSecondMagicNumber(UPGRADED_FOCUS);
             initializeDescription();
         }
     }

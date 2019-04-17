@@ -5,7 +5,6 @@ import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.InfectionPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,13 +12,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PoisonPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class attackInfectionAssault extends AbstractDefaultCard {
+public class attackInfectionAssault extends AbstractHollowCard {
 
 
     // TEXT DECLARATION
@@ -67,7 +65,10 @@ public class attackInfectionAssault extends AbstractDefaultCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int newDamage = (baseDamage + (magicNumber * (p.getPower(InfectionPower.POWER_ID).amount)));
+        int newDamage = baseDamage;
+        if (p.hasPower(InfectionPower.POWER_ID)){
+            newDamage = (baseDamage + (magicNumber * (p.getPower(InfectionPower.POWER_ID).amount)));
+        }
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, newDamage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
     }

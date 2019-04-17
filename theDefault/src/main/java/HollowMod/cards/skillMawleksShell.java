@@ -11,11 +11,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class skillMawleksShell extends AbstractDefaultCard {
+public class skillMawleksShell extends AbstractHollowCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -26,7 +25,7 @@ public class skillMawleksShell extends AbstractDefaultCard {
      * For how to create it, check out:
      * https://github.com/daviscook477/BaseMod/wiki/Dynamic-Variables
      * The files in this base that detail this are:
-     * variables.DefaultSecondMagicNumber and cards.AbstractDefaultCard
+     * variables.DefaultSecondMagicNumber and cards.AbstractHollowCard
      *
      * Apply 2(5) vulnerable and 4(9) poison to an enemy.
      */
@@ -52,10 +51,11 @@ public class skillMawleksShell extends AbstractDefaultCard {
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
     private static final int COST = 2;
-    private static final int UPGRADE_BASE_COST = 1;
     private static final int DEXTERITY = 1;
 
-    private static final int INFECTION = 3;
+    private static final int INFECTION = 5;
+    private static final int UPGRADE_INFECTION = (-2);
+
 
 
 
@@ -66,6 +66,7 @@ public class skillMawleksShell extends AbstractDefaultCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
         this.magicNumber = this.baseMagicNumber = DEXTERITY;
+        this.defaultSecondMagicNumber = this.defaultBaseSecondMagicNumber = INFECTION;
         this.tags.add(CardTagEnum.INFECTION);
     }
 
@@ -75,7 +76,7 @@ public class skillMawleksShell extends AbstractDefaultCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
 
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new InfectionPower(p, INFECTION), INFECTION));
+                new ApplyPowerAction(p, p, new InfectionPower(p, defaultSecondMagicNumber), defaultSecondMagicNumber));
     }
 
     // Upgraded stats.
@@ -83,7 +84,7 @@ public class skillMawleksShell extends AbstractDefaultCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            upgradeBaseCost(UPGRADE_BASE_COST);
+            upgradeDefaultSecondMagicNumber(UPGRADE_INFECTION);
             initializeDescription();
         }
     }

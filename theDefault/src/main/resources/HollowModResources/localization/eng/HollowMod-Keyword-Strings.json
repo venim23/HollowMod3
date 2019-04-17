@@ -1,61 +1,36 @@
 [
   {
-    "PROPER_NAME": "Dash",
-    "NAMES": [
-      "dash"
-    ],
-    "DESCRIPTION": "A unique type of defensive skill, can benefit from and trigger other effects."
-  },
-  {
+    "PROPER_NAME": "Soul",
     "NAMES": [
       "soul",
       "Soul"
     ],
-    "DESCRIPTION": "Soul is a unique resource the player can use to activate special Fõcus cards."
+    "DESCRIPTION": "A unique resource the player can #yFocus to activate certain [#60CFFF]Spells."
   },
   {
-	"PROPER_NAME": "Fõcus",
+	"PROPER_NAME": "Focus",
     "NAMES": [
-      "fõcus",
-      "Fõcus"
+      "focus",
+      "Focus",
+      "Focused"
     ],
-    "DESCRIPTION": "Spend that amount of Soul in order to play the card"
+    "DESCRIPTION": "Spend that amount of #ySoul in order to play the card"
   },
   {
-    "PROPER_NAME": "Võid",
+    "PROPER_NAME": "Void",
     "NAMES": [
-      "võid",
-      "Võid"
+      "void",
+      "Void"
     ],
-    "DESCRIPTION": "The Antethis of Soul, Võid increases the characters võid level, which improves the damage of Võid cards, leaves the player Vulnerable and negates any Soul gathered. Võid decrements at the beginning of each turn."
+    "DESCRIPTION": "The Antithesis of #ySoul, #yVoid #yLevel stacks, improving the damage of #yVoid [#60CFFF]Spells, and increasing any Damage taken. #yVoid Level decrements at the beginning of each turn."
   },
   {
-    "NAMES": [
-      "spell",
-      "Spell"
-    ],
-    "DESCRIPTION": "Special cards that have powerful effects, Attacks with the Spell keyword do not generate any Soul"
-  },
-   {
-    "NAMES": [
-      "ally",
-      "Ally"
-    ],
-    "DESCRIPTION": "Cards that indicate help from others, attacks with the Ally Keyword do not generate any Soul"
-  },
-  {
+    "PROPER_NAME": "Infection",
     "NAMES": [
       "infection",
       "Infection"
     ],
-    "DESCRIPTION": "Infection is a lingering debuff that damages you and decrements at the end of your turn"
-  },
-  {
-    "NAMES": [
-      "keyword",
-      "keywords"
-    ],
-    "DESCRIPTION": "Whenever you play a card, gain 1 dexterity this turn only."
+    "DESCRIPTION": "A Lingering debuff, #FFA200Infection #yLevel damages you and decrements by #b2 at the end of your turn."
   },
   {
     "PROPER_NAME": "Multiword Keyword",

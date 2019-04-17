@@ -13,7 +13,7 @@ import HollowMod.characters.TheBugKnight;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class skillSoulTotem extends AbstractDefaultCard {
+public class skillSoulTotem extends AbstractHollowCard {
 
     // TEXT DECLARATION
 

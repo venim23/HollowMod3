@@ -276,5 +276,11 @@
   "HollowMod:LifebloodHeart": "2",
   "HollowMod:FallenFury": "2",
   "HollowMod:MonarchWings": "2",
-  "HollowMod:SiblingsSouls": "2"
+  "HollowMod:SiblingsSouls": "2",
+  "HollowMod:HowlingWraiths": "2",
+  "HollowMod:AwokenDreamNail": "2",
+  "HollowMod:ChannelNail": "2",
+  "HollowMod:SoulMaster": "2",
+  "GUARDIAN": "2",
+  "GHOST": "2"
 }

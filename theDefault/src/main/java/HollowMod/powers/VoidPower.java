@@ -8,6 +8,7 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.utility.ReApplyPowersAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -44,8 +45,12 @@ public class VoidPower extends AbstractPower implements CloneablePowerInterface 
         ID = POWER_ID;
 
         this.owner = owner;
-        this.amount = amount;
-        this.priority = 0;
+        if (owner.hasPower(SoulMasterPower.POWER_ID)) {
+            this.amount = (amount + owner.getPower(SoulMasterPower.POWER_ID).amount);
+        } else {
+            this.amount = amount;
+        }
+        this.priority = 1;
 
         type = PowerType.BUFF;
         isTurnBased = true;
@@ -54,7 +59,7 @@ public class VoidPower extends AbstractPower implements CloneablePowerInterface 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
-        AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, SoulPower.POWER_ID));
+        AbstractDungeon.actionManager.addToTop(new ReducePowerAction(this.owner, this.owner, SoulPower.POWER_ID, owner.getPower(SoulPower.POWER_ID).amount));
 
         updateDescription();
 
@@ -64,19 +69,20 @@ public class VoidPower extends AbstractPower implements CloneablePowerInterface 
     public void stackPower(int stackAmount)
     {
         this.fontScale = 8.0F;
-        this.amount += stackAmount;
+        if (owner.hasPower(SoulMasterPower.POWER_ID)) {
+            this.amount += (stackAmount + owner.getPower(SoulMasterPower.POWER_ID).amount);
+        } else {
+            this.amount += stackAmount;
+        }
         if (this.amount == 0) {
             AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, VoidPower.POWER_ID));
-        }
-        if (this.amount > 0){
-            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, SoulPower.POWER_ID));
         }
     }
 
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.type != DamageInfo.DamageType.THORNS) {
+        if ((info.type != DamageInfo.DamageType.THORNS) && (info.owner != this.owner)) {
             flashWithoutSound();
             AbstractDungeon.actionManager.addToTop(new DamageAction(this.owner, (new DamageInfo(info.owner, this.amount, DamageInfo.DamageType.THORNS)),true));
             //damageAmount += this.amount;
@@ -98,8 +104,8 @@ public class VoidPower extends AbstractPower implements CloneablePowerInterface 
             flash(); // Makes the power icon flash.
                 AbstractDungeon.actionManager.addToBottom(
                         new ReducePowerAction(owner, owner, VoidPower.POWER_ID, 1));
+                updateDescription();
                 // this should reduce the void power by 1 at the e3nd of each turn.
-
         }
 
     }
@@ -107,7 +113,7 @@ public class VoidPower extends AbstractPower implements CloneablePowerInterface 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+        this.description = (DESCRIPTIONS[0] + (this.amount -1)  + DESCRIPTIONS[1]);
     }
 
     @Override

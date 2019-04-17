@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public abstract class HollowSpellCard extends AbstractDefaultCard {
+public abstract class HollowSpellCard extends AbstractHollowCard {
 
     public int SOUL_COST;
 	// this is a custom card type that extends the abstractdefaultcardtype, this hopefully will allow an easier ability to use "Focus" cards as spell costs. 

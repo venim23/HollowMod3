@@ -15,8 +15,8 @@ import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-// public class attackCycloneSlash extends AbstractDefaultCard
-public class attackCycloneSlash extends AbstractDefaultCard {
+// public class attackCycloneSlash extends AbstractHollowCard
+public class attackCycloneSlash extends AbstractHollowCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.

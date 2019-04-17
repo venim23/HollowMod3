@@ -3,7 +3,6 @@ package HollowMod.cards;
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
 import HollowMod.powers.MothsMistakePower;
-import HollowMod.powers.WeaverSongPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,7 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class powerMothsMistake extends AbstractDefaultCard {
+public class powerMothsMistake extends AbstractHollowCard {
 
 
 
@@ -35,9 +34,9 @@ public class powerMothsMistake extends AbstractDefaultCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
 
-    private static final int POISON = 1;
+    private static final int POISON = 2;
     private static final int UPGRADE_PLUS_POISON = 1;
 
     // /STAT DECLARATION/

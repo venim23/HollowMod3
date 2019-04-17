@@ -72,10 +72,6 @@ public class WeaverSongPower extends AbstractPower implements CloneablePowerInte
         }
     }
 
-    @Override
-    public void atEndOfTurn(boolean isPlayer){
-        AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, WeaverSongPower.POWER_ID));
-    }
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {

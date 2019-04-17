@@ -3,8 +3,8 @@ package HollowMod.cards;
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
+import HollowMod.powers.MonarchWingsPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class skillDoubleDash extends AbstractDefaultCard {
+public class skillDoubleDash extends AbstractHollowCard {
 
 
 
@@ -64,11 +64,16 @@ public class skillDoubleDash extends AbstractDefaultCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int doubleblockcheck = magicNumber;
+        if (p.hasPower(MonarchWingsPower.POWER_ID)){
+            doubleblockcheck += doubleblockcheck;
+        }
         AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(p,p, this.block));
 
+
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new NextTurnBlockPower(p, magicNumber), magicNumber));
+                new ApplyPowerAction(p, p, new NextTurnBlockPower(p, doubleblockcheck), doubleblockcheck));
     }
 
 

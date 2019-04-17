@@ -3,8 +3,8 @@
     <groupId>Venim</groupId>
     <artifactId>HollowMod</artifactId>
     <!--<version>1.4.0</version>-->
-    <version>0.0.1</version>
-    <name>DefaultMod</name>
+    <version>0.6.1</version>
+    <name>HollowMod</name>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

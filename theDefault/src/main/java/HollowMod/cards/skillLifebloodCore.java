@@ -12,7 +12,7 @@ import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class skillLifebloodCore extends AbstractDefaultCard {
+public class skillLifebloodCore extends AbstractHollowCard {
 
     // TEXT DECLARATION
 
@@ -51,7 +51,7 @@ public class skillLifebloodCore extends AbstractDefaultCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int newlife = AbstractDungeon.player.currentBlock;
-        AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(p,p,newlife));
+        AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(p,p,(newlife * 2)));
         AbstractDungeon.actionManager.addToBottom(new LoseBlockAction(p,p,newlife));
     }
 

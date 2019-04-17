@@ -9,11 +9,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class skillLifebloodCocoon extends AbstractDefaultCard {
+public class skillLifebloodCocoon extends AbstractHollowCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -24,7 +23,7 @@ public class skillLifebloodCocoon extends AbstractDefaultCard {
      * For how to create it, check out:
      * https://github.com/daviscook477/BaseMod/wiki/Dynamic-Variables
      * The files in this base that detail this are:
-     * variables.DefaultSecondMagicNumber and cards.AbstractDefaultCard
+     * variables.DefaultSecondMagicNumber and cards.AbstractHollowCard
      *
      * Apply 2(5) vulnerable and 4(9) poison to an enemy.
      */
@@ -49,11 +48,10 @@ public class skillLifebloodCocoon extends AbstractDefaultCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
-    private static final int COST = 2;
-    private static final int UPGRADED_COST = 1;
+    private static final int COST = 1;
 
-    private static final int TEMP_HP_GAIN = 2;
-
+    private static final int TEMP_HP_GAIN = 1;
+    private static final int UPGRADED_TEMPHP_GAIN = 2;
 
 
     // /STAT DECLARATION/
@@ -75,7 +73,7 @@ public class skillLifebloodCocoon extends AbstractDefaultCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
+            upgradeMagicNumber(UPGRADED_TEMPHP_GAIN);
             initializeDescription();
         }
     }

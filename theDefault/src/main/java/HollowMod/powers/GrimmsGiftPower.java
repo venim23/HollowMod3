@@ -57,7 +57,7 @@ public class GrimmsGiftPower extends AbstractPower implements CloneablePowerInte
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target)
     {
-        if ((damageAmount > 0) && (target != this.owner) && (info.type == DamageInfo.DamageType.NORMAL))
+        if ((target != this.owner) && (info.type != DamageInfo.DamageType.THORNS))
         {
             flash();
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, this.owner, new VulnerablePower(target, this.amount, false), this.amount, true));

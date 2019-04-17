@@ -9,11 +9,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class skillStalwartShell extends AbstractDefaultCard {
+public class skillStalwartShell extends AbstractHollowCard {
 
 
     public static final String ID = hollowMod.makeID("StalwartShell");
@@ -36,7 +35,7 @@ public class skillStalwartShell extends AbstractDefaultCard {
 
     private static final int COST = 1;
     private static final int UPGRADED_COST = 0;
-    private static final int ARMOR = 2;
+    private static final int ARMOR = 3;
 
 
 

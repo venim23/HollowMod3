@@ -5,7 +5,6 @@ import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.VoidDashPower;
 import HollowMod.powers.VoidPower;
-import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,7 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class skillVoidDash extends AbstractDefaultCard {
+public class skillVoidDash extends AbstractHollowCard {
 
     // TEXT DECLARATION
 

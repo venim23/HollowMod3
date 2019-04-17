@@ -1,659 +1,1670 @@
-04:21:06.496 INFO basemod.BaseMod> initializeGson
-04:21:06.512 INFO basemod.BaseMod> initializeTypeMaps
-04:21:06.513 INFO basemod.BaseMod> Registered MonsterStrings
-04:21:06.515 INFO basemod.BaseMod> Registered PowerStrings
-04:21:06.516 INFO basemod.BaseMod> Registered CardStrings
-04:21:06.516 INFO basemod.BaseMod> Registered RelicStrings
-04:21:06.516 INFO basemod.BaseMod> Registered EventStrings
-04:21:06.517 INFO basemod.BaseMod> Registered PotionStrings
-04:21:06.517 INFO basemod.BaseMod> Registered CreditStrings
-04:21:06.518 INFO basemod.BaseMod> Registered TutorialStrings
-04:21:06.518 INFO basemod.BaseMod> Registered KeywordStrings
-04:21:06.534 INFO basemod.BaseMod> Registered ScoreBonusStrings
-04:21:06.535 INFO basemod.BaseMod> Registered CharacterStrings
-04:21:06.535 INFO basemod.BaseMod> Registered UIStrings
-04:21:06.536 INFO basemod.BaseMod> Registered OrbStrings
-04:21:06.536 INFO basemod.BaseMod> Registered RunModStrings
-04:21:06.537 INFO basemod.BaseMod> Registered BlightStrings
-04:21:06.537 INFO basemod.BaseMod> Registered AchievementStrings
-04:21:06.537 INFO basemod.BaseMod> initializePowerMap
-04:21:07.112 INFO basemod.BaseMod> initializeUnderscorePowerIDs
-04:21:07.137 INFO HollowMod.hollowMod> ========================= Initializing Default Mod. Hi. =========================
-04:21:07.137 INFO HollowMod.hollowMod> Subscribe to BaseMod hooks
-04:21:07.144 INFO HollowMod.hollowMod> Done subscribing
-04:21:07.144 INFO HollowMod.hollowMod> Creating the color BUGKNIGHT_GRAY_COLOR
-04:21:07.144 INFO HollowMod.hollowMod> Done creating the color
-04:21:07.144 INFO HollowMod.hollowMod> ========================= /Default Mod Initialized. Hello World./ =========================
-04:21:07.146 INFO desktop.DesktopLauncher> time: 1555215667146
-04:21:07.147 INFO desktop.DesktopLauncher> version: 2019-01-23
-04:21:07.147 INFO desktop.DesktopLauncher> libgdx:  1.9.5
-04:21:07.147 INFO desktop.DesktopLauncher> default_locale: en_US
-04:21:07.147 INFO desktop.DesktopLauncher> default_charset: windows-1252
-04:21:07.147 INFO desktop.DesktopLauncher> default_encoding: windows-1252
-04:21:07.147 INFO desktop.DesktopLauncher> java_version: 1.8.0_201
-04:21:07.147 INFO desktop.DesktopLauncher> os_arch: amd64
-04:21:07.148 INFO desktop.DesktopLauncher> os_name: Windows 10
-04:21:07.148 INFO desktop.DesktopLauncher> os_version: 10.0
-04:21:07.149 INFO core.SystemStats> MEMORY STATS:
-Free Memory: 517Mb
+05:28:11.761 INFO basemod.BaseMod> initializeGson
+05:28:11.776 INFO basemod.BaseMod> initializeTypeMaps
+05:28:11.777 INFO basemod.BaseMod> Registered MonsterStrings
+05:28:11.779 INFO basemod.BaseMod> Registered PowerStrings
+05:28:11.780 INFO basemod.BaseMod> Registered CardStrings
+05:28:11.780 INFO basemod.BaseMod> Registered RelicStrings
+05:28:11.781 INFO basemod.BaseMod> Registered EventStrings
+05:28:11.781 INFO basemod.BaseMod> Registered PotionStrings
+05:28:11.782 INFO basemod.BaseMod> Registered CreditStrings
+05:28:11.782 INFO basemod.BaseMod> Registered TutorialStrings
+05:28:11.782 INFO basemod.BaseMod> Registered KeywordStrings
+05:28:11.928 INFO basemod.BaseMod> Registered ScoreBonusStrings
+05:28:11.928 INFO basemod.BaseMod> Registered CharacterStrings
+05:28:11.929 INFO basemod.BaseMod> Registered UIStrings
+05:28:11.929 INFO basemod.BaseMod> Registered OrbStrings
+05:28:11.930 INFO basemod.BaseMod> Registered RunModStrings
+05:28:11.930 INFO basemod.BaseMod> Registered BlightStrings
+05:28:11.930 INFO basemod.BaseMod> Registered AchievementStrings
+05:28:11.931 INFO basemod.BaseMod> initializePowerMap
+05:28:12.426 INFO basemod.BaseMod> initializeUnderscorePowerIDs
+05:28:12.839 INFO HollowMod.hollowMod> ========================= Initializing Default Mod. Hi. =========================
+05:28:12.840 INFO HollowMod.hollowMod> Subscribe to BaseMod hooks
+05:28:12.845 INFO HollowMod.hollowMod> Done subscribing
+05:28:12.846 INFO HollowMod.hollowMod> Creating the color BUGKNIGHT_GRAY_COLOR
+05:28:12.846 INFO HollowMod.hollowMod> Done creating the color
+05:28:12.846 INFO HollowMod.hollowMod> ========================= /Default Mod Initialized. Hello World./ =========================
+05:28:12.847 INFO desktop.DesktopLauncher> time: 1555478892847
+05:28:12.847 INFO desktop.DesktopLauncher> version: 2019-01-23
+05:28:12.847 INFO desktop.DesktopLauncher> libgdx:  1.9.5
+05:28:12.848 INFO desktop.DesktopLauncher> default_locale: en_US
+05:28:12.848 INFO desktop.DesktopLauncher> default_charset: windows-1252
+05:28:12.848 INFO desktop.DesktopLauncher> default_encoding: windows-1252
+05:28:12.848 INFO desktop.DesktopLauncher> java_version: 1.8.0_201
+05:28:12.848 INFO desktop.DesktopLauncher> os_arch: amd64
+05:28:12.848 INFO desktop.DesktopLauncher> os_name: Windows 10
+05:28:12.848 INFO desktop.DesktopLauncher> os_version: 10.0
+05:28:12.849 INFO core.SystemStats> MEMORY STATS:
+Free Memory: 273Mb
 Max Memory: 3,628Mb
-Allocated Memory: 820Mb
-Unallocated Memory: 2,808Mb
-Total Free Memory: 3,325Mb
-Used Memory: 302Mb
+Allocated Memory: 859Mb
+Unallocated Memory: 2,769Mb
+Total Free Memory: 3,042Mb
+Used Memory: 585Mb
 
-04:21:07.149 INFO core.SystemStats> DISK STATS:
+05:28:12.849 INFO core.SystemStats> DISK STATS:
 Total Space: 204,354Mb
-Usable Space: 7,618Mb
-Free Space: 7,618Mb
+Usable Space: 17,515Mb
+Free Space: 17,515Mb
 
-04:21:07.185 INFO core.DisplayConfig> Reading info.displayconfig
-04:21:07.188 INFO core.DisplayConfig> DisplayConfig successfully read.
-04:21:07.188 INFO desktop.DesktopLauncher> Settings successfully loaded
-04:21:07.189 INFO desktop.DesktopLauncher> Launching application...
-04:21:07.645 INFO ststwitch.TwitchConfig> The 'twitchconfig.txt' already exists, not overwriting it.
-04:21:07.817 INFO steam.SteamIntegration> [FAILURE] Steam API failed to initialize correctly.
-04:21:07.818 INFO core.CardCrawlGame> No migration
-04:21:07.822 INFO core.Settings> Initializing display settings...
-04:21:07.822 INFO core.DisplayConfig> Reading info.displayconfig
-04:21:07.823 INFO core.DisplayConfig> DisplayConfig successfully read.
-04:21:07.823 INFO core.Settings> Initializing sound settings...
-04:21:07.824 INFO core.Settings> Initializing game settings...
-04:21:07.856 INFO localization.LocalizedStrings> Loc Strings load time: 25ms
-04:21:07.856 INFO basemod.BaseMod> begin editing localization strings
-04:21:07.857 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.RunModStrings
-04:21:07.860 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.PowerStrings
-04:21:07.861 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.RelicStrings
-04:21:07.862 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.PowerStrings
-04:21:07.862 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.RelicStrings
-04:21:07.862 INFO HollowMod.hollowMod> Beginning to edit strings
-04:21:07.863 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.CardStrings
-04:21:07.865 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.PowerStrings
-04:21:07.866 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.RelicStrings
-04:21:07.866 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.EventStrings
-04:21:07.867 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.PotionStrings
-04:21:07.868 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.CharacterStrings
-04:21:07.869 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.OrbStrings
-04:21:07.870 INFO HollowMod.hollowMod> Done edittting strings
-04:21:07.887 INFO audio.MusicMaster> Music Volume: 0.5
-04:21:07.890 INFO audio.SoundMaster> Sound Effect Volume: 0.5
-04:21:07.890 INFO audio.SoundMaster> Loaded 360 Sound Effects
-04:21:07.890 INFO audio.SoundMaster> SFX load time: 1ms
-04:21:07.891 INFO basemod.BaseMod> begin adding custom sounds
-04:21:07.891 INFO basemod.BaseMod> Added 0 sounds
-04:21:08.686 INFO cards.AbstractCard> Card Image load time: 790ms
-04:21:08.687 INFO basemod.BaseMod> editting keywords
-04:21:09.504 INFO helpers.ImageMaster> Texture load time: 811ms
-04:21:09.566 INFO helpers.FontHelper> Font load time (Map Fonts): 19ms
-04:21:09.675 INFO helpers.FontHelper> Font load time (Kreon Standard): 109ms
-04:21:09.968 INFO helpers.FontHelper> Font load time (The rest of it): 293ms
-04:21:09.992 INFO unlock.UnlockTracker> RED UNLOCKS:   0/9
-04:21:09.992 INFO unlock.UnlockTracker> GREEN UNLOCKS: 0/9
-04:21:09.992 INFO unlock.UnlockTracker> BLUE UNLOCKS: 0/9
-04:21:09.993 INFO unlock.UnlockTracker> RELIC UNLOCKS: 0/18
-04:21:10.028 INFO unlock.UnlockTracker> CARDS SEEN:    298/0
-04:21:10.046 INFO unlock.UnlockTracker> RELICS SEEN:   31/0
-04:21:10.047 INFO basemod.BaseMod> publish post refresh - refreshing unlocks
-04:21:10.047 INFO basemod.BaseMod> begin editing cards
-04:21:10.047 INFO HollowMod.hollowMod> Adding variables
-04:21:10.048 INFO HollowMod.hollowMod> Add variabls
-04:21:10.049 INFO HollowMod.hollowMod> Adding cards
-04:21:10.473 INFO HollowMod.hollowMod> Making sure the cards are unlocked.
-04:21:10.477 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\STSSeenCards
-04:21:10.480 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\STSSeenCards
-04:21:10.480 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.480 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\STSUnlocks
-04:21:10.482 INFO helpers.AsyncSaver> Enqueue: qsize=1 file=preferences\STSSeenCards
-04:21:10.483 INFO helpers.AsyncSaver> Enqueue: qsize=2 file=preferences\STSUnlocks
-04:21:10.483 INFO helpers.AsyncSaver> Enqueue: qsize=3 file=preferences\STSSeenCards
-04:21:10.484 INFO helpers.AsyncSaver> Enqueue: qsize=4 file=preferences\STSUnlocks
-04:21:10.484 INFO helpers.AsyncSaver> Enqueue: qsize=5 file=preferences\STSSeenCards
-04:21:10.485 INFO helpers.AsyncSaver> Enqueue: qsize=6 file=preferences\STSUnlocks
-04:21:10.486 INFO helpers.AsyncSaver> Enqueue: qsize=7 file=preferences\STSSeenCards
-04:21:10.486 INFO helpers.AsyncSaver> Enqueue: qsize=8 file=preferences\STSUnlocks
-04:21:10.487 INFO helpers.AsyncSaver> Enqueue: qsize=9 file=preferences\STSSeenCards
-04:21:10.488 INFO helpers.AsyncSaver> Enqueue: qsize=10 file=preferences\STSUnlocks
-04:21:10.489 INFO helpers.AsyncSaver> Enqueue: qsize=11 file=preferences\STSSeenCards
-04:21:10.490 INFO helpers.AsyncSaver> Enqueue: qsize=12 file=preferences\STSUnlocks
-04:21:10.490 INFO helpers.AsyncSaver> Enqueue: qsize=13 file=preferences\STSSeenCards
-04:21:10.491 INFO helpers.AsyncSaver> Enqueue: qsize=14 file=preferences\STSUnlocks
-04:21:10.492 INFO helpers.AsyncSaver> Enqueue: qsize=15 file=preferences\STSSeenCards
-04:21:10.493 INFO helpers.AsyncSaver> Enqueue: qsize=16 file=preferences\STSUnlocks
-04:21:10.494 INFO helpers.AsyncSaver> Enqueue: qsize=17 file=preferences\STSSeenCards
-04:21:10.494 INFO helpers.AsyncSaver> Enqueue: qsize=18 file=preferences\STSUnlocks
-04:21:10.495 INFO helpers.AsyncSaver> Enqueue: qsize=19 file=preferences\STSSeenCards
-04:21:10.495 INFO helpers.AsyncSaver> Enqueue: qsize=20 file=preferences\STSUnlocks
-04:21:10.496 INFO helpers.AsyncSaver> Enqueue: qsize=21 file=preferences\STSSeenCards
-04:21:10.496 INFO helpers.AsyncSaver> Enqueue: qsize=22 file=preferences\STSUnlocks
-04:21:10.497 INFO helpers.AsyncSaver> Enqueue: qsize=23 file=preferences\STSSeenCards
-04:21:10.497 INFO helpers.AsyncSaver> Enqueue: qsize=24 file=preferences\STSUnlocks
-04:21:10.498 INFO helpers.AsyncSaver> Enqueue: qsize=25 file=preferences\STSSeenCards
-04:21:10.498 INFO helpers.AsyncSaver> Enqueue: qsize=26 file=preferences\STSUnlocks
-04:21:10.499 INFO helpers.AsyncSaver> Enqueue: qsize=27 file=preferences\STSSeenCards
-04:21:10.499 INFO helpers.AsyncSaver> Enqueue: qsize=28 file=preferences\STSUnlocks
-04:21:10.500 INFO helpers.AsyncSaver> Enqueue: qsize=29 file=preferences\STSSeenCards
-04:21:10.500 INFO helpers.AsyncSaver> Enqueue: qsize=30 file=preferences\STSUnlocks
-04:21:10.501 INFO helpers.AsyncSaver> Enqueue: qsize=31 file=preferences\STSSeenCards
-04:21:10.502 INFO helpers.AsyncSaver> Enqueue: qsize=32 file=preferences\STSUnlocks
-04:21:10.502 INFO helpers.AsyncSaver> Enqueue: qsize=33 file=preferences\STSSeenCards
-04:21:10.503 INFO helpers.AsyncSaver> Enqueue: qsize=34 file=preferences\STSUnlocks
-04:21:10.504 INFO helpers.AsyncSaver> Enqueue: qsize=35 file=preferences\STSSeenCards
-04:21:10.504 INFO helpers.AsyncSaver> Enqueue: qsize=36 file=preferences\STSUnlocks
-04:21:10.505 INFO helpers.AsyncSaver> Enqueue: qsize=37 file=preferences\STSSeenCards
-04:21:10.506 INFO helpers.AsyncSaver> Enqueue: qsize=38 file=preferences\STSUnlocks
-04:21:10.506 INFO helpers.AsyncSaver> Enqueue: qsize=39 file=preferences\STSSeenCards
-04:21:10.507 INFO helpers.AsyncSaver> Enqueue: qsize=40 file=preferences\STSUnlocks
-04:21:10.508 INFO helpers.AsyncSaver> Enqueue: qsize=41 file=preferences\STSSeenCards
-04:21:10.508 INFO helpers.AsyncSaver> Enqueue: qsize=42 file=preferences\STSUnlocks
-04:21:10.509 INFO helpers.AsyncSaver> Enqueue: qsize=43 file=preferences\STSSeenCards
-04:21:10.509 INFO helpers.AsyncSaver> Enqueue: qsize=44 file=preferences\STSUnlocks
-04:21:10.509 INFO helpers.AsyncSaver> Enqueue: qsize=45 file=preferences\STSSeenCards
-04:21:10.510 INFO helpers.AsyncSaver> Enqueue: qsize=46 file=preferences\STSUnlocks
-04:21:10.510 INFO helpers.AsyncSaver> Enqueue: qsize=47 file=preferences\STSSeenCards
-04:21:10.511 INFO helpers.AsyncSaver> Enqueue: qsize=48 file=preferences\STSUnlocks
-04:21:10.511 INFO helpers.AsyncSaver> Enqueue: qsize=49 file=preferences\STSSeenCards
-04:21:10.512 INFO helpers.AsyncSaver> Enqueue: qsize=50 file=preferences\STSUnlocks
-04:21:10.512 INFO helpers.AsyncSaver> Enqueue: qsize=51 file=preferences\STSSeenCards
-04:21:10.513 INFO helpers.AsyncSaver> Enqueue: qsize=52 file=preferences\STSUnlocks
-04:21:10.513 INFO helpers.AsyncSaver> Enqueue: qsize=53 file=preferences\STSSeenCards
-04:21:10.513 INFO helpers.AsyncSaver> Enqueue: qsize=54 file=preferences\STSUnlocks
-04:21:10.514 INFO helpers.AsyncSaver> Enqueue: qsize=55 file=preferences\STSSeenCards
-04:21:10.514 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.515 INFO helpers.FileSaver> Dequeue: qsize=55 file=preferences\STSUnlocks
-04:21:10.515 INFO helpers.AsyncSaver> Enqueue: qsize=55 file=preferences\STSUnlocks
-04:21:10.515 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.515 INFO helpers.AsyncSaver> Enqueue: qsize=56 file=preferences\STSSeenCards
-04:21:10.516 INFO helpers.AsyncSaver> Enqueue: qsize=57 file=preferences\STSUnlocks
-04:21:10.517 INFO helpers.AsyncSaver> Enqueue: qsize=58 file=preferences\STSSeenCards
-04:21:10.517 INFO helpers.AsyncSaver> Enqueue: qsize=59 file=preferences\STSUnlocks
-04:21:10.518 INFO helpers.AsyncSaver> Enqueue: qsize=60 file=preferences\STSSeenCards
-04:21:10.518 INFO helpers.AsyncSaver> Enqueue: qsize=61 file=preferences\STSUnlocks
-04:21:10.519 INFO helpers.AsyncSaver> Enqueue: qsize=62 file=preferences\STSSeenCards
-04:21:10.519 INFO helpers.AsyncSaver> Enqueue: qsize=63 file=preferences\STSUnlocks
-04:21:10.520 INFO helpers.AsyncSaver> Enqueue: qsize=64 file=preferences\STSSeenCards
-04:21:10.521 INFO helpers.AsyncSaver> Enqueue: qsize=65 file=preferences\STSUnlocks
-04:21:10.521 INFO helpers.AsyncSaver> Enqueue: qsize=66 file=preferences\STSSeenCards
-04:21:10.521 INFO helpers.AsyncSaver> Enqueue: qsize=67 file=preferences\STSUnlocks
-04:21:10.522 INFO helpers.AsyncSaver> Enqueue: qsize=68 file=preferences\STSSeenCards
-04:21:10.522 INFO helpers.AsyncSaver> Enqueue: qsize=69 file=preferences\STSUnlocks
-04:21:10.523 INFO helpers.AsyncSaver> Enqueue: qsize=70 file=preferences\STSSeenCards
-04:21:10.523 INFO helpers.AsyncSaver> Enqueue: qsize=71 file=preferences\STSUnlocks
-04:21:10.523 INFO helpers.AsyncSaver> Enqueue: qsize=72 file=preferences\STSSeenCards
-04:21:10.524 INFO helpers.AsyncSaver> Enqueue: qsize=73 file=preferences\STSUnlocks
-04:21:10.525 INFO helpers.AsyncSaver> Enqueue: qsize=74 file=preferences\STSSeenCards
-04:21:10.525 INFO helpers.AsyncSaver> Enqueue: qsize=75 file=preferences\STSUnlocks
-04:21:10.526 INFO helpers.AsyncSaver> Enqueue: qsize=76 file=preferences\STSSeenCards
-04:21:10.526 INFO helpers.AsyncSaver> Enqueue: qsize=77 file=preferences\STSUnlocks
-04:21:10.527 INFO helpers.AsyncSaver> Enqueue: qsize=78 file=preferences\STSSeenCards
-04:21:10.527 INFO helpers.AsyncSaver> Enqueue: qsize=79 file=preferences\STSUnlocks
-04:21:10.528 INFO helpers.AsyncSaver> Enqueue: qsize=80 file=preferences\STSSeenCards
-04:21:10.528 INFO helpers.AsyncSaver> Enqueue: qsize=81 file=preferences\STSUnlocks
-04:21:10.529 INFO helpers.AsyncSaver> Enqueue: qsize=82 file=preferences\STSSeenCards
-04:21:10.529 INFO helpers.AsyncSaver> Enqueue: qsize=83 file=preferences\STSUnlocks
-04:21:10.529 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.530 INFO helpers.AsyncSaver> Enqueue: qsize=84 file=preferences\STSSeenCards
-04:21:10.530 INFO helpers.FileSaver> Dequeue: qsize=83 file=preferences\STSSeenCards
-04:21:10.530 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.530 INFO helpers.AsyncSaver> Enqueue: qsize=84 file=preferences\STSUnlocks
-04:21:10.531 INFO helpers.AsyncSaver> Enqueue: qsize=85 file=preferences\STSSeenCards
-04:21:10.531 INFO helpers.AsyncSaver> Enqueue: qsize=86 file=preferences\STSUnlocks
-04:21:10.532 INFO helpers.AsyncSaver> Enqueue: qsize=87 file=preferences\STSSeenCards
-04:21:10.532 INFO helpers.AsyncSaver> Enqueue: qsize=88 file=preferences\STSUnlocks
-04:21:10.532 INFO helpers.AsyncSaver> Enqueue: qsize=89 file=preferences\STSSeenCards
-04:21:10.533 INFO helpers.AsyncSaver> Enqueue: qsize=90 file=preferences\STSUnlocks
-04:21:10.533 INFO helpers.AsyncSaver> Enqueue: qsize=91 file=preferences\STSSeenCards
-04:21:10.534 INFO helpers.AsyncSaver> Enqueue: qsize=92 file=preferences\STSUnlocks
-04:21:10.534 INFO helpers.AsyncSaver> Enqueue: qsize=93 file=preferences\STSSeenCards
-04:21:10.535 INFO helpers.AsyncSaver> Enqueue: qsize=94 file=preferences\STSUnlocks
-04:21:10.535 INFO helpers.AsyncSaver> Enqueue: qsize=95 file=preferences\STSSeenCards
-04:21:10.536 INFO helpers.AsyncSaver> Enqueue: qsize=96 file=preferences\STSUnlocks
-04:21:10.536 INFO helpers.AsyncSaver> Enqueue: qsize=97 file=preferences\STSSeenCards
-04:21:10.537 INFO helpers.AsyncSaver> Enqueue: qsize=98 file=preferences\STSUnlocks
-04:21:10.538 INFO helpers.AsyncSaver> Enqueue: qsize=99 file=preferences\STSSeenCards
-04:21:10.538 INFO helpers.AsyncSaver> Enqueue: qsize=100 file=preferences\STSUnlocks
-04:21:10.539 INFO helpers.AsyncSaver> Enqueue: qsize=101 file=preferences\STSSeenCards
-04:21:10.539 INFO helpers.AsyncSaver> Enqueue: qsize=102 file=preferences\STSUnlocks
-04:21:10.540 INFO helpers.AsyncSaver> Enqueue: qsize=103 file=preferences\STSSeenCards
-04:21:10.540 INFO helpers.AsyncSaver> Enqueue: qsize=104 file=preferences\STSUnlocks
-04:21:10.541 INFO HollowMod.hollowMod> Done adding cards!
-04:21:10.546 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.546 INFO helpers.FileSaver> Dequeue: qsize=104 file=preferences\STSUnlocks
-04:21:10.546 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.560 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.560 INFO helpers.FileSaver> Dequeue: qsize=103 file=preferences\STSSeenCards
-04:21:10.561 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.573 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.573 INFO helpers.FileSaver> Dequeue: qsize=102 file=preferences\STSUnlocks
-04:21:10.574 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.586 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.586 INFO helpers.FileSaver> Dequeue: qsize=101 file=preferences\STSSeenCards
-04:21:10.586 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.598 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.598 INFO helpers.FileSaver> Dequeue: qsize=100 file=preferences\STSUnlocks
-04:21:10.599 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.610 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.611 INFO helpers.FileSaver> Dequeue: qsize=99 file=preferences\STSSeenCards
-04:21:10.611 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.622 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.622 INFO helpers.FileSaver> Dequeue: qsize=98 file=preferences\STSUnlocks
-04:21:10.623 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.634 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.635 INFO helpers.FileSaver> Dequeue: qsize=97 file=preferences\STSSeenCards
-04:21:10.635 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.648 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.648 INFO helpers.FileSaver> Dequeue: qsize=96 file=preferences\STSUnlocks
-04:21:10.648 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.657 INFO panels.TopPanel> Twitch Integration enabled due to presence of 'twitch.properties` file.
-04:21:10.658 INFO panels.TopPanel> Not starting twitch integration because enabled=false
-04:21:10.660 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.661 INFO helpers.FileSaver> Dequeue: qsize=95 file=preferences\STSSeenCards
-04:21:10.661 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.672 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.672 INFO helpers.FileSaver> Dequeue: qsize=94 file=preferences\STSUnlocks
-04:21:10.672 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.686 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.687 INFO helpers.FileSaver> Dequeue: qsize=93 file=preferences\STSSeenCards
-04:21:10.687 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.697 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.697 INFO helpers.FileSaver> Dequeue: qsize=92 file=preferences\STSUnlocks
-04:21:10.697 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.706 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.706 INFO helpers.FileSaver> Dequeue: qsize=91 file=preferences\STSSeenCards
-04:21:10.706 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.732 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.732 INFO helpers.FileSaver> Dequeue: qsize=90 file=preferences\STSUnlocks
-04:21:10.732 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.744 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.745 INFO helpers.FileSaver> Dequeue: qsize=89 file=preferences\STSSeenCards
-04:21:10.745 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.757 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.758 INFO helpers.FileSaver> Dequeue: qsize=88 file=preferences\STSUnlocks
-04:21:10.758 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.768 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.769 INFO helpers.FileSaver> Dequeue: qsize=87 file=preferences\STSSeenCards
-04:21:10.769 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.779 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.780 INFO helpers.FileSaver> Dequeue: qsize=86 file=preferences\STSUnlocks
-04:21:10.780 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.791 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.791 INFO helpers.FileSaver> Dequeue: qsize=85 file=preferences\STSSeenCards
-04:21:10.791 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.800 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.801 INFO helpers.FileSaver> Dequeue: qsize=84 file=preferences\STSUnlocks
-04:21:10.801 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.812 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.812 INFO helpers.FileSaver> Dequeue: qsize=83 file=preferences\STSSeenCards
-04:21:10.812 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.824 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.824 INFO helpers.FileSaver> Dequeue: qsize=82 file=preferences\STSUnlocks
-04:21:10.824 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.833 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.833 INFO helpers.FileSaver> Dequeue: qsize=81 file=preferences\STSSeenCards
-04:21:10.834 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.843 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.844 INFO helpers.FileSaver> Dequeue: qsize=80 file=preferences\STSUnlocks
-04:21:10.844 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.857 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.857 INFO helpers.FileSaver> Dequeue: qsize=79 file=preferences\STSSeenCards
-04:21:10.858 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.867 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.867 INFO helpers.FileSaver> Dequeue: qsize=78 file=preferences\STSUnlocks
-04:21:10.868 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.877 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.877 INFO helpers.FileSaver> Dequeue: qsize=77 file=preferences\STSSeenCards
-04:21:10.877 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.888 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.888 INFO helpers.FileSaver> Dequeue: qsize=76 file=preferences\STSUnlocks
-04:21:10.888 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.906 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.906 INFO helpers.FileSaver> Dequeue: qsize=75 file=preferences\STSSeenCards
-04:21:10.906 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.916 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.916 INFO helpers.FileSaver> Dequeue: qsize=74 file=preferences\STSUnlocks
-04:21:10.917 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.928 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.928 INFO helpers.FileSaver> Dequeue: qsize=73 file=preferences\STSSeenCards
-04:21:10.928 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.938 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.939 INFO helpers.FileSaver> Dequeue: qsize=72 file=preferences\STSUnlocks
-04:21:10.939 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.951 INFO helpers.CardLibrary> Card load time: 410ms with 337 cards
-04:21:10.951 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.951 INFO helpers.FileSaver> Dequeue: qsize=71 file=preferences\STSSeenCards
-04:21:10.951 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.951 INFO basemod.BaseMod> begin editing relics
-04:21:10.952 INFO HollowMod.hollowMod> Adding relics
-04:21:10.953 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/relics/placeholder_relic.png
-04:21:10.962 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.967 INFO helpers.FileSaver> Dequeue: qsize=70 file=preferences\STSUnlocks
-04:21:10.968 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.968 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/relics/outline/placeholder_relic.png
-04:21:10.971 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/relics/mask.png
-04:21:10.972 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/relics/outline/mask.png
-04:21:10.974 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/relics/placeholder_relic2.png
-04:21:10.974 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/relics/outline/placeholder_relic2.png
-04:21:10.978 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/relics/BottledPlaceholder.png
-04:21:10.979 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/relics/outline/BottledPlaceholder.png
-04:21:10.980 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:10.981 INFO helpers.FileSaver> Dequeue: qsize=69 file=preferences\STSSeenCards
-04:21:10.981 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.985 INFO helpers.AsyncSaver> Enqueue: qsize=69 file=preferences\STSSeenRelics
-04:21:10.985 INFO HollowMod.hollowMod> Done adding relics!
-04:21:10.995 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:10.995 INFO helpers.FileSaver> Dequeue: qsize=69 file=preferences\STSUnlocks
-04:21:10.996 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.005 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.006 INFO helpers.FileSaver> Dequeue: qsize=68 file=preferences\STSSeenCards
-04:21:11.006 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.015 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.015 INFO helpers.FileSaver> Dequeue: qsize=67 file=preferences\STSUnlocks
-04:21:11.015 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.025 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.025 INFO helpers.FileSaver> Dequeue: qsize=66 file=preferences\STSSeenCards
-04:21:11.025 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.034 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.034 INFO helpers.FileSaver> Dequeue: qsize=65 file=preferences\STSUnlocks
-04:21:11.035 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.045 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.045 INFO helpers.FileSaver> Dequeue: qsize=64 file=preferences\STSSeenCards
-04:21:11.046 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.055 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.055 INFO helpers.FileSaver> Dequeue: qsize=63 file=preferences\STSUnlocks
-04:21:11.055 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.065 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.065 INFO helpers.FileSaver> Dequeue: qsize=62 file=preferences\STSSeenCards
-04:21:11.065 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.075 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.075 INFO helpers.FileSaver> Dequeue: qsize=61 file=preferences\STSUnlocks
-04:21:11.075 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.085 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.085 INFO helpers.FileSaver> Dequeue: qsize=60 file=preferences\STSSeenCards
-04:21:11.085 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.095 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.095 INFO helpers.FileSaver> Dequeue: qsize=59 file=preferences\STSUnlocks
-04:21:11.095 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.104 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.105 INFO helpers.FileSaver> Dequeue: qsize=58 file=preferences\STSSeenCards
-04:21:11.105 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.110 INFO helpers.RelicLibrary> Relic load time: 124ms
-04:21:11.111 INFO input.InputHelper> Setting input processor to Scroller
-04:21:11.117 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.117 INFO helpers.FileSaver> Dequeue: qsize=57 file=preferences\STSUnlocks
-04:21:11.118 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.134 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.134 INFO helpers.FileSaver> Dequeue: qsize=56 file=preferences\STSSeenCards
-04:21:11.135 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.146 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.146 INFO helpers.FileSaver> Dequeue: qsize=55 file=preferences\STSUnlocks
-04:21:11.147 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.148 INFO basemod.BaseMod> postCreateStartingRelics for: IRONCLAD
-04:21:11.148 INFO basemod.BaseMod> postCreateStartingRelics adding [ Burning Blood ]
-04:21:11.158 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.158 INFO helpers.FileSaver> Dequeue: qsize=54 file=preferences\STSSeenCards
-04:21:11.158 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.170 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.171 INFO helpers.FileSaver> Dequeue: qsize=53 file=preferences\STSUnlocks
-04:21:11.171 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.185 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.186 INFO helpers.FileSaver> Dequeue: qsize=52 file=preferences\STSSeenCards
-04:21:11.186 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.200 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.200 INFO helpers.FileSaver> Dequeue: qsize=51 file=preferences\STSUnlocks
-04:21:11.201 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.213 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.213 INFO helpers.FileSaver> Dequeue: qsize=50 file=preferences\STSSeenCards
-04:21:11.213 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.230 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.230 INFO helpers.FileSaver> Dequeue: qsize=49 file=preferences\STSUnlocks
-04:21:11.230 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.245 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.245 INFO helpers.FileSaver> Dequeue: qsize=48 file=preferences\STSSeenCards
-04:21:11.245 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.257 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.258 INFO helpers.FileSaver> Dequeue: qsize=47 file=preferences\STSUnlocks
-04:21:11.258 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.261 INFO basemod.BaseMod> postCreateStartingRelics for: THE_SILENT
-04:21:11.261 INFO basemod.BaseMod> postCreateStartingRelics adding [ Ring of the Snake ]
-04:21:11.270 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.270 INFO helpers.FileSaver> Dequeue: qsize=46 file=preferences\STSSeenCards
-04:21:11.270 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.282 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.282 INFO helpers.FileSaver> Dequeue: qsize=45 file=preferences\STSUnlocks
-04:21:11.283 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.295 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.296 INFO helpers.FileSaver> Dequeue: qsize=44 file=preferences\STSSeenCards
-04:21:11.296 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.308 INFO basemod.BaseMod> postCreateStartingRelics for: DEFECT
-04:21:11.308 INFO basemod.BaseMod> postCreateStartingRelics adding [ Cracked Core ]
-04:21:11.311 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.311 INFO helpers.FileSaver> Dequeue: qsize=43 file=preferences\STSUnlocks
-04:21:11.312 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.329 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.330 INFO helpers.FileSaver> Dequeue: qsize=42 file=preferences\STSSeenCards
-04:21:11.330 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.342 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.342 INFO helpers.FileSaver> Dequeue: qsize=41 file=preferences\STSUnlocks
-04:21:11.343 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.354 INFO basemod.BaseMod> begin editing characters
-04:21:11.355 INFO HollowMod.hollowMod> Beginning to edit characters. Add THE_BUGKNIGHT
-04:21:11.355 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.355 INFO helpers.FileSaver> Dequeue: qsize=40 file=preferences\STSSeenCards
-04:21:11.356 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.367 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.367 INFO helpers.FileSaver> Dequeue: qsize=39 file=preferences\STSUnlocks
-04:21:11.367 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.378 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.378 INFO helpers.FileSaver> Dequeue: qsize=38 file=preferences\STSSeenCards
-04:21:11.379 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.389 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.390 INFO helpers.FileSaver> Dequeue: qsize=37 file=preferences\STSUnlocks
-04:21:11.390 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.401 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.401 INFO helpers.FileSaver> Dequeue: qsize=36 file=preferences\STSSeenCards
-04:21:11.402 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.410 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.411 INFO helpers.FileSaver> Dequeue: qsize=35 file=preferences\STSUnlocks
-04:21:11.411 INFO basemod.BaseMod> postCreateStartingRelics for: THE_BUGKNIGHT
-04:21:11.411 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.411 INFO basemod.BaseMod> postCreateStartingRelics adding [ HollowMod:VesselMask ]
-04:21:11.417 INFO HollowMod.hollowMod> Begin loading starter Deck Strings
-04:21:11.417 INFO HollowMod.hollowMod> loading dashes
-04:21:11.417 INFO HollowMod.hollowMod> loading focuses
-04:21:11.418 INFO HollowMod.hollowMod> loading testcards
-04:21:11.418 INFO HollowMod.hollowMod> Begin loading starter Deck Strings
-04:21:11.418 INFO HollowMod.hollowMod> loading dashes
-04:21:11.418 INFO HollowMod.hollowMod> loading focuses
-04:21:11.418 INFO HollowMod.hollowMod> loading testcards
-04:21:11.422 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.422 INFO helpers.FileSaver> Dequeue: qsize=34 file=preferences\STSSeenCards
-04:21:11.422 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.431 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.431 INFO helpers.FileSaver> Dequeue: qsize=33 file=preferences\STSUnlocks
-04:21:11.431 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.441 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.441 INFO helpers.FileSaver> Dequeue: qsize=32 file=preferences\STSSeenCards
-04:21:11.441 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.449 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.449 INFO helpers.FileSaver> Dequeue: qsize=31 file=preferences\STSUnlocks
-04:21:11.449 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.458 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.458 INFO helpers.FileSaver> Dequeue: qsize=30 file=preferences\STSSeenCards
-04:21:11.459 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.467 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.467 INFO helpers.FileSaver> Dequeue: qsize=29 file=preferences\STSUnlocks
-04:21:11.467 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.478 INFO HollowMod.hollowMod> Beginning to edit potions
-04:21:11.478 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.478 INFO helpers.FileSaver> Dequeue: qsize=28 file=preferences\STSSeenCards
-04:21:11.478 INFO HollowMod.hollowMod> Done editing potions
-04:21:11.478 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.479 INFO HollowMod.hollowMod> Added THE_BUGKNIGHT
-04:21:11.484 INFO core.CardCrawlGame> [GC] BEFORE: 525799544
-04:21:11.603 INFO core.CardCrawlGame> [GC] AFTER: 91009192
-04:21:11.604 INFO basemod.BaseMod> publishPostInitialize
-04:21:11.624 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.625 INFO helpers.FileSaver> Dequeue: qsize=27 file=preferences\STSUnlocks
-04:21:11.625 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.635 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.635 INFO helpers.FileSaver> Dequeue: qsize=26 file=preferences\STSSeenCards
-04:21:11.635 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.645 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.645 INFO helpers.FileSaver> Dequeue: qsize=25 file=preferences\STSUnlocks
-04:21:11.646 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.656 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.656 INFO helpers.FileSaver> Dequeue: qsize=24 file=preferences\STSSeenCards
-04:21:11.656 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.665 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.665 INFO helpers.FileSaver> Dequeue: qsize=23 file=preferences\STSUnlocks
-04:21:11.666 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.683 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.683 INFO helpers.FileSaver> Dequeue: qsize=22 file=preferences\STSSeenCards
-04:21:11.683 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.693 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.693 INFO helpers.FileSaver> Dequeue: qsize=21 file=preferences\STSUnlocks
-04:21:11.693 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.702 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.703 INFO helpers.FileSaver> Dequeue: qsize=20 file=preferences\STSSeenCards
-04:21:11.703 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.712 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.712 INFO helpers.FileSaver> Dequeue: qsize=19 file=preferences\STSUnlocks
-04:21:11.712 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.715 INFO basemod.BaseMod> registerModBadge : BaseMod
-04:21:11.716 INFO basemod.ModBadge> initialized mod badge for: BaseMod
-04:21:11.716 INFO basemod.ModBadge> setup hooks for BaseMod mod badge
-04:21:11.717 INFO basemod.BaseMod> initializeUnderscoreCardIDs
-04:21:11.718 INFO basemod.BaseMod> initializeUnderscorePotionIDs
-04:21:11.719 INFO basemod.BaseMod> initializeUnderscoreEventIDs
-04:21:11.719 INFO basemod.BaseMod> initializeUnderscoreRelicIDs
-04:21:11.719 INFO basemod.BaseMod> initializeEncounters
-04:21:11.722 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.722 INFO helpers.FileSaver> Dequeue: qsize=18 file=preferences\STSSeenCards
-04:21:11.722 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.731 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.731 INFO helpers.FileSaver> Dequeue: qsize=17 file=preferences\STSUnlocks
-04:21:11.731 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.740 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.740 INFO helpers.FileSaver> Dequeue: qsize=16 file=preferences\STSSeenCards
-04:21:11.740 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.748 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.748 INFO helpers.FileSaver> Dequeue: qsize=15 file=preferences\STSUnlocks
-04:21:11.749 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.757 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.758 INFO helpers.FileSaver> Dequeue: qsize=14 file=preferences\STSSeenCards
-04:21:11.758 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.765 INFO HollowMod.hollowMod> Loading badge image and mod options
-04:21:11.765 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/BadgeBug.png
-04:21:11.768 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.768 INFO helpers.FileSaver> Dequeue: qsize=13 file=preferences\STSUnlocks
-04:21:11.768 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.778 INFO basemod.BaseMod> registerModBadge : Hollow Mod
-04:21:11.779 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.779 INFO basemod.ModBadge> initialized mod badge for: Hollow Mod
-04:21:11.779 INFO helpers.FileSaver> Dequeue: qsize=12 file=preferences\STSSeenCards
-04:21:11.779 INFO basemod.ModBadge> setup hooks for Hollow Mod mod badge
-04:21:11.779 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.779 INFO HollowMod.hollowMod> Done loading badge Image and mod options
-04:21:11.782 INFO controller.CInputHelper> [CONTROLLER] Utilizing DirectInput
-04:21:11.788 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.788 INFO helpers.FileSaver> Dequeue: qsize=11 file=preferences\STSUnlocks
-04:21:11.789 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.797 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.797 INFO helpers.FileSaver> Dequeue: qsize=10 file=preferences\STSSeenCards
-04:21:11.797 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.808 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.808 INFO helpers.FileSaver> Dequeue: qsize=9 file=preferences\STSUnlocks
-04:21:11.808 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.816 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.816 INFO helpers.FileSaver> Dequeue: qsize=8 file=preferences\STSSeenCards
-04:21:11.817 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.822 INFO controller.CInputHelper> [CONTROLLER] No controllers detected
-04:21:11.826 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.826 INFO helpers.FileSaver> Dequeue: qsize=7 file=preferences\STSUnlocks
-04:21:11.826 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.837 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.837 INFO helpers.FileSaver> Dequeue: qsize=6 file=preferences\STSSeenCards
-04:21:11.838 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.848 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.848 INFO helpers.FileSaver> Dequeue: qsize=5 file=preferences\STSUnlocks
-04:21:11.848 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.859 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.859 INFO helpers.FileSaver> Dequeue: qsize=4 file=preferences\STSSeenCards
-04:21:11.859 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.869 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.870 INFO helpers.FileSaver> Dequeue: qsize=3 file=preferences\STSUnlocks
-04:21:11.870 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.879 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.879 INFO helpers.FileSaver> Dequeue: qsize=2 file=preferences\STSSeenCards
-04:21:11.879 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.888 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
-04:21:11.888 INFO helpers.FileSaver> Dequeue: qsize=1 file=preferences\STSUnlocks
-04:21:11.888 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.897 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
-04:21:11.897 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\STSSeenRelics
-04:21:11.897 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenRelics
-04:21:11.901 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenRelics
-04:21:18.809 INFO basemod.BaseMod> publishAddCustomModeMods
-04:21:18.812 INFO HollowMod.hollowMod> Begin loading starter Deck Strings
-04:21:18.812 INFO HollowMod.hollowMod> loading dashes
-04:21:18.813 INFO HollowMod.hollowMod> loading focuses
-04:21:18.813 INFO HollowMod.hollowMod> loading testcards
-04:21:18.813 INFO HollowMod.hollowMod> Begin loading starter Deck Strings
-04:21:18.813 INFO HollowMod.hollowMod> loading dashes
-04:21:18.813 INFO HollowMod.hollowMod> loading focuses
-04:21:18.813 INFO HollowMod.hollowMod> loading testcards
-04:21:18.955 INFO unlock.UnlockTracker> RED UNLOCKS:   0/9
-04:21:18.955 INFO unlock.UnlockTracker> GREEN UNLOCKS: 0/9
-04:21:18.955 INFO unlock.UnlockTracker> BLUE UNLOCKS: 0/9
-04:21:18.955 INFO unlock.UnlockTracker> RELIC UNLOCKS: 0/18
-04:21:18.955 INFO unlock.UnlockTracker> CARDS SEEN:    298/337
-04:21:18.955 INFO unlock.UnlockTracker> RELICS SEEN:   31/162
-04:21:18.955 INFO basemod.BaseMod> publish post refresh - refreshing unlocks
-04:21:18.955 INFO compendium.CardLibraryScreen> Initializing card library screen.
-04:21:18.959 INFO basemod.BaseMod> postCreateStartingRelics for: IRONCLAD
-04:21:18.960 INFO basemod.BaseMod> postCreateStartingRelics adding [ Burning Blood ]
-04:21:18.995 INFO characters.CharacterManager> Successfully recreated IRONCLAD
-04:21:18.997 INFO basemod.BaseMod> postCreateStartingRelics for: THE_SILENT
-04:21:18.997 INFO basemod.BaseMod> postCreateStartingRelics adding [ Ring of the Snake ]
-04:21:19.034 INFO characters.CharacterManager> Successfully recreated THE_SILENT
-04:21:19.035 INFO basemod.BaseMod> postCreateStartingRelics for: DEFECT
-04:21:19.036 INFO basemod.BaseMod> postCreateStartingRelics adding [ Cracked Core ]
-04:21:19.069 INFO characters.CharacterManager> Successfully recreated DEFECT
-04:21:19.098 INFO basemod.BaseMod> postCreateStartingRelics for: THE_BUGKNIGHT
-04:21:19.098 INFO basemod.BaseMod> postCreateStartingRelics adding [ HollowMod:VesselMask ]
-04:21:19.103 INFO HollowMod.hollowMod> Begin loading starter Deck Strings
-04:21:19.103 INFO HollowMod.hollowMod> loading dashes
-04:21:19.103 INFO HollowMod.hollowMod> loading focuses
-04:21:19.103 INFO HollowMod.hollowMod> loading testcards
-04:21:19.103 INFO HollowMod.hollowMod> Begin loading starter Deck Strings
-04:21:19.103 INFO HollowMod.hollowMod> loading dashes
-04:21:19.103 INFO HollowMod.hollowMod> loading focuses
-04:21:19.103 INFO HollowMod.hollowMod> loading testcards
-04:21:19.162 INFO characters.CharacterManager> Successfully recreated THE_BUGKNIGHT
-04:21:19.162 INFO HollowMod.hollowMod> Begin loading starter Deck Strings
-04:21:19.162 INFO HollowMod.hollowMod> loading dashes
-04:21:19.162 INFO HollowMod.hollowMod> loading focuses
-04:21:19.162 INFO HollowMod.hollowMod> loading testcards
-04:21:19.162 INFO HollowMod.hollowMod> Begin loading starter Deck Strings
-04:21:19.162 INFO HollowMod.hollowMod> loading dashes
-04:21:19.162 INFO HollowMod.hollowMod> loading focuses
-04:21:19.163 INFO HollowMod.hollowMod> loading testcards
-04:21:19.175 INFO saveAndContinue.SaveAndContinue> IRONCLAD save does NOT exist!
-04:21:19.175 INFO saveAndContinue.SaveAndContinue> THE_SILENT save does NOT exist!
-04:21:19.175 INFO saveAndContinue.SaveAndContinue> DEFECT save does NOT exist!
-04:21:19.176 INFO saveAndContinue.SaveAndContinue> THE_BUGKNIGHT save does NOT exist!
-04:22:26.987 INFO core.CardCrawlGame> PAUSE()
-04:22:58.858 INFO core.CardCrawlGame> RESUME()
-04:24:06.122 INFO core.CardCrawlGame> PAUSE()
-04:24:53.725 INFO core.CardCrawlGame> RESUME()
-04:24:56.605 INFO core.CardCrawlGame> PAUSE()
-04:25:53.341 INFO core.CardCrawlGame> RESUME()
-04:25:55.415 INFO helpers.TipHelper> ! block
-04:25:56.663 INFO helpers.TipHelper> ! exhaust
-04:25:57.993 INFO helpers.TipHelper> ! block
-04:26:00.010 INFO helpers.TipHelper> ! vulnerable
-04:26:28.368 INFO helpers.TipHelper> ! vulnerable
-04:26:29.944 INFO helpers.TipHelper> ! vulnerable
-04:27:48.468 INFO core.CardCrawlGame> PAUSE()
-04:27:48.468 INFO core.CardCrawlGame> Game shutting down...
-04:27:48.468 INFO helpers.FileSaver> Save thread interrupted!
-04:27:48.469 INFO helpers.FileSaver> Save thread will die now.
+05:28:12.896 INFO core.DisplayConfig> Reading info.displayconfig
+05:28:12.900 INFO core.DisplayConfig> DisplayConfig successfully read.
+05:28:12.900 INFO desktop.DesktopLauncher> Settings successfully loaded
+05:28:12.901 INFO desktop.DesktopLauncher> Launching application...
+05:28:13.381 INFO ststwitch.TwitchConfig> The 'twitchconfig.txt' already exists, not overwriting it.
+05:28:13.781 INFO steam.SteamIntegration> [FAILURE] Steam API failed to initialize correctly.
+05:28:13.782 INFO core.CardCrawlGame> No migration
+05:28:13.786 INFO core.Settings> Initializing display settings...
+05:28:13.786 INFO core.DisplayConfig> Reading info.displayconfig
+05:28:13.787 INFO core.DisplayConfig> DisplayConfig successfully read.
+05:28:13.787 INFO core.Settings> Initializing sound settings...
+05:28:13.788 INFO core.Settings> Initializing game settings...
+05:28:13.819 INFO localization.LocalizedStrings> Loc Strings load time: 24ms
+05:28:13.820 INFO basemod.BaseMod> begin editing localization strings
+05:28:13.821 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.RunModStrings
+05:28:13.824 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.PowerStrings
+05:28:13.825 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.RelicStrings
+05:28:13.825 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.PowerStrings
+05:28:13.826 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.RelicStrings
+05:28:13.826 INFO HollowMod.hollowMod> Beginning to edit strings
+05:28:13.827 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.CardStrings
+05:28:13.828 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.PowerStrings
+05:28:13.829 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.RelicStrings
+05:28:13.829 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.EventStrings
+05:28:13.830 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.PotionStrings
+05:28:13.831 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.CharacterStrings
+05:28:13.832 INFO basemod.BaseMod> loadJsonStrings: com.megacrit.cardcrawl.localization.OrbStrings
+05:28:13.832 INFO HollowMod.hollowMod> Done edittting strings
+05:28:13.848 INFO audio.MusicMaster> Music Volume: 0.5
+05:28:13.850 INFO audio.SoundMaster> Sound Effect Volume: 0.5
+05:28:13.851 INFO audio.SoundMaster> Loaded 360 Sound Effects
+05:28:13.851 INFO audio.SoundMaster> SFX load time: 2ms
+05:28:13.851 INFO basemod.BaseMod> begin adding custom sounds
+05:28:13.852 INFO basemod.BaseMod> Added 0 sounds
+05:28:14.622 INFO cards.AbstractCard> Card Image load time: 765ms
+05:28:14.623 INFO basemod.BaseMod> editting keywords
+05:28:15.431 INFO helpers.ImageMaster> Texture load time: 802ms
+05:28:15.492 INFO helpers.FontHelper> Font load time (Map Fonts): 19ms
+05:28:15.601 INFO helpers.FontHelper> Font load time (Kreon Standard): 109ms
+05:28:15.895 INFO helpers.FontHelper> Font load time (The rest of it): 293ms
+05:28:15.919 INFO unlock.UnlockTracker> RED UNLOCKS:   0/9
+05:28:15.919 INFO unlock.UnlockTracker> GREEN UNLOCKS: 0/9
+05:28:15.920 INFO unlock.UnlockTracker> BLUE UNLOCKS: 0/9
+05:28:15.920 INFO unlock.UnlockTracker> RELIC UNLOCKS: 0/18
+05:28:16.241 INFO unlock.UnlockTracker> CARDS SEEN:    326/0
+05:28:16.259 INFO unlock.UnlockTracker> RELICS SEEN:   71/0
+05:28:16.259 INFO basemod.BaseMod> publish post refresh - refreshing unlocks
+05:28:16.259 INFO basemod.BaseMod> begin editing cards
+05:28:16.260 INFO HollowMod.hollowMod> Adding variables
+05:28:16.261 INFO HollowMod.hollowMod> Add variabls
+05:28:16.261 INFO HollowMod.hollowMod> Adding cards
+05:28:16.979 INFO HollowMod.hollowMod> Making sure the cards are unlocked.
+05:28:16.984 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\STSSeenCards
+05:28:16.986 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\STSSeenCards
+05:28:16.987 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:16.987 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\STSUnlocks
+05:28:16.989 INFO helpers.AsyncSaver> Enqueue: qsize=1 file=preferences\STSSeenCards
+05:28:16.990 INFO helpers.AsyncSaver> Enqueue: qsize=2 file=preferences\STSUnlocks
+05:28:16.991 INFO helpers.AsyncSaver> Enqueue: qsize=3 file=preferences\STSSeenCards
+05:28:16.991 INFO helpers.AsyncSaver> Enqueue: qsize=4 file=preferences\STSUnlocks
+05:28:16.992 INFO helpers.AsyncSaver> Enqueue: qsize=5 file=preferences\STSSeenCards
+05:28:16.993 INFO helpers.AsyncSaver> Enqueue: qsize=6 file=preferences\STSUnlocks
+05:28:16.993 INFO helpers.AsyncSaver> Enqueue: qsize=7 file=preferences\STSSeenCards
+05:28:16.994 INFO helpers.AsyncSaver> Enqueue: qsize=8 file=preferences\STSUnlocks
+05:28:16.995 INFO helpers.AsyncSaver> Enqueue: qsize=9 file=preferences\STSSeenCards
+05:28:16.996 INFO helpers.AsyncSaver> Enqueue: qsize=10 file=preferences\STSUnlocks
+05:28:16.996 INFO helpers.AsyncSaver> Enqueue: qsize=11 file=preferences\STSSeenCards
+05:28:16.997 INFO helpers.AsyncSaver> Enqueue: qsize=12 file=preferences\STSUnlocks
+05:28:16.998 INFO helpers.AsyncSaver> Enqueue: qsize=13 file=preferences\STSSeenCards
+05:28:16.998 INFO helpers.AsyncSaver> Enqueue: qsize=14 file=preferences\STSUnlocks
+05:28:16.999 INFO helpers.AsyncSaver> Enqueue: qsize=15 file=preferences\STSSeenCards
+05:28:16.999 INFO helpers.AsyncSaver> Enqueue: qsize=16 file=preferences\STSUnlocks
+05:28:17.000 INFO helpers.AsyncSaver> Enqueue: qsize=17 file=preferences\STSSeenCards
+05:28:17.001 INFO helpers.AsyncSaver> Enqueue: qsize=18 file=preferences\STSUnlocks
+05:28:17.001 INFO helpers.AsyncSaver> Enqueue: qsize=19 file=preferences\STSSeenCards
+05:28:17.002 INFO helpers.AsyncSaver> Enqueue: qsize=20 file=preferences\STSUnlocks
+05:28:17.003 INFO helpers.AsyncSaver> Enqueue: qsize=21 file=preferences\STSSeenCards
+05:28:17.003 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.003 INFO helpers.AsyncSaver> Enqueue: qsize=22 file=preferences\STSUnlocks
+05:28:17.003 INFO helpers.FileSaver> Dequeue: qsize=21 file=preferences\STSUnlocks
+05:28:17.004 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.004 INFO helpers.AsyncSaver> Enqueue: qsize=22 file=preferences\STSSeenCards
+05:28:17.005 INFO helpers.AsyncSaver> Enqueue: qsize=23 file=preferences\STSUnlocks
+05:28:17.005 INFO helpers.AsyncSaver> Enqueue: qsize=24 file=preferences\STSSeenCards
+05:28:17.006 INFO helpers.AsyncSaver> Enqueue: qsize=25 file=preferences\STSUnlocks
+05:28:17.007 INFO helpers.AsyncSaver> Enqueue: qsize=26 file=preferences\STSSeenCards
+05:28:17.008 INFO helpers.AsyncSaver> Enqueue: qsize=27 file=preferences\STSUnlocks
+05:28:17.008 INFO helpers.AsyncSaver> Enqueue: qsize=28 file=preferences\STSSeenCards
+05:28:17.009 INFO helpers.AsyncSaver> Enqueue: qsize=29 file=preferences\STSUnlocks
+05:28:17.010 INFO helpers.AsyncSaver> Enqueue: qsize=30 file=preferences\STSSeenCards
+05:28:17.011 INFO helpers.AsyncSaver> Enqueue: qsize=31 file=preferences\STSUnlocks
+05:28:17.012 INFO helpers.AsyncSaver> Enqueue: qsize=32 file=preferences\STSSeenCards
+05:28:17.013 INFO helpers.AsyncSaver> Enqueue: qsize=33 file=preferences\STSUnlocks
+05:28:17.013 INFO helpers.AsyncSaver> Enqueue: qsize=34 file=preferences\STSSeenCards
+05:28:17.014 INFO helpers.AsyncSaver> Enqueue: qsize=35 file=preferences\STSUnlocks
+05:28:17.014 INFO helpers.AsyncSaver> Enqueue: qsize=36 file=preferences\STSSeenCards
+05:28:17.015 INFO helpers.AsyncSaver> Enqueue: qsize=37 file=preferences\STSUnlocks
+05:28:17.016 INFO helpers.AsyncSaver> Enqueue: qsize=38 file=preferences\STSSeenCards
+05:28:17.016 INFO helpers.AsyncSaver> Enqueue: qsize=39 file=preferences\STSUnlocks
+05:28:17.017 INFO helpers.AsyncSaver> Enqueue: qsize=40 file=preferences\STSSeenCards
+05:28:17.018 INFO helpers.AsyncSaver> Enqueue: qsize=41 file=preferences\STSUnlocks
+05:28:17.018 INFO helpers.AsyncSaver> Enqueue: qsize=42 file=preferences\STSSeenCards
+05:28:17.019 INFO helpers.AsyncSaver> Enqueue: qsize=43 file=preferences\STSUnlocks
+05:28:17.020 INFO helpers.AsyncSaver> Enqueue: qsize=44 file=preferences\STSSeenCards
+05:28:17.020 INFO helpers.AsyncSaver> Enqueue: qsize=45 file=preferences\STSUnlocks
+05:28:17.020 INFO helpers.AsyncSaver> Enqueue: qsize=46 file=preferences\STSSeenCards
+05:28:17.021 INFO helpers.AsyncSaver> Enqueue: qsize=47 file=preferences\STSUnlocks
+05:28:17.022 INFO helpers.AsyncSaver> Enqueue: qsize=48 file=preferences\STSSeenCards
+05:28:17.022 INFO helpers.AsyncSaver> Enqueue: qsize=49 file=preferences\STSUnlocks
+05:28:17.023 INFO helpers.AsyncSaver> Enqueue: qsize=50 file=preferences\STSSeenCards
+05:28:17.023 INFO helpers.AsyncSaver> Enqueue: qsize=51 file=preferences\STSUnlocks
+05:28:17.024 INFO helpers.AsyncSaver> Enqueue: qsize=52 file=preferences\STSSeenCards
+05:28:17.024 INFO helpers.AsyncSaver> Enqueue: qsize=53 file=preferences\STSUnlocks
+05:28:17.025 INFO helpers.AsyncSaver> Enqueue: qsize=54 file=preferences\STSSeenCards
+05:28:17.025 INFO helpers.AsyncSaver> Enqueue: qsize=55 file=preferences\STSUnlocks
+05:28:17.025 INFO helpers.AsyncSaver> Enqueue: qsize=56 file=preferences\STSSeenCards
+05:28:17.026 INFO helpers.AsyncSaver> Enqueue: qsize=57 file=preferences\STSUnlocks
+05:28:17.026 INFO helpers.AsyncSaver> Enqueue: qsize=58 file=preferences\STSSeenCards
+05:28:17.027 INFO helpers.AsyncSaver> Enqueue: qsize=59 file=preferences\STSUnlocks
+05:28:17.027 INFO helpers.AsyncSaver> Enqueue: qsize=60 file=preferences\STSSeenCards
+05:28:17.027 INFO helpers.AsyncSaver> Enqueue: qsize=61 file=preferences\STSUnlocks
+05:28:17.028 INFO helpers.AsyncSaver> Enqueue: qsize=62 file=preferences\STSSeenCards
+05:28:17.028 INFO helpers.AsyncSaver> Enqueue: qsize=63 file=preferences\STSUnlocks
+05:28:17.029 INFO helpers.AsyncSaver> Enqueue: qsize=64 file=preferences\STSSeenCards
+05:28:17.029 INFO helpers.AsyncSaver> Enqueue: qsize=65 file=preferences\STSUnlocks
+05:28:17.029 INFO helpers.AsyncSaver> Enqueue: qsize=66 file=preferences\STSSeenCards
+05:28:17.030 INFO helpers.AsyncSaver> Enqueue: qsize=67 file=preferences\STSUnlocks
+05:28:17.030 INFO helpers.AsyncSaver> Enqueue: qsize=68 file=preferences\STSSeenCards
+05:28:17.030 INFO helpers.AsyncSaver> Enqueue: qsize=69 file=preferences\STSUnlocks
+05:28:17.031 INFO helpers.AsyncSaver> Enqueue: qsize=70 file=preferences\STSSeenCards
+05:28:17.031 INFO helpers.AsyncSaver> Enqueue: qsize=71 file=preferences\STSUnlocks
+05:28:17.032 INFO helpers.AsyncSaver> Enqueue: qsize=72 file=preferences\STSSeenCards
+05:28:17.032 INFO helpers.AsyncSaver> Enqueue: qsize=73 file=preferences\STSUnlocks
+05:28:17.033 INFO helpers.AsyncSaver> Enqueue: qsize=74 file=preferences\STSSeenCards
+05:28:17.033 INFO helpers.AsyncSaver> Enqueue: qsize=75 file=preferences\STSUnlocks
+05:28:17.033 INFO helpers.AsyncSaver> Enqueue: qsize=76 file=preferences\STSSeenCards
+05:28:17.034 INFO helpers.AsyncSaver> Enqueue: qsize=77 file=preferences\STSUnlocks
+05:28:17.034 INFO helpers.AsyncSaver> Enqueue: qsize=78 file=preferences\STSSeenCards
+05:28:17.035 INFO helpers.AsyncSaver> Enqueue: qsize=79 file=preferences\STSUnlocks
+05:28:17.035 INFO helpers.AsyncSaver> Enqueue: qsize=80 file=preferences\STSSeenCards
+05:28:17.036 INFO helpers.AsyncSaver> Enqueue: qsize=81 file=preferences\STSUnlocks
+05:28:17.037 INFO helpers.AsyncSaver> Enqueue: qsize=82 file=preferences\STSSeenCards
+05:28:17.037 INFO helpers.AsyncSaver> Enqueue: qsize=83 file=preferences\STSUnlocks
+05:28:17.037 INFO helpers.AsyncSaver> Enqueue: qsize=84 file=preferences\STSSeenCards
+05:28:17.038 INFO helpers.AsyncSaver> Enqueue: qsize=85 file=preferences\STSUnlocks
+05:28:17.038 INFO helpers.AsyncSaver> Enqueue: qsize=86 file=preferences\STSSeenCards
+05:28:17.039 INFO helpers.AsyncSaver> Enqueue: qsize=87 file=preferences\STSUnlocks
+05:28:17.039 INFO helpers.AsyncSaver> Enqueue: qsize=88 file=preferences\STSSeenCards
+05:28:17.039 INFO helpers.AsyncSaver> Enqueue: qsize=89 file=preferences\STSUnlocks
+05:28:17.040 INFO helpers.AsyncSaver> Enqueue: qsize=90 file=preferences\STSSeenCards
+05:28:17.040 INFO helpers.AsyncSaver> Enqueue: qsize=91 file=preferences\STSUnlocks
+05:28:17.040 INFO helpers.AsyncSaver> Enqueue: qsize=92 file=preferences\STSSeenCards
+05:28:17.041 INFO helpers.AsyncSaver> Enqueue: qsize=93 file=preferences\STSUnlocks
+05:28:17.041 INFO helpers.AsyncSaver> Enqueue: qsize=94 file=preferences\STSSeenCards
+05:28:17.042 INFO helpers.AsyncSaver> Enqueue: qsize=95 file=preferences\STSUnlocks
+05:28:17.042 INFO helpers.AsyncSaver> Enqueue: qsize=96 file=preferences\STSSeenCards
+05:28:17.042 INFO helpers.AsyncSaver> Enqueue: qsize=97 file=preferences\STSUnlocks
+05:28:17.043 INFO helpers.AsyncSaver> Enqueue: qsize=98 file=preferences\STSSeenCards
+05:28:17.043 INFO helpers.AsyncSaver> Enqueue: qsize=99 file=preferences\STSUnlocks
+05:28:17.043 INFO helpers.AsyncSaver> Enqueue: qsize=100 file=preferences\STSSeenCards
+05:28:17.044 INFO helpers.AsyncSaver> Enqueue: qsize=101 file=preferences\STSUnlocks
+05:28:17.044 INFO helpers.AsyncSaver> Enqueue: qsize=102 file=preferences\STSSeenCards
+05:28:17.045 INFO helpers.AsyncSaver> Enqueue: qsize=103 file=preferences\STSUnlocks
+05:28:17.045 INFO helpers.AsyncSaver> Enqueue: qsize=104 file=preferences\STSSeenCards
+05:28:17.045 INFO helpers.AsyncSaver> Enqueue: qsize=105 file=preferences\STSUnlocks
+05:28:17.046 INFO helpers.AsyncSaver> Enqueue: qsize=106 file=preferences\STSSeenCards
+05:28:17.046 INFO helpers.AsyncSaver> Enqueue: qsize=107 file=preferences\STSUnlocks
+05:28:17.046 INFO helpers.AsyncSaver> Enqueue: qsize=108 file=preferences\STSSeenCards
+05:28:17.047 INFO helpers.AsyncSaver> Enqueue: qsize=109 file=preferences\STSUnlocks
+05:28:17.047 INFO helpers.AsyncSaver> Enqueue: qsize=110 file=preferences\STSSeenCards
+05:28:17.048 INFO helpers.AsyncSaver> Enqueue: qsize=111 file=preferences\STSUnlocks
+05:28:17.048 INFO helpers.AsyncSaver> Enqueue: qsize=112 file=preferences\STSSeenCards
+05:28:17.048 INFO helpers.AsyncSaver> Enqueue: qsize=113 file=preferences\STSUnlocks
+05:28:17.049 INFO HollowMod.hollowMod> Done adding cards!
+05:28:17.124 INFO panels.TopPanel> Twitch Integration enabled due to presence of 'twitch.properties` file.
+05:28:17.125 INFO panels.TopPanel> Not starting twitch integration because enabled=false
+05:28:17.222 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.222 INFO helpers.FileSaver> Dequeue: qsize=113 file=preferences\STSSeenCards
+05:28:17.223 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.233 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.233 INFO helpers.FileSaver> Dequeue: qsize=112 file=preferences\STSUnlocks
+05:28:17.234 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.245 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.245 INFO helpers.FileSaver> Dequeue: qsize=111 file=preferences\STSSeenCards
+05:28:17.245 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.379 INFO helpers.CardLibrary> Card load time: 330ms with 350 cards
+05:28:17.379 INFO basemod.BaseMod> begin editing relics
+05:28:17.380 INFO HollowMod.hollowMod> Adding relics
+05:28:17.381 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/relics/placeholder_relic.png
+05:28:17.382 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/relics/outline/placeholder_relic.png
+05:28:17.384 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/relics/mask.png
+05:28:17.385 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/relics/outline/mask.png
+05:28:17.387 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/relics/delicate_flower.png
+05:28:17.388 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/relics/outline/delicate_flower.png
+05:28:17.390 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/relics/jonis_blessing.png
+05:28:17.391 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/relics/outline/jonis_blessing.png
+05:28:17.394 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/relics/BottledPlaceholder.png
+05:28:17.395 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/relics/outline/BottledPlaceholder.png
+05:28:17.399 INFO helpers.AsyncSaver> Enqueue: qsize=111 file=preferences\STSSeenRelics
+05:28:17.399 INFO HollowMod.hollowMod> Done adding relics!
+05:28:17.473 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.473 INFO helpers.FileSaver> Dequeue: qsize=111 file=preferences\STSUnlocks
+05:28:17.474 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.485 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.486 INFO helpers.FileSaver> Dequeue: qsize=110 file=preferences\STSSeenCards
+05:28:17.486 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.497 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.497 INFO helpers.FileSaver> Dequeue: qsize=109 file=preferences\STSUnlocks
+05:28:17.498 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.512 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.512 INFO helpers.FileSaver> Dequeue: qsize=108 file=preferences\STSSeenCards
+05:28:17.512 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.525 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.526 INFO helpers.FileSaver> Dequeue: qsize=107 file=preferences\STSUnlocks
+05:28:17.526 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.538 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.538 INFO helpers.FileSaver> Dequeue: qsize=106 file=preferences\STSSeenCards
+05:28:17.539 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.550 INFO helpers.RelicLibrary> Relic load time: 150ms
+05:28:17.551 INFO input.InputHelper> Setting input processor to Scroller
+05:28:17.552 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.553 INFO helpers.FileSaver> Dequeue: qsize=105 file=preferences\STSUnlocks
+05:28:17.553 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.565 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.565 INFO helpers.FileSaver> Dequeue: qsize=104 file=preferences\STSSeenCards
+05:28:17.566 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.577 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.577 INFO helpers.FileSaver> Dequeue: qsize=103 file=preferences\STSUnlocks
+05:28:17.578 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.581 INFO basemod.BaseMod> postCreateStartingRelics for: IRONCLAD
+05:28:17.582 INFO basemod.BaseMod> postCreateStartingRelics adding [ Burning Blood ]
+05:28:17.592 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.592 INFO helpers.FileSaver> Dequeue: qsize=102 file=preferences\STSSeenCards
+05:28:17.592 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.605 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.605 INFO helpers.FileSaver> Dequeue: qsize=101 file=preferences\STSUnlocks
+05:28:17.605 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.618 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.619 INFO helpers.FileSaver> Dequeue: qsize=100 file=preferences\STSSeenCards
+05:28:17.619 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.631 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.631 INFO helpers.FileSaver> Dequeue: qsize=99 file=preferences\STSUnlocks
+05:28:17.631 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.645 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.646 INFO helpers.FileSaver> Dequeue: qsize=98 file=preferences\STSSeenCards
+05:28:17.646 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.660 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.661 INFO helpers.FileSaver> Dequeue: qsize=97 file=preferences\STSUnlocks
+05:28:17.661 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.674 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.675 INFO helpers.FileSaver> Dequeue: qsize=96 file=preferences\STSSeenCards
+05:28:17.675 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.690 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.690 INFO helpers.FileSaver> Dequeue: qsize=95 file=preferences\STSUnlocks
+05:28:17.691 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.695 INFO basemod.BaseMod> postCreateStartingRelics for: THE_SILENT
+05:28:17.695 INFO basemod.BaseMod> postCreateStartingRelics adding [ Ring of the Snake ]
+05:28:17.705 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.705 INFO helpers.FileSaver> Dequeue: qsize=94 file=preferences\STSSeenCards
+05:28:17.705 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.719 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.719 INFO helpers.FileSaver> Dequeue: qsize=93 file=preferences\STSUnlocks
+05:28:17.720 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.733 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.734 INFO helpers.FileSaver> Dequeue: qsize=92 file=preferences\STSSeenCards
+05:28:17.734 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.747 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.747 INFO helpers.FileSaver> Dequeue: qsize=91 file=preferences\STSUnlocks
+05:28:17.748 INFO basemod.BaseMod> postCreateStartingRelics for: DEFECT
+05:28:17.748 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.748 INFO basemod.BaseMod> postCreateStartingRelics adding [ Cracked Core ]
+05:28:17.763 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.763 INFO helpers.FileSaver> Dequeue: qsize=90 file=preferences\STSSeenCards
+05:28:17.763 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.778 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.779 INFO helpers.FileSaver> Dequeue: qsize=89 file=preferences\STSUnlocks
+05:28:17.779 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.791 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.791 INFO helpers.FileSaver> Dequeue: qsize=88 file=preferences\STSSeenCards
+05:28:17.791 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.793 INFO basemod.BaseMod> begin editing characters
+05:28:17.793 INFO HollowMod.hollowMod> Beginning to edit characters. Add THE_BUGKNIGHT
+05:28:17.802 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.802 INFO helpers.FileSaver> Dequeue: qsize=87 file=preferences\STSUnlocks
+05:28:17.803 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.813 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.813 INFO helpers.FileSaver> Dequeue: qsize=86 file=preferences\STSSeenCards
+05:28:17.813 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.825 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.825 INFO helpers.FileSaver> Dequeue: qsize=85 file=preferences\STSUnlocks
+05:28:17.825 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.840 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.840 INFO helpers.FileSaver> Dequeue: qsize=84 file=preferences\STSSeenCards
+05:28:17.841 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.851 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.851 INFO helpers.FileSaver> Dequeue: qsize=83 file=preferences\STSUnlocks
+05:28:17.851 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.864 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.864 INFO helpers.FileSaver> Dequeue: qsize=82 file=preferences\STSSeenCards
+05:28:17.864 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.874 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.874 INFO helpers.FileSaver> Dequeue: qsize=81 file=preferences\STSUnlocks
+05:28:17.874 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.882 INFO basemod.BaseMod> postCreateStartingRelics for: THE_BUGKNIGHT
+05:28:17.882 INFO basemod.BaseMod> postCreateStartingRelics adding [ HollowMod:VesselMask ]
+05:28:17.886 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.887 INFO helpers.FileSaver> Dequeue: qsize=80 file=preferences\STSSeenCards
+05:28:17.887 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.895 INFO HollowMod.hollowMod> Begin loading starter Deck Strings
+05:28:17.895 INFO HollowMod.hollowMod> loading dashes
+05:28:17.895 INFO HollowMod.hollowMod> loading focuses
+05:28:17.895 INFO HollowMod.hollowMod> loading testcards
+05:28:17.895 INFO HollowMod.hollowMod> Begin loading starter Deck Strings
+05:28:17.896 INFO HollowMod.hollowMod> loading dashes
+05:28:17.896 INFO HollowMod.hollowMod> loading focuses
+05:28:17.896 INFO HollowMod.hollowMod> loading testcards
+05:28:17.901 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.901 INFO helpers.FileSaver> Dequeue: qsize=79 file=preferences\STSUnlocks
+05:28:17.902 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.915 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.915 INFO helpers.FileSaver> Dequeue: qsize=78 file=preferences\STSSeenCards
+05:28:17.916 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.928 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.928 INFO helpers.FileSaver> Dequeue: qsize=77 file=preferences\STSUnlocks
+05:28:17.929 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.938 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.938 INFO helpers.FileSaver> Dequeue: qsize=76 file=preferences\STSSeenCards
+05:28:17.938 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.947 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.948 INFO helpers.FileSaver> Dequeue: qsize=75 file=preferences\STSUnlocks
+05:28:17.948 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.959 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:17.959 INFO helpers.FileSaver> Dequeue: qsize=74 file=preferences\STSSeenCards
+05:28:17.959 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:17.960 INFO HollowMod.hollowMod> Beginning to edit potions
+05:28:17.961 INFO HollowMod.hollowMod> Done editing potions
+05:28:17.961 INFO HollowMod.hollowMod> Added THE_BUGKNIGHT
+05:28:17.966 INFO core.CardCrawlGame> [GC] BEFORE: 335074216
+05:28:18.097 INFO core.CardCrawlGame> [GC] AFTER: 99423952
+05:28:18.097 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.098 INFO basemod.BaseMod> publishPostInitialize
+05:28:18.098 INFO helpers.FileSaver> Dequeue: qsize=73 file=preferences\STSUnlocks
+05:28:18.098 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.210 INFO basemod.BaseMod> registerModBadge : BaseMod
+05:28:18.211 INFO basemod.ModBadge> initialized mod badge for: BaseMod
+05:28:18.211 INFO basemod.ModBadge> setup hooks for BaseMod mod badge
+05:28:18.213 INFO basemod.BaseMod> initializeUnderscoreCardIDs
+05:28:18.213 INFO basemod.BaseMod> initializeUnderscorePotionIDs
+05:28:18.214 INFO basemod.BaseMod> initializeUnderscoreEventIDs
+05:28:18.215 INFO basemod.BaseMod> initializeUnderscoreRelicIDs
+05:28:18.215 INFO basemod.BaseMod> initializeEncounters
+05:28:18.263 INFO HollowMod.hollowMod> Loading badge image and mod options
+05:28:18.263 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/BadgeBug.png
+05:28:18.276 INFO basemod.BaseMod> registerModBadge : Hollow Mod
+05:28:18.276 INFO basemod.ModBadge> initialized mod badge for: Hollow Mod
+05:28:18.277 INFO basemod.ModBadge> setup hooks for Hollow Mod mod badge
+05:28:18.277 INFO HollowMod.hollowMod> Done loading badge Image and mod options
+05:28:18.280 INFO controller.CInputHelper> [CONTROLLER] Utilizing DirectInput
+05:28:18.282 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.282 INFO helpers.FileSaver> Dequeue: qsize=72 file=preferences\STSSeenCards
+05:28:18.283 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.292 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.292 INFO helpers.FileSaver> Dequeue: qsize=71 file=preferences\STSUnlocks
+05:28:18.293 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.301 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.301 INFO helpers.FileSaver> Dequeue: qsize=70 file=preferences\STSSeenCards
+05:28:18.301 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.313 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.313 INFO helpers.FileSaver> Dequeue: qsize=69 file=preferences\STSUnlocks
+05:28:18.313 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.324 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.324 INFO helpers.FileSaver> Dequeue: qsize=68 file=preferences\STSSeenCards
+05:28:18.325 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.325 INFO controller.CInputHelper> [CONTROLLER] No controllers detected
+05:28:18.334 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.335 INFO helpers.FileSaver> Dequeue: qsize=67 file=preferences\STSUnlocks
+05:28:18.335 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.345 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.345 INFO helpers.FileSaver> Dequeue: qsize=66 file=preferences\STSSeenCards
+05:28:18.346 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.360 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.360 INFO helpers.FileSaver> Dequeue: qsize=65 file=preferences\STSUnlocks
+05:28:18.360 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.369 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.369 INFO helpers.FileSaver> Dequeue: qsize=64 file=preferences\STSSeenCards
+05:28:18.369 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.379 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.379 INFO helpers.FileSaver> Dequeue: qsize=63 file=preferences\STSUnlocks
+05:28:18.379 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.388 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.388 INFO helpers.FileSaver> Dequeue: qsize=62 file=preferences\STSSeenCards
+05:28:18.388 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.397 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.397 INFO helpers.FileSaver> Dequeue: qsize=61 file=preferences\STSUnlocks
+05:28:18.398 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.406 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.406 INFO helpers.FileSaver> Dequeue: qsize=60 file=preferences\STSSeenCards
+05:28:18.407 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.415 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.415 INFO helpers.FileSaver> Dequeue: qsize=59 file=preferences\STSUnlocks
+05:28:18.415 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.424 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.425 INFO helpers.FileSaver> Dequeue: qsize=58 file=preferences\STSSeenCards
+05:28:18.425 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.434 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.434 INFO helpers.FileSaver> Dequeue: qsize=57 file=preferences\STSUnlocks
+05:28:18.434 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.445 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.445 INFO helpers.FileSaver> Dequeue: qsize=56 file=preferences\STSSeenCards
+05:28:18.445 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.457 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.457 INFO helpers.FileSaver> Dequeue: qsize=55 file=preferences\STSUnlocks
+05:28:18.457 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.467 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.467 INFO helpers.FileSaver> Dequeue: qsize=54 file=preferences\STSSeenCards
+05:28:18.467 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.477 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.477 INFO helpers.FileSaver> Dequeue: qsize=53 file=preferences\STSUnlocks
+05:28:18.478 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.488 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.488 INFO helpers.FileSaver> Dequeue: qsize=52 file=preferences\STSSeenCards
+05:28:18.488 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.497 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.497 INFO helpers.FileSaver> Dequeue: qsize=51 file=preferences\STSUnlocks
+05:28:18.498 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.507 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.507 INFO helpers.FileSaver> Dequeue: qsize=50 file=preferences\STSSeenCards
+05:28:18.507 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.516 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.517 INFO helpers.FileSaver> Dequeue: qsize=49 file=preferences\STSUnlocks
+05:28:18.517 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.528 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.528 INFO helpers.FileSaver> Dequeue: qsize=48 file=preferences\STSSeenCards
+05:28:18.529 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.540 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.541 INFO helpers.FileSaver> Dequeue: qsize=47 file=preferences\STSUnlocks
+05:28:18.541 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.554 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.554 INFO helpers.FileSaver> Dequeue: qsize=46 file=preferences\STSSeenCards
+05:28:18.555 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.567 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.567 INFO helpers.FileSaver> Dequeue: qsize=45 file=preferences\STSUnlocks
+05:28:18.567 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.583 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.583 INFO helpers.FileSaver> Dequeue: qsize=44 file=preferences\STSSeenCards
+05:28:18.583 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.599 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.599 INFO helpers.FileSaver> Dequeue: qsize=43 file=preferences\STSUnlocks
+05:28:18.599 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.610 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.610 INFO helpers.FileSaver> Dequeue: qsize=42 file=preferences\STSSeenCards
+05:28:18.611 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.624 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.624 INFO helpers.FileSaver> Dequeue: qsize=41 file=preferences\STSUnlocks
+05:28:18.624 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.635 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.635 INFO helpers.FileSaver> Dequeue: qsize=40 file=preferences\STSSeenCards
+05:28:18.635 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.648 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.648 INFO helpers.FileSaver> Dequeue: qsize=39 file=preferences\STSUnlocks
+05:28:18.649 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.660 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.660 INFO helpers.FileSaver> Dequeue: qsize=38 file=preferences\STSSeenCards
+05:28:18.660 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.670 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.671 INFO helpers.FileSaver> Dequeue: qsize=37 file=preferences\STSUnlocks
+05:28:18.671 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.680 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.680 INFO helpers.FileSaver> Dequeue: qsize=36 file=preferences\STSSeenCards
+05:28:18.680 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.688 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.689 INFO helpers.FileSaver> Dequeue: qsize=35 file=preferences\STSUnlocks
+05:28:18.689 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.697 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.697 INFO helpers.FileSaver> Dequeue: qsize=34 file=preferences\STSSeenCards
+05:28:18.697 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.706 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.706 INFO helpers.FileSaver> Dequeue: qsize=33 file=preferences\STSUnlocks
+05:28:18.706 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.715 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.715 INFO helpers.FileSaver> Dequeue: qsize=32 file=preferences\STSSeenCards
+05:28:18.715 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.724 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.724 INFO helpers.FileSaver> Dequeue: qsize=31 file=preferences\STSUnlocks
+05:28:18.724 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.733 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.734 INFO helpers.FileSaver> Dequeue: qsize=30 file=preferences\STSSeenCards
+05:28:18.734 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.743 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.743 INFO helpers.FileSaver> Dequeue: qsize=29 file=preferences\STSUnlocks
+05:28:18.743 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.753 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.753 INFO helpers.FileSaver> Dequeue: qsize=28 file=preferences\STSSeenCards
+05:28:18.753 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.762 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.763 INFO helpers.FileSaver> Dequeue: qsize=27 file=preferences\STSUnlocks
+05:28:18.763 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.772 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.772 INFO helpers.FileSaver> Dequeue: qsize=26 file=preferences\STSSeenCards
+05:28:18.772 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.781 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.782 INFO helpers.FileSaver> Dequeue: qsize=25 file=preferences\STSUnlocks
+05:28:18.782 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.792 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.793 INFO helpers.FileSaver> Dequeue: qsize=24 file=preferences\STSSeenCards
+05:28:18.793 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.803 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.803 INFO helpers.FileSaver> Dequeue: qsize=23 file=preferences\STSUnlocks
+05:28:18.803 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.813 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.813 INFO helpers.FileSaver> Dequeue: qsize=22 file=preferences\STSSeenCards
+05:28:18.813 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.823 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.823 INFO helpers.FileSaver> Dequeue: qsize=21 file=preferences\STSUnlocks
+05:28:18.823 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.834 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.834 INFO helpers.FileSaver> Dequeue: qsize=20 file=preferences\STSSeenCards
+05:28:18.834 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.844 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.844 INFO helpers.FileSaver> Dequeue: qsize=19 file=preferences\STSUnlocks
+05:28:18.844 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.853 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.854 INFO helpers.FileSaver> Dequeue: qsize=18 file=preferences\STSSeenCards
+05:28:18.854 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.863 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.864 INFO helpers.FileSaver> Dequeue: qsize=17 file=preferences\STSUnlocks
+05:28:18.864 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.874 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.874 INFO helpers.FileSaver> Dequeue: qsize=16 file=preferences\STSSeenCards
+05:28:18.874 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.883 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.884 INFO helpers.FileSaver> Dequeue: qsize=15 file=preferences\STSUnlocks
+05:28:18.884 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.893 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.894 INFO helpers.FileSaver> Dequeue: qsize=14 file=preferences\STSSeenCards
+05:28:18.894 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.904 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.904 INFO helpers.FileSaver> Dequeue: qsize=13 file=preferences\STSUnlocks
+05:28:18.904 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.914 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.914 INFO helpers.FileSaver> Dequeue: qsize=12 file=preferences\STSSeenCards
+05:28:18.914 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.925 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.926 INFO helpers.FileSaver> Dequeue: qsize=11 file=preferences\STSUnlocks
+05:28:18.926 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.935 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.935 INFO helpers.FileSaver> Dequeue: qsize=10 file=preferences\STSSeenCards
+05:28:18.935 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.945 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.945 INFO helpers.FileSaver> Dequeue: qsize=9 file=preferences\STSUnlocks
+05:28:18.945 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.955 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.955 INFO helpers.FileSaver> Dequeue: qsize=8 file=preferences\STSSeenCards
+05:28:18.955 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.963 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.963 INFO helpers.FileSaver> Dequeue: qsize=7 file=preferences\STSUnlocks
+05:28:18.964 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.973 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.973 INFO helpers.FileSaver> Dequeue: qsize=6 file=preferences\STSSeenCards
+05:28:18.973 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.982 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:18.982 INFO helpers.FileSaver> Dequeue: qsize=5 file=preferences\STSUnlocks
+05:28:18.982 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.992 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:18.992 INFO helpers.FileSaver> Dequeue: qsize=4 file=preferences\STSSeenCards
+05:28:18.992 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:19.002 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:19.002 INFO helpers.FileSaver> Dequeue: qsize=3 file=preferences\STSUnlocks
+05:28:19.003 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:19.012 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:19.012 INFO helpers.FileSaver> Dequeue: qsize=2 file=preferences\STSSeenCards
+05:28:19.013 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:19.023 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenCards
+05:28:19.023 INFO helpers.FileSaver> Dequeue: qsize=1 file=preferences\STSUnlocks
+05:28:19.023 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:19.032 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:28:19.032 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\STSSeenRelics
+05:28:19.032 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenRelics
+05:28:19.038 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenRelics
+05:28:25.459 INFO basemod.BaseMod> publishAddCustomModeMods
+05:28:25.462 INFO HollowMod.hollowMod> Begin loading starter Deck Strings
+05:28:25.463 INFO HollowMod.hollowMod> loading dashes
+05:28:25.463 INFO HollowMod.hollowMod> loading focuses
+05:28:25.463 INFO HollowMod.hollowMod> loading testcards
+05:28:25.463 INFO HollowMod.hollowMod> Begin loading starter Deck Strings
+05:28:25.464 INFO HollowMod.hollowMod> loading dashes
+05:28:25.464 INFO HollowMod.hollowMod> loading focuses
+05:28:25.464 INFO HollowMod.hollowMod> loading testcards
+05:28:25.584 INFO unlock.UnlockTracker> RED UNLOCKS:   0/9
+05:28:25.584 INFO unlock.UnlockTracker> GREEN UNLOCKS: 0/9
+05:28:25.584 INFO unlock.UnlockTracker> BLUE UNLOCKS: 0/9
+05:28:25.584 INFO unlock.UnlockTracker> RELIC UNLOCKS: 0/18
+05:28:25.584 INFO unlock.UnlockTracker> CARDS SEEN:    326/350
+05:28:25.584 INFO unlock.UnlockTracker> RELICS SEEN:   71/162
+05:28:25.584 INFO basemod.BaseMod> publish post refresh - refreshing unlocks
+05:28:25.585 INFO compendium.CardLibraryScreen> Initializing card library screen.
+05:28:25.590 INFO basemod.BaseMod> postCreateStartingRelics for: IRONCLAD
+05:28:25.590 INFO basemod.BaseMod> postCreateStartingRelics adding [ Burning Blood ]
+05:28:25.626 INFO characters.CharacterManager> Successfully recreated IRONCLAD
+05:28:25.629 INFO basemod.BaseMod> postCreateStartingRelics for: THE_SILENT
+05:28:25.629 INFO basemod.BaseMod> postCreateStartingRelics adding [ Ring of the Snake ]
+05:28:25.662 INFO characters.CharacterManager> Successfully recreated THE_SILENT
+05:28:25.664 INFO basemod.BaseMod> postCreateStartingRelics for: DEFECT
+05:28:25.665 INFO basemod.BaseMod> postCreateStartingRelics adding [ Cracked Core ]
+05:28:25.700 INFO characters.CharacterManager> Successfully recreated DEFECT
+05:28:25.727 INFO basemod.BaseMod> postCreateStartingRelics for: THE_BUGKNIGHT
+05:28:25.727 INFO basemod.BaseMod> postCreateStartingRelics adding [ HollowMod:VesselMask ]
+05:28:25.732 INFO HollowMod.hollowMod> Begin loading starter Deck Strings
+05:28:25.732 INFO HollowMod.hollowMod> loading dashes
+05:28:25.732 INFO HollowMod.hollowMod> loading focuses
+05:28:25.732 INFO HollowMod.hollowMod> loading testcards
+05:28:25.733 INFO HollowMod.hollowMod> Begin loading starter Deck Strings
+05:28:25.733 INFO HollowMod.hollowMod> loading dashes
+05:28:25.733 INFO HollowMod.hollowMod> loading focuses
+05:28:25.733 INFO HollowMod.hollowMod> loading testcards
+05:28:25.789 INFO characters.CharacterManager> Successfully recreated THE_BUGKNIGHT
+05:28:25.789 INFO HollowMod.hollowMod> Begin loading starter Deck Strings
+05:28:25.790 INFO HollowMod.hollowMod> loading dashes
+05:28:25.790 INFO HollowMod.hollowMod> loading focuses
+05:28:25.790 INFO HollowMod.hollowMod> loading testcards
+05:28:25.790 INFO HollowMod.hollowMod> Begin loading starter Deck Strings
+05:28:25.790 INFO HollowMod.hollowMod> loading dashes
+05:28:25.790 INFO HollowMod.hollowMod> loading focuses
+05:28:25.790 INFO HollowMod.hollowMod> loading testcards
+05:28:25.799 INFO saveAndContinue.SaveAndContinue> IRONCLAD save does NOT exist!
+05:28:25.799 INFO saveAndContinue.SaveAndContinue> THE_SILENT save does NOT exist!
+05:28:25.799 INFO saveAndContinue.SaveAndContinue> DEFECT save does NOT exist!
+05:28:25.811 INFO saveAndContinue.SaveAndContinue> saves\THE_BUGKNIGHT.autosave save file was successfully loaded.
+05:28:25.811 INFO saveAndContinue.SaveAndContinue> THE_BUGKNIGHT save exists and is valid.
+05:28:36.105 INFO saveAndContinue.SaveAndContinue> IRONCLAD save does NOT exist!
+05:28:36.105 INFO saveAndContinue.SaveAndContinue> THE_SILENT save does NOT exist!
+05:28:36.106 INFO saveAndContinue.SaveAndContinue> DEFECT save does NOT exist!
+05:28:36.110 INFO saveAndContinue.SaveAndContinue> saves\THE_BUGKNIGHT.autosave save file was successfully loaded.
+05:28:36.110 INFO saveAndContinue.SaveAndContinue> THE_BUGKNIGHT save exists and is valid.
+05:28:37.107 INFO basemod.BaseMod> publishPreStartGame
+05:28:37.138 INFO basemod.BaseMod> postCreateStartingRelics for: THE_BUGKNIGHT
+05:28:37.138 INFO basemod.BaseMod> postCreateStartingRelics adding [ HollowMod:VesselMask ]
+05:28:37.143 INFO HollowMod.hollowMod> Begin loading starter Deck Strings
+05:28:37.143 INFO HollowMod.hollowMod> loading dashes
+05:28:37.143 INFO HollowMod.hollowMod> loading focuses
+05:28:37.143 INFO HollowMod.hollowMod> loading testcards
+05:28:37.143 INFO HollowMod.hollowMod> Begin loading starter Deck Strings
+05:28:37.143 INFO HollowMod.hollowMod> loading dashes
+05:28:37.144 INFO HollowMod.hollowMod> loading focuses
+05:28:37.144 INFO HollowMod.hollowMod> loading testcards
+05:28:37.202 INFO characters.CharacterManager> Successfully recreated THE_BUGKNIGHT
+05:28:37.206 INFO saveAndContinue.SaveAndContinue> saves\THE_BUGKNIGHT.autosave save file was successfully loaded.
+05:28:37.207 INFO core.CardCrawlGame> HollowMod:NailStrikeStart, 0
+05:28:37.207 INFO core.CardCrawlGame> HollowMod:NailStrikeStart, 0
+05:28:37.207 INFO core.CardCrawlGame> HollowMod:NailStrikeStart, 0
+05:28:37.207 INFO core.CardCrawlGame> HollowMod:QuickDashStart, 1
+05:28:37.208 INFO core.CardCrawlGame> HollowMod:QuickDashStart, 0
+05:28:37.208 INFO core.CardCrawlGame> HollowMod:FocusHealStart, 0
+05:28:37.209 INFO core.CardCrawlGame> HollowMod:FocusHealStart, 0
+05:28:37.209 INFO core.CardCrawlGame> HollowMod:Weaversong, 0
+05:28:37.209 INFO core.CardCrawlGame> HollowMod:DungDefenderAura, 0
+05:28:37.209 INFO core.CardCrawlGame> HollowMod:MothsMistake, 1
+05:28:37.210 INFO core.CardCrawlGame> HollowMod:PogoStrike, 0
+05:28:37.210 INFO core.CardCrawlGame> HollowMod:CloakDash, 1
+05:28:37.210 INFO core.CardCrawlGame> HollowMod:HuntersJournal, 0
+05:28:37.210 INFO core.CardCrawlGame> HollowMod:MothsMistake, 1
+05:28:37.210 INFO core.CardCrawlGame> HollowMod:StalwartShell, 0
+05:28:37.211 INFO core.CardCrawlGame> HollowMod:Hiveblood, 1
+05:28:37.211 INFO core.CardCrawlGame> HollowMod:DashSlash, 0
+05:28:37.211 INFO core.CardCrawlGame> HollowMod:MothsMistake, 1
+05:28:37.212 INFO core.CardCrawlGame> HollowMod:DoubleDash, 1
+05:28:37.212 INFO core.CardCrawlGame> HollowMod:TaintedHusks, 1
+05:28:37.212 INFO core.CardCrawlGame> HollowMod:Grubsong, 0
+05:28:37.213 INFO core.CardCrawlGame> HollowMod:StalwartShell, 1
+05:28:37.213 INFO core.CardCrawlGame> HollowMod:MonarchWings, 1
+05:28:37.213 INFO core.CardCrawlGame> HollowMod:MantisMark, 1
+05:28:37.214 INFO basemod.BaseMod> publish on relic get
+05:28:37.216 INFO basemod.BaseMod> publish on relic get
+05:28:37.217 INFO basemod.BaseMod> publish on relic get
+05:28:37.217 INFO basemod.BaseMod> publish on relic get
+05:28:37.218 INFO basemod.BaseMod> publish on relic get
+05:28:37.219 INFO basemod.BaseMod> publish on relic get
+05:28:37.220 INFO basemod.BaseMod> publish on relic get
+05:28:37.221 INFO basemod.BaseMod> publish on relic get
+05:28:37.222 INFO basemod.BaseMod> publish on relic get
+05:28:37.223 INFO basemod.BaseMod> publish on relic get
+05:28:37.228 INFO basemod.BaseMod> publish on potion get
+05:28:37.228 INFO basemod.BaseMod> publish on potion get
+05:28:37.229 INFO basemod.BaseMod> publish on potion get
+05:28:37.330 INFO dungeons.AbstractDungeon> Loading seeds: -7835223498649860579
+05:28:37.330 INFO dungeons.AbstractDungeon> Monster seed:  69
+05:28:37.330 INFO dungeons.AbstractDungeon> Event seed:    6
+05:28:37.331 INFO dungeons.AbstractDungeon> Merchant seed: 54
+05:28:37.331 INFO dungeons.AbstractDungeon> Card seed:     319
+05:28:37.331 INFO dungeons.AbstractDungeon> Treasure seed: 19
+05:28:37.331 INFO dungeons.AbstractDungeon> Relic seed:    10
+05:28:37.331 INFO dungeons.AbstractDungeon> Potion seed:   88
+05:28:37.336 INFO dungeons.AbstractDungeon> [BOSS] Automaton
+05:28:37.354 INFO dungeons.AbstractDungeon> INIT CARD POOL
+05:28:37.356 INFO dungeons.AbstractDungeon> COLORLESS CARDS: 35
+05:28:37.356 INFO dungeons.AbstractDungeon> CURSE CARDS: 10
+05:28:37.356 INFO dungeons.AbstractDungeon> Cardpool load time: 1ms
+05:28:37.357 INFO PotionLibrary.PotionHelperInitialize> Adding HollowMod:PlaceholderPotion
+05:28:37.360 INFO dungeons.AbstractDungeon> Dungeon load time: 119ms
+05:28:37.360 INFO basemod.BaseMod> publishStartGame
+05:28:37.361 INFO basemod.BaseMod> mapDensityMultiplier: 1.0
+05:28:37.710 INFO scenes.AbstractScene> Fading in ambiance: AMBIANCE_CITY
+05:28:37.910 INFO dungeons.AbstractDungeon> Generating Room Types! There are 59 rooms:
+05:28:37.910 INFO dungeons.AbstractDungeon>  SHOP (5%): 3
+05:28:37.911 INFO dungeons.AbstractDungeon>  REST (12%): 7
+05:28:37.911 INFO dungeons.AbstractDungeon>  TRSRE (0%): 0
+05:28:37.911 INFO dungeons.AbstractDungeon>  ELITE (8%): 5
+05:28:37.912 INFO dungeons.AbstractDungeon>  EVNT (22%): 13
+05:28:37.912 INFO dungeons.AbstractDungeon>  MSTR (53%): 31
+05:28:37.916 INFO map.RoomTypeAssigner> #### Unassigned Rooms:
+05:28:37.917 INFO dungeons.AbstractDungeon> Generated the following dungeon map:
+05:28:37.917 INFO dungeons.AbstractDungeon> 
+           /  / | \     \  
+14        R  R  R  R     R 
+        /   \|/  /     /   
+13     E     $  $     ?    
+       |   / |    \     \  
+12     M  E  ?     M     ? 
+       |    \| \   |     | 
+11     M     M  ?  M     M 
+       |   / |/  /     /   
+10     R  ?  M  R     ?    
+         \  \|/     /      
+9         ?  M     R       
+        /    | \   |       
+8      T     T  T  T       
+         \ /  / |  |       
+7         E  R  M  M       
+        / |/    |  |       
+6      R  M     E  M       
+       |/   \     \|       
+5      E     R     R       
+       |     | \   | \     
+4      M     M  ?  M  M    
+       | \   |    \  \  \  
+3      M  ?  $     M  M  M 
+         \|/     /    |  | 
+2         M     ?     M  ? 
+          | \ /       |/   
+1         ?  M        ?    
+        /  /        /      
+0      M  M        M       
+05:28:37.918 INFO dungeons.AbstractDungeon> Game Seed: -7835223498649860579
+05:28:37.918 INFO dungeons.AbstractDungeon> Map generation time: 13ms
+05:28:37.918 INFO dungeons.AbstractDungeon> Loading into: 4,11
+05:28:37.918 INFO dungeons.AbstractDungeon> UNSPECIFIED CASE: NONE
+05:28:37.920 INFO dungeons.AbstractDungeon> MONSTER: Centurion and Healer
+05:28:39.555 INFO unlock.UnlockTracker> Already seen: HollowMod:HowlingWraiths
+05:28:39.555 INFO unlock.UnlockTracker> Already seen: HollowMod:CloakDash
+05:28:39.555 INFO unlock.UnlockTracker> Already seen: HollowMod:DashSlash
+05:28:39.555 INFO unlock.UnlockTracker> Already seen: HollowMod:ChannelNail
+05:28:40.848 INFO helpers.CardHelper> Obtained HollowMod:DashSlash (COMMON). You have 2 now
+05:28:40.848 INFO unlock.UnlockTracker> Already seen: HollowMod:DashSlash
+05:28:41.247 INFO audio.MusicMaster> Properly faded out MENU
+05:28:43.564 INFO dungeons.AbstractDungeon> Removing monster: Centurion and Healer from monster list.
+05:28:43.564 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:28:43.564 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:28:43.564 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:28:43.565 INFO saveAndContinue.SaveFile> Next Room: com.megacrit.cardcrawl.rooms.MonsterRoom
+05:28:43.570 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=saves\THE_BUGKNIGHT.autosave
+05:28:43.571 INFO dungeons.AbstractDungeon> MONSTER: 3 Cultists
+05:28:43.576 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:28:43.576 INFO helpers.FileSaver> Dequeue: qsize=0 file=saves\THE_BUGKNIGHT.autosave
+05:28:43.576 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\saves\THE_BUGKNIGHT.autosave
+05:28:43.596 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\saves\THE_BUGKNIGHT.autosave
+05:28:44.707 INFO basemod.BaseMod> publish start battle
+05:28:44.708 INFO basemod.BaseMod> powers modified
+05:28:46.518 INFO basemod.BaseMod> publishPostDraw
+05:28:46.728 INFO basemod.BaseMod> publishPostDraw
+05:28:46.928 INFO basemod.BaseMod> publishPostDraw
+05:28:47.143 INFO basemod.BaseMod> publishPostDraw
+05:28:47.360 INFO basemod.BaseMod> publishPostDraw
+05:28:47.562 INFO basemod.BaseMod> publishPostDraw
+05:28:48.761 INFO basemod.BaseMod> publish on card use
+05:28:48.762 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/mothsmistake_power84.png
+05:28:48.769 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/mothsmistake_power32.png
+05:28:48.794 INFO basemod.BaseMod> publish on post power apply
+05:28:48.806 INFO basemod.BaseMod> powers modified
+05:28:50.043 INFO basemod.BaseMod> publish on card use
+05:28:50.077 INFO basemod.BaseMod> publish on post power apply
+05:28:50.087 INFO basemod.BaseMod> powers modified
+05:28:53.210 INFO basemod.BaseMod> publish on card use
+05:28:53.210 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/Infection_power84.png
+05:28:53.219 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/Infection_power32.png
+05:28:53.220 INFO HollowMod.hollowMod> spawn infection power loaded
+05:28:53.727 INFO basemod.BaseMod> publish on post power apply
+05:28:53.737 INFO basemod.BaseMod> powers modified
+05:28:54.177 INFO basemod.BaseMod> publish on post power apply
+05:28:54.191 INFO basemod.BaseMod> powers modified
+05:28:54.993 INFO basemod.BaseMod> publish on post power apply
+05:28:54.993 INFO basemod.BaseMod> powers modified
+05:28:55.812 INFO basemod.BaseMod> publish on post power apply
+05:28:55.812 INFO basemod.BaseMod> powers modified
+05:28:59.361 INFO basemod.BaseMod> publish on card use
+05:28:59.860 INFO basemod.BaseMod> publishPostDraw
+05:29:00.060 INFO basemod.BaseMod> publishPostDraw
+05:29:00.093 INFO basemod.BaseMod> publishPostExhaust
+05:29:01.477 INFO basemod.BaseMod> publish on card use
+05:29:01.510 INFO basemod.BaseMod> publish on post power apply
+05:29:01.517 INFO basemod.BaseMod> powers modified
+05:29:01.777 INFO basemod.BaseMod> publishPostExhaust
+05:29:07.777 INFO basemod.BaseMod> publish on card use
+05:29:07.777 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/VoidGod_power84.png
+05:29:07.786 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/VoidGod_power32.png
+05:29:07.787 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/soulmeter_power84.png
+05:29:07.788 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/soulmeter_power32.png
+05:29:07.788 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/Soulvial84.png
+05:29:07.789 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/Soulvial32.png
+05:29:08.061 INFO basemod.BaseMod> publish on post power apply
+05:29:08.061 INFO basemod.BaseMod> powers modified
+05:29:09.094 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/brokenvessel_power84.png
+05:29:09.103 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/brokenvessel_power32.png
+05:29:09.227 INFO basemod.BaseMod> publish on Player Damaged
+05:29:09.378 INFO basemod.BaseMod> powers modified
+05:29:11.610 INFO unique.PoisonLoseHpAction> Cultist HAS 49 HP.
+05:29:12.077 INFO unique.PoisonLoseHpAction> Cultist HAS 43 HP.
+05:29:12.543 INFO unique.PoisonLoseHpAction> Cultist HAS 51 HP.
+05:29:13.011 INFO basemod.BaseMod> publishPreMonsterTurn
+05:29:14.610 INFO basemod.BaseMod> publish on post power apply
+05:29:14.610 INFO basemod.BaseMod> powers modified
+05:29:14.894 INFO basemod.BaseMod> publishPreMonsterTurn
+05:29:16.493 INFO basemod.BaseMod> publish on post power apply
+05:29:16.493 INFO basemod.BaseMod> powers modified
+05:29:16.777 INFO basemod.BaseMod> publishPreMonsterTurn
+05:29:19.427 INFO basemod.BaseMod> publish on post power apply
+05:29:19.427 INFO basemod.BaseMod> powers modified
+05:29:21.243 INFO basemod.BaseMod> publish on Player Lose Block
+05:29:21.244 INFO basemod.BaseMod> publishPostEnergyRecharge
+05:29:21.244 INFO HollowMod.hollowMod> spawn infection power loaded
+05:29:21.478 INFO basemod.BaseMod> publishPostDraw
+05:29:21.693 INFO basemod.BaseMod> publishPostDraw
+05:29:21.911 INFO basemod.BaseMod> publishPostDraw
+05:29:22.128 INFO basemod.BaseMod> publishPostDraw
+05:29:22.344 INFO basemod.BaseMod> publishPostDraw
+05:29:22.544 INFO basemod.BaseMod> publishPostDraw
+05:29:22.578 INFO basemod.BaseMod> publish on post power apply
+05:29:22.578 INFO basemod.BaseMod> powers modified
+05:29:22.861 INFO basemod.BaseMod> publish on post power apply
+05:29:22.861 INFO basemod.BaseMod> powers modified
+05:29:23.143 INFO basemod.BaseMod> publish on post power apply
+05:29:23.143 INFO basemod.BaseMod> powers modified
+05:29:23.411 INFO basemod.BaseMod> publish on post power apply
+05:29:23.411 INFO HollowMod.hollowMod> stack power loaded
+05:29:23.411 INFO basemod.BaseMod> powers modified
+05:29:28.043 INFO basemod.BaseMod> publish on card use
+05:29:28.077 INFO basemod.BaseMod> publish on post power apply
+05:29:28.085 INFO basemod.BaseMod> powers modified
+05:29:28.343 INFO basemod.BaseMod> publishPostExhaust
+05:29:30.593 INFO basemod.BaseMod> publish on card use
+05:29:31.077 INFO basemod.BaseMod> publishPostDraw
+05:29:31.077 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/soultwister_power84.png
+05:29:31.086 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/soultwister_power32.png
+05:29:31.111 INFO basemod.BaseMod> publish on post power apply
+05:29:31.120 INFO basemod.BaseMod> powers modified
+05:29:36.343 INFO basemod.BaseMod> publish on card use
+05:29:36.343 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/monarchwing_power84.png
+05:29:36.353 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/monarchwing_power32.png
+05:29:36.643 INFO basemod.BaseMod> publish on post power apply
+05:29:36.643 INFO basemod.BaseMod> powers modified
+05:29:38.427 INFO basemod.BaseMod> publish on card use
+05:29:40.628 INFO basemod.BaseMod> publish on card use
+05:29:40.927 INFO basemod.BaseMod> publish on post power apply
+05:29:40.927 INFO basemod.BaseMod> powers modified
+05:29:42.344 INFO basemod.BaseMod> publish on Player Damaged
+05:29:42.511 INFO basemod.BaseMod> powers modified
+05:29:44.760 INFO unique.PoisonLoseHpAction> Cultist HAS 39 HP.
+05:29:45.228 INFO unique.PoisonLoseHpAction> Cultist HAS 32 HP.
+05:29:45.694 INFO unique.PoisonLoseHpAction> Cultist HAS 49 HP.
+05:29:46.178 INFO basemod.BaseMod> publishPreMonsterTurn
+05:29:48.378 INFO basemod.BaseMod> publish on Player Damaged
+05:29:48.561 INFO basemod.BaseMod> publishPreMonsterTurn
+05:29:50.777 INFO basemod.BaseMod> publish on Player Damaged
+05:29:50.944 INFO basemod.BaseMod> publishPreMonsterTurn
+05:29:53.143 INFO basemod.BaseMod> publish on Player Damaged
+05:29:54.843 INFO basemod.BaseMod> powers modified
+05:29:55.110 INFO basemod.BaseMod> publish on Player Lose Block
+05:29:55.110 INFO basemod.BaseMod> publishPostEnergyRecharge
+05:29:55.110 INFO HollowMod.hollowMod> spawn infection power loaded
+05:29:55.143 INFO basemod.BaseMod> publish on post power apply
+05:29:55.143 INFO basemod.BaseMod> powers modified
+05:29:55.428 INFO basemod.BaseMod> publish on post power apply
+05:29:55.428 INFO basemod.BaseMod> powers modified
+05:29:55.710 INFO basemod.BaseMod> publish on post power apply
+05:29:55.710 INFO basemod.BaseMod> powers modified
+05:29:56.260 INFO basemod.BaseMod> powers modified
+05:29:56.578 INFO basemod.BaseMod> publishPostDraw
+05:29:56.794 INFO basemod.BaseMod> publishPostDraw
+05:29:57.011 INFO basemod.BaseMod> publishPostDraw
+05:29:57.211 INFO basemod.BaseMod> publishPostDraw
+05:29:57.427 INFO basemod.BaseMod> publishPostDraw
+05:29:57.643 INFO basemod.BaseMod> publishPostDraw
+05:29:57.677 INFO basemod.BaseMod> publish on post power apply
+05:29:57.677 INFO basemod.BaseMod> powers modified
+05:29:57.960 INFO basemod.BaseMod> publish on post power apply
+05:29:57.960 INFO basemod.BaseMod> powers modified
+05:29:58.227 INFO basemod.BaseMod> publish on post power apply
+05:29:58.227 INFO basemod.BaseMod> powers modified
+05:29:58.510 INFO basemod.BaseMod> publish on post power apply
+05:29:58.510 INFO HollowMod.hollowMod> stack power loaded
+05:29:58.520 INFO basemod.BaseMod> powers modified
+05:30:03.311 INFO basemod.BaseMod> publish on card use
+05:30:03.544 INFO basemod.BaseMod> publishPostDraw
+05:30:03.760 INFO basemod.BaseMod> publishPostDraw
+05:30:03.793 INFO basemod.BaseMod> publishPostExhaust
+05:30:05.628 INFO basemod.BaseMod> publish on card use
+05:30:05.661 INFO basemod.BaseMod> publish on post power apply
+05:30:05.661 INFO basemod.BaseMod> powers modified
+05:30:46.243 INFO basemod.BaseMod> publish on card use
+05:30:46.277 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/baldur_power84.png
+05:30:46.287 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/baldur_power32.png
+05:30:46.578 INFO basemod.BaseMod> powers modified
+05:30:47.243 INFO basemod.BaseMod> publishPostExhaust
+05:30:50.578 INFO basemod.BaseMod> publish on card use
+05:30:50.610 INFO basemod.BaseMod> publish on post power apply
+05:30:50.610 INFO basemod.BaseMod> powers modified
+05:30:50.878 INFO basemod.BaseMod> publishPostExhaust
+05:30:51.677 INFO basemod.BaseMod> publish on card use
+05:30:51.677 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/dungdefender_power84.png
+05:30:51.687 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/dungdefender_power32.png
+05:30:51.978 INFO basemod.BaseMod> publish on post power apply
+05:30:51.978 INFO basemod.BaseMod> powers modified
+05:30:54.594 INFO basemod.BaseMod> publish on pre potion use
+05:30:54.594 INFO basemod.BaseMod> publish on post potion use
+05:30:55.811 INFO basemod.BaseMod> publish on Player Damaged
+05:30:55.978 INFO basemod.BaseMod> powers modified
+05:30:58.310 INFO unique.PoisonLoseHpAction> Cultist HAS 32 HP.
+05:30:58.794 INFO unique.PoisonLoseHpAction> Cultist HAS 25 HP.
+05:30:59.260 INFO unique.PoisonLoseHpAction> Cultist HAS 42 HP.
+05:30:59.727 INFO basemod.BaseMod> publishPreMonsterTurn
+05:31:01.928 INFO basemod.BaseMod> publish on Player Damaged
+05:31:02.129 INFO basemod.BaseMod> publish on post power apply
+05:31:02.129 INFO basemod.BaseMod> powers modified
+05:31:02.377 INFO basemod.BaseMod> publishPreMonsterTurn
+05:31:04.577 INFO basemod.BaseMod> publish on Player Damaged
+05:31:04.778 INFO basemod.BaseMod> publish on post power apply
+05:31:04.778 INFO basemod.BaseMod> powers modified
+05:31:05.044 INFO basemod.BaseMod> publishPreMonsterTurn
+05:31:07.260 INFO basemod.BaseMod> publish on Player Damaged
+05:31:08.977 INFO basemod.BaseMod> powers modified
+05:31:09.243 INFO basemod.BaseMod> publish on post power apply
+05:31:09.243 INFO basemod.BaseMod> powers modified
+05:31:09.494 INFO basemod.BaseMod> publish on Player Lose Block
+05:31:09.494 INFO basemod.BaseMod> publishPostEnergyRecharge
+05:31:09.494 INFO HollowMod.hollowMod> spawn infection power loaded
+05:31:09.527 INFO basemod.BaseMod> powers modified
+05:31:09.660 INFO basemod.BaseMod> publish on post power apply
+05:31:09.660 INFO basemod.BaseMod> powers modified
+05:31:09.927 INFO basemod.BaseMod> publish on post power apply
+05:31:09.927 INFO basemod.BaseMod> powers modified
+05:31:10.193 INFO basemod.BaseMod> publish on post power apply
+05:31:10.193 INFO basemod.BaseMod> powers modified
+05:31:10.693 INFO basemod.BaseMod> publishPostDraw
+05:31:10.894 INFO basemod.BaseMod> publishPostDraw
+05:31:12.144 INFO basemod.BaseMod> publishPostDraw
+05:31:12.345 INFO basemod.BaseMod> publishPostDraw
+05:31:12.560 INFO basemod.BaseMod> publishPostDraw
+05:31:12.760 INFO basemod.BaseMod> publishPostDraw
+05:31:12.793 INFO basemod.BaseMod> publish on post power apply
+05:31:12.793 INFO basemod.BaseMod> powers modified
+05:31:13.077 INFO basemod.BaseMod> publish on post power apply
+05:31:13.077 INFO basemod.BaseMod> powers modified
+05:31:13.343 INFO basemod.BaseMod> publish on post power apply
+05:31:13.343 INFO basemod.BaseMod> powers modified
+05:31:13.610 INFO basemod.BaseMod> publish on post power apply
+05:31:13.610 INFO HollowMod.hollowMod> stack power loaded
+05:31:13.610 INFO basemod.BaseMod> powers modified
+05:31:19.660 INFO basemod.BaseMod> publish on card use
+05:31:19.693 INFO basemod.BaseMod> publish on post power apply
+05:31:19.693 INFO basemod.BaseMod> powers modified
+05:31:19.960 INFO basemod.BaseMod> publishPostExhaust
+05:31:23.394 INFO basemod.BaseMod> publish on card use
+05:31:24.227 INFO basemod.BaseMod> publish on post power apply
+05:31:24.227 INFO basemod.BaseMod> powers modified
+05:31:28.028 INFO basemod.BaseMod> publish on card use
+05:31:29.628 INFO basemod.BaseMod> publish on card use
+05:31:29.628 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/weaversong_power84.png
+05:31:29.638 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/weaversong_power32.png
+05:31:29.660 INFO basemod.BaseMod> publish on post power apply
+05:31:29.660 INFO basemod.BaseMod> powers modified
+05:31:30.910 INFO basemod.BaseMod> publish on card use
+05:31:30.910 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/grubsong_power84.png
+05:31:30.921 INFO util.TextureLoader> DefaultMod | Loading Texture: HollowModResources/images/powers/grubsong_power32.png
+05:31:30.944 INFO basemod.BaseMod> publish on post power apply
+05:31:30.944 INFO basemod.BaseMod> powers modified
+05:31:32.228 INFO basemod.BaseMod> publish on card use
+05:31:32.777 INFO basemod.BaseMod> publish on post power apply
+05:31:32.777 INFO basemod.BaseMod> powers modified
+05:31:33.394 INFO basemod.BaseMod> publish on Player Damaged
+05:31:33.561 INFO basemod.BaseMod> powers modified
+05:31:34.243 INFO basemod.BaseMod> publish on post power apply
+05:31:34.243 INFO basemod.BaseMod> powers modified
+05:31:35.794 INFO unique.PoisonLoseHpAction> Cultist HAS 9 HP.
+05:31:36.121 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:31:36.121 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:31:36.121 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:31:36.165 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:31:36.294 INFO unique.PoisonLoseHpAction> Cultist HAS 13 HP.
+05:31:36.619 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:31:36.619 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:31:36.620 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:31:36.663 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:31:36.762 INFO unique.PoisonLoseHpAction> Cultist HAS 18 HP.
+05:31:37.086 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:31:37.086 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:31:37.086 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:31:37.130 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:31:37.912 INFO monsters.AbstractMonster> Disposing Atlas...
+05:31:38.428 INFO monsters.AbstractMonster> Disposing Atlas...
+05:31:38.894 INFO basemod.BaseMod> publish post combat
+05:31:38.894 INFO monsters.AbstractMonster> Disposing Atlas...
+05:31:39.129 INFO rooms.AbstractRoom> MONSTERS SLAIN 12
+05:31:39.129 INFO rooms.AbstractRoom> POTION CHANCE: 30
+05:31:39.130 INFO saveAndContinue.SaveFile> Next Room: com.megacrit.cardcrawl.rooms.MonsterRoom
+05:31:39.135 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=saves\THE_BUGKNIGHT.autosave
+05:31:39.135 INFO helpers.FileSaver> Dequeue: qsize=0 file=saves\THE_BUGKNIGHT.autosave
+05:31:39.136 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\saves\THE_BUGKNIGHT.autosave
+05:31:39.181 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\saves\THE_BUGKNIGHT.autosave
+05:31:46.761 INFO unlock.UnlockTracker> Already seen: HollowMod:MonarchWings
+05:31:46.761 INFO unlock.UnlockTracker> Already seen: HollowMod:InfectionAssault
+05:31:46.761 INFO unlock.UnlockTracker> Already seen: HollowMod:ThornsofAgony
+05:31:46.761 INFO unlock.UnlockTracker> Already seen: HollowMod:SoulStrike
+05:31:52.617 INFO helpers.TipHelper> ! block
+05:32:00.703 INFO helpers.CardHelper> Obtained HollowMod:InfectionAssault (UNCOMMON). Creating new map entry.
+05:32:00.703 INFO unlock.UnlockTracker> Already seen: HollowMod:InfectionAssault
+05:32:03.619 INFO dungeons.AbstractDungeon> Removing monster: 3 Cultists from monster list.
+05:32:03.619 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:32:03.619 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:32:03.619 INFO saveAndContinue.SaveFile> Next Room: com.megacrit.cardcrawl.rooms.ShopRoom
+05:32:03.619 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:32:03.624 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=saves\THE_BUGKNIGHT.autosave
+05:32:03.624 INFO audio.MusicMaster> Playing SHOP
+05:32:03.670 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:32:03.670 INFO helpers.FileSaver> Dequeue: qsize=0 file=saves\THE_BUGKNIGHT.autosave
+05:32:03.670 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\saves\THE_BUGKNIGHT.autosave
+05:32:03.674 INFO shop.ShopScreen> ROLL 64
+05:32:03.674 INFO dungeons.AbstractDungeon> Returning UNCOMMON relic
+05:32:03.675 INFO shop.ShopScreen> ROLL 56
+05:32:03.675 INFO dungeons.AbstractDungeon> Returning UNCOMMON relic
+05:32:03.677 INFO shop.ShopScreen> ROLL 48
+05:32:03.677 INFO dungeons.AbstractDungeon> Returning UNCOMMON relic
+05:32:03.678 INFO shop.ShopScreen> ROLL 75
+05:32:03.678 INFO dungeons.AbstractDungeon> Returning UNCOMMON relic
+05:32:03.679 INFO dungeons.AbstractDungeon> Returning SHOP relic
+05:32:03.680 INFO basemod.BaseMod> postCreateShopRelics for: [com.megacrit.cardcrawl.shop.StoreRelic@36b7d43c, com.megacrit.cardcrawl.shop.StoreRelic@28d45c0e, com.megacrit.cardcrawl.shop.StoreRelic@423c903a]
+05:32:03.682 INFO basemod.BaseMod> postCreateShopPotions for: [com.megacrit.cardcrawl.shop.StorePotion@7faeebe7, com.megacrit.cardcrawl.shop.StorePotion@6933a419, com.megacrit.cardcrawl.shop.StorePotion@517e5d3]
+05:32:03.689 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\saves\THE_BUGKNIGHT.autosave
+05:32:04.607 INFO unlock.UnlockTracker> Already seen: HollowMod:RecoilStrike
+05:32:04.607 INFO unlock.UnlockTracker> Already seen: HollowMod:WraithStrike
+05:32:04.608 INFO unlock.UnlockTracker> Already seen: HollowMod:SoulTotem
+05:32:04.608 INFO unlock.UnlockTracker> Already seen: HollowMod:SoulSplash
+05:32:04.608 INFO unlock.UnlockTracker> Already seen: HollowMod:ThornsofAgony
+05:32:04.608 INFO unlock.UnlockTracker> Already seen: PanicButton
+05:32:04.608 INFO unlock.UnlockTracker> Already seen: Chrysalis
+05:32:04.608 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\STSSeenRelics
+05:32:04.609 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\STSSeenRelics
+05:32:04.609 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\STSSeenRelics
+05:32:04.609 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenRelics
+05:32:04.653 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenRelics
+05:32:04.653 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\STSSeenRelics
+05:32:04.654 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenRelics
+05:32:04.662 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenRelics
+05:32:28.173 INFO core.CardCrawlGame> PAUSE()
+05:32:42.925 INFO core.CardCrawlGame> RESUME()
+05:32:52.918 INFO unlock.UnlockTracker> Already seen: HollowMod:RecoilStrike
+05:32:52.918 INFO unlock.UnlockTracker> Already seen: HollowMod:WraithStrike
+05:32:52.918 INFO unlock.UnlockTracker> Already seen: HollowMod:SoulTotem
+05:32:52.918 INFO unlock.UnlockTracker> Already seen: HollowMod:SoulSplash
+05:32:52.918 INFO unlock.UnlockTracker> Already seen: HollowMod:ThornsofAgony
+05:32:52.919 INFO unlock.UnlockTracker> Already seen: PanicButton
+05:32:52.919 INFO unlock.UnlockTracker> Already seen: Chrysalis
+05:32:57.285 INFO characters.AnimatedNpc> Disposing merchant atlas.
+05:32:57.285 INFO audio.MainMusic> Unsilencing TheCity
+05:32:58.101 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:32:58.101 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:32:58.101 INFO saveAndContinue.SaveFile> Next Room: com.megacrit.cardcrawl.rooms.RestRoom
+05:32:58.101 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:32:58.105 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=saves\THE_BUGKNIGHT.autosave
+05:32:58.159 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:32:58.159 INFO helpers.FileSaver> Dequeue: qsize=0 file=saves\THE_BUGKNIGHT.autosave
+05:32:58.159 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\saves\THE_BUGKNIGHT.autosave
+05:32:58.174 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\saves\THE_BUGKNIGHT.autosave
+05:33:01.296 INFO audio.MusicMaster> Properly faded out SHOP
+05:33:01.563 INFO basemod.BaseMod> publishPostCampfire
+05:33:14.980 INFO audio.MainMusic> Unsilencing TheCity
+05:33:18.879 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:33:18.879 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:33:18.879 INFO saveAndContinue.SaveFile> Next Room: com.megacrit.cardcrawl.rooms.MonsterRoomBoss
+05:33:18.879 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:33:18.881 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=saves\THE_BUGKNIGHT.autosave
+05:33:18.891 INFO rooms.MonsterRoomBoss> BOSSES: 2
+05:33:18.893 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:33:18.893 INFO helpers.FileSaver> Dequeue: qsize=0 file=saves\THE_BUGKNIGHT.autosave
+05:33:18.893 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\saves\THE_BUGKNIGHT.autosave
+05:33:18.893 INFO audio.MainMusic> Unsilencing TheCity
+05:33:18.894 INFO scenes.AbstractScene> Fading out ambiance: AMBIANCE_CITY
+05:33:18.894 INFO audio.MusicMaster> Playing BOSS_CITY
+05:33:18.901 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\STSSeenBosses
+05:33:18.902 INFO monsters.MonsterGroup> MONSTER GROUP getMonster(): Could not find monster: TheCollector
+05:33:18.902 INFO scenes.AbstractScene> Fading in ambiance: AMBIANCE_CITY
+05:33:18.909 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\saves\THE_BUGKNIGHT.autosave
+05:33:18.911 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\STSSeenBosses
+05:33:18.911 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenBosses
+05:33:18.920 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenBosses
+05:33:19.913 INFO basemod.BaseMod> publish on post power apply
+05:33:19.913 INFO basemod.BaseMod> powers modified
+05:33:20.274 INFO basemod.BaseMod> publish start battle
+05:33:20.274 INFO basemod.BaseMod> powers modified
+05:33:21.780 INFO basemod.BaseMod> publishPostDraw
+05:33:21.996 INFO basemod.BaseMod> publishPostDraw
+05:33:22.195 INFO basemod.BaseMod> publishPostDraw
+05:33:22.398 INFO basemod.BaseMod> publishPostDraw
+05:33:22.613 INFO basemod.BaseMod> publishPostDraw
+05:33:22.829 INFO basemod.BaseMod> publishPostDraw
+05:33:26.812 INFO basemod.BaseMod> publish on card use
+05:33:27.263 INFO basemod.BaseMod> publishPostDraw
+05:33:27.296 INFO basemod.BaseMod> publish on post power apply
+05:33:27.308 INFO basemod.BaseMod> powers modified
+05:33:30.845 INFO basemod.BaseMod> publish on card use
+05:33:30.879 INFO basemod.BaseMod> publish on post power apply
+05:33:30.879 INFO basemod.BaseMod> powers modified
+05:33:32.929 INFO basemod.BaseMod> publish on card use
+05:33:33.429 INFO basemod.BaseMod> publishPostDraw
+05:33:33.645 INFO basemod.BaseMod> publishPostDraw
+05:33:33.679 INFO basemod.BaseMod> publishPostExhaust
+05:33:41.862 INFO basemod.BaseMod> publish on card use
+05:33:41.895 INFO basemod.BaseMod> publish on post power apply
+05:33:41.895 INFO basemod.BaseMod> powers modified
+05:33:49.529 INFO basemod.BaseMod> publish on card use
+05:33:49.565 INFO basemod.BaseMod> publish on post power apply
+05:33:49.565 INFO basemod.BaseMod> powers modified
+05:33:49.830 INFO basemod.BaseMod> publishPostExhaust
+05:33:52.530 INFO basemod.BaseMod> publish on card use
+05:33:55.446 INFO basemod.BaseMod> publishPreMonsterTurn
+05:33:55.456 INFO basemod.BaseMod> powers modified
+05:33:55.458 INFO basemod.BaseMod> powers modified
+05:33:57.180 INFO basemod.BaseMod> publish on post power apply
+05:33:57.180 INFO basemod.BaseMod> powers modified
+05:33:57.629 INFO basemod.BaseMod> publish on post power apply
+05:33:57.629 INFO basemod.BaseMod> powers modified
+05:33:59.463 INFO basemod.BaseMod> publish on Player Lose Block
+05:33:59.463 INFO basemod.BaseMod> publishPostEnergyRecharge
+05:33:59.680 INFO basemod.BaseMod> publishPostDraw
+05:33:59.895 INFO basemod.BaseMod> publishPostDraw
+05:34:00.113 INFO basemod.BaseMod> publishPostDraw
+05:34:00.330 INFO basemod.BaseMod> publishPostDraw
+05:34:00.530 INFO basemod.BaseMod> publishPostDraw
+05:34:00.745 INFO basemod.BaseMod> publishPostDraw
+05:34:04.245 INFO basemod.BaseMod> publish on card use
+05:34:04.245 INFO HollowMod.hollowMod> spawn infection power loaded
+05:34:04.746 INFO basemod.BaseMod> publish on post power apply
+05:34:04.746 INFO basemod.BaseMod> powers modified
+05:34:05.195 INFO basemod.BaseMod> publish on post power apply
+05:34:05.413 INFO basemod.BaseMod> powers modified
+05:34:06.495 INFO basemod.BaseMod> publish on post power apply
+05:34:06.729 INFO basemod.BaseMod> powers modified
+05:34:07.812 INFO basemod.BaseMod> publish on post power apply
+05:34:07.812 INFO basemod.BaseMod> powers modified
+05:34:08.040 INFO basemod.BaseMod> publish on card use
+05:34:08.063 INFO basemod.BaseMod> publish on post power apply
+05:34:08.063 INFO basemod.BaseMod> powers modified
+05:34:14.462 INFO basemod.BaseMod> publish on card use
+05:34:14.812 INFO basemod.BaseMod> publish on Player Damaged
+05:34:14.962 INFO basemod.BaseMod> publish on post power apply
+05:34:14.962 INFO basemod.BaseMod> powers modified
+05:34:15.230 INFO basemod.BaseMod> publishPostExhaust
+05:34:15.413 INFO basemod.BaseMod> publish on post power apply
+05:34:15.413 INFO basemod.BaseMod> powers modified
+05:34:21.195 INFO basemod.BaseMod> publish on card use
+05:34:21.746 INFO basemod.BaseMod> publish on post power apply
+05:34:21.746 INFO basemod.BaseMod> powers modified
+05:34:23.374 INFO core.CardCrawlGame> PAUSE()
+05:34:25.278 INFO core.CardCrawlGame> RESUME()
+05:34:26.713 INFO basemod.BaseMod> publish on card use
+05:34:27.046 INFO basemod.BaseMod> powers modified
+05:34:27.712 INFO basemod.BaseMod> publishPostExhaust
+05:34:28.348 INFO basemod.BaseMod> publish on Player Damaged
+05:34:28.496 INFO basemod.BaseMod> powers modified
+05:34:29.030 INFO basemod.BaseMod> publish on post power apply
+05:34:29.030 INFO basemod.BaseMod> powers modified
+05:34:30.595 INFO unique.PoisonLoseHpAction> Orb HAS 41 HP.
+05:34:31.062 INFO basemod.BaseMod> publishPreMonsterTurn
+05:34:32.646 INFO cards.CardGroup> ERROR: No cards left for type: DRAW_PILE
+05:34:33.912 INFO basemod.BaseMod> publish on post power apply
+05:34:33.912 INFO basemod.BaseMod> powers modified
+05:34:34.195 INFO basemod.BaseMod> publishPreMonsterTurn
+05:34:36.146 INFO basemod.BaseMod> publish on Player Damaged
+05:34:36.396 INFO basemod.BaseMod> publish on Player Damaged
+05:34:36.579 INFO basemod.BaseMod> publishPreMonsterTurn
+05:34:38.179 INFO cards.CardGroup> ERROR: No cards left for type: DRAW_PILE
+05:34:39.430 INFO basemod.BaseMod> publish on post power apply
+05:34:39.430 INFO basemod.BaseMod> powers modified
+05:34:41.263 INFO basemod.BaseMod> publish on Player Lose Block
+05:34:41.263 INFO basemod.BaseMod> publishPostEnergyRecharge
+05:34:41.263 INFO HollowMod.hollowMod> spawn infection power loaded
+05:34:41.480 INFO basemod.BaseMod> publishPostDraw
+05:34:41.695 INFO basemod.BaseMod> publishPostDraw
+05:34:41.895 INFO basemod.BaseMod> publishPostDraw
+05:34:42.095 INFO basemod.BaseMod> publishPostDraw
+05:34:42.313 INFO basemod.BaseMod> publishPostDraw
+05:34:42.513 INFO basemod.BaseMod> publishPostDraw
+05:34:42.546 INFO basemod.BaseMod> publish on post power apply
+05:34:42.546 INFO basemod.BaseMod> powers modified
+05:34:42.829 INFO basemod.BaseMod> publish on post power apply
+05:34:43.379 INFO basemod.BaseMod> powers modified
+05:34:43.713 INFO basemod.BaseMod> publish on post power apply
+05:34:43.713 INFO basemod.BaseMod> powers modified
+05:34:43.995 INFO basemod.BaseMod> publish on post power apply
+05:34:43.995 INFO HollowMod.hollowMod> stack power loaded
+05:34:43.995 INFO basemod.BaseMod> powers modified
+05:34:44.279 INFO basemod.BaseMod> publish on card use
+05:34:44.312 INFO basemod.BaseMod> publish on post power apply
+05:34:44.312 INFO basemod.BaseMod> powers modified
+05:34:45.546 INFO basemod.BaseMod> publish on card use
+05:34:45.579 INFO basemod.BaseMod> publish on post power apply
+05:34:45.579 INFO basemod.BaseMod> powers modified
+05:34:45.862 INFO basemod.BaseMod> publishPostExhaust
+05:34:49.362 INFO basemod.BaseMod> publish on card use
+05:34:49.680 INFO basemod.BaseMod> publish on post power apply
+05:34:49.680 INFO basemod.BaseMod> powers modified
+05:34:51.046 INFO basemod.BaseMod> publish on card use
+05:34:52.129 INFO basemod.BaseMod> publish on post power apply
+05:34:52.129 INFO basemod.BaseMod> powers modified
+05:34:53.113 INFO basemod.BaseMod> publish on card use
+05:34:54.213 INFO basemod.BaseMod> publish on post power apply
+05:34:54.213 INFO basemod.BaseMod> powers modified
+05:34:54.645 INFO basemod.BaseMod> publish on card use
+05:34:55.195 INFO basemod.BaseMod> publish on post power apply
+05:34:55.195 INFO basemod.BaseMod> powers modified
+05:34:56.162 INFO basemod.BaseMod> powers modified
+05:34:56.379 INFO basemod.BaseMod> publish on Player Damaged
+05:34:56.829 INFO basemod.BaseMod> powers modified
+05:34:57.346 INFO basemod.BaseMod> publish on post power apply
+05:34:57.346 INFO basemod.BaseMod> powers modified
+05:34:58.913 INFO unique.PoisonLoseHpAction> Orb HAS 13 HP.
+05:34:59.379 INFO unique.PoisonLoseHpAction> Orb HAS 54 HP.
+05:34:59.862 INFO basemod.BaseMod> publishPreMonsterTurn
+05:35:01.930 INFO basemod.BaseMod> publish on Player Damaged
+05:35:02.113 INFO basemod.BaseMod> publishPreMonsterTurn
+05:35:03.979 INFO basemod.BaseMod> publish on post power apply
+05:35:03.979 INFO basemod.BaseMod> powers modified
+05:35:04.279 INFO basemod.BaseMod> publishPreMonsterTurn
+05:35:06.345 INFO basemod.BaseMod> publish on Player Damaged
+05:35:08.045 INFO basemod.BaseMod> publish on Player Lose Block
+05:35:08.045 INFO basemod.BaseMod> publishPostEnergyRecharge
+05:35:08.046 INFO HollowMod.hollowMod> spawn infection power loaded
+05:35:08.363 INFO basemod.BaseMod> powers modified
+05:35:08.712 INFO basemod.BaseMod> publishPostDraw
+05:35:08.929 INFO basemod.BaseMod> publishPostDraw
+05:35:10.129 INFO basemod.BaseMod> publishPostDraw
+05:35:10.330 INFO basemod.BaseMod> publishPostDraw
+05:35:10.546 INFO basemod.BaseMod> publishPostDraw
+05:35:10.762 INFO basemod.BaseMod> publishPostDraw
+05:35:10.796 INFO basemod.BaseMod> publish on post power apply
+05:35:10.796 INFO basemod.BaseMod> powers modified
+05:35:11.080 INFO basemod.BaseMod> publish on post power apply
+05:35:11.080 INFO basemod.BaseMod> powers modified
+05:35:11.362 INFO basemod.BaseMod> publish on post power apply
+05:35:11.362 INFO basemod.BaseMod> powers modified
+05:35:11.629 INFO basemod.BaseMod> publish on post power apply
+05:35:11.629 INFO basemod.BaseMod> powers modified
+05:35:41.830 INFO basemod.BaseMod> publish on card use
+05:35:41.863 INFO basemod.BaseMod> publish on post power apply
+05:35:41.863 INFO basemod.BaseMod> powers modified
+05:35:42.130 INFO basemod.BaseMod> publishPostExhaust
+05:35:43.280 INFO basemod.BaseMod> publish on card use
+05:35:43.312 INFO basemod.BaseMod> publish on post power apply
+05:35:43.312 INFO basemod.BaseMod> powers modified
+05:35:43.595 INFO basemod.BaseMod> publishPostExhaust
+05:35:48.463 INFO basemod.BaseMod> publish on card use
+05:35:48.763 INFO basemod.BaseMod> publish on post power apply
+05:35:48.763 INFO basemod.BaseMod> powers modified
+05:35:57.812 INFO basemod.BaseMod> publish on card use
+05:35:58.596 INFO basemod.BaseMod> publish on post power apply
+05:35:58.596 INFO basemod.BaseMod> powers modified
+05:36:00.780 INFO basemod.BaseMod> publish on card use
+05:36:01.312 INFO basemod.BaseMod> publish on post power apply
+05:36:01.312 INFO basemod.BaseMod> powers modified
+05:36:02.645 INFO basemod.BaseMod> publish on card use
+05:36:03.196 INFO basemod.BaseMod> publish on post power apply
+05:36:03.196 INFO basemod.BaseMod> powers modified
+05:36:04.429 INFO basemod.BaseMod> publish on Player Damaged
+05:36:04.862 INFO basemod.BaseMod> powers modified
+05:36:05.112 INFO basemod.BaseMod> publish on post power apply
+05:36:05.112 INFO basemod.BaseMod> powers modified
+05:36:06.695 INFO unique.PoisonLoseHpAction> Orb HAS 5 HP.
+05:36:07.013 INFO unlock.UnlockTracker> Already seen: HollowMod:HuntersJournal
+05:36:07.013 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:36:07.013 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:36:07.014 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:36:07.097 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:36:07.179 INFO unique.PoisonLoseHpAction> Bronze Automaton HAS 290 HP.
+05:36:07.663 INFO unique.PoisonLoseHpAction> Orb HAS 17 HP.
+05:36:08.979 INFO basemod.BaseMod> publishPreMonsterTurn
+05:36:10.946 INFO basemod.BaseMod> publish on Player Damaged
+05:36:11.212 INFO basemod.BaseMod> publish on Player Damaged
+05:36:11.396 INFO basemod.BaseMod> publish on post power apply
+05:36:11.396 INFO basemod.BaseMod> powers modified
+05:36:11.680 INFO basemod.BaseMod> publish on post power apply
+05:36:11.680 INFO basemod.BaseMod> powers modified
+05:36:11.930 INFO basemod.BaseMod> publishPreMonsterTurn
+05:36:14.029 INFO basemod.BaseMod> publish on Player Damaged
+05:36:15.745 INFO basemod.BaseMod> powers modified
+05:36:16.013 INFO basemod.BaseMod> publish on post power apply
+05:36:16.013 INFO basemod.BaseMod> powers modified
+05:36:16.280 INFO basemod.BaseMod> publish on Player Lose Block
+05:36:16.280 INFO basemod.BaseMod> publishPostEnergyRecharge
+05:36:16.280 INFO HollowMod.hollowMod> spawn infection power loaded
+05:36:16.313 INFO basemod.BaseMod> powers modified
+05:36:16.630 INFO basemod.BaseMod> publishPostDraw
+05:36:16.830 INFO basemod.BaseMod> publishPostDraw
+05:36:17.046 INFO basemod.BaseMod> publishPostDraw
+05:36:17.245 INFO basemod.BaseMod> publishPostDraw
+05:36:17.463 INFO basemod.BaseMod> publishPostDraw
+05:36:17.663 INFO basemod.BaseMod> publishPostDraw
+05:36:17.696 INFO basemod.BaseMod> publish on post power apply
+05:36:17.696 INFO basemod.BaseMod> powers modified
+05:36:17.962 INFO basemod.BaseMod> publish on post power apply
+05:36:17.962 INFO basemod.BaseMod> powers modified
+05:36:18.246 INFO basemod.BaseMod> publish on post power apply
+05:36:18.254 INFO basemod.BaseMod> powers modified
+05:36:22.029 INFO basemod.BaseMod> publish on card use
+05:36:22.513 INFO basemod.BaseMod> publishPostDraw
+05:36:22.796 INFO basemod.BaseMod> publish on post power apply
+05:36:22.796 INFO basemod.BaseMod> powers modified
+05:36:24.229 INFO basemod.BaseMod> publish on card use
+05:36:24.229 INFO HollowMod.hollowMod> spawn infection power loaded
+05:36:24.729 INFO basemod.BaseMod> publish on post power apply
+05:36:24.729 INFO HollowMod.hollowMod> stack power loaded
+05:36:24.729 INFO basemod.BaseMod> powers modified
+05:36:25.179 INFO basemod.BaseMod> publish on post power apply
+05:36:25.179 INFO basemod.BaseMod> powers modified
+05:36:25.996 INFO basemod.BaseMod> publish on post power apply
+05:36:25.996 INFO basemod.BaseMod> powers modified
+05:36:26.796 INFO basemod.BaseMod> publish on post power apply
+05:36:26.796 INFO basemod.BaseMod> powers modified
+05:36:28.962 INFO basemod.BaseMod> publish on card use
+05:36:29.229 INFO basemod.BaseMod> publishPostDraw
+05:36:30.395 INFO basemod.BaseMod> publishPostDraw
+05:36:30.429 INFO basemod.BaseMod> publishPostExhaust
+05:36:32.262 INFO basemod.BaseMod> publish on card use
+05:36:32.380 INFO unlock.UnlockTracker> Already seen: HollowMod:MothsMistake
+05:36:32.380 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:36:32.380 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:36:32.380 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:36:32.391 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:36:32.745 INFO basemod.BaseMod> publishPostDraw
+05:36:33.030 INFO basemod.BaseMod> publish on post power apply
+05:36:33.030 INFO basemod.BaseMod> powers modified
+05:36:34.546 INFO basemod.BaseMod> publish on card use
+05:36:34.579 INFO basemod.BaseMod> publish on post power apply
+05:36:34.579 INFO basemod.BaseMod> powers modified
+05:36:37.213 INFO basemod.BaseMod> publish on card use
+05:36:37.530 INFO basemod.BaseMod> publish on post power apply
+05:36:37.530 INFO basemod.BaseMod> powers modified
+05:36:38.780 INFO basemod.BaseMod> publish on card use
+05:36:39.612 INFO basemod.BaseMod> publish on post power apply
+05:36:39.612 INFO basemod.BaseMod> powers modified
+05:36:43.362 INFO basemod.BaseMod> publish on card use
+05:36:43.429 INFO basemod.BaseMod> powers modified
+05:36:44.246 INFO basemod.BaseMod> publishPostExhaust
+05:36:45.830 INFO basemod.BaseMod> publish on Player Damaged
+05:36:45.995 INFO basemod.BaseMod> powers modified
+05:36:46.896 INFO basemod.BaseMod> publish on post power apply
+05:36:46.896 INFO basemod.BaseMod> powers modified
+05:36:48.462 INFO unique.PoisonLoseHpAction> Bronze Automaton HAS 260 HP.
+05:36:48.945 INFO basemod.BaseMod> publishPreMonsterTurn
+05:36:50.796 INFO basemod.BaseMod> publish on post power apply
+05:36:50.796 INFO basemod.BaseMod> powers modified
+05:36:52.598 INFO basemod.BaseMod> publish on Player Lose Block
+05:36:52.598 INFO basemod.BaseMod> publishPostEnergyRecharge
+05:36:52.599 INFO HollowMod.hollowMod> spawn infection power loaded
+05:36:52.913 INFO basemod.BaseMod> powers modified
+05:36:53.263 INFO basemod.BaseMod> publishPostDraw
+05:36:53.479 INFO basemod.BaseMod> publishPostDraw
+05:36:53.680 INFO basemod.BaseMod> publishPostDraw
+05:36:53.895 INFO basemod.BaseMod> publishPostDraw
+05:36:55.030 INFO basemod.BaseMod> publishPostDraw
+05:36:55.245 INFO basemod.BaseMod> publishPostDraw
+05:36:55.280 INFO basemod.BaseMod> publish on post power apply
+05:36:55.280 INFO basemod.BaseMod> powers modified
+05:36:55.545 INFO basemod.BaseMod> publish on post power apply
+05:36:55.545 INFO HollowMod.hollowMod> stack power loaded
+05:36:55.545 INFO basemod.BaseMod> powers modified
+05:37:13.196 INFO basemod.BaseMod> publish on card use
+05:37:13.196 INFO HollowMod.hollowMod> spawn infection power loaded
+05:37:13.729 INFO basemod.BaseMod> publish on post power apply
+05:37:13.729 INFO HollowMod.hollowMod> stack power loaded
+05:37:13.729 INFO basemod.BaseMod> powers modified
+05:37:14.179 INFO basemod.BaseMod> publish on post power apply
+05:37:14.179 INFO basemod.BaseMod> powers modified
+05:37:15.012 INFO basemod.BaseMod> publish on post power apply
+05:37:15.012 INFO basemod.BaseMod> powers modified
+05:37:15.813 INFO basemod.BaseMod> publish on post power apply
+05:37:15.813 INFO basemod.BaseMod> powers modified
+05:37:22.212 INFO basemod.BaseMod> publish on card use
+05:37:22.713 INFO basemod.BaseMod> publish on post power apply
+05:37:22.713 INFO basemod.BaseMod> powers modified
+05:37:25.110 INFO core.CardCrawlGame> PAUSE()
+05:37:56.414 INFO core.CardCrawlGame> RESUME()
+05:37:57.146 INFO basemod.BaseMod> publish on card use
+05:37:57.445 INFO basemod.BaseMod> publish on post power apply
+05:37:57.445 INFO basemod.BaseMod> powers modified
+05:38:00.229 INFO basemod.BaseMod> publish on card use
+05:38:01.045 INFO basemod.BaseMod> publish on post power apply
+05:38:01.045 INFO basemod.BaseMod> powers modified
+05:38:03.429 INFO basemod.BaseMod> publish on Player Damaged
+05:38:03.581 INFO basemod.BaseMod> powers modified
+05:38:04.229 INFO basemod.BaseMod> publish on post power apply
+05:38:04.229 INFO basemod.BaseMod> powers modified
+05:38:05.779 INFO unique.PoisonLoseHpAction> Bronze Automaton HAS 199 HP.
+05:38:06.245 INFO basemod.BaseMod> publishPreMonsterTurn
+05:38:09.446 INFO basemod.BaseMod> publish on Player Damaged
+05:38:11.162 INFO basemod.BaseMod> powers modified
+05:38:11.446 INFO basemod.BaseMod> publish on post power apply
+05:38:11.446 INFO basemod.BaseMod> powers modified
+05:38:11.712 INFO basemod.BaseMod> publish on Player Lose Block
+05:38:11.712 INFO basemod.BaseMod> publishPostEnergyRecharge
+05:38:11.712 INFO HollowMod.hollowMod> spawn infection power loaded
+05:38:11.746 INFO basemod.BaseMod> powers modified
+05:38:12.113 INFO basemod.BaseMod> publishPostDraw
+05:38:12.330 INFO basemod.BaseMod> publishPostDraw
+05:38:12.545 INFO basemod.BaseMod> publishPostDraw
+05:38:12.746 INFO basemod.BaseMod> publishPostDraw
+05:38:12.962 INFO basemod.BaseMod> publishPostDraw
+05:38:14.013 INFO basemod.BaseMod> publishPostDraw
+05:38:14.046 INFO basemod.BaseMod> publish on post power apply
+05:38:14.046 INFO basemod.BaseMod> powers modified
+05:38:14.329 INFO basemod.BaseMod> publish on post power apply
+05:38:14.329 INFO HollowMod.hollowMod> stack power loaded
+05:38:14.329 INFO basemod.BaseMod> powers modified
+05:38:21.946 INFO basemod.BaseMod> publish on card use
+05:38:22.413 INFO basemod.BaseMod> publishPostDraw
+05:38:22.696 INFO basemod.BaseMod> publish on post power apply
+05:38:22.696 INFO basemod.BaseMod> powers modified
+05:38:24.279 INFO basemod.BaseMod> publish on card use
+05:38:25.113 INFO basemod.BaseMod> publish on post power apply
+05:38:25.113 INFO basemod.BaseMod> powers modified
+05:38:25.545 INFO basemod.BaseMod> publish on card use
+05:38:25.863 INFO basemod.BaseMod> publish on post power apply
+05:38:25.863 INFO basemod.BaseMod> powers modified
+05:38:26.713 INFO basemod.BaseMod> publish on card use
+05:38:30.196 INFO basemod.BaseMod> publish on card use
+05:38:30.713 INFO basemod.BaseMod> publish on post power apply
+05:38:30.713 INFO basemod.BaseMod> powers modified
+05:38:32.895 INFO basemod.BaseMod> publish on card use
+05:38:34.330 INFO basemod.BaseMod> publish on card use
+05:38:34.879 INFO basemod.BaseMod> publish on post power apply
+05:38:34.879 INFO basemod.BaseMod> powers modified
+05:38:36.780 INFO basemod.BaseMod> publish on Player Damaged
+05:38:36.946 INFO basemod.BaseMod> powers modified
+05:38:37.362 INFO basemod.BaseMod> publish on post power apply
+05:38:37.362 INFO basemod.BaseMod> powers modified
+05:38:38.929 INFO unique.PoisonLoseHpAction> Bronze Automaton HAS 91 HP.
+05:38:39.413 INFO basemod.BaseMod> publishPreMonsterTurn
+05:38:42.779 INFO basemod.BaseMod> publish on Player Lose Block
+05:38:42.779 INFO basemod.BaseMod> publishPostEnergyRecharge
+05:38:42.779 INFO HollowMod.hollowMod> spawn infection power loaded
+05:38:43.096 INFO basemod.BaseMod> powers modified
+05:38:43.445 INFO basemod.BaseMod> publishPostDraw
+05:38:43.646 INFO basemod.BaseMod> publishPostDraw
+05:38:43.863 INFO basemod.BaseMod> publishPostDraw
+05:38:44.080 INFO basemod.BaseMod> publishPostDraw
+05:38:45.196 INFO basemod.BaseMod> publishPostDraw
+05:38:45.412 INFO basemod.BaseMod> publishPostDraw
+05:38:45.445 INFO basemod.BaseMod> publish on post power apply
+05:38:45.445 INFO basemod.BaseMod> powers modified
+05:38:45.730 INFO basemod.BaseMod> publish on post power apply
+05:38:45.730 INFO HollowMod.hollowMod> stack power loaded
+05:38:45.730 INFO basemod.BaseMod> powers modified
+05:38:47.730 INFO basemod.BaseMod> publish on card use
+05:38:48.213 INFO basemod.BaseMod> publishPostDraw
+05:38:48.479 INFO basemod.BaseMod> publish on post power apply
+05:38:48.479 INFO basemod.BaseMod> powers modified
+05:38:49.363 INFO basemod.BaseMod> publish on card use
+05:38:49.663 INFO basemod.BaseMod> publish on post power apply
+05:38:49.663 INFO basemod.BaseMod> powers modified
+05:38:50.280 INFO basemod.BaseMod> publish on card use
+05:38:51.129 INFO basemod.BaseMod> publish on post power apply
+05:38:51.129 INFO basemod.BaseMod> powers modified
+05:38:52.148 INFO basemod.BaseMod> publish on card use
+05:38:52.462 INFO basemod.BaseMod> publish on post power apply
+05:38:52.462 INFO basemod.BaseMod> powers modified
+05:38:54.746 INFO basemod.BaseMod> publish on card use
+05:38:54.746 INFO HollowMod.hollowMod> spawn infection power loaded
+05:38:55.279 INFO basemod.BaseMod> publish on post power apply
+05:38:55.279 INFO HollowMod.hollowMod> stack power loaded
+05:38:55.279 INFO basemod.BaseMod> powers modified
+05:38:55.732 INFO basemod.BaseMod> publish on post power apply
+05:38:55.732 INFO basemod.BaseMod> powers modified
+05:38:56.512 INFO basemod.BaseMod> publish on post power apply
+05:38:56.512 INFO basemod.BaseMod> powers modified
+05:38:57.330 INFO basemod.BaseMod> publish on post power apply
+05:38:57.330 INFO basemod.BaseMod> powers modified
+05:38:58.313 INFO basemod.BaseMod> publish on Player Damaged
+05:38:58.463 INFO basemod.BaseMod> powers modified
+05:38:59.130 INFO basemod.BaseMod> publish on post power apply
+05:38:59.130 INFO basemod.BaseMod> powers modified
+05:39:00.696 INFO unique.PoisonLoseHpAction> Bronze Automaton HAS 27 HP.
+05:39:01.012 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:39:01.012 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:39:01.012 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:39:01.013 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:39:01.034 INFO audio.MusicMaster> Playing STS_BossVictoryStinger_1_v3_MUSIC.ogg
+05:39:01.035 INFO audio.TempMusic> ERROR: NO SUCH TEMP BGM: STS_BossVictoryStinger_1_v3_MUSIC.ogg
+05:39:01.041 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:39:01.041 INFO helpers.AsyncSaver> Enqueue: qsize=1 file=preferences\STSUnlocks
+05:39:01.041 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:39:01.042 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:39:01.041 INFO unlock.UnlockTracker> Hard Unlock: AUTOMATON
+05:39:01.049 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:39:01.050 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\STSUnlocks
+05:39:01.050 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:39:01.059 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSUnlocks
+05:39:04.313 INFO basemod.BaseMod> publish post combat
+05:39:04.313 INFO monsters.AbstractMonster> Disposing Atlas...
+05:39:04.548 INFO rooms.AbstractRoom> POTION CHANCE: 40
+05:39:04.548 INFO saveAndContinue.SaveFile> Next Room: com.megacrit.cardcrawl.rooms.MonsterRoomBoss
+05:39:04.550 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=saves\THE_BUGKNIGHT.autosave
+05:39:04.550 INFO helpers.FileSaver> Dequeue: qsize=0 file=saves\THE_BUGKNIGHT.autosave
+05:39:04.550 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\saves\THE_BUGKNIGHT.autosave
+05:39:04.573 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\saves\THE_BUGKNIGHT.autosave
+05:39:08.578 INFO core.CardCrawlGame> PAUSE()
+05:39:19.700 INFO core.CardCrawlGame> RESUME()
+05:39:21.629 INFO unlock.UnlockTracker> Already seen: HollowMod:ZotesMagnificence
+05:39:21.629 INFO unlock.UnlockTracker> Already seen: HollowMod:AwokenDreamNail
+05:39:21.630 INFO unlock.UnlockTracker> Already seen: HollowMod:ElderbugsWisdom
+05:39:21.630 INFO unlock.UnlockTracker> Already seen: HollowMod:SlysStrikes
+05:39:35.563 INFO helpers.CardHelper> Obtained HollowMod:ElderbugsWisdom (RARE). Creating new map entry.
+05:39:35.563 INFO unlock.UnlockTracker> Already seen: HollowMod:ElderbugsWisdom
+05:39:36.179 INFO audio.MainMusic> Unsilencing TheCity
+05:39:36.980 INFO dungeons.AbstractDungeon> Removing monster: Snecko from monster list.
+05:39:36.980 INFO dungeons.AbstractDungeon> UNSPECIFIED CASE: NONE
+05:39:36.981 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:39:36.982 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\THE_BUGKNIGHT
+05:39:36.982 INFO saveAndContinue.SaveFile> Next Room: com.megacrit.cardcrawl.rooms.TreasureRoomBoss
+05:39:36.982 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:39:36.983 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=saves\THE_BUGKNIGHT.autosave
+05:39:36.983 INFO audio.MusicMaster> Playing SHRINE
+05:39:37.001 INFO dungeons.AbstractDungeon> Returning BOSS relic
+05:39:37.002 INFO dungeons.AbstractDungeon> Returning BOSS relic
+05:39:37.003 INFO dungeons.AbstractDungeon> Returning BOSS relic
+05:39:37.007 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\THE_BUGKNIGHT
+05:39:37.011 INFO helpers.FileSaver> Dequeue: qsize=0 file=saves\THE_BUGKNIGHT.autosave
+05:39:37.011 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\saves\THE_BUGKNIGHT.autosave
+05:39:37.025 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\saves\THE_BUGKNIGHT.autosave
+05:39:38.415 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\STSSeenRelics
+05:39:38.415 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\STSSeenRelics
+05:39:38.415 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\STSSeenRelics
+05:39:38.416 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenRelics
+05:39:38.431 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenRelics
+05:39:38.431 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\STSSeenRelics
+05:39:38.431 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenRelics
+05:39:38.442 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSSeenRelics
+05:39:40.198 INFO audio.MusicMaster> Properly faded out BOSS_CITY
+05:39:40.199 INFO audio.MusicMaster> Properly faded out STS_BossVictoryStinger_1_v3_MUSIC.ogg
+05:39:44.012 INFO basemod.BaseMod> publish on relic get
+05:39:45.863 INFO audio.MainMusic> Unsilencing TheCity
+05:39:46.662 INFO scenes.AbstractScene> Fading out ambiance: AMBIANCE_CITY
+05:39:46.719 INFO dungeons.AbstractDungeon> CardRng Counter: 500
+05:39:46.726 INFO dungeons.AbstractDungeon> [BOSS] Awakened One
+05:39:46.727 INFO basemod.BaseMod> Adding Custom Events...
+05:39:46.736 INFO dungeons.AbstractDungeon> INIT CARD POOL
+05:39:46.736 INFO dungeons.AbstractDungeon> COLORLESS CARDS: 35
+05:39:46.736 INFO dungeons.AbstractDungeon> CURSE CARDS: 10
+05:39:46.736 INFO dungeons.AbstractDungeon> Cardpool load time: 0ms
+05:39:46.737 INFO PotionLibrary.PotionHelperInitialize> Adding HollowMod:PlaceholderPotion
+05:39:46.737 INFO dungeons.AbstractDungeon> Content generation time: 57ms
+05:39:46.737 INFO basemod.BaseMod> publishStartAct
+05:39:47.094 INFO scenes.AbstractScene> Fading in ambiance: AMBIANCE_BEYOND
+05:39:47.276 INFO dungeons.AbstractDungeon> Generating Room Types! There are 51 rooms:
+05:39:47.276 INFO dungeons.AbstractDungeon>  SHOP (5%): 3
+05:39:47.276 INFO dungeons.AbstractDungeon>  REST (12%): 6
+05:39:47.276 INFO dungeons.AbstractDungeon>  TRSRE (0%): 0
+05:39:47.276 INFO dungeons.AbstractDungeon>  ELITE (8%): 4
+05:39:47.277 INFO dungeons.AbstractDungeon>  EVNT (22%): 11
+05:39:47.277 INFO dungeons.AbstractDungeon>  MSTR (53%): 27
+05:39:47.277 INFO map.RoomTypeAssigner> #### Unassigned Rooms:
+05:39:47.278 INFO map.RoomTypeAssigner> class com.megacrit.cardcrawl.rooms.MonsterRoom
+05:39:47.278 INFO map.RoomTypeAssigner> INFO: Node=(2,13):[(2,14), (3,14)] was null. Changed to a MonsterRoom.
+05:39:47.278 INFO dungeons.AbstractDungeon> Generated the following dungeon map:
+05:39:47.278 INFO dungeons.AbstractDungeon> 
+        /     / | \  \  \  
+14     R     R  R  R  R  R 
+       |     |/  /      \| 
+13     M     M  M        M 
+         \ /   \|      / | 
+12        M     M     $  ? 
+        / |       \     \| 
+11     $  M        M     E 
+       |/        /   \ /   
+10     ?        ?     M    
+         \      |     |    
+9         R     ?     ?    
+            \ /     /   \  
+8            T     T     T 
+           /   \ /       | 
+7         M     R        R 
+        /   \ /   \      | 
+6      R     E     M     E 
+       |       \ /     /   
+5      E        R     R    
+         \    / |   /      
+4         M  M  ?  $       
+          |  | \|/         
+3         ?  ?  M          
+        /  / |/ |          
+2      M  M  ?  M          
+       |  |/  / |          
+1      ?  M  ?  M          
+       |/      \  \        
+0      M        M  M       
+05:39:47.278 INFO dungeons.AbstractDungeon> Game Seed: -7835223498649860579
+05:39:47.279 INFO dungeons.AbstractDungeon> Map generation time: 4ms
+05:39:47.292 INFO helpers.TipTracker> NEOW_SKIP will never be shown again!
+05:39:47.293 INFO helpers.AsyncSaver> Enqueue: qsize=0 file=preferences\STSTips
+05:39:47.293 INFO helpers.FileSaver> Dequeue: qsize=0 file=preferences\STSTips
+05:39:47.293 INFO helpers.File> Attempting to save file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSTips
+05:39:47.307 INFO helpers.File> Successfully saved file=C:\Users\Conor\Documents\MTS_Modwork\HollowMod\theDefault\lib\preferences\STSTips
+05:39:49.562 INFO core.CardCrawlGame> PAUSE()
+05:39:50.495 INFO audio.MusicMaster> Properly faded out TheCity
+05:39:50.495 INFO audio.MusicMaster> Properly faded out SHRINE

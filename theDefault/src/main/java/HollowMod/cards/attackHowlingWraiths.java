@@ -1,8 +1,10 @@
 package HollowMod.cards;
 
+import HollowMod.actions.FocusSoulAction;
 import HollowMod.patches.CardTagEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,7 +16,7 @@ import HollowMod.characters.TheBugKnight;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class attackHowlingWraiths extends AbstractDefaultCard {
+public class attackHowlingWraiths extends AbstractHollowCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.
@@ -58,16 +60,19 @@ public class attackHowlingWraiths extends AbstractDefaultCard {
     private static final int COST = 2;
     private static final int UPGRADED_COST = 1;
 
-    private static final int DAMAGE = 8;
-    private static final int UPGRADE_PLUS_DMG = 4;
+    private static final int DAMAGE = 11;
+    private static final int UPGRADE_PLUS_DMG = 2;
+
+    private static final int FOCUS_COST = 2;
 
     // /STAT DECLARATION/
 
 
     public attackHowlingWraiths() {// This one and the one right under the imports are the most important ones, don't forget them
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET, FOCUS_COST);
         baseDamage = DAMAGE;
-
+        this.isMultiDamage = true;
+        this.hollowFocusCost = (hollowBaseFocusCost = FOCUS_COST);
         tags.add(CardTagEnum.SPELL);
 
     }
@@ -76,8 +81,10 @@ public class attackHowlingWraiths extends AbstractDefaultCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToTop(new FocusSoulAction(p,hollowFocusCost));
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+                new DamageAllEnemiesAction(p, multiDamage , damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+
     }
 
 

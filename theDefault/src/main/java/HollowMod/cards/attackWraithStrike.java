@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class attackWraithStrike extends AbstractDefaultCard {
+public class attackWraithStrike extends AbstractHollowCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.

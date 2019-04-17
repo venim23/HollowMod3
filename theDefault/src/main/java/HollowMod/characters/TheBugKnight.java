@@ -1,6 +1,8 @@
 package HollowMod.characters;
 
 import HollowMod.hollowMod;
+import HollowMod.relics.DelicateFlowerRelic;
+import HollowMod.relics.JonisBlessingRelic;
 import HollowMod.relics.VesselMask;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
@@ -154,18 +156,19 @@ public class TheBugKnight extends CustomPlayer {
 
 
         retVal.add(attackNailStrike_s.ID);
-        //retVal.add(attackNailStrike_s.ID);
-        //retVal.add(attackNailStrike_s.ID);
-        //retVal.add(attackNailStrike_s.ID);
+        retVal.add(attackNailStrike_s.ID);
+        retVal.add(attackNailStrike_s.ID);
+        retVal.add(attackNailStrike_s.ID);
         logger.info("loading dashes");
-
-        //retVal.add(skillQuickDash_s.ID);
-        //retVal.add(skillQuickDash_s.ID);
+        retVal.add(skillQuickDash_s.ID);
+        retVal.add(skillQuickDash_s.ID);
+        retVal.add(skillQuickDash_s.ID);
         retVal.add(skillQuickDash_s.ID);
         //Attacks
 
         //retVal.add(attackInfectedAttack.ID);
         //retVal.add(attackSoulStrike.ID);
+        //retVal.add(attackDesolateDive.ID);
         //retVal.add(attackVengefulVoid.ID);
         //retVal.add(attackVengefulVoid.ID);
         //retVal.add(attackVengefulVoid.ID);
@@ -176,6 +179,7 @@ public class TheBugKnight extends CustomPlayer {
         //retVal.add(attackQuirrelsAssistance.ID);
         logger.info("loading focuses");
         //Skills
+        retVal.add(skillFocusHeal_s.ID);
         retVal.add(skillFocusHeal_s.ID);
         //retVal.add(skillSoulTotem.ID);
         //retVal.add(skillSoulSplash.ID);
@@ -192,7 +196,7 @@ public class TheBugKnight extends CustomPlayer {
 
         logger.info("loading testcards");
         //retVal.add(attackRecoilStrike.ID);
-        retVal.add(skillDoubleDash.ID);
+        //retVal.add(skillDoubleDash.ID);
         //retVal.add(powerSlysStrikes.ID);
         //retVal.add(attackDashSlash.ID);
         //retVal.add(skillLifebloodCocoon.ID);
@@ -201,7 +205,8 @@ public class TheBugKnight extends CustomPlayer {
         //retVal.add(attackInfectedCysts.ID);
         //retVal.add(skillDungDefenderAura.ID);
         //retVal.add(skillGrimmsGift.ID);
-        retVal.add(attackPogoStrike.ID);
+        //retVal.add(attackPogoStrike.ID);
+        //retVal.add(attackVengefulSpirit.ID);
         //retVal.add(attackAbyssShriek.ID);
         //retVal.add(powerWeaversong.ID);
         //retVal.add(attackInfectedAttack.ID);
@@ -215,19 +220,30 @@ public class TheBugKnight extends CustomPlayer {
         //retVal.add(powerThornsofAgony.ID);
         //retVal.add(powerShapeofUnn.ID);
         //retVal.add(skillCrystalDash.ID);
-        retVal.add(skillHuntersJournal.ID);
+        //retVal.add(skillHuntersJournal.ID);
         //retVal.add(skillVoidDash.ID);
         //retVal.add(attackSharpenedNail.ID);
         //retVal.add(skillCornifersMap.ID);
         //retVal.add(skillLifebloodCore.ID);
         //retVal.add(skillLifebloodHeart.ID);
         //retVal.add(skillHiveblood.ID);
-        retVal.add(skillPerfectDash.ID);
+        //retVal.add(skillPerfectDash.ID);
         //retVal.add(attackGreatSlash.ID);
         //retVal.add(attackFuryoftheFallen.ID);
         //retVal.add(skillSiblingsSouls.ID);
-        retVal.add(skillMonarchWings.ID);
-
+        //retVal.add(skillMonarchWings.ID);
+        //retVal.add(skillChannelNail.ID);
+        //retVal.add(attackHowlingWraiths.ID);
+        //retVal.add(attackAwokenDreamNail.ID);
+        //retVal.add(powerSoulMaster.ID);
+        //retVal.add(powerSoulMaster.ID);
+        //retVal.add(powerSoulEater.ID);
+        //retVal.add(powerBaldurShell.ID);
+        //retVal.add(skillSporeShroom.ID);
+        //retVal.add(powerSoulVessel.ID);
+        //retVal.add(attackPureNailStrike.ID);
+        //retVal.add(skillSoulShaman.ID);
+        //retVal.add(skillOvercharmed.ID);
 
         return retVal;
     }
@@ -240,11 +256,14 @@ public class TheBugKnight extends CustomPlayer {
         //retVal.add(PlaceholderRelic2.ID);
         //retVal.add(DefaultClickableRelic.ID);
         retVal.add(VesselMask.ID);
-
         //UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
         //UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
         //UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
         UnlockTracker.markRelicAsSeen(VesselMask.ID);
+        UnlockTracker.markRelicAsSeen(JonisBlessingRelic.ID);
+        UnlockTracker.markRelicAsSeen(DelicateFlowerRelic.ID);
+
+
 
         return retVal;
     }
@@ -252,7 +271,7 @@ public class TheBugKnight extends CustomPlayer {
     // character Select screen effect
     @Override
     public void doCharSelectScreenSelectEffect() {
-        CardCrawlGame.sound.playA("ATTACK_DAGGER_1", 1.25f); // Sound Effect
+        CardCrawlGame.sound.playA("ATTACK_MAGIC_SLOW_1", 1.25f); // Sound Effect
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT,
                 false); // Screen Effect
     }
@@ -260,7 +279,7 @@ public class TheBugKnight extends CustomPlayer {
     // character Select on-button-press sound effect
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
-        return "ATTACK_DAGGER_1";
+        return "ATTACK_MAGIC_SLOW_1";
     }
 
     // Should return how much HP your maximum HP reduces by when starting a run at

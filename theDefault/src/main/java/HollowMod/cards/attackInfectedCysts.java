@@ -4,11 +4,9 @@ import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.InfectionPower;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -21,8 +19,8 @@ import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-// public class attackCycloneSlash extends AbstractDefaultCard
-public class attackInfectedCysts extends AbstractDefaultCard {
+// public class attackCycloneSlash extends AbstractHollowCard
+public class attackInfectedCysts extends AbstractHollowCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.
@@ -67,7 +65,7 @@ public class attackInfectedCysts extends AbstractDefaultCard {
 
     private static final int DAMAGE = 11;    // DAMAGE = 7
     private static final int POISON = 3;
-    private static final int UPGRADE_PLUS_POISON = 1;
+    private static final int UPGRADE_PLUS_POISON = 3;
     private static final int INFECTION = 3;
 
 
