@@ -30,7 +30,8 @@ public abstract class AbstractDefaultCard extends CustomCard {
         isMagicNumberModified = false;
         isDefaultSecondMagicNumberModified = false;
     }
-
+    // I think I can add a new version of the public AbstractDefaultCard here and have an extra variable for final int soulCost that goes here, then if the returned one has that, It can be sent to a Canute function inside this template. 
+    // i think as long as I super the same variables up to the Custom Card class. 
     public void displayUpgrades() { // Display the upgrade - when you click a card to upgrade it
         super.displayUpgrades();
         if (upgradedDefaultSecondMagicNumber) { // If we set upgradedDefaultSecondMagicNumber = true in our card.
