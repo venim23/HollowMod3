@@ -5,10 +5,16 @@ So this is an overview of what the mod is, any design goals and a way to keep tr
 The Goal is, of course, to integrate the world of Hollow Knight, by Team Cherry. into the world of Slay the Spire, in a way that doesn't completely ruin either experience or memory, since both are fantastic games. Additionaly it's a fun ay for me to brush up on my 6 years out of date java skills.
 
 Hollow Mod currently has 4 Archetypes, although most of those also support hybrid decks pretty well (with the exception of Soul and Void)Currently Archetype API isn't supported but I want to eventually.
-Pure Vessel: Focused on Soul, Spells and some healing. This probably is the default archetype, and has more cards than the others 
-Void God: Void spells are powerful cards that instead of costong soul, apply VOID to you, void increases the damage of void cards even more, but also increases all damage you receive: Beware of birds.
-Broken Vessel: Infection, and themed off the idea of a Vessel becoming corrupted like the Broken Vessel. Infection is a poison heavy build, but these cards also inflict Enfection on you, which is kinda like a self poison. but you can block the damage, so as long as you keep it balanced you are good.
-Friendship: Ally cards are all sorts of benefits and buffs that help you out, this archtype relies more on the generic combat cards and doesn't have too many special mechanics.
+
+**Pure Vessel:** Focused on Soul, Spells and some healing. This probably is the default archetype, and has more cards than the others 
+
+**Void God:** Void spells are powerful cards that instead of costong soul, apply VOID to you, void increases the damage of void cards even more, but also increases all damage you receive: Beware of birds.
+
+**Broken Vessel:** Infection, and themed off the idea of a Vessel becoming corrupted like the Broken Vessel. Infection is a poison heavy build, but these cards also inflict Enfection on you, which is kinda like a self poison. but you can block the damage, so as long as you keep it balanced you are good.
+
+**Friendship:** Ally cards are all sorts of benefits and buffs that help you out, this archtype relies more on the generic combat cards and doesn't have too many special mechanics.
+
+In addition to these, you can interchange them pretty freely, infection and soul actually play off each other pretty well, and so does void and allies
 
 Other Notes: Lifeblood is just temporary hp, unfortunately i don't know how to override the temporary HP bar aspect to make it look blue. I'll look into that as long as i can make sure it only happens to the knight. Lifeblood really isn't an archetype. It's just a defensive buff that helps out a lot.
 
