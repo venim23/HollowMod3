@@ -1,4 +1,5 @@
 **Hollow Mod**
+
 So this is an overview of what the mod is, any design goals and a way to keep track of future plans. I guess.
 
 The Goal is, of course, to integrate the world of Hollow Knight, by Team Cherry. into the world of Slay the Spire, in a way that doesn't completely ruin either experience or memory, since both are fantastic games. Additionaly it's a fun ay for me to brush up on my 6 years out of date java skills.
@@ -45,6 +46,7 @@ Other Notes: Lifeblood is just temporary hp, unfortunately i don't know how to o
 * Redistributed the Formatting of several cards and their NL's thanks to Beret's suggestions.
 
 **Future Plans: double point releases are reserved for fixes and balance tweaks by default.**
+
 0.6.9
 * 2 new Boss Relics, both which upgrade the Knights Mask, Kings Mask and Void Mask
 * Fixes to the currently hidden and broken cards, Corniger's Map, Spore Shroom, and Lord of Shades
