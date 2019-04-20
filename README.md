@@ -51,28 +51,30 @@ Other Notes: Lifeblood is just temporary hp, unfortunately i don't know how to o
 * Double Dash now has it's second effect upgraded with Monarch Wings if you play it while the power is active. 
 * Redistributed the Formatting of several cards and their NL's thanks to Beret's suggestions.
 
-**Future Plans: double point releases are reserved for fixes and balance tweaks by default.**
+
 
 0.6.9
+* Stretch: I'd love to see if i can get the actual SFX of slashes and spells supported, but Audio is my worst element, unlikely.
+
+0.7.0
+* Mylas Song: New 2 Part Event, Time 1: meeting Myla the and getting a common, Upgrade/remove/Relic choice,  time 2: potentially hving to kill her husk and getting a Vampire like choice to replace all Strikes with Infected attacks.
+
+**Future Plans: double point releases are reserved for fixes and balance tweaks by default.**
+
+0.8.0 
+* 3-4 new Potions: Lifeblood (might overlap with Hubris's Lifeblood Potion, Which is HK inspired I'd bet) Soul Potion, Void Potion and Potentially Infection Potion.
+* New Idle Animations to Represent Soulmaster and Void Archetypes
+* Some conditional to make the players Anim appear Void with Void Mask (probably using the Void God sprites)
+* Some conditional to give the players anim a glowy soul effect with Kings Mask (Probably using the mask of the paly king or Hollow Knight)
+* Exploring Custom Keyword Colors.
+* I'd like too add in Archtype API support but who knows if I'm smart enough for that
 * 2 new Boss Relics, both which upgrade the Knights Mask, Kings Mask and Void Mask
 * Fixes to the currently hidden and broken cards, Corniger's Map, Spore Shroom, and Lord of Shades
 * New Cards: Kings Brand, Pale Ladies Blessing, Dream Gate, Embrace the Void and Mantis Claw
 * 2 other currently Undesigned cards, Hybrids for Infection Ally archetype, and Soul Infection Archetypes.
 
-0.7.0
-* 3-4 new Potions: Lifeblood (might overlap with Hubris's Lifeblood Potion, Which is HK inspired I'd bet) Soul Potion, Void Potion and Potentially Infection Potion.
-* Mylas Song: New 2 Part Event, Time 1: meeting Myla the and getting a common, Upgrade/remove/Relic choice,  time 2: potentially hving to kill her husk and getting a Vampire like choice to replace all Strikes with Infected attacks.
-* I'd like too add in Archtype API support but who knows if I'm smart enough for that
-
-0.8.0 
-* New Idle Animations to Represent Soulmaster and Void Archetypes
-* Some conditional to make the players Anim appear Void with Void Mask (probably using the Void God sprites)
-* Some conditional to give the players anim a glowy soul effect with Kings Mask (Probably using the mask of the paly king or Hollow Knight)
-* Exploring Custom Keyword Colors.
-
 0.9.0
 * Exploring custom Attack Effects using the actual in game Sprite Effects
-* Stretch: I'd love to see if i can get the actual SFX of slashes and spells supported, but Audio is my worst element, unlikely.
 * a new relic or two and potentially a new curse or three (specific to the Knight) 
 * Setting some cards, relics, potions or curses behind "unlocks"
 
