@@ -1,6 +1,7 @@
 package HollowMod.powers;
 
 import HollowMod.hollowMod;
+import HollowMod.relics.IsmasTearRelic;
 import HollowMod.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
@@ -65,13 +66,17 @@ public class InfectionPower extends AbstractPower implements CloneablePowerInter
     @Override
     public void atEndOfTurn(boolean isPlayer)
         { // At the end of your turn
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(owner, new DamageInfo(owner, this.amount)));
+            int InfDamage = this.amount;
+            if (AbstractDungeon.player.hasRelic(IsmasTearRelic.ID)) {
+                InfDamage = InfDamage - 1;
+            }
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(owner, new DamageInfo(owner, InfDamage, DamageInfo.DamageType.THORNS)));
         //I'm hoping this makes the Broken Vessel power work better to deal damage to everyone whenever you take damage.
         if (owner.hasPower(BrokenVesselPower.POWER_ID)){
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if ((!monster.isDead) && (!monster.isDying)) {
                     AbstractDungeon.actionManager.addToBottom(
-                            new DamageAction(monster, new DamageInfo(owner, this.amount, DamageInfo.DamageType.THORNS)));
+                            new DamageAction(monster, new DamageInfo(owner, InfDamage, DamageInfo.DamageType.THORNS)));
                 }
             }
         }

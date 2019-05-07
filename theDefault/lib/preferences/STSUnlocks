@@ -283,5 +283,8 @@
   "HollowMod:SoulMaster": "2",
   "GUARDIAN": "2",
   "GHOST": "2",
-  "AUTOMATON": "2"
+  "AUTOMATON": "2",
+  "SLIME": "2",
+  "HollowMod:DreamGate": "2",
+  "HollowMod:SiblingsShadow": "2"
 }

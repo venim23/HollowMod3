@@ -4,9 +4,12 @@ import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.InfectionPower;
+import HollowMod.util.SoundEffects;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -76,6 +79,7 @@ public class attackInfectedCysts extends AbstractHollowCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
         this.exhaust = true;
+        this.isMultiDamage = true;
         this.magicNumber = baseMagicNumber = POISON;
         tags.add(CardTagEnum.INFECTION);
 
@@ -85,15 +89,15 @@ public class attackInfectedCysts extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Orange.getKey()));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.1F));
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
             if ((!monster.isDead) && (!monster.isDying)) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p , new PoisonPower(monster, p, magicNumber), magicNumber));
-                AbstractDungeon.actionManager.addToBottom(
-                        new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn)));
+
             }
         }
+        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(m, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.POISON));
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new InfectionPower(p, INFECTION), INFECTION));
 

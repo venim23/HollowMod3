@@ -3,7 +3,9 @@ package HollowMod.cards;
 import HollowMod.actions.FocusSoulAction;
 import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -78,6 +80,7 @@ public class skillFocusHeal_s extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Healing.getKey()));
         AbstractDungeon.actionManager.addToTop(new FocusSoulAction(p,hollowFocusCost));
         AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, this.magicNumber));
     }

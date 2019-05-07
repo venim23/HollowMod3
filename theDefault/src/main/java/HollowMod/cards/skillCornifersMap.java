@@ -3,7 +3,9 @@ package HollowMod.cards;
 import HollowMod.hollowMod;
 import HollowMod.characters.TheBugKnight;
 import HollowMod.patches.CardTagEnum;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.unique.DiscardPileToTopOfDeckAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -69,6 +71,8 @@ public class skillCornifersMap extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Cornifer.getKey()));
         AbstractDungeon.actionManager.addToTop(new DiscardPileToTopOfDeckAction(p));
         if (p.discardPile.group.size() > 0) {
             AbstractDungeon.gridSelectScreen.open(p.discardPile, 1, TEXT[0], true, false, true, false);

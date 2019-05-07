@@ -2,10 +2,12 @@ package HollowMod.cards;
 
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -84,6 +86,7 @@ public class attackFastStrike extends AbstractHollowCard {
         AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, 1, false));
 
         for (int i = this.magicNumber; i > 0; i--){
+            AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Nail.getKey()));
             AbstractDungeon.actionManager.addToBottom(
                     new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m,p, new VulnerablePower(m,1,false),1));

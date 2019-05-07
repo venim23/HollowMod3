@@ -1,0 +1,23 @@
+{
+  "HollowMod:Focus":
+  {
+    "TEXT": [
+      "[#EFFAFF]Focus",
+      "Spend that amount of #ySoul in order to play this card."
+    ]
+  },
+  "HollowMod:Void":
+  {
+    "TEXT": [
+      "[#696969]Void",
+      "Increases the current [#696969]Void [#696969]Level, removing #ySoul, and preventing [#EFFAFF]Focus. NL [#696969]Void [#696969]Level increases the damage dealt by [#696969]Void [#60CFFF]Spells and the damage taken from enemies. NL [#696969]Void [#696969]Level goes down by #b1 at the beginning of each turn."
+    ]
+  },
+  "HollowMod:Infection":
+  {
+    "TEXT": [
+      "[#FFA200]Infection",
+      "A lingering debuff, [#FFA200]Infection [#FFA200]Level damages you and decrements by #b2 at the end of your turn."
+    ]
+  }
+}

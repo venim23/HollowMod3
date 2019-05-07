@@ -3,8 +3,10 @@ package HollowMod.cards;
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
 import HollowMod.powers.DungDefenderPower;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -61,6 +63,8 @@ public class skillDungDefenderAura extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Defender.getKey()));
         AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(p,p, this.block));
 

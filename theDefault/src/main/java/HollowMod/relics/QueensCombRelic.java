@@ -5,6 +5,7 @@ import HollowMod.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
@@ -14,12 +15,11 @@ import static HollowMod.hollowMod.makeRelicPath;
 public class QueensCombRelic extends CustomRelic {
 
     // ID, images, text.
-    public static final String ID = hollowMod.makeID("QueensComb");
+    public static final String ID = hollowMod.makeID("QueensCombRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("queens_comb.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("queens_comb.png"));
-
-    public static final int STARTING_BLUE = 15;
+    private static int HEALVAL = 4;
 
     public QueensCombRelic() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.HEAVY);
@@ -27,31 +27,23 @@ public class QueensCombRelic extends CustomRelic {
 
     // Flash at the start of Battle.
     @Override
-    public void atBattleStartPreDraw() {
-        flash();
-        AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(
-                AbstractDungeon.player,AbstractDungeon.player, STARTING_BLUE));
-    }
-    @Override
     public void onEquip() {
-        AbstractDungeon.player.energy.energyMaster += 1;
-    }
-
-    // Lose 1 energy on unequip.
-    @Override
-    public void onUnequip() {
-        AbstractDungeon.player.energy.energyMaster -= 1;
+        AbstractDungeon.player.maxHealth = (AbstractDungeon.player.maxHealth/2);
     }
 
     @Override
     public void atTurnStart(){
+        flash();
+        if (AbstractDungeon.player.damagedThisCombat <=0){
+            AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player,AbstractDungeon.player,HEALVAL));
+        }
     }
 
     // Description
     @Override
 
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + HEALVAL + DESCRIPTIONS[1];
     }
 
 }

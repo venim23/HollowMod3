@@ -1,0 +1,10 @@
+{
+  "NEOW_SKIP": "true",
+  "COMBAT_TIP": "true",
+  "NEOW_INTRO": "true",
+  "RELIC_TIP": "true",
+  "SHUFFLE_TIP": "true",
+  "POWER_TIP": "true",
+  "POTION_TIP": "true",
+  "INTENT_TIP": "true"
+}

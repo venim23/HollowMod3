@@ -4,10 +4,12 @@ import HollowMod.hollowMod;
 import HollowMod.powers.BaldurShellPower;
 import HollowMod.powers.SoulMasterPower;
 import HollowMod.powers.SoulPower;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -55,6 +57,7 @@ public class FocusSoulAction
       AbstractDungeon.actionManager.addToTop(new ReducePowerAction(this.source, this.source, SoulPower.POWER_ID ,this.cost));
       this.source.getPower(SoulPower.POWER_ID).updateDescription();
       if (this.source.hasPower(BaldurShellPower.POWER_ID)){
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Blocker.getKey()));
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(source, source, source.getPower(BaldurShellPower.POWER_ID).amount, true));
         source.getPower(BaldurShellPower.POWER_ID).flash();
       }

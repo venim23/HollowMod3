@@ -3,7 +3,9 @@ package HollowMod.cards;
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
 import HollowMod.powers.GrubsongPower;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -50,6 +52,8 @@ public class powerGrubsong extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Fatty.getKey()));
 
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new GrubsongPower(p, p, magicNumber ), magicNumber));

@@ -1,0 +1,69 @@
+
+falseknight.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+leg2
+  rotate: false
+  xy: 1, 174
+  size: 55, 45
+  orig: 400, 400
+  offset: 176, 186
+  index: -1
+leg1
+  rotate: false
+  xy: 58, 174
+  size: 28, 41
+  orig: 400, 400
+  offset: 174, 172
+  index: -1
+elbow
+  rotate: false
+  xy: 1, 325
+  size: 101, 106
+  orig: 400, 400
+  offset: 128, 168
+  index: -1
+arm2
+  rotate: false
+  xy: 105, 174
+  size: 76, 86
+  orig: 400, 400
+  offset: 163, 156
+  index: -1
+shoulder
+  rotate: false
+  xy: 869, 223
+  size: 113, 100
+  orig: 400, 400
+  offset: 140, 148
+  index: -1
+body
+  rotate: false
+  xy: 605, 1
+  size: 262, 249
+  orig: 400, 400
+  offset: 74, 40
+  index: -1
+head
+  rotate: false
+  xy: 869, 1
+  size: 149, 220
+  orig: 400, 400
+  offset: 129, 149
+  index: -1
+hammer
+  rotate: false
+  xy: 1, 1
+  size: 602, 171
+  orig: 900, 900
+  offset: 92, 387
+  index: -1
+Hand
+  rotate: false
+  xy: 1, 252
+  size: 102, 65
+  orig: 400, 400
+  offset: 175, 153
+  index: -1

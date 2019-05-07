@@ -4,8 +4,10 @@ import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.MonarchWingsPower;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -64,6 +66,9 @@ public class skillDoubleDash extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Evade.getKey()));
+
         int doubleblockcheck = magicNumber;
         if (p.hasPower(MonarchWingsPower.POWER_ID)){
             doubleblockcheck += doubleblockcheck;

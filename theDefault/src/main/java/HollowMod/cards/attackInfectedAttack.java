@@ -3,8 +3,10 @@ package HollowMod.cards;
 import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.InfectionPower;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -68,19 +70,18 @@ public class attackInfectedAttack extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Orange.getKey()));
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn)));
         // This should do the damage
-        logger.info("Beginning to damage");
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(m, p, new PoisonPower(m, p, this.magicNumber), this.magicNumber));
         //this should apply the poison
-        logger.info("Beginning to poison");
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new InfectionPower(p, this.defaultSecondMagicNumber), this.defaultSecondMagicNumber));
         //AbstractDungeon.actionManager.addToBottom(
         //new ApplyPowerAction(p, p, new DexterityPower(p, this.defaultSecondMagicNumber), this.defaultSecondMagicNumber));
-        logger.info("Beginning to infect");
         //this should apply the infection?
     }
 

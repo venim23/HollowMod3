@@ -5,8 +5,10 @@ import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.VoidDashPower;
 import HollowMod.powers.VoidPower;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -63,6 +65,7 @@ public class skillVoidDash extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.ShadowDash.getKey()));
         AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(p,p, this.block));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p,p, new VoidDashPower(p, p, magicNumber), magicNumber));

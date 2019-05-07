@@ -2,11 +2,14 @@ package HollowMod.cards;
 
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
+import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.InfectionPower;
 import HollowMod.powers.SiblingSoulPower;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.unique.BouncingFlaskAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -51,6 +54,7 @@ public class skillTaintedHusks extends AbstractHollowCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
         this.magicNumber = (this.baseMagicNumber = BOUNCES);
+        this.tags.add(CardTagEnum.INFECTION);
         this.defaultSecondMagicNumber = this.defaultBaseSecondMagicNumber = INFECTION;
 
     }
@@ -60,6 +64,7 @@ public class skillTaintedHusks extends AbstractHollowCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractMonster randomMonster = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
         if (randomMonster != null) {
+            AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Orange.getKey()));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new PotionBounceEffect(p.hb.cY, p.hb.cX, randomMonster.hb.cX, this.hb.cY), 0.3F));
         }
         AbstractDungeon.actionManager.addToBottom(new BouncingFlaskAction(randomMonster, POISON, this.magicNumber));

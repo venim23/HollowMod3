@@ -49,7 +49,7 @@ public class skillMantisMark extends AbstractHollowCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int STRENGTH = 1;
     private static final int UPGRADED_STRENGTH = 1;
 

@@ -54,7 +54,7 @@ public class LifeHeartPower extends AbstractPower implements CloneablePowerInter
     // On use card, apply (amount) of Dexterity. (Go to the actual power card for the amount.)
     @Override
     public int onAttacked(DamageInfo info, int damageAmount){
-        if ((info.owner != null) && (info.type == DamageInfo.DamageType.HP_LOSS) && (info.owner != this.owner)) {
+        if ((info.owner != null) && (info.type == DamageInfo.DamageType.HP_LOSS)) {
              flash();
              AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, LifeHeartPower.POWER_ID));
         }

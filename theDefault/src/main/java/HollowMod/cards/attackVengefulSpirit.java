@@ -4,9 +4,11 @@ import HollowMod.actions.FocusSoulAction;
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -45,7 +47,7 @@ public class attackVengefulSpirit extends AbstractHollowCard {
 
 
     private static final int FOCUS_COST = 3;
-    private static final int UPGRADE_FOCUS_COST = 3;
+    private static final int UPGRADE_FOCUS_COST = 2;
 
     // /STAT DECLARATION/
 
@@ -62,6 +64,7 @@ public class attackVengefulSpirit extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Fireball.getKey()));
         AbstractDungeon.actionManager.addToTop(new FocusSoulAction(p,hollowFocusCost));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
 

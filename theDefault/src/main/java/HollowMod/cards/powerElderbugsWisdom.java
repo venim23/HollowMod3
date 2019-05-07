@@ -4,7 +4,9 @@ import HollowMod.hollowMod;
 import HollowMod.characters.TheBugKnight;
 import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.ElderbugPower;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -68,6 +70,8 @@ public class powerElderbugsWisdom extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Elder.getKey()));
 
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new ElderbugPower(p, p, magicNumber), magicNumber));

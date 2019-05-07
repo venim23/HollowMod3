@@ -5,9 +5,11 @@ import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.VoidPower;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -42,10 +44,12 @@ public class attackDesolateDive extends AbstractHollowCard {
     private static final int COST = 0;
 
     private static final int FOCUS_COST = 4;
+    private static final int UPGRADE_FOCUS_COST = 3;
+
 
 
     private static final int DAMAGE = 10;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int UPGRADE_PLUS_DMG = 4;
 
     // /STAT DECLARATION/
 
@@ -62,6 +66,7 @@ public class attackDesolateDive extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Quake.getKey()));
         AbstractDungeon.actionManager.addToTop(new FocusSoulAction(p,hollowFocusCost));
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAllEnemiesAction(p, multiDamage , damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
@@ -74,6 +79,7 @@ public class attackDesolateDive extends AbstractHollowCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeFocusCost(UPGRADE_FOCUS_COST);
             initializeDescription();
         }
     }

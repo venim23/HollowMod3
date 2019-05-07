@@ -3,8 +3,10 @@ package HollowMod.cards;
 import HollowMod.hollowMod;
 import HollowMod.characters.TheBugKnight;
 import HollowMod.patches.CardTagEnum;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.PlayTopCardAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -70,6 +72,8 @@ public class skillConfessorsAdvice extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Jiji.getKey()));
         AbstractCard CardtoCopy = AbstractDungeon.player.drawPile.getTopCard();
         AbstractDungeon.actionManager.addToBottom( new PlayTopCardAction(
                 AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), false));

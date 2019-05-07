@@ -58,11 +58,15 @@ public class ShadeLordPower extends AbstractPower implements CloneablePowerInter
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
         if ((c.block > 0)){
+            int blockval = c.block;
+            int newblock = 0;
+            int halfblock = (c.block / 2);
+            /*for (int i = blockval; i > 0; i = i - 2){
+                newblock++;
+            }*/
 
-            int blockreduced = Math.round(c.block/2);
-
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new ThornsPower(owner, blockreduced), blockreduced));
-            c.block = (c.block - blockreduced);
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new ThornsPower(owner, halfblock),halfblock));
+            c.block = (c.block - halfblock);
             //AbstractDungeon.actionManager.addToBottom(new LoseBlockAction(owner, owner, blockreduced));
 
         }
@@ -70,8 +74,10 @@ public class ShadeLordPower extends AbstractPower implements CloneablePowerInter
     }
     @Override
     public void atStartOfTurn() {
-        if (owner.getPower(ThornsPower.POWER_ID).amount > 0) {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(owner, owner, ThornsPower.POWER_ID, Math.round(this.owner.getPower(ThornsPower.POWER_ID).amount / 2)));
+        if (owner.hasPower(ThornsPower.POWER_ID)) {
+            if (owner.getPower(ThornsPower.POWER_ID).amount > 0) {
+                AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(owner, owner, ThornsPower.POWER_ID, (this.owner.getPower(ThornsPower.POWER_ID).amount / 2)));
+            }
         }
     }
 

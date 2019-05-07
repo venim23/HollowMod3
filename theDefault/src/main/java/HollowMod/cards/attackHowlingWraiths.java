@@ -2,9 +2,11 @@ package HollowMod.cards;
 
 import HollowMod.actions.FocusSoulAction;
 import HollowMod.patches.CardTagEnum;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -82,6 +84,7 @@ public class attackHowlingWraiths extends AbstractHollowCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToTop(new FocusSoulAction(p,hollowFocusCost));
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Scream.getKey()));
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAllEnemiesAction(p, multiDamage , damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
 

@@ -38,8 +38,8 @@ public class powerBaldurShell extends AbstractHollowCard {
 
     private static final int COST = 1;
 
-    private static final int BLOCK_ON_FOCUS = 2;
-    private static final int UPGRADE_BLOCK_ON_FOCUS = 1;
+    private static final int BLOCK_ON_FOCUS = 3;
+    private static final int UPGRADE_BLOCK_ON_FOCUS = 2;
 
     // /STAT DECLARATION/
 

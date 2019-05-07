@@ -4,7 +4,9 @@ import HollowMod.hollowMod;
 import HollowMod.characters.TheBugKnight;
 import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.NailsmithPower;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -49,8 +51,8 @@ public class skillTheNailsmith extends AbstractHollowCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
-    private static final int COST = 2;
-    private static final int UPGRADED_COST = 1;
+    private static final int COST = 1;
+    private static final int UPGRADED_COST = 0;
 
     private static final int ROUNDS_ADDED = 1;
 
@@ -68,7 +70,7 @@ public class skillTheNailsmith extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Smith.getKey()));
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new NailsmithPower( p, magicNumber), magicNumber));
 

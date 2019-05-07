@@ -2,9 +2,12 @@ package HollowMod.cards;
 
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -56,10 +59,10 @@ public class attackPogoStrike extends AbstractHollowCard {
     private static final CardType TYPE = CardType.ATTACK;       //
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
-    private static final int COST = 1;  // COST = 1
+    private static final int COST = 0;  // COST = 1
     private static final int UPGRADE_BASE_COST = 0;
-    private static final int DAMAGE = 6;    // DAMAGE = 6
-     // UPGRADE_PLUS_DMG = 3
+    private static final int DAMAGE = 4;    // DAMAGE = 6
+    private static final int UPGRADE_PLUS_DMG = 3;
 
     private static final int CARDS = 1;    // DAMAGE = 6
 
@@ -77,8 +80,11 @@ public class attackPogoStrike extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Parry.getKey()));
+        AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, 1, false));
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
     }
@@ -89,7 +95,7 @@ public class attackPogoStrike extends AbstractHollowCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADE_BASE_COST);
+            upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
     }

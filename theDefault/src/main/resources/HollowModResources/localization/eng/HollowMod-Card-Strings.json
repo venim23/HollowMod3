@@ -1,7 +1,7 @@
 {
   "HollowMod:NailStrikeStart": {
     "NAME": "Nail Strike",
-    "DESCRIPTION": "Deal !D! Damage."
+    "DESCRIPTION": "Deal !D! damage."
   },
   "HollowMod:QuickDashStart": {
     "NAME": "Quick Dash",
@@ -9,55 +9,55 @@
   },
   "HollowMod:FocusHealStart": {
     "NAME": "Simple Focus",
-    "DESCRIPTION": "[#60CFFF]Spell NL hollowmod:Focus !HollowMod:focusCost! :  Heal !M!. NL Exhaust."
+    "DESCRIPTION": "[#60CFFF]Spell NL [#EFFAFF]Focus[] !HollowMod:focusCost!: Heal !M!. NL Exhaust."
   },
 
 
   "HollowMod:CycloneSlash": {
     "NAME": "Cyclone Slash",
-    "DESCRIPTION": "Deal !D! Damage to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies."
   },
   "HollowMod:DashSlash": {
     "NAME": "Dash Slash",
-    "DESCRIPTION": "[#60CFFF]Dash NL Deal !D! Damage. NL Gain !B! Block."
+    "DESCRIPTION": "[#60CFFF]Dash NL Gain !B! Block. NL Deal !D! damage. "
   },
   "HollowMod:FastStrike": {
     "NAME": "Fast Strike",
-    "DESCRIPTION": "Discard 1 card. Deal !D! Damage and apply 1 Vulnerable to !M! random enemies."
+    "DESCRIPTION": "Discard 1 card. Deal !D! damage and apply 1 Vulnerable to !M! random enemies."
   },
   "HollowMod:HeavyBlow": {
     "NAME": "Heavy Blow",
-    "DESCRIPTION": "Deal !D! Damage and apply !M! Weak to an enemy."
+    "DESCRIPTION": "Deal !D! damage and apply !M! Weak to an enemy."
   },
   "HollowMod:HowlingWraiths": {
     "NAME": "Howling Wraiths",
-    "DESCRIPTION": "[#60CFFF]Spell NL hollowmod:Focus !HollowMod:focusCost!: Deal !D! Damage to all enemies."
+    "DESCRIPTION": "[#60CFFF]Spell NL [#EFFAFF]Focus[] !HollowMod:focusCost!: Deal !D! damage to all enemies."
   },
   "HollowMod:InfectedAttack": {
     "NAME": "Infected Attack",
-    "DESCRIPTION": "Deal !D! Damage. Apply !M! Poison. NL hollowmod:Infection 2."
+    "DESCRIPTION": "Deal !D! damage. Apply !M! Poison. NL [#FFA200]Infection[] 2."
   },
   "HollowMod:RecoilStrike": {
     "NAME": "Recoil Strike",
-    "DESCRIPTION": "Deal !D! Damage. NL Return [#60CFFF]Dash card from your discard pile to hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL Return a [#60CFFF]Dash card from your discard pile to hand. It costs 1 Less [E] this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Return a [#60CFFF]Dash card from your discard pile to hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Return a [#60CFFF]Dash card from your discard pile to hand. It costs 1 Less [E] this turn."
   },
   "HollowMod:SoulStrike": {
     "NAME": "Soul Strike",
-    "DESCRIPTION": "Deal !D! Damage. NL Gain !M! Additional hollowmod:Soul"
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Additional hollowmod:Soul"
   },
   "HollowMod:VengefulVoid": {
     "NAME": "Vengeful Void",
-    "DESCRIPTION": "[#60CFFF]Spell NL hollowmod:Void 2: Deal !D! Damage to a single enemy !M! times. Exhaust."
+    "DESCRIPTION": "[#60CFFF]Spell NL [#696969]Void[] 2: Deal !D! damage to a single enemy !M! times. Exhaust."
   },
   "HollowMod:WraithStrike": {
     "NAME": "Wraith Strike",
-    "DESCRIPTION": "[#60CFFF]Spell NL hollowmod:Void 1: Deal !D! Damage and Apply !M! Weak to an enemy."
+    "DESCRIPTION": "[#60CFFF]Spell NL [#696969]Void[] 1: Deal !D! damage and Apply !M! Weak to an enemy."
   },
   "HollowMod:ChannelNail": {
     "NAME": "Channel Nail",
-    "DESCRIPTION": "[#60CFFF]Spell NL hollowmod:Focus 3: Next turn, gain [E] and Draw 1 Extra Card. Exhaust.",
-    "UPGRADE_DESCRIPTION": "[#60CFFF]Spell NL hollowmod:Focus 3: Next turn, gain [E] and Draw 1 Extra Card."
+    "DESCRIPTION": "[#60CFFF]Spell NL [#EFFAFF]Focus[] 3: Next turn, gain [E] and Draw 1 Extra Card. Exhaust.",
+    "UPGRADE_DESCRIPTION": "[#60CFFF]Spell NL [#EFFAFF]Focus[] 3: Next turn, gain [E] and Draw 1 Extra Card."
   },
   "HollowMod:CloakDash": {
     "NAME": "Cloak Dash",
@@ -73,7 +73,7 @@
   },
   "HollowMod:LifebloodCocoon": {
     "NAME": "Lifeblood Cocoon",
-    "DESCRIPTION": "Gain !M! Temporary HP each time you attack an enemy this turn."
+    "DESCRIPTION": "Gain !M! [#00bfff]Temporary [#00bfff]HP each time you attack an enemy this turn."
   },
   "HollowMod:MantisMark": {
     "NAME": "Mantis Mark",
@@ -81,16 +81,16 @@
   },
   "HollowMod:SoulSplash": {
     "NAME": "Soul Splash",
-    "DESCRIPTION": "[#60CFFF]Spell NL hollowmod:Focus 2: Apply !M! Vulnerable to all enemies, Draw a card."
+    "DESCRIPTION": "[#60CFFF]Spell NL [#EFFAFF]Focus[] 2: Apply !M! Vulnerable to ALL enemies. Draw a card."
   },
   "HollowMod:SoulTotem": {
     "NAME": "Soul Totem",
-    "DESCRIPTION": "Gain !M! hollowmod:Soul Draw 1 Card. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! hollowmod:Soul Draw 2 Cards. Exhaust."
+    "DESCRIPTION": "Gain !M! hollowmod:Soul. Draw !HollowMod:SecondMagic! card. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! hollowmod:Soul. Draw !HollowMod:SecondMagic! cards. Exhaust."
   },
   "HollowMod:TaintedHusks": {
     "NAME": "Tainted Husks",
-    "DESCRIPTION": "Applies !HollowMod:SecondMagic! Poison to !M! Random Enemies. NL hollowmod:Infection 3."
+    "DESCRIPTION": "Applies !HollowMod:SecondMagic! Poison to !M! Random Enemies. NL [#FFA200]Infection[] 3."
   },
   "HollowMod:StalwartShell": {
     "NAME": "Stalwart Shell",
@@ -100,86 +100,95 @@
 
   "HollowMod:AbyssShriek": {
     "NAME": "Abyss Shriek",
-    "DESCRIPTION": "[#60CFFF]Spell NL hollowmod:Void 2: Deal !D! Damage to ALL Enemies. NL You cannot play any more Attack cards this turn."
+    "DESCRIPTION": "[#60CFFF]Spell NL [#696969]Void[] 2: Deal !D! damage to ALL Enemies. NL You cannot play any more Attack cards this turn."
   },
   "HollowMod:CoiledNail": {
     "NAME": "Coiled Nail",
-    "DESCRIPTION": "Deal !D! Damage to an enemy. NL If the enemy is Vulnerable, Repeat this effect."
+    "DESCRIPTION": "Deal !D! damage to an enemy. NL Deal twice that damage if the target is Vulnerable."
   },
   "HollowMod:DescendingDark": {
     "NAME": "Descending Dark",
-    "DESCRIPTION": "[#60CFFF]Spell NL hollowmod:Void 2: Deals !D! Damage to ALL Enemies. Exhaust."
+    "DESCRIPTION": "[#60CFFF]Spell NL [#696969]Void[] 2: Deal !D! damage to ALL enemies. Exhaust."
   },
   "HollowMod:DesolateDive": {
     "NAME": "Desolate Dive",
-    "DESCRIPTION": "[#60CFFF]Spell NL hollowmod:Focus 4: Deal !D! Damage to ALL Enemies."
+    "DESCRIPTION": "[#60CFFF]Spell NL [#EFFAFF]Focus[] 4: Deal !D! damage to ALL Enemies."
   },
   "HollowMod:FallenFury": {
     "NAME": "Fury of the Fallen",
-    "DESCRIPTION": "Deal !D! Damage to an enemy. NL If you are below 25% HP, Deal !M! times that amount instead."
+    "DESCRIPTION": "Deal !D! damage to an enemy. NL If you are below 25% HP, Deal !M! times that amount instead."
   },
   "HollowMod:GreatSlash": {
     "NAME": "Great Slash",
-    "DESCRIPTION": "Deal !D! Damage to ALL Enemies !M! times."
+    "DESCRIPTION": "Deal !D! damage to ALL Enemies !M! times."
   },
   "HollowMod:InfectedCysts": {
     "NAME": "Infected Cysts",
-    "DESCRIPTION": "Deal !D! Damage and apply !M! Poison to all enemies. NL hollowmod:Infection 3. Exhaust"
+    "DESCRIPTION": "Deal !D! damage and apply !M! Poison to all enemies. NL [#FFA200]Infection[] 3. Exhaust"
   },
   "HollowMod:InfectionAssault": {
     "NAME": "Infection Assault",
-    "DESCRIPTION": "Deal !D! Damage, plus an additional !M! damage for every level of hollowmod:Infection."
+    "DESCRIPTION": "Deal !D! damage, plus an additional !M! damage for every level of [#FFA200]Infection[]."
   },
   "HollowMod:PogoStrike": {
     "NAME": "Pogo Strike",
-    "DESCRIPTION": "Deal !D! Damage. NL Draw 1 card."
+    "DESCRIPTION": "Deal !D! damage. NL Discard 1 card. Draw 1 card."
   },
   "HollowMod:PureNailStrike": {
     "NAME": "Pure Nail Strike",
-    "DESCRIPTION": "[#60CFFF]Spell NL hollowmod:Focus X: Deal !D! Damage to an enemy, plus an additional !M! damage for each hollowmod:Soul Spent"
+    "DESCRIPTION": "[#60CFFF]Spell NL [#EFFAFF]Focus[] X: Deal !D! damage to an enemy. Deal an additional !M! damage for each hollowmod:Soul Spent"
   },
   "HollowMod:QuirrelsAssistance": {
     "NAME": "Quirrel's Assistance",
-    "DESCRIPTION": "[#60CFFF]Ally NL A Random Enemy Gains Weak !M!. NL A Random Enemy Takes !D! Damage."
-  },  
+    "DESCRIPTION": "[#60CFFF]Ally NL Deal !D! damage to a random enemy. NL  Apply !M! Weak to a random enemy."
+  },
   "HollowMod:SharpenedNail": {
     "NAME": "Sharpened Nail",
-    "DESCRIPTION": "Deal !D! Damage to an Enemy. NL If the enemy is Weak, Deal the same Damage to ALL other enemies. "
+    "DESCRIPTION": "Deal !D! damage to an enemy. NL If the enemy is Weak, Deal the same damage to ALL other enemies. "
   },
   "HollowMod:VengefulSpirit": {
     "NAME": "Vengeful Spirit",
-    "DESCRIPTION": "[#60CFFF]Spell NL hollowmod:Focus !HollowMod:focusCost!: Deal !D! Damage to an enemy."
+    "DESCRIPTION": "[#60CFFF]Spell NL [#EFFAFF]Focus[] !HollowMod:focusCost!: Deal !D! damage to an enemy."
   },
   "HollowMod:BaldurShell": {
     "NAME": "Baldur Shell",
-    "DESCRIPTION": "When you hollowmod:Focus, Gain !M! Block.",
-    "UPGRADE_DESCRIPTION": "Innate. Whenever you hollowmod:Focus, Gain !M! Block."
+    "DESCRIPTION": "Whenever you [#EFFAFF]Focus[], gain !M! Block.",
+    "UPGRADE_DESCRIPTION": "Innate. Whenever you [#EFFAFF]Focus[], gain !M! Block."
   },
   "HollowMod:BrokenVessel": {
     "NAME": "Broken Vessel",
-    "DESCRIPTION": "When you take Damage from hollowmod:Infection, Deal that same Damage to ALL Enemies as well.",
-    "UPGRADE_DESCRIPTION": "Innate, When you take Damage from hollowmod:Infection, Deal that same Damage to ALL Enemies as well."
+    "DESCRIPTION": "Whenever you take damage from [#FFA200]Infection[], deal that damage to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "Innate, Whenever you take damage from [#FFA200]Infection[], deal that damage to ALL enemies."
   },
   "HollowMod:Flukenest": {
     "NAME": "Flukenest",
-    "DESCRIPTION": "Whenever you play a [#60CFFF]Spell: Deal 1 Damage to !M! Random Enemies"
+    "DESCRIPTION": "Whenever you play a [#60CFFF]Spell: Deal 1 damage to !M! Random Enemies"
   },
   "HollowMod:Grubsong": {
     "NAME": "Grubsong",
-    "DESCRIPTION": "The first time you take Damage each turn, Gain 1 hollowmod:Soul.",
-    "UPGRADE_DESCRIPTION": "The first !M! times you take Damage each turn, Gain 1 hollowmod:Soul."
+    "DESCRIPTION": "The first time you take damage each turn, Gain 1 hollowmod:Soul.",
+    "UPGRADE_DESCRIPTION": "The first !M! times you take damage each turn, Gain 1 hollowmod:Soul."
+  },
+  "HollowMod:LuriensSpire": {
+    "NAME": "Lurien's Spire",
+    "DESCRIPTION": "[#60CFFF]Ally NL Remove all [#FFA200]Infection[] and Gain that amount of hollowmod:Soul. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "[#60CFFF]Ally NL Remove all [#FFA200]Infection[] and Gain that amount of hollowmod:Soul, NL or [#696969]Void[] if [#696969]Void[] is Active. NL Exhaust."
+  },
+  "HollowMod:MonomonsArchive": {
+    "NAME": "Monomon's Archive",
+    "DESCRIPTION": "[#60CFFF]Ally, [#60CFFF]Spell NL [#EFFAFF]Focus[] 5: Gain !B! Block."
   },
   "HollowMod:MothsMistake": {
     "NAME": "Moth's Mistake",
-    "DESCRIPTION": "At the Start of Each Turn: apply !M! Poison to all enemies, and gain 1 hollowmod:Infection."
+    "DESCRIPTION": "At the Start of your Turn: apply !M! Poison to all enemies, and gain 1 [#FFA200]Infection[]."
   },
   "HollowMod:ShapeofUnn": {
     "NAME": "Shape of Unn",
-    "DESCRIPTION": "When you play a [#60CFFF]Spell, Place 1 [#60CFFF]Dash card in your Discard into your Hand."
+    "DESCRIPTION": "Wheneber you play a [#60CFFF]Spell, Place 1 [#60CFFF]Dash card in your Discard into your Hand."
   },
   "HollowMod:SoulEater": {
     "NAME": "Soul Eater",
-    "DESCRIPTION": "When you play an Attack card, Generate 1 Additional hollowmod:Soul (Doesn't work for [#60CFFF]Spell or [#60CFFF]Ally cards"
+    "DESCRIPTION": "Whenever you play an Attack card, Generate 1 hollowmod:Soul .Doesn't work for [#60CFFF]Spell or [#60CFFF]Ally attacks."
   },
   "HollowMod:SoulVessel": {
     "NAME": "Soul Vessel",
@@ -200,8 +209,8 @@
   },
   "HollowMod:DreamGate": {
     "NAME": "Dream Gate",
-    "DESCRIPTION": "Exhaust a Card, The next card you play is returned to your hand. Exhaust",
-	"UPGRADE_DESCRIPTION": "Exhaust a Card, The next 2 cards you play are returned to your hand. Exhaust"
+    "DESCRIPTION": "Exhaust a Card, Return the Top Card of Your Discard to your hand. Exhaust",
+	"UPGRADE_DESCRIPTION": "Exhaust a Card, Return the Top 2 Cards of Your Discard to your hand. Exhaust"
   },
   "HollowMod:DungDefenderAura": {
     "NAME": "Dung Defender's Aura",
@@ -209,12 +218,12 @@
   },
   "HollowMod:EmbracetheVoid": {
     "NAME": "Embrace the Void",
-    "DESCRIPTION": "Costs 1 [E] Less for each hollowmod:Void. Draw Cards until you draw a hollowmod:Void or draw 5 cards. Exhaust",
-	"UPGRADE_DESCRIPTION": "Costs 1 [E] Less for each hollowmod:Void. Draw Cards until you draw a hollowmod:Void or draw 5 cards."
+    "DESCRIPTION": "Costs 1 [E] Less for each [#696969]Void[]. Draw Cards until you draw a [#696969]Void[] or draw 5 cards. Exhaust",
+	"UPGRADE_DESCRIPTION": "Costs 1 [E] Less for each [#696969]Void[]. Draw Cards until you draw a [#696969]Void[] or draw 5 cards."
   },
   "HollowMod:GrimmsGift": {
     "NAME": "Grimm's Gift",
-    "DESCRIPTION": "[#60CFFF] NL Each time you damage an enemy this turn, apply #b1 Vulnerable to them. "
+    "DESCRIPTION": "[#60CFFF]Ally NL Each time you damage an enemy this turn, apply 1 Vulnerable to them. "
   },
   "HollowMod:HuntersJournal": {
     "NAME": "Hunter's Journal",
@@ -227,11 +236,11 @@
   },
   "HollowMod:LifebloodHeart": {
     "NAME": "Lifeblood Heart",
-    "DESCRIPTION": "Gain !M! Temporary Health, If you take no unblocked Damage this Turn, Repeat this effect next Turn. Exhaust."
+    "DESCRIPTION": "Gain !M! [#00bfff]Temporary [#00bfff]Health, If you take no unblocked damage this turn, repeat this effect next turn. Exhaust."
   },
   "HollowMod:MawleksShell": {
     "NAME": "Mawlek's Shell",
-    "DESCRIPTION": "Gain !M! Dexterity, hollowmod:Infection !HollowMod:SecondMagic!."
+    "DESCRIPTION": "Gain !M! Dexterity, [#FFA200]Infection[] !HollowMod:SecondMagic!."
   },
   "HollowMod:MonarchWings": {
     "NAME": "Monarch Wings",
@@ -243,7 +252,7 @@
   },
   "HollowMod:PaleKingsBlessing": {
     "NAME": "Pale King's Blessing",
-    "DESCRIPTION": "Ethereal NL Exhaust 2 Cards. Gain !M! hollowmod:Soul. Gain 1 [E]. Exhaust."
+    "DESCRIPTION": "[#60CFFF]Ally NL Heal !M! + 1 for each level of [#FFA200]Infection[]."
   },
   "HollowMod:PerfectDash": {
     "NAME": "Perfect Dash",
@@ -252,47 +261,46 @@
   },
   "HollowMod:SoulShaman": {
     "NAME": "Soul Shaman",
-    "DESCRIPTION": "[#60CFFF]Spell NL hollowmod:Focus 6: Gain [E].",
-    "UPGRADE_DESCRIPTION": "[#60CFFF]Spell NL hollowmod:Focus 6: Gain [E][E]."
+    "DESCRIPTION": "[#60CFFF]Spell NL [#EFFAFF]Focus[] 5: Gain [E].",
+    "UPGRADE_DESCRIPTION": "[#60CFFF]Spell NL [#EFFAFF]Focus[] 5: Gain [E] [E]."
   },
   "HollowMod:SporeShroom": {
     "NAME": "Spore Shroom",
-    "DESCRIPTION": "[#60CFFF]Spell NL hollowmod:Focus 3: Discard up to 3 Cards. Heal 2 HP and Apply 1 Poison to all enemies for each Card Discarded. Exhaust."
+    "DESCRIPTION": "[#60CFFF]Spell NL [#EFFAFF]Focus[] 3: Discard up to 3 Cards. Heal 2 HP and Apply 1 Poison to all enemies for each Card Discarded. Exhaust."
   },
   "HollowMod:WhiteLadysBlessing": {
     "NAME": "White Lady's Blessing",
-    "DESCRIPTION": "Ethereal NL hollowmod:Focus !M!: Heal 3, Draw 2 Cards. Discard 1 Card. Exhaust."
+    "DESCRIPTION": "[#60CFFF]Ally NL [#696969]Void[] !M!."
   },
 
 
   "HollowMod:AwokenDreamNail": {
     "NAME": "Awoken Dream Nail",
-    "DESCRIPTION": "Deal !D! Damage. Increase the Soul Meter Limit by 1 for this combat, and fill your Soul Meter"
+    "DESCRIPTION": "Deal !D! damage. Increase the Soul Meter Limit by 1 for this combat, and fill your Soul Meter"
   },
   "HollowMod:HornetsHelp": {
     "NAME": "Hornet's Help",
-    "DESCRIPTION": "[#60CFFF]Ally NL Deal X damage to a random enemy X times and gain X block.",
-    "UPGRADE_DESCRIPTION": "[#60CFFF]Ally NL Deal X+1 damage to a random enemy X+1 times and gain X+1 block."
+    "DESCRIPTION": "[#60CFFF]Ally NL Deal X damage to a random enemy and gain X block !M! times "
   },
   "HollowMod:MantisClaw": {
     "NAME": "Mantis Claw",
-    "DESCRIPTION": "Exhaust 3 Cards in your hand. Draw 1 Card and Deal !D! Damage to a single enemy for each card Exhausted. Exhaust."
+    "DESCRIPTION": "Exhaust 3 Cards in your hand. Draw 1 Card and Deal !D! damage to a single enemy for each card Exhausted. Exhaust."
   },
   "HollowMod:ZotesMagnificence": {
     "NAME": "Zote's Magnificence",
-    "DESCRIPTION": "[#60CFFF]Ally NL Deal !D! Damage, at the cost of all your Current Block. Exhaust"
+    "DESCRIPTION": "[#60CFFF]Ally NL Deal !D! damage, at the cost of all your Current Block. Exhaust"
   },
   "HollowMod:ElderbugsWisdom": {
     "NAME": "Elderbug's Wisdom",
-    "DESCRIPTION": "[#60CFFF]Ally NL Whenever you play an [#60CFFF]Ally Card, Draw 1 Card."
+    "DESCRIPTION": "[#60CFFF]Ally NL Whenever you play an [#60CFFF]Ally card, draw 1 card."
   },
   "HollowMod:LordofShades": {
     "NAME": "Lord of Shades",
-    "DESCRIPTION": "Ethereal NL Võid !M!: While hollowmod:Void is Active: 50% of all Block you gain is instead gained as Thorn. All Thorn is reduced by half at the end of each turn."
+    "DESCRIPTION": "Ethereal NL [#696969]Void[] !M!: While [#696969]Void[] is Active: 50% of all Block you gain is instead gained as Thorn. All Thorn is reduced by half at the end of each turn."
   },
   "HollowMod:SharpenedShadows": {
     "NAME": "Sharpened Shadows",
-    "DESCRIPTION": "While you have hollowmod:Void: Playing a [#60CFFF]Dash Card will deal !M! Damage to a random enemy."
+    "DESCRIPTION": "While you have [#696969]Void[]: Playing a [#60CFFF]Dash Card will deal !M! damage to a random enemy."
   },
   "HollowMod:SlysStrikes": {
     "NAME": "Sly's Strikes",
@@ -301,12 +309,12 @@
   },
   "HollowMod:SoulMaster": {
     "NAME": "Soul Master",
-    "DESCRIPTION": "hollowmod:Soul [#60CFFF]Spells cost 1 less hollowmod:Soul. NL hollowmod:Void [#60CFFF]Spells generate 1 more hollowmod:Void.",
-    "UPGRADE_DESCRIPTION": "Innate NL hollowmod:Soul [#60CFFF]Spells cost 1 less hollowmod:Soul. NL hollowmod:Void [#60CFFF]Spells generate 1 more hollowmod:Void."
+    "DESCRIPTION": "hollowmod:Soul [#60CFFF]Spells cost 1 less hollowmod:Soul. NL [#696969]Void[] [#60CFFF]Spells generate 1 more [#696969]Void[].",
+    "UPGRADE_DESCRIPTION": "Innate NL hollowmod:Soul [#60CFFF]Spells cost 1 less hollowmod:Soul. NL [#696969]Void[] [#60CFFF]Spells generate 1 more [#696969]Void[]."
   },
   "HollowMod:Weaversong": {
     "NAME": "Weaversong",
-    "DESCRIPTION": "Whenever you Play an Attack: Deal !M! Damage to a random enemy."
+    "DESCRIPTION": "Whenever you Play an Attack: Deal !M! damage to a random enemy."
   },
 
   "HollowMod:Hiveblood": {
@@ -315,22 +323,31 @@
   },
   "HollowMod:LifebloodCore": {
     "NAME": "Lifeblood Core",
-    "DESCRIPTION": "Ethereal NL Gain 2 Temporary HP for each current point of Block. Lose all Block. Exhaust",
-    "UPGRADE_DESCRIPTION": "Gain 2 Temporary HP for each current point of Block. Lose all Block. Exhaust"
+    "DESCRIPTION": "Ethereal NL Gain 2 [#00bfff]Temporary [#00bfff]HP for each current point of Block. Lose all Block. Exhaust",
+    "UPGRADE_DESCRIPTION": "Gain 2 [#00bfff]Temporary [#00bfff]HP for each current point of Block. Lose all Block. Exhaust"
+  },
+  "HollowMod:ShadowDash": {
+    "NAME": "Shadow Dash",
+    "DESCRIPTION": "[#60CFFF]Dash NL [#696969]Void[] 2: Gain 2 Block. Gain Additional Block equal to your [#696969]Void[] Level. Exhaust",
+    "UPGRADE_DESCRIPTION": "[#60CFFF]Dash NL [#696969]Void[] 2: Gain 2 Block. Gain Additional Block equal to your [#696969]Void[] Level."
   },
   "HollowMod:PureVessel": {
     "NAME": "Pure Vessel",
-    "DESCRIPTION": "Overcharge 1. Exhaust",
-    "UPGRADE_DESCRIPTION": "Retain NL Overcharge 1. Exhaust"
+    "DESCRIPTION": "At the start of your turn Turn, pay 1 hollowmod:Soul to Gain 1 Strength. NL These values increase by 1 each turn. If you cannot pay: lose this power and any gained Strength.",
+    "UPGRADE_DESCRIPTION": "Retain NL At the start of your turn Turn, pay 1 hollowmod:Soul to Gain 1 Strength. NL These values increase by 1 each turn. If you cannot pay: lose this power and any gained Strength."
   },
   "HollowMod:RadiancesLament": {
     "NAME": "Radiance's Lament",
-    "DESCRIPTION": "Return all [#FFA200]Infection cards from your Discard and Exhaust Piles to your hand. hollowmod:Infection Cards played this turn cost 1 [E] Less and are Exhausted.",
-    "UPGRADE_DESCRIPTION": "Retain, Return all hollowmod:Infection cards from your Discard and Exhaust Piles to your hand. hollowmod:Infection Cards played this turn cost 1 [E] Less and are Exhausted."
+    "DESCRIPTION": "Return all [#FFA200]Infection cards from your Discard and Exhaust Piles to your hand. Exhaust",
+    "UPGRADE_DESCRIPTION": "Retain, Return all [#FFA200]Infection[] cards from your Discard, Draw and Exhaust Piles to your hand. Exhaust"
   },
   "HollowMod:SiblingsSouls": {
     "NAME": "Sibling's Souls",
     "DESCRIPTION": "Add a Copy of the next played attack or skill card to your hand."
+  },
+  "HollowMod:SiblingsShadow": {
+    "NAME": "Sibling's Shadow",
+    "DESCRIPTION": "[#60CFFF]Ally NL [#696969]Void[] 1: Return !M! [#696969]Void[] Cards from your Exhaust Pile to Your Hand. Exhaust"
   },
   "HollowMod:theNailsmith": {
   "NAME": "The Nailsmith",
@@ -338,16 +355,23 @@
   },
   "HollowMod:VoidDash": {
     "NAME": "Void Dash",
-    "DESCRIPTION": "[#60CFFF]Dash NL hollowmod:Void 1: Gain !B! Block, Deal !M! Damage to any enemy who's attacks you block this turn."
+    "DESCRIPTION": "[#60CFFF]Dash NL [#696969]Void[] 1: Gain !B! Block, Deal !M! damage to any enemy who's attacks you block this turn."
   },
-  
+  "HollowMod:HerrahsAnger": {
+    "NAME": "Herrah's Anger",
+    "DESCRIPTION": "[#60CFFF]Ally NL Deal !D! damage to an Enemy !M! Times. NL This damage can be augmented by [#696969]Void[]."
+  },
+  "HollowMod:MylasSalvation": {
+    "NAME": "Myla's Salvation",
+    "DESCRIPTION": "[#60CFFF]Ally NL Return a card from your Exhaust Pile to your Hand. Exhaust."
+  },
 
 
 
 
   "HollowMod:DefaultCommonAttack": {
     "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! Damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works.[]"
+    "DESCRIPTION": "Deal !D! damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works.[]"
   },
   "HollowMod:DefaultCommonSkill": {
     "NAME": "Defend",
@@ -361,7 +385,7 @@
   
   "HollowMod:DefaultUncommonAttack": {
     "NAME": "Big slap",
-    "DESCRIPTION": "Deal !D! Damage."
+    "DESCRIPTION": "Deal !D! damage."
   },
   "HollowMod:DefaultUncommonSkill": {
     "NAME": "A Better Defend",
@@ -375,7 +399,7 @@
   
   "HollowMod:DefaultRareAttack": {
     "NAME": "TOUCH",
-    "DESCRIPTION": "Deal !D! Damage."
+    "DESCRIPTION": "Deal !D! damage."
   },
   "HollowMod:DefaultRareSkill": {
     "NAME": "For Each Loop x2",
@@ -389,7 +413,7 @@
   
   "HollowMod:DefaultAttackWithVariable": {
     "NAME": "Special Strike",
-    "DESCRIPTION": "Deal !D! Damage [E] times. NL (Deal damage total.)"
+    "DESCRIPTION": "Deal !D! damage [E] times. NL (Deal damage total.)"
   },
   "HollowMod:DefaultSecondMagicNumberSkill": {
     "NAME": "Cool 2 Number Card",

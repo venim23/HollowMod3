@@ -34,9 +34,9 @@ public class powerThornsofAgony extends AbstractHollowCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
 
-    private static final int THORNS = 2;
+    private static final int THORNS = 3;
     private static final int UPGRADE_PLUS_THORNS = 1;
 
     // /STAT DECLARATION/
@@ -61,7 +61,6 @@ public class powerThornsofAgony extends AbstractHollowCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            this.isEthereal = false;
             this.upgradeName();
             upgradeMagicNumber(UPGRADE_PLUS_THORNS);
             this.initializeDescription();

@@ -1,10 +1,15 @@
 package HollowMod;
 
+import HollowMod.events.MylasSongHappyEvent;
+import HollowMod.monsters.monsterHuskWarrior;
+import HollowMod.potions.*;
 import HollowMod.relics.*;
+import HollowMod.util.SoundEffects;
 import HollowMod.variables.FocusCostVariable;
-import basemod.BaseMod;
+import basemod.*;
 import basemod.ModLabel;
 import basemod.ModPanel;
+import basemod.abstracts.CustomUnlockBundle;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -14,14 +19,17 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import javafx.util.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import HollowMod.cards.*;
 import HollowMod.characters.TheBugKnight;
-import HollowMod.potions.PlaceholderPotion;
 import HollowMod.util.IDCheckDontTouchPls;
 import HollowMod.util.TextureLoader;
 import HollowMod.variables.DefaultCustomVariable;
@@ -57,7 +65,9 @@ public class hollowMod implements
         EditStringsSubscriber,
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
-        PostInitializeSubscriber {
+        AddAudioSubscriber,
+        PostInitializeSubscriber,
+        SetUnlocksSubscriber{
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
     public static final Logger logger = LogManager.getLogger(hollowMod.class.getName());
@@ -79,6 +89,11 @@ public class hollowMod implements
     public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
     public static final Color PLACEHOLDER_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f); // Near White
     public static final Color PLACEHOLDER_POTION_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f); // Super Dark Red/Brown
+    public static final Color VOID_POTION_COLOR = CardHelper.getColor(0f, 0f, 0f); // Super Dark
+    public static final Color LIFEBLOOD_POTION_COLOR = CardHelper.getColor(0f, 244.0f, 244.0f); // Super Dark Red/Brown
+    public static final Color INFECTION_POTION_COLOR = CardHelper.getColor(255.0f, 135f, 15f);
+    public static final Color SOUL_POTION_COLOR = CardHelper.getColor(255.0f, 255f, 255f);
+
 
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
@@ -137,6 +152,13 @@ public class hollowMod implements
 
     public static String makeEventPath(String resourcePath) {
         return getModID() + "Resources/images/events/" + resourcePath;
+    }
+
+    public static String makeAudioPath(String resourcePath) {
+        return getModID() + "Resources/audio/sounds/" + resourcePath;
+    }
+    public static String makeMonsterPath(String resourcePath) {
+        return getModID() + "Resources/images/monsters/" + resourcePath;
     }
 
     // =============== /MAKE IMAGE PATHS/ =================
@@ -259,7 +281,7 @@ public class hollowMod implements
 
         // Create the Mod Menu
         ModPanel settingsPanel = new ModPanel();
-        settingsPanel.addUIElement(new ModLabel("DefaultMod doesn't have any settings! An example of those may come later.", 400.0f, 700.0f,
+        settingsPanel.addUIElement(new ModLabel("HollowMod doesn't have any settings! An example of those may come later.", 400.0f, 700.0f,
                 settingsPanel, (me) -> {
         }));
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
@@ -271,14 +293,64 @@ public class hollowMod implements
         // If you want to have a character-specific event, look at slimebound (CityRemoveEventPatch).
         // Essentially, you need to patch the game and say "if a player is not playing my character class, remove the event from the pool"
 
-        // BaseMod.addEvent(IdentityCrisisEvent.ID, IdentityCrisisEvent.class, TheCity.ID);
-
+        BaseMod.addEvent(MylasSongHappyEvent.ID, MylasSongHappyEvent.class);
+        if (!(AbstractDungeon.player instanceof TheBugKnight)) {
+            AbstractDungeon.eventList.remove(MylasSongHappyEvent.ID);
+        }
         // =============== /EVENTS/ =================
         logger.info("Done loading badge Image and mod options");
+        // =============== MONSTERS =================
+        //BaseMod.addMonster("infinitespire:MassOfShapes", MassOfShapes::new);
+        BaseMod.addMonster(monsterHuskWarrior.ID, () -> new monsterHuskWarrior());
+        if (!(AbstractDungeon.player instanceof TheBugKnight)) {
+            AbstractDungeon.monsterList.remove(monsterHuskWarrior.ID);
+        }
 
+        //BaseMod.addBoss("TheBeyond", "infinitespire:MassOfShapes", createPath("ui/map/massBoss.png"), createPath("ui/map/massBoss-outline.png"));
+        // =============== /MONSTERS/ =================
     }
 
     // =============== / POST-INITIALIZE/ =================
+
+
+    // ================ ADD AUDIO ===================
+    //Thanks Alchyr!
+    @Override
+    public void receiveAddAudio() {
+        addAudio(SoundEffects.Hornet);
+        addAudio(SoundEffects.Cyclone);
+        addAudio(SoundEffects.Scream);
+        addAudio(SoundEffects.Evade);
+        addAudio(SoundEffects.Fireball);
+        addAudio(SoundEffects.MinerBad);
+        addAudio(SoundEffects.MinerGood);
+        addAudio(SoundEffects.Parry);
+        addAudio(SoundEffects.Quake);
+        addAudio(SoundEffects.ShadowDash);
+        addAudio(SoundEffects.DreamNail);
+        addAudio(SoundEffects.Blocker);
+        addAudio(SoundEffects.Cornifer);
+        addAudio(SoundEffects.Defender);
+        addAudio(SoundEffects.Nail);
+        addAudio(SoundEffects.Orange);
+        addAudio(SoundEffects.Elder);
+        addAudio(SoundEffects.Healing);
+        addAudio(SoundEffects.Jiji);
+        addAudio(SoundEffects.Smith);
+        addAudio(SoundEffects.Fatty);
+        addAudio(SoundEffects.Sly);
+        addAudio(SoundEffects.Zote);
+        addAudio(SoundEffects.Quirrel);
+        addAudio(SoundEffects.MinerLyrics);
+        addAudio(SoundEffects.MinerDeath);
+        addAudio(SoundEffects.MinerTalk);
+    }
+
+
+    private void addAudio(Pair<String, String> audioData)
+    {
+        BaseMod.addAudio(audioData.getKey(), audioData.getValue());
+    }
 
 
     // ================ ADD POTIONS ===================
@@ -290,7 +362,11 @@ public class hollowMod implements
         // Class Specific Potion. If you want your potion to not be class-specific,
         // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
-        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheBugKnight.Enums.THE_BUGKNIGHT);
+        BaseMod.addPotion(VoidPotion.class, VOID_POTION_COLOR, VOID_POTION_COLOR, VOID_POTION_COLOR, VoidPotion.POTION_ID, TheBugKnight.Enums.THE_BUGKNIGHT);
+        BaseMod.addPotion(SoulPotion.class, SOUL_POTION_COLOR, SOUL_POTION_COLOR, SOUL_POTION_COLOR, SoulPotion.POTION_ID, TheBugKnight.Enums.THE_BUGKNIGHT);
+        BaseMod.addPotion(LifebloodPotion.class, LIFEBLOOD_POTION_COLOR, LIFEBLOOD_POTION_COLOR, LIFEBLOOD_POTION_COLOR, LifebloodPotion.POTION_ID, TheBugKnight.Enums.THE_BUGKNIGHT);
+        BaseMod.addPotion(InfectionPotion.class, INFECTION_POTION_COLOR, INFECTION_POTION_COLOR, INFECTION_POTION_COLOR, InfectionPotion.POTION_ID, TheBugKnight.Enums.THE_BUGKNIGHT);
+
 
         logger.info("Done editing potions");
     }
@@ -305,17 +381,22 @@ public class hollowMod implements
         logger.info("Adding relics");
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
+        //BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
         //BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.HOLLOW_COLOR);
         //BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.HOLLOW_COLOR);
+        BaseMod.addRelicToCustomPool(new IsmasTearRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
+        BaseMod.addRelicToCustomPool(new MillibellesNoteRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
         BaseMod.addRelicToCustomPool(new VesselMask(), TheBugKnight.Enums.HOLLOW_COLOR);
         BaseMod.addRelicToCustomPool(new DelicateFlowerRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
+        BaseMod.addRelicToCustomPool(new VoidIdolRelic() ,TheBugKnight.Enums.HOLLOW_COLOR);
+        BaseMod.addRelicToCustomPool(new KingsSoulRelic() ,TheBugKnight.Enums.HOLLOW_COLOR);
 
         // This adds a relic to the Shared pool. Every character can find this relic
         BaseMod.addRelic(new JonisBlessingRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new QueensCombRelic(), RelicType.SHARED);
 
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
-        UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
+        //UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
         logger.info("Done adding relics!");
     }
 
@@ -377,6 +458,7 @@ public class hollowMod implements
         BaseMod.addCard(new attackPureNailStrike());
         BaseMod.addCard(new attackDesolateDive());
         BaseMod.addCard(new attackVengefulSpirit());
+        BaseMod.addCard(new attackHerrahsAnger());
 
 
         //Skills
@@ -401,12 +483,20 @@ public class hollowMod implements
         BaseMod.addCard(new skillLifebloodHeart());
         BaseMod.addCard(new skillPerfectDash());
         BaseMod.addCard(new skillSiblingsSouls());
+        BaseMod.addCard(new skillLuriensSpire());
         BaseMod.addCard(new skillMonarchWings());
         BaseMod.addCard(new skillChannelNail());
         //BaseMod.addCard(new skillSporeShroom());
         BaseMod.addCard(new skillSoulShaman());
-        BaseMod.addCard(new skillOvercharmed());
+        BaseMod.addCard(new skillMonomonsArchive());
         BaseMod.addCard(new skillTaintedHusks());
+        BaseMod.addCard(new skillMylasSalvation());
+        BaseMod.addCard(new skillDreamGate());
+        BaseMod.addCard(new skillSiblingsShadow());
+        BaseMod.addCard(new skillPaleKingsBlessing());
+        BaseMod.addCard(new skillWhiteLadysBlessing());
+        BaseMod.addCard(new skillShadowDash());
+
         //Powers
         BaseMod.addCard(new powerElderbugsWisdom());
         BaseMod.addCard(new powerSharpenedShadows());
@@ -421,7 +511,8 @@ public class hollowMod implements
         BaseMod.addCard(new powerSoulVessel());
         BaseMod.addCard(new powerSoulEater());
         BaseMod.addCard(new powerBaldurShell());
-        //BaseMod.addCard(new powerLordofShades());
+        BaseMod.addCard(new powerPureVessel());
+        BaseMod.addCard(new powerLordofShades());
 
 
         //Deprecated
@@ -458,7 +549,7 @@ public class hollowMod implements
         UnlockTracker.unlockCard(attackInfectedCysts.ID);
         UnlockTracker.unlockCard(attackPogoStrike.ID);
         UnlockTracker.unlockCard(attackAbyssShriek.ID);
-        UnlockTracker.unlockCard(attackInfectionAssault.ID);
+        //UnlockTracker.unlockCard(attackInfectionAssault.ID);
         UnlockTracker.unlockCard(attackSharpenedNail.ID);
         UnlockTracker.unlockCard(attackGreatSlash.ID);
         UnlockTracker.unlockCard(attackFuryoftheFallen.ID);
@@ -479,7 +570,7 @@ public class hollowMod implements
         UnlockTracker.unlockCard(skillStalwartShell.ID);
         UnlockTracker.unlockCard(skillDungDefenderAura.ID);
         UnlockTracker.unlockCard(skillGrimmsGift.ID);
-        UnlockTracker.unlockCard(skillRadiancesLament.ID);
+        //UnlockTracker.unlockCard(skillRadiancesLament.ID);
         UnlockTracker.unlockCard(skillCrystalDash.ID);
         UnlockTracker.unlockCard(skillHuntersJournal.ID);
         UnlockTracker.unlockCard(skillVoidDash.ID);
@@ -490,6 +581,9 @@ public class hollowMod implements
         UnlockTracker.unlockCard(skillMonarchWings.ID);
         UnlockTracker.unlockCard(skillSiblingsSouls.ID);
         UnlockTracker.unlockCard(skillChannelNail.ID);
+        UnlockTracker.unlockCard(skillDreamGate.ID);
+        UnlockTracker.unlockCard(skillSiblingsShadow.ID);
+
         // Powers
 
         UnlockTracker.unlockCard(powerSharpenedShadows.ID);
@@ -519,6 +613,32 @@ public class hollowMod implements
         logger.info("Done adding cards!");
     }
 
+
+
+    public void receiveSetUnlocks() {
+        BaseMod.addUnlockBundle(new CustomUnlockBundle(skillEmbracetheVoid.ID,powerPureVessel.ID, powerBrokenVessel.ID), TheBugKnight.Enums.THE_BUGKNIGHT, 0);
+        UnlockTracker.addCard(skillEmbracetheVoid.ID);
+        UnlockTracker.addCard(powerPureVessel.ID);
+        UnlockTracker.addCard(powerBrokenVessel.ID);
+        BaseMod.addUnlockBundle(new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC, VoidIdolRelic.ID, KingsSoulRelic.ID, QueensCombRelic.ID), TheBugKnight.Enums.THE_BUGKNIGHT, 1);
+        UnlockTracker.addRelic(VoidIdolRelic.ID);
+        UnlockTracker.addRelic(KingsSoulRelic.ID);
+        UnlockTracker.addRelic(QueensCombRelic.ID);
+        BaseMod.addUnlockBundle(new CustomUnlockBundle(attackHerrahsAnger.ID, skillLuriensSpire.ID, skillMonomonsArchive.ID), TheBugKnight.Enums.THE_BUGKNIGHT, 2);
+        UnlockTracker.addCard(attackHerrahsAnger.ID);
+        UnlockTracker.addCard(skillLuriensSpire.ID);
+        UnlockTracker.addCard(skillMonomonsArchive.ID);
+        BaseMod.addUnlockBundle(new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC, IsmasTearRelic.ID, JonisBlessingRelic.ID, DelicateFlowerRelic.ID), TheBugKnight.Enums.THE_BUGKNIGHT, 3);
+        UnlockTracker.addRelic(IsmasTearRelic.ID);
+        UnlockTracker.addRelic(JonisBlessingRelic.ID);
+        UnlockTracker.addRelic(DelicateFlowerRelic.ID);
+        BaseMod.addUnlockBundle(new CustomUnlockBundle(skillPaleKingsBlessing.ID, skillWhiteLadysBlessing.ID, skillRadiancesLament.ID), TheBugKnight.Enums.THE_BUGKNIGHT, 4);
+        UnlockTracker.addCard(skillPaleKingsBlessing.ID);
+        UnlockTracker.addCard(skillWhiteLadysBlessing.ID);
+        UnlockTracker.addCard(skillRadiancesLament.ID);
+
+
+    }
     // There are better ways to do this than listing every single individual card, but I do not want to complicate things
     // in a "tutorial" mod. This will do and it's completely ok to use. If you ever want to clean up and
     // shorten all the imports, go look take a look at other mods, such as Hubris.
@@ -559,6 +679,9 @@ public class hollowMod implements
         // OrbStrings
         BaseMod.loadCustomStringsFile(OrbStrings.class,
                 getModID() + "Resources/localization/eng/HollowMod-Orb-Strings.json");
+        //UI
+        BaseMod.loadCustomStringsFile(UIStrings.class,
+                getModID() + "Resources/localization/eng/HollowMod-UI-Strings.json");
 
         logger.info("Done edittting strings");
     }

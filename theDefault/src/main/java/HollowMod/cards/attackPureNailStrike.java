@@ -42,10 +42,10 @@ public class attackPureNailStrike extends AbstractHollowCard {
 
     private static final int COST = 2;
 
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 9;
 
     private static final int DAMAGE_PER_SOUL = 2;
-    private static final int UPGRADE_DAMAGE_PER_SOUL = 2;
+    private static final int UPGRADE_DAMAGE_PER_SOUL = 3;
 
     // /STAT DECLARATION/
 

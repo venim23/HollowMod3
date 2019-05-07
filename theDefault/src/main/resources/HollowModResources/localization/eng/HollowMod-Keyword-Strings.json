@@ -1,36 +1,11 @@
 [
   {
-    "PROPER_NAME": "Soul",
+    "PROPER_NAME": "[#EFFAFF]Soul",
     "NAMES": [
       "soul",
       "Soul"
     ],
-    "DESCRIPTION": "A unique resource the player can #yFocus to activate certain [#60CFFF]Spells."
-  },
-  {
-	"PROPER_NAME": "Focus",
-    "NAMES": [
-      "focus",
-      "Focus",
-      "Focused"
-    ],
-    "DESCRIPTION": "Spend that amount of #ySoul in order to play the card"
-  },
-  {
-    "PROPER_NAME": "Void",
-    "NAMES": [
-      "void",
-      "Void"
-    ],
-    "DESCRIPTION": "The Antithesis of #ySoul, #yVoid #yLevel stacks, improving the damage of #yVoid [#60CFFF]Spells, and increasing any Damage taken. #yVoid Level decrements at the beginning of each turn."
-  },
-  {
-    "PROPER_NAME": "Infection",
-    "NAMES": [
-      "infection",
-      "Infection"
-    ],
-    "DESCRIPTION": "A Lingering debuff, #FFA200Infection #yLevel damages you and decrements by #b2 at the end of your turn."
+    "DESCRIPTION": "A unique resource the player can [#EFFAFF]Focus to activate certain [#60CFFF]Spells."
   },
   {
     "PROPER_NAME": "Multiword Keyword",

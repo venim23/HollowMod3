@@ -3,11 +3,13 @@ package HollowMod.cards;
 import HollowMod.hollowMod;
 import HollowMod.characters.TheBugKnight;
 import HollowMod.patches.CardTagEnum;
+import HollowMod.util.SoundEffects;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -67,6 +69,7 @@ public class attackZotesMagnificence extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m != null) {
+            AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Zote.getKey()));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
         }
         AbstractDungeon.actionManager.addToBottom(

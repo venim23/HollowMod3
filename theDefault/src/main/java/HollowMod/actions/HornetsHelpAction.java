@@ -45,17 +45,19 @@ public class HornetsHelpAction extends AbstractGameAction {
         if (upgraded) {
             ++effect;
         }
+        int repVal = magicNumber;
         int BaseEffect = effect;
         if (effect > 0) {
-            for (int i = 0; i < effect; ++i) {
+            for (int i = 0; i < repVal; ++i) {
 
-                AbstractDungeon.actionManager.addToBottom(new DamageRandomEnemyAction(new DamageInfo(p, BaseEffect), AttackEffect.BLUNT_LIGHT));
+                AbstractDungeon.actionManager.addToBottom(new DamageRandomEnemyAction(new DamageInfo(p, BaseEffect), AttackEffect.NONE));
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p,p,BaseEffect));
             }
             if (!freeToPlayOnce) {
                 p.energy.use(EnergyPanel.totalCount);
             }
         }
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p,p,BaseEffect));
+
         isDone = true;
     }
 }

@@ -2,9 +2,11 @@ package HollowMod.cards;
 
 import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.VoidPower;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -93,7 +95,7 @@ public class attackVengefulVoid extends AbstractHollowCard {
         if (p.hasPower(VoidPower.POWER_ID)){
             void_bonus += p.getPower(VoidPower.POWER_ID).amount;
         }
-
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Fireball.getKey()));
 
         for (int i = this.magicNumber; i > 0; i--){
             AbstractDungeon.actionManager.addToBottom(

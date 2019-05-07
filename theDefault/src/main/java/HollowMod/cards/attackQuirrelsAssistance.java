@@ -3,9 +3,11 @@ package HollowMod.cards;
 import HollowMod.hollowMod;
 import HollowMod.characters.TheBugKnight;
 import HollowMod.patches.CardTagEnum;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -59,10 +61,10 @@ public class attackQuirrelsAssistance extends AbstractHollowCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 6;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int DAMAGE = 7;
+    private static final int UPGRADE_PLUS_DMG = 4;
     private static final int WEAK_AMT = 2;
-    private static final int UPGRADE_PLUS_WEAK_AMT = 1;
+    private static final int UPGRADE_PLUS_WEAK_AMT = 2;
 
 
     // /STAT DECLARATION/
@@ -79,8 +81,9 @@ public class attackQuirrelsAssistance extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Quirrel.getKey()));
         AbstractMonster randomMonster = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(randomMonster, p, new WeakPower(randomMonster, magicNumber, false)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(randomMonster, p, new WeakPower(randomMonster, magicNumber, false),magicNumber));
         AbstractDungeon.actionManager.addToBottom(new DamageRandomEnemyAction(new DamageInfo(p, damage), AbstractGameAction.AttackEffect.SLASH_DIAGONAL ));
     }
 

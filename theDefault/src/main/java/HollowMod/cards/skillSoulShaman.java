@@ -29,7 +29,7 @@ public class skillSoulShaman extends AbstractHollowCard {
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -42,7 +42,7 @@ public class skillSoulShaman extends AbstractHollowCard {
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
     private static final int COST = 0;
-    private static final int FOCUS_COST = 6;
+    private static final int FOCUS_COST = 5;
     private static final int ENERGY = 1;
     private static final int UPGRADED_ENERGY= 1;
 
@@ -74,6 +74,7 @@ public class skillSoulShaman extends AbstractHollowCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADED_ENERGY);
+            rawDescription = (UPGRADE_DESCRIPTION);
             initializeDescription();
         }
     }

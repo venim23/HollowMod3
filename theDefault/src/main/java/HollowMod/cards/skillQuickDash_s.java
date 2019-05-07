@@ -1,8 +1,10 @@
 package HollowMod.cards;
 
 import HollowMod.patches.CardTagEnum;
+import HollowMod.util.SoundEffects;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -74,6 +76,7 @@ public class skillQuickDash_s extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Evade.getKey()));
         AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(p,p, this.block));
     }

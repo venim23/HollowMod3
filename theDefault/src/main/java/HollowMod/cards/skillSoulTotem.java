@@ -25,18 +25,18 @@ public class skillSoulTotem extends AbstractHollowCard {
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     // /TEXT DECLARATION/
 
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON; //  Up to you, I like auto-complete on these
+    private static final CardRarity RARITY = CardRarity.COMMON; //  Up to you, I like auto-complete on these
     private static final CardTarget TARGET = CardTarget.SELF;  //   since they don't change much.
     private static final CardType TYPE = CardType.SKILL;       //
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     private static final int SOUL = 2;
 
@@ -74,6 +74,7 @@ public class skillSoulTotem extends AbstractHollowCard {
         if (!upgraded) {
             upgradeName();
             this.upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_DRAW_CARDS);
+            rawDescription = (UPGRADE_DESCRIPTION);
             initializeDescription();
         }
     }

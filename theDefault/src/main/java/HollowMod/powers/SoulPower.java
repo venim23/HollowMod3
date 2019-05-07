@@ -40,6 +40,8 @@ public class SoulPower extends AbstractPower implements CloneablePowerInterface 
 
         if (owner.hasPower(VoidPower.POWER_ID)){
             this.amount = 0;
+        } else if (amount >= SOUL_METER) {
+            this.amount = SOUL_METER;
         } else {
             this.amount = amount;
         }

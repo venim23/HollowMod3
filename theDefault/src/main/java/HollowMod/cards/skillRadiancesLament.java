@@ -68,6 +68,7 @@ public class skillRadiancesLament extends AbstractHollowCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int discardInfections =0;
         int exhaustedInfections = 0;
+        int drawInfections = 0;
         for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
             if (c.hasTag(CardTagEnum.INFECTION)) {
                 discardInfections++;
@@ -78,8 +79,16 @@ public class skillRadiancesLament extends AbstractHollowCard {
                 exhaustedInfections++;
             }
         }
+        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+            if (c.hasTag(CardTagEnum.INFECTION)) {
+                drawInfections++;
+            }
+        }
         AbstractDungeon.actionManager.addToBottom(new FetchAction(AbstractDungeon.player.discardPile, (card -> card.hasTag(CardTagEnum.INFECTION)), discardInfections));
         AbstractDungeon.actionManager.addToBottom(new FetchAction(AbstractDungeon.player.exhaustPile, (card -> card.hasTag(CardTagEnum.INFECTION)), exhaustedInfections));
+        if (this.upgraded){
+            AbstractDungeon.actionManager.addToBottom(new FetchAction(AbstractDungeon.player.drawPile, (card -> card.hasTag(CardTagEnum.INFECTION)), drawInfections));
+        }
     }
 
     //Add stuff about Them costing 1 less this turn and exhausting?

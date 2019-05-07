@@ -1,6 +1,9 @@
 {
-  "DEFAULT_SLOT": "0",
+  "DEFAULT_SLOT": "1",
   "PROFILE_NAME": "Dumbass",
-  "COMPLETION": "3.463316",
-  "PLAYTIME": "7844"
+  "COMPLETION": "4.4228396",
+  "PLAYTIME": "20470",
+  "1_PROFILE_NAME": "nope",
+  "1_COMPLETION": "1.5156783",
+  "1_PLAYTIME": "1248"
 }

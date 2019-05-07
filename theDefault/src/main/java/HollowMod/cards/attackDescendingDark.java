@@ -2,9 +2,11 @@ package HollowMod.cards;
 
 import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.VoidPower;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -51,7 +53,7 @@ public class attackDescendingDark extends AbstractHollowCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON; //  Up to you, I like auto-complete on these
+    private static final CardRarity RARITY = CardRarity.COMMON; //  Up to you, I like auto-complete on these
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;  //   since they don't change much.
     private static final CardType TYPE = CardType.ATTACK;       //
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
@@ -88,7 +90,7 @@ public class attackDescendingDark extends AbstractHollowCard {
                     finalDamage[i] += p.getPower(VoidPower.POWER_ID).amount;
             }
         }
-
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Quake.getKey()));
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAllEnemiesAction(p, finalDamage , damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VoidPower(p, this.magicNumber), this.magicNumber));

@@ -5,6 +5,7 @@ import HollowMod.relics.DelicateFlowerRelic;
 import HollowMod.relics.JonisBlessingRelic;
 import HollowMod.relics.VesselMask;
 import basemod.abstracts.CustomPlayer;
+import basemod.animations.AbstractAnimation;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -15,6 +16,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
@@ -66,7 +68,13 @@ public class TheBugKnight extends CustomPlayer {
     public static final int ORB_SLOTS = 0;
 
     // =============== /BASE STATS/ =================
-
+    public static final SpriterAnimation KnightAnim = new SpriterAnimation(
+            "HollowModResources/images/char/BugKnight/Spriter/KnightAnim.scml");
+    public static final SpriterAnimation VoidAnim = new SpriterAnimation(
+            "HollowModResources/images/char/BugKnight/Spriter/KnightAnim.scml");
+    public static final SpriterAnimation VesselAnim = new SpriterAnimation(
+            "HollowModResources/images/char/BugKnight/Spriter/KnightAnim.scml");
+    public static SpriterAnimation CurrentAnim = KnightAnim;
 
     // =============== STRINGS =================
 
@@ -100,8 +108,7 @@ public class TheBugKnight extends CustomPlayer {
     public TheBugKnight(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
                 "HollowModResources/images/char/BugKnight/orb/vfx.png", null,
-                new SpriterAnimation(
-                        "HollowModResources/images/char/BugKnight/Spriter/KnightAnim.scml"));
+                CurrentAnim);
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================  
@@ -165,7 +172,7 @@ public class TheBugKnight extends CustomPlayer {
         retVal.add(skillQuickDash_s.ID);
         retVal.add(skillQuickDash_s.ID);
         //Attacks
-
+        //retVal.add(attackCycloneSlash.ID);
         //retVal.add(attackInfectedAttack.ID);
         //retVal.add(attackSoulStrike.ID);
         //retVal.add(attackDesolateDive.ID);
@@ -266,6 +273,12 @@ public class TheBugKnight extends CustomPlayer {
 
 
         return retVal;
+    }
+    public void UpdateCharAnim(SpriterAnimation anim){
+        if (AbstractDungeon.player instanceof TheBugKnight)
+        {
+            ((TheBugKnight)AbstractDungeon.player).UpdateCharAnim(anim);
+        }
     }
 
     // character Select screen effect

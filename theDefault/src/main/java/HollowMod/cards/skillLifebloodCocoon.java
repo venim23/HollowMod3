@@ -50,8 +50,8 @@ public class skillLifebloodCocoon extends AbstractHollowCard {
 
     private static final int COST = 1;
 
-    private static final int TEMP_HP_GAIN = 1;
-    private static final int UPGRADED_TEMPHP_GAIN = 2;
+    private static final int TEMP_HP_GAIN = 2;
+    private static final int UPGRADED_TEMPHP_GAIN = 1;
 
 
     // /STAT DECLARATION/
