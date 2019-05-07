@@ -1,137 +1,94 @@
-# StS-Default Mod Base
+**Hollow Mod**
 
-Welcome to this extremely over-commented Slay the Spire modding base. 
+So this is an overview of what the mod is, any design goals and a way to keep track of future plans. I guess.
 
-This is a minimal "default clean slate" for creating Slay the spire mods. 
+The Goal is, of course, to integrate the world of Hollow Knight, by Team Cherry. into the world of Slay the Spire, in a way that doesn't completely ruin either experience or memory, since both are fantastic games. Additionaly it's a fun ay for me to brush up on my 6 years out of date java skills.
 
-Use it to make your own mod of any type - If you want to add any standard in-game content (character, cards, relics, events, etc.), this is a good starting point.
+Hollow Mod currently has 4 Archetypes, although most of those also support hybrid decks pretty well (with the exception of Soul and Void)Currently Archetype API isn't supported but I want to eventually.
 
-It features 1 character (the Default) with a minimal set of things: 1 card of each type, 1 debuff, 1 relic, etc.
+**Pure Vessel:** Focused on Soul, Spells and some healing. This probably is the default archetype, and has more cards than the others 
 
-(Currently, there are still some stuff missing (such as game patching examples) which I plan to add later but I have other mods I wanna work on more.)
+**Void God:** Void spells are powerful cards that instead of costong soul, apply VOID to you, void increases the damage of void cards even more, but also increases all damage you receive: Beware of birds.
 
-If you're new to modding, you basically *need* the BaseMod wiki for whatever you wish to add, and you can work your way thought it with this base. Another very important thing is to look at other mods (get them from their github!), as well as the base-game code, and see how they do things. 
+**Broken Vessel:** Infection, and themed off the idea of a Vessel becoming corrupted like the Broken Vessel. Infection is a poison heavy build, but these cards also inflict Enfection on you, which is kinda like a self poison. but you can block the damage, so as long as you keep it balanced you are good.
 
-https://github.com/daviscook477/BaseMod/wiki
+**Friendship:** Ally cards are all sorts of benefits and buffs that help you out, this archtype relies more on the generic combat cards and doesn't have too many special mechanics.
 
-This base itself isn't going to help you code or anything!! Nor does it provide basic Java learning! While I have been putting comments noting what does what, this is just a nice starting point if you need a place to start learning from that's not an absolute empty canvas, or an overly-complicated, difficult to understand mod. But you still need to learn how the in-game code works and how to piece things together on your own. (i.e. this base will show you where to put the code for double-tap, but not what it is/how to write it/how it works. Look up the actual cards and backward-engineer them for that.)
+In addition to these, you can interchange them pretty freely, infection and soul actually play off each other pretty well, and so does void and allies
 
-Feel free to use this in any way you like, of course. 
+Other Notes: Lifeblood is just temporary hp, unfortunately i don't know how to override the temporary HP bar aspect to make it look blue. I'll look into that as long as i can make sure it only happens to the knight. Lifeblood really isn't an archetype. It's just a defensive buff that helps out a lot.
 
-If you have any issues or you want to recommend and/or add something to the mod that you feel would be helpful, feel free to submit an issue or a PR!
+**Release Notes:** 
 
-Happy modding!
+0.6.1
+* Added Versioning/
+* Released the Majority of the cards for the character. 
+* Added the Character Idel animation.
+* Removed "Most" of the lingering remnants of Gremious Defaultcharacter template.
 
-***
-Great big thank you to [Kobting](https://github.com/Kobting) for the original version of the following guide:
+0.6.2
+* Adjusted the Scaling/Reward of Infection Cards
+* Reworked Soul Meter into a single stack power to allow Increased Soul Limit to persist if Void is applied
+* Added Soul Vessel power
+* Buffed Simple Focus to be a bit better base, but the same upgraded
 
-## Setting Up Your Development Environment
-
-### Download the Default Mod Repository
-Download this repository as a zip. Unzip where you want to set up your dev environment.
-
-![](https://i.imgur.com/WnDw5GY.png)
-
-*Do not clone or fork unless you really want to go through the hassle of changing git things later*
-
-### Adding Dependencies
-You will need a 3 other mods in order to be able to build this/your mod:
-BaseMod, ModTheSpire, and (for this mod specifically but it's a great utility for everyone:)  StSlib
-
-Download the latest release `.jar` for each project or subscribe to them on the Steam Workshop. If you're using workshop mods, the mod locations are as follows:
-
-- Mod the Spire: `Steam\steamapps\workshop\content\646570\1605060445`
-- BaseMod: `Steam\steamapps\workshop\content\646570\1605833019`
-- StSlib: `Steam\steamapps\workshop\content\646570\1609158507`
-
-The final dependency you will need is the actual game. There is a file called `desktop-1.0.jar` located where your game is installed.
-
-> ModTheSpire and BaseMod only support the main branch of the game (i.e. not the beta branch).
+0.6.3
+* Added Joni's Blessing Shop Relic and Delicate Flower Uncommon Relic
+* Added Tainted Husks to the Infection Archetype
+* Fixed Basic Dash's upgrade cost being 0
+* Fixed Soul Splash being a BASIC rarity instead of common.
+* Buffed all Lifeblood Cards
+0.6.7
+* Keywords Implemented
+* Spell, Dash and Ally Labels are no longer Keywords.
+* Beret's Testing Changes
+* PogoStrike ReBalancing, Damage up, Unupgraded cost up, Upgraded card draw down.
+* Mantis mark cost down
+* Cloak Dash card draw down.
+* Dung Defender Upgrade BLock up, Poison Down
+* Moths Mistake Fixed to actally increment infectionrepeatedly with multiple stacks.
+* Mawleks Shell, Baldurs Shell both Weren't using Variable to display upgrades.
+* Double Dash now has it's second effect upgraded with Monarch Wings if you play it while the power is active. 
+* Redistributed the Formatting of several cards and their NL's thanks to Beret's suggestions.
 
 
-### Import Project Into an IDE
-This set up should be IDE agnostic (i.e. you can use whatever IDE you like). Here are steps for importing your project into the more popular IDE
 
-**IntelliJ**
+0.6.9
+* Stretch: I'd love to see if i can get the actual SFX of slashes and spells supported, but Audio is my worst element, unlikely.
 
-*File -> Project from Existing Sources -> Select theDefault folder or your own mod that follows the structure of the theDefault -> Select Maven -> Press next until your project is built*.
+0.7.0
+* Mylas Song: New 2 Part Event, Time 1: meeting Myla the and getting a common, Upgrade/remove/Relic choice,  time 2: potentially hving to kill her husk and getting a Vampire like choice to replace all Strikes with Infected attacks.
 
-Click on the Maven Projects tab on the right of the editor (ignoring that this image shows it to the left)
+**Future Plans: double point releases are reserved for fixes and balance tweaks by default.**
 
-![](https://i.imgur.com/rZfME3t.png)
+0.8.0 
+* 3-4 new Potions: Lifeblood (might overlap with Hubris's Lifeblood Potion, Which is HK inspired I'd bet) Soul Potion, Void Potion and Potentially Infection Potion.
+* New Idle Animations to Represent Soulmaster and Void Archetypes
+* Some conditional to make the players Anim appear Void with Void Mask (probably using the Void God sprites)
+* Some conditional to give the players anim a glowy soul effect with Kings Mask (Probably using the mask of the paly king or Hollow Knight)
+* Exploring Custom Keyword Colors.
+* I'd like too add in Archtype API support but who knows if I'm smart enough for that
+* 2 new Boss Relics, both which upgrade the Knights Mask, Kings Mask and Void Mask
+* Fixes to the currently hidden and broken cards, Corniger's Map, Spore Shroom, and Lord of Shades
+* New Cards: Kings Brand, Pale Ladies Blessing, Dream Gate, Embrace the Void and Mantis Claw
+* 2 other currently Undesigned cards, Hybrids for Infection Ally archetype, and Soul Infection Archetypes.
 
-This should open your pom.xml (Look at the top and make sure that's the file opened)
+0.9.0
+* Exploring custom Attack Effects using the actual in game Sprite Effects
+* a new relic or two and potentially a new curse or three (specific to the Knight) 
+* Setting some cards, relics, potions or curses behind "unlocks"
 
-Name your mod a nice name change the steam path to correctly reflect your steamapps location.
-Check all the locations to make sure they point to existing files.
+1.0.0 
+* 2 new Enemies
+* Act 1 Event only enemy: Grimm
+* Boss only enemy: Nightmare King Grimm
 
-Click the refresh icon to load your dependencies from the pom.xml into your project. (If no Maven projects tab on the right *View -> Tool Windows -> Maven Projects*)
+1.+.+
+Stretch: I kinda wanna do Hornet as a character, but I'll postpone it for the chance to base it on the stuff that happend with Silksong and those elements, items and story. If i REALLY want to do another custom charachter. 
+* in leiu of that: I'm tempted to make a Zote. 
+* Potential Zote Relic: "All Zote's attack Cards Say they do 200% their actual damage"
 
-(If it asks you, just enable auto-import)
+Re: Hollow Knight. Just to cover all the checkboxes here. If you haven't played Hollow knight, go buy it and play it,  It's easily one of the best Metroidvania games ever made. Team Cherry have always been some of the best Devs and absolutely have given their players their best without nickeling and diming them at all. (I mean, 4 DLC packs that almost double or triple the game length, for free?) 
 
-## Writing Your First Mod
+Hopefully if I ever actually put this on steam, it doesn't "bug" them too much. https://hollowknight.com/ if you somehow download this and like it but didn't play hollow knight, all the art is from hollow knight and it's gorgeous. I can't talk it up enough.
 
-### Package the Default Mod
-If you have followed the steps so far, you should be able to package this mod that you downloaded from this repo.
-
-In IntelliJ, open the Maven project tab and select the "Execute maven goal" button.
-
-![](https://i.imgur.com/OPNhpDc.png)
-
-In the command line field, type `package`.
-(Good practice is to do `clean` followed by `package`, especially if you are replacing a file with another one and they have an identical name.)
-
-You can also asign a shortcut to the both those commands by opening the Lifecycle drop-down folder (also in the image above) and right-click > Asign shortcut on them.
-
-You can now find your mod in `[slay the spire install folder]/mods/[name_of_mod].jar`. If you  can't find it, check at the bottom of your pom.xml for the location.
-
-You should be able to run Slay the Spire by running `MTS.cmd` (`MTS.sh` on a mac).
-BUT WAIT
-If you wanna run it with IntelliJ and get cool clickable line numbers when you get a crash-log that'll instantly direct you to where your error is:
-
-https://imgur.com/a/MO5oNuS
-
-## Going Further
-
-You made a card/event/relic and wanna test it? Please remember that the console exists:
-https://github.com/daviscook477/BaseMod/wiki/Console
-
-### What Other Listeners Exist
-
-Mods do a whole lot of things. A full list of listeners can be found in `src/main/java/basemod/interfaces` in BaseMod.
-
-### Looking at the Game's Source Code
-
-What else can I do with `AbstractCard` or `AbstractDungeon`? How does the Silent's `Choke` really work? How does Slay the Spire work under the hood. A lot of these questions can be answered by looking at the game's source code. You can do this by decompiling the game. 
-
-IntelliJ comes with it's own internal decompiler. Once you set your lib folder correctly and start up the mod, you will see the `External Libraries` folder on the left-hand side. Basemod and the Slay the Spire's `Desktop-1-0.jar` we put into our lib folder are both there, and can simply be oppened and explored. Alternatively, you can always search up the card/class you are looking for in intelliJ's class search (`ctrl+shift+A` and switch to the class tab with `tab` or `shift+tab`). 
-
-![](https://i.imgur.com/OausOaf.png)
-
-Finally, you can also find the original declaration of something already in the code by right clicking on it and selecting `Go to -> Declaration`, or, even faster, ctrl+left clicking on it.
-
-If you do not wish to use the built-in decompiler, follow [this guide](https://github.com/daviscook477/BaseMod/wiki/Decompiling-Your-Game) instead.
-
-### Can I Make My Own Listener
-
-You bet you can. Check out how listeners are made in BaseMod and check out the documentation about `SpirePatch` in the [ModTheSpire docs](https://github.com/kiooeht/ModTheSpire/wiki/SpirePatch)
-
-***
-
-Things I should add/do next:
-
-* ~~Non-character specific relic~~
-
-* ~~Custom potions~~
-
-* ~~Dynamic Variables~~
-
-* ~~CustomBottleRelic~~
-
-* ~~CustomSavable (?)~~
-
-* ~~Change all the tabs into spaces so that formatting is ok across all platforms~~
-
-* Patching Exmaples
-
-* Other things I don't know about yet
