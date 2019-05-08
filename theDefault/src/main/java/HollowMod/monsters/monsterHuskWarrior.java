@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class monsterHuskWarrior extends AbstractMonster {
@@ -22,11 +24,12 @@ public class monsterHuskWarrior extends AbstractMonster {
 
 
     // ****** MOVE AND STAT VALUES ********//
-    private int bigattackDamage = 15;
-    private int attackdebuffDamage = 5;
-    private int attackdebuffValue = 1;
-    private int bigdebuffValue = 5;
-    private int blockAmt = 5;
+    private int attdefAtt = 9;
+    private int attdefDef = 8;
+    private int flurryDamage = 5;
+    private int flurryHits = 2;
+    private int chargeBuff = 4;
+    private int shieldVal= 11;
     private int maxHP = 55;
     private int minHP = 45;
     // ******* END OF MOVE AND STAT VALUES *********//
@@ -55,22 +58,22 @@ public class monsterHuskWarrior extends AbstractMonster {
             //For monsters encountered at higher ascension levels adds a bit more HP
             this.minHP += 2;
             this.maxHP += 2;
+            this.shieldVal += 2;
 
         }
         if (AbstractDungeon.ascensionLevel > 2)
         {
             //for Ascenction 3 and higher, adds a bit more damage
-            this.bigattackDamage += 1;
-            this.bigdebuffValue += 1;
-            this.attackdebuffDamage += 1;
+            this.attdefAtt += 1;
+            this.attdefDef += 1;
+            this.flurryDamage += 1;
         }
         //set the min and max hp bounds,
         setHp(this.minHP, this.maxHP);
         //****** DAMAGE INFO ARRAYS? **** //
         //creates a list 0,1,2 of damageinfos to pull from for later.
-        this.damage.add(new DamageInfo(this, this.bigattackDamage)); // attack 0 damage
-        this.damage.add(new DamageInfo(this, 1)); //attack 1 damage
-        this.damage.add(new DamageInfo(this, this.attackdebuffDamage)); // attack 2 damage
+        this.damage.add(new DamageInfo(this, this.attdefAtt)); // attack 0 damage
+        this.damage.add(new DamageInfo(this, this.flurryDamage)); //attack 1 damage
         // **** END ARRAYS **** //
         loadAnimation(
                 //loads the animation
@@ -89,26 +92,29 @@ public class monsterHuskWarrior extends AbstractMonster {
         AbstractPlayer p = AbstractDungeon.player;
         //very simple, it checks what you've assinged as .nextMove's value. that happens in getMove
         switch (this.nextMove)
-        {
-            case 0:  // calls attack 0 damage stored damage info, alternatively you could created the damage info inside the case too
-                //this is all pretty generit AbstractDungeion.actionManager stuff for adding new actions to the bottom for the monster to perform
-                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(p, (DamageInfo)this.damage.get(0), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        {   //0 Swing- att
+            case 0: //BLockstrike
+                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATT_DEF"));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(p, (DamageInfo)this.damage.get(0), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, this.attdefDef));
                 break;
+            // Defend
             case 1: //calls the assigned block value
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "DEFEND"));
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, this.blockAmt));
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, this.shieldVal));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new PlatedArmorPower(this,2),2));
                 break;
-            case 2: //calls attack 2 damage info
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(p, (DamageInfo)this.damage.get(1), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, this, new StrengthPower( this, this.bigdebuffValue), this.bigdebuffValue));
-                break;
-            case 3: //calls attack 1 damage info
-                for (int i = 0; i < 2; i++)
+            case 2: //Flurry
+                for (int i = 0; i < this.flurryHits; i++)
                 {
-                    AbstractDungeon.actionManager.addToBottom(new DamageAction(p, (DamageInfo)this.damage.get(2), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, this, new StrengthPower(this, this.attackdebuffValue), this.attackdebuffValue));
+                    AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
+                    AbstractDungeon.actionManager.addToBottom(new DamageAction(p, (DamageInfo)this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
                 }
+                break;
+            case 3: //charge
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new PlatedArmorPower(this, this.chargeBuff), this.chargeBuff));
+                this.flurryDamage++;
+
         }
         //unsure here, I think it basically  uses an action to send this monsters data to the AbstractMonster.rollMove , which activates the DefaultMonster.getMove and sends a rng amount?
         //this seems to basically be the "get the intent for the next turn's move thing"
@@ -130,7 +136,10 @@ public class monsterHuskWarrior extends AbstractMonster {
                 this.state.setAnimation(0, "defend", false);
                 this.state.addAnimation(0, "idle", true, 0.0F);
                 break;
-
+            case"ATT_DEF":
+                this.state.setAnimation(0, "attack", false);
+                this.state.addAnimation(0, "defend", false, 0.4f);
+                this.state.addAnimation(0, "idle", true, 0.6F);
         }
     }
     //Unsure, but I think this handles the event of Taking damage, not sure if it's needed or not.
@@ -150,14 +159,9 @@ public class monsterHuskWarrior extends AbstractMonster {
     protected void getMove(int i)
     {
         // so for this, it's a modified probability. it's a 30% chance (any roll less than 30) but it's also gauranteed if it's the first turn of the combat
-        if ((i < 30) || (GameActionManager.turn == 0))
-        {
-            //this is within that 30%chance, it makes sure it doesn't repeat that move again.
-            if (!lastMove((byte)2)) {
-                setMove((byte)2, AbstractMonster.Intent.ATTACK_DEBUFF, ((DamageInfo)this.damage.get(1)).base);
-                //This lets the big debuff follow the attack/debuff if the ascension level is 17 or higher
-            } else if (AbstractDungeon.ascensionLevel >= 17) {
-                //So here's what setmove looks for:
+        if (i < 30) {
+            setMove((byte) 0, AbstractMonster.Intent.ATTACK_DEFEND, ((DamageInfo) this.damage.get(0)).base);
+                        //So here's what setmove looks for:
 		  /*
 		  final String moveName, I think this is just for Debugger
 		  final byte nextMove, thsi is what the case in takeTurn looks for
@@ -166,27 +170,31 @@ public class monsterHuskWarrior extends AbstractMonster {
 		  (otpional)_final int multiplier, For stull like the birdy attacks of 2x5? that's this thing.
 		  (Optional) final boolean isMultiDamage if the multiplier was there set this to true, by default it's false IIRC)
 		  */
-                setMove((byte)3, AbstractMonster.Intent.ATTACK_DEBUFF, ((DamageInfo)this.damage.get(2)).base, 2, true);
-            } else {
-                setMove((byte)0, AbstractMonster.Intent.ATTACK, ((DamageInfo)this.damage.get(0)).base);
-            }
-        }
-        //I think this is just a catch for between 30 and 45 so 15% chance? since it's an else if that overlaps? it's a weird way to do that blank.
-        else if (i < 45) {
-            setMove((byte)1, AbstractMonster.Intent.DEFEND);
+        } else if (i < 60) {
+            setMove((byte)1, Intent.DEFEND_BUFF);
             //so anything over 44 will be this i think?  so 65% generic attacks.
+        } else if (i < 85){
+            setMove((byte)2, AbstractMonster.Intent.ATTACK, ((DamageInfo)this.damage.get(1)).base, this.flurryHits, true);
+        } else if ((i >= 85) && (!this.lastMove((byte)3))){
+            setMove((byte)3, AbstractMonster.Intent.BUFF);
         } else {
-            setMove((byte)0, AbstractMonster.Intent.ATTACK, ((DamageInfo)this.damage.get(0)).base);
+            setMove((byte)2, AbstractMonster.Intent.ATTACK, ((DamageInfo)this.damage.get(1)).base, this.flurryHits, true);
         }
     }
+
+    public void die() {
+        this.state.setTimeScale(0.1f);
+        this.useShakeAnimation(5.0f);
+        super.die();
+    }
+
     //Assigns byte values to the attack names. I can't find this directly called, maybe it's just put in the output for debugging
     public static class MoveBytes
     {
         public static final byte BLOCKSTRIKE = 0;
         public static final byte DEFEND = 1;
         public static final byte FLURRY = 2;
-        public static final byte CHARGEUP = 3;
-        public static final byte SWING = 4;
+        public static final byte CHARGE = 3;
     }
 
 

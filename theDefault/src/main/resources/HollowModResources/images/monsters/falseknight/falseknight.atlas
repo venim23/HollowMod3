@@ -1,69 +1,69 @@
 
 falseknight.png
-size: 1024,512
+size: 2048,2048
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 leg2
   rotate: false
-  xy: 1, 174
-  size: 55, 45
+  xy: 1609, 1
+  size: 400, 400
   orig: 400, 400
-  offset: 176, 186
+  offset: 0, 0
   index: -1
 leg1
   rotate: false
-  xy: 58, 174
-  size: 28, 41
+  xy: 403, 1305
+  size: 400, 400
   orig: 400, 400
-  offset: 174, 172
+  offset: 0, 0
   index: -1
 elbow
   rotate: false
-  xy: 1, 325
-  size: 101, 106
+  xy: 403, 903
+  size: 400, 400
   orig: 400, 400
-  offset: 128, 168
+  offset: 0, 0
   index: -1
 arm2
   rotate: false
-  xy: 105, 174
-  size: 76, 86
+  xy: 805, 903
+  size: 400, 400
   orig: 400, 400
-  offset: 163, 156
+  offset: 0, 0
   index: -1
 shoulder
   rotate: false
-  xy: 869, 223
-  size: 113, 100
+  xy: 1207, 1305
+  size: 400, 400
   orig: 400, 400
-  offset: 140, 148
+  offset: 0, 0
   index: -1
 body
   rotate: false
-  xy: 605, 1
-  size: 262, 249
+  xy: 1, 903
+  size: 400, 400
   orig: 400, 400
-  offset: 74, 40
+  offset: 0, 0
   index: -1
 head
   rotate: false
-  xy: 869, 1
-  size: 149, 220
+  xy: 805, 1305
+  size: 400, 400
   orig: 400, 400
-  offset: 129, 149
+  offset: 0, 0
   index: -1
 hammer
   rotate: false
   xy: 1, 1
-  size: 602, 171
+  size: 900, 900
   orig: 900, 900
-  offset: 92, 387
+  offset: 0, 0
   index: -1
 Hand
   rotate: false
-  xy: 1, 252
-  size: 102, 65
+  xy: 1, 1305
+  size: 400, 400
   orig: 400, 400
-  offset: 175, 153
+  offset: 0, 0
   index: -1

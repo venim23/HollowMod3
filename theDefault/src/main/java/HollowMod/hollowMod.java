@@ -1,6 +1,7 @@
 package HollowMod;
 
 import HollowMod.events.MylasSongHappyEvent;
+import HollowMod.monsters.bossFalseKnight;
 import HollowMod.monsters.monsterHuskWarrior;
 import HollowMod.potions.*;
 import HollowMod.relics.*;
@@ -305,7 +306,8 @@ public class hollowMod implements
         if (!(AbstractDungeon.player instanceof TheBugKnight)) {
             AbstractDungeon.monsterList.remove(monsterHuskWarrior.ID);
         }
-
+        BaseMod.addMonster(bossFalseKnight.ID, () -> new bossFalseKnight());
+        BaseMod.addBoss("Exordium", bossFalseKnight.ID, "HollowModResources/images/ui/map/nightmareelite.png","HollowModResources/images/ui/map/bossIcon-outline.png");
         //BaseMod.addBoss("TheBeyond", "infinitespire:MassOfShapes", createPath("ui/map/massBoss.png"), createPath("ui/map/massBoss-outline.png"));
         // =============== /MONSTERS/ =================
     }

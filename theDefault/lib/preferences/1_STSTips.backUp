@@ -6,5 +6,6 @@
   "SHUFFLE_TIP": "true",
   "POWER_TIP": "true",
   "POTION_TIP": "true",
-  "INTENT_TIP": "true"
+  "INTENT_TIP": "true",
+  "CARD_REWARD_TIP": "true"
 }
