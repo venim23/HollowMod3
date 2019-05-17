@@ -1,5 +1,6 @@
 package HollowMod.cards;
 
+import HollowMod.actions.SFXVAction;
 import HollowMod.hollowMod;
 import HollowMod.characters.TheBugKnight;
 import HollowMod.patches.CardTagEnum;
@@ -71,7 +72,7 @@ public class powerElderbugsWisdom extends AbstractHollowCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Elder.getKey()));
+        AbstractDungeon.actionManager.addToBottom(new SFXVAction(SoundEffects.Elder.getKey(), 1.4F));
 
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new ElderbugPower(p, p, magicNumber), magicNumber));

@@ -1,6 +1,8 @@
 package HollowMod.powers;
 
+import HollowMod.actions.SFXVAction;
 import HollowMod.hollowMod;
+import HollowMod.util.SoundEffects;
 import HollowMod.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
@@ -9,6 +11,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -68,6 +71,7 @@ public class WeaverSongPower extends AbstractPower implements CloneablePowerInte
     @Override
     public void onUseCard(final AbstractCard card, final UseCardAction action) {
         if ((card.type.equals(AbstractCard.CardType.ATTACK))) {
+            AbstractDungeon.actionManager.addToBottom(new SFXVAction(SoundEffects.SpiderBud.getKey(), 1.6F));
             AbstractDungeon.actionManager.addToBottom(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, this.amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
         }
     }

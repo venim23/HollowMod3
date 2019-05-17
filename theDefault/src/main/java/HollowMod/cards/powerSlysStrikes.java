@@ -70,10 +70,8 @@ public class powerSlysStrikes extends AbstractHollowCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            this.isEthereal = false;
             this.upgradeName();
             upgradeBaseCost(UPGRADED_COST);
-            this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
     }

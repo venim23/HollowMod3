@@ -1,5 +1,6 @@
 package HollowMod.cards;
 
+import HollowMod.actions.SFXVAction;
 import HollowMod.util.SoundEffects;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -75,7 +76,7 @@ public class attackNailStrike_s extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Nail.getKey()));
+        AbstractDungeon.actionManager.addToBottom(new SFXVAction(SoundEffects.Nail.getKey(), 1.2F));
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
     }

@@ -62,8 +62,11 @@ public class skillPerfectDash extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new GainBlockAction(p,p, this.block));
+        if (this.upgraded) {
+            AbstractDungeon.actionManager.addToBottom(
+                    new GainBlockAction(p, p, this.block));
+        }
+
 
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p,p,new IntangiblePlayerPower(p,1)));

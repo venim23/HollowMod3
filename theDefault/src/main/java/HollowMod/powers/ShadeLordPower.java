@@ -15,6 +15,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 
+import java.security.acl.Owner;
+
 import static HollowMod.hollowMod.makePowerPath;
 
 //Add X to the level of Void Power, Void will add vulnerability and
@@ -47,23 +49,10 @@ public class ShadeLordPower extends AbstractPower implements CloneablePowerInter
         updateDescription();
     }
 
-    public void stackPower(int stackAmount)
-    {
-        this.fontScale = 8.0F;
-        this.amount += stackAmount;
-        if (this.amount == 0) {
-            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, ShadeLordPower.POWER_ID));
-        }
-    }
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if ((c.block > 0)){
-            int blockval = c.block;
-            int newblock = 0;
+        if (((c.block > 0) && owner.hasPower(VoidPower.POWER_ID))){
             int halfblock = (c.block / 2);
-            /*for (int i = blockval; i > 0; i = i - 2){
-                newblock++;
-            }*/
 
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new ThornsPower(owner, halfblock),halfblock));
             c.block = (c.block - halfblock);
@@ -81,14 +70,6 @@ public class ShadeLordPower extends AbstractPower implements CloneablePowerInter
         }
     }
 
-    public void atEndOfTurn(final boolean isPlayer){
-        if ( this.amount > 0) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new ReducePowerAction(owner, owner, ShadeLordPower.POWER_ID, 1));
-        }
-
-
-        }
 
 
     @Override

@@ -1,0 +1,123 @@
+{
+	"HollowMod:NKGrimm": {
+		"MOVES":[
+			"Fire Bats",
+			"Flame Pillar",
+			"Ritual of Fire",
+			"Flame Cloak",
+			"Teleport",
+			"Cloak Spikes",
+			"Swaddled Flames",
+			"Channel Power",
+			"Released Fury"
+			
+		],
+		"NAME": "Nightmare King Grimm",
+		"DIALOG": [
+			"Dance with me, my friend. The crowd awaits. NL Show them you are worthy of a starring role!",
+			"#rThe #rRitual...",
+			"#rHeart #rof #rFlame...",
+			"Our scarlet eyes will watch you keenly... friend."
+		]
+	},
+	"HollowMod:FalseKnight":{
+		"MOVES": [
+			"Slam",
+			"Heavy Smash",
+			"Charge",
+			"Rampage",
+			"Exposed"
+		],
+		"NAME": "The False Knight",
+		"DIALOG": [
+			"This great shell... NL ...It belongs to me!",
+			"I wanted... NL ...The strength to protect the others..."
+		]
+	},
+    "HollowMod:Radiance":{
+        "MOVES" : [
+			"Rising Dusk",
+			"Breaking Dawn",
+			"Sword Wall",
+			"Sword Rain",
+			"Charging Light",
+			"Burning Sun",
+			"Last Light"
+		],
+        "NAME" : "The Radiance",
+        "DIALOG": [
+		"[#FFA200]...ANCIENT [#FFA200]ENEMY...",
+		"[#FFA200]...DAWN [#FFA200]WILL [#FFA200]BREAK...",
+		"[#FFA200]...THIS [#FFA200]LIGHT [#FFA200]CANNOT [#FFA200]BE [#FFA200]CONSUMED...",
+		"[#FFA200]...I [#FFA200]WILL [#FFA200]NOT [#FFA200]BE [#FFA200]FORGOTTEN..."
+		
+		]
+    },
+	"HollowMod:StalkingDevout":{
+		"MOVES" : [],
+		"NAME" : "Stalking Devout",
+		"DIALOG": []
+	},
+	"HollowMod:LittleWeaver":{
+		"MOVES" : [],
+		"NAME" : "Little Weaver",
+		"DIALOG": []
+	},
+	"HollowMod:MossKnight":{
+		"MOVES" : [],
+		"NAME" : "Moss Knight",
+		"DIALOG": []
+	},
+	"HollowMod:HuskWarrior":{
+		"MOVES" : [],
+		"NAME" : "Husk Warrior",
+		"DIALOG": []
+	},
+	"HollowMod:HuskSentry":{
+		"MOVES" : [],
+		"NAME" : "Husk Sentry",
+		"DIALOG": []
+	},
+	"HollowMod:ViolentHusk":{
+		"MOVES" : [],
+		"NAME" : "ViolentHusk",
+		"DIALOG": []
+	},
+	"HollowMod:DroolingHusk":{
+		"MOVES" : [],
+		"NAME" : "Drooling Husk",
+		"DIALOG": []
+	},
+	"HollowMod:Flukemon":{
+		"MOVES" : [],
+		"NAME" : "Flukemon",
+		"DIALOG": []
+	},
+	"HollowMod:Fluketop":{
+		"MOVES" : [],
+		"NAME" : "Fluke?",
+		"DIALOG": []
+	},
+	"HollowMod:Flukebot":{
+		"MOVES" : [],
+		"NAME" : "Fluke?",
+		"DIALOG": []
+	},
+	"HollowMod:Zote":{
+		"MOVES" : [
+		"Life Ender",
+		"Frontal Assault",
+		"Recovery",
+		"The Grey Prince",
+		"Flail",
+		"Zoteling"
+		],
+		"NAME" : "Zote the Mighty",
+		"DIALOG": [
+		"Know this, cur. I am Zote the Mighty",
+		"Hoy! What are you doing, you clumsy little oaf?",
+		"Go on, cur! Scurry away! Lest I humiliate you further!"
+		]
+	}
+	
+}

@@ -1,8 +1,7 @@
 package HollowMod;
 
 import HollowMod.events.MylasSongHappyEvent;
-import HollowMod.monsters.bossFalseKnight;
-import HollowMod.monsters.monsterHuskWarrior;
+import HollowMod.monsters.*;
 import HollowMod.potions.*;
 import HollowMod.relics.*;
 import HollowMod.util.SoundEffects;
@@ -22,8 +21,13 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.dungeons.TheBeyond;
+import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.monsters.MonsterInfo;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javafx.util.Pair;
@@ -295,21 +299,43 @@ public class hollowMod implements
         // Essentially, you need to patch the game and say "if a player is not playing my character class, remove the event from the pool"
 
         BaseMod.addEvent(MylasSongHappyEvent.ID, MylasSongHappyEvent.class);
-        if (!(AbstractDungeon.player instanceof TheBugKnight)) {
-            AbstractDungeon.eventList.remove(MylasSongHappyEvent.ID);
-        }
         // =============== /EVENTS/ =================
         logger.info("Done loading badge Image and mod options");
         // =============== MONSTERS =================
         //BaseMod.addMonster("infinitespire:MassOfShapes", MassOfShapes::new);
-        BaseMod.addMonster(monsterHuskWarrior.ID, () -> new monsterHuskWarrior());
-        if (!(AbstractDungeon.player instanceof TheBugKnight)) {
-            AbstractDungeon.monsterList.remove(monsterHuskWarrior.ID);
-        }
+        BaseMod.addMonster(monsterHuskWarrior.ID, () -> new MonsterGroup(new AbstractMonster[]{
+                new monsterHuskWarrior(100.0f),
+                new monsterHuskWarrior(-250.0F)
+        }));
+        BaseMod.addMonster(monsterHuskSentry.ID, () -> new MonsterGroup(new AbstractMonster[]{
+                new monsterHuskSentry(-250.0F),
+                new monsterHuskSentry(50.0F)
+
+        }));
+        BaseMod.addMonster(eliteStalkingDevout.ID, () -> new MonsterGroup(new AbstractMonster[]{
+                new monsterLittleWeaver(-500.0F, -10.0F),
+                new monsterLittleWeaver(-250.0F, 10.0F),
+                new eliteStalkingDevout(100.0F),
+
+        }));
+        BaseMod.addMonster(bossRadiance.ID, () -> new bossRadiance());
         BaseMod.addMonster(bossFalseKnight.ID, () -> new bossFalseKnight());
-        BaseMod.addBoss("Exordium", bossFalseKnight.ID, "HollowModResources/images/ui/map/nightmareelite.png","HollowModResources/images/ui/map/bossIcon-outline.png");
+        BaseMod.addMonster(bossNKGrimm.ID, () -> new bossNKGrimm());
+
         //BaseMod.addBoss("TheBeyond", "infinitespire:MassOfShapes", createPath("ui/map/massBoss.png"), createPath("ui/map/massBoss-outline.png"));
         // =============== /MONSTERS/ =================
+
+
+        // ================ ADD ENCOUNTERS ===================
+
+        BaseMod.addBoss(Exordium.ID, bossFalseKnight.ID, "HollowModResources/images/ui/map/FalseKnightIcon.png","HollowModResources/images/ui/map/bossIcon-outline.png");
+        BaseMod.addBoss(TheCity.ID, bossNKGrimm.ID, "HollowModResources/images/ui/map/GrimmIcon.png","HollowModResources/images/ui/map/bossIcon-outline.png");
+        BaseMod.addBoss(TheBeyond.ID, bossRadiance.ID, "HollowModResources/images/ui/map/RadianceIcon.png","HollowModResources/images/ui/map/bossIcon-outline.png");
+        BaseMod.addMonsterEncounter(Exordium.ID, new MonsterInfo(monsterHuskWarrior.ID,1.0F));
+        BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(monsterHuskSentry.ID,1.0F));
+        BaseMod.addEliteEncounter(TheBeyond.ID, new MonsterInfo(eliteStalkingDevout.ID,1.1F));
+
+        // ================ /ENCOUNTERS/ ===================
     }
 
     // =============== / POST-INITIALIZE/ =================
@@ -341,11 +367,30 @@ public class hollowMod implements
         addAudio(SoundEffects.Smith);
         addAudio(SoundEffects.Fatty);
         addAudio(SoundEffects.Sly);
+        addAudio(SoundEffects.SpiderBud);
+        addAudio(SoundEffects.SentryBuzz);
         addAudio(SoundEffects.Zote);
         addAudio(SoundEffects.Quirrel);
         addAudio(SoundEffects.MinerLyrics);
         addAudio(SoundEffects.MinerDeath);
         addAudio(SoundEffects.MinerTalk);
+        addAudio(SoundEffects.DevoutSlash);
+        addAudio(SoundEffects.DevoutOpen);
+        addAudio(SoundEffects.WeaverScream);
+        addAudio(SoundEffects.SentryBrava);
+        addAudio(SoundEffects.GrimmCape);
+        addAudio(SoundEffects.GrimmCast);
+        addAudio(SoundEffects.GrimmDie);
+        addAudio(SoundEffects.GrimmFire);
+        addAudio(SoundEffects.GrimmSpikes);
+        addAudio(SoundEffects.GrimmCall);
+        addAudio(SoundEffects.RadBeam);
+        addAudio(SoundEffects.RadCharge);
+        addAudio(SoundEffects.RadFlyD);
+        addAudio(SoundEffects.RadMisc);
+        addAudio(SoundEffects.RadScream);
+        addAudio(SoundEffects.RadSong);
+        addAudio(SoundEffects.RadSword);
     }
 
 
@@ -390,8 +435,8 @@ public class hollowMod implements
         BaseMod.addRelicToCustomPool(new MillibellesNoteRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
         BaseMod.addRelicToCustomPool(new VesselMask(), TheBugKnight.Enums.HOLLOW_COLOR);
         BaseMod.addRelicToCustomPool(new DelicateFlowerRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
-        BaseMod.addRelicToCustomPool(new VoidIdolRelic() ,TheBugKnight.Enums.HOLLOW_COLOR);
-        BaseMod.addRelicToCustomPool(new KingsSoulRelic() ,TheBugKnight.Enums.HOLLOW_COLOR);
+        BaseMod.addRelicToCustomPool(new VoidIdolRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
+        BaseMod.addRelicToCustomPool(new KingsSoulRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
 
         // This adds a relic to the Shared pool. Every character can find this relic
         BaseMod.addRelic(new JonisBlessingRelic(), RelicType.SHARED);
@@ -437,12 +482,14 @@ public class hollowMod implements
         BaseMod.addCard(new attackCycloneSlash());
         BaseMod.addCard(new attackCoiledNail());
         BaseMod.addCard(new attackDashSlash());
+        BaseMod.addCard(new attackBlackTendrils());
+        BaseMod.addCard(new attackHeavyBlow());
         BaseMod.addCard(new attackDescendingDark());
         BaseMod.addCard(new attackHornetsHelp());
         BaseMod.addCard(new attackInfectedAttack());
         BaseMod.addCard(new attackQuirrelsAssistance());
         BaseMod.addCard(new attackSoulStrike());
-        BaseMod.addCard(new skillSoulTotem());
+
         BaseMod.addCard(new attackWraithStrike());
         BaseMod.addCard(new attackVengefulVoid());
         BaseMod.addCard(new attackZotesMagnificence());
@@ -498,6 +545,7 @@ public class hollowMod implements
         BaseMod.addCard(new skillPaleKingsBlessing());
         BaseMod.addCard(new skillWhiteLadysBlessing());
         BaseMod.addCard(new skillShadowDash());
+        BaseMod.addCard(new skillSoulTotem());
 
         //Powers
         BaseMod.addCard(new powerElderbugsWisdom());
@@ -618,8 +666,8 @@ public class hollowMod implements
 
 
     public void receiveSetUnlocks() {
-        BaseMod.addUnlockBundle(new CustomUnlockBundle(skillEmbracetheVoid.ID,powerPureVessel.ID, powerBrokenVessel.ID), TheBugKnight.Enums.THE_BUGKNIGHT, 0);
-        UnlockTracker.addCard(skillEmbracetheVoid.ID);
+        BaseMod.addUnlockBundle(new CustomUnlockBundle(powerLordofShades.ID, powerPureVessel.ID, powerBrokenVessel.ID), TheBugKnight.Enums.THE_BUGKNIGHT, 0);
+        UnlockTracker.addCard(powerLordofShades.ID);
         UnlockTracker.addCard(powerPureVessel.ID);
         UnlockTracker.addCard(powerBrokenVessel.ID);
         BaseMod.addUnlockBundle(new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC, VoidIdolRelic.ID, KingsSoulRelic.ID, QueensCombRelic.ID), TheBugKnight.Enums.THE_BUGKNIGHT, 1);
@@ -684,6 +732,10 @@ public class hollowMod implements
         //UI
         BaseMod.loadCustomStringsFile(UIStrings.class,
                 getModID() + "Resources/localization/eng/HollowMod-UI-Strings.json");
+
+        //Monster
+       BaseMod.loadCustomStringsFile(MonsterStrings.class,
+                getModID() + "Resources/localization/eng/HollowMod-Monster-Strings.json");
 
         logger.info("Done edittting strings");
     }

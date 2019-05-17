@@ -1,9 +1,11 @@
 package HollowMod.cards;
 
+import HollowMod.actions.SFXVAction;
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.MonarchWingsPower;
+import HollowMod.powers.ShadeLordPower;
 import HollowMod.powers.VoidDashPower;
 import HollowMod.powers.VoidPower;
 import HollowMod.util.SoundEffects;
@@ -15,6 +17,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.ThornsPower;
 
 import static HollowMod.hollowMod.makeCardPath;
 
@@ -67,18 +70,24 @@ public class skillShadowDash extends AbstractHollowCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p,p,new VoidPower(p, VOID), VOID));
-        int blockval = 0;
+        int blockval = VOID;
         if (p.hasPower(VoidPower.POWER_ID)){
             blockval = p.getPower(VoidPower.POWER_ID).amount + VOID;
         }
         if (p.hasPower(MonarchWingsPower.POWER_ID)){
             blockval = blockval * 2;
         }
+        if (p.hasPower(ShadeLordPower.POWER_ID)){
+            blockval = blockval/2;
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p,p, new ThornsPower(p,blockval),blockval));
+        }
+        // janky AF
         AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(p,p, block));
-        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Evade.getKey()));
+        AbstractDungeon.actionManager.addToBottom(new SFXVAction(SoundEffects.Evade.getKey()));
         AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(p,p, blockval));
+
     }
 
 

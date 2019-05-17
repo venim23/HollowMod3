@@ -6,6 +6,7 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -30,7 +31,7 @@ public class attackRecoilStrike extends AbstractHollowCard {
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     // /TEXT DECLARATION/
 
 
@@ -43,8 +44,10 @@ public class attackRecoilStrike extends AbstractHollowCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 8;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int DAMAGE = 9;
+
+    private static int intVal = 0;
+
 
     // /STAT DECLARATION/
 
@@ -63,7 +66,13 @@ public class attackRecoilStrike extends AbstractHollowCard {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         //this Deals Damage
-        AbstractDungeon.actionManager.addToBottom(new FetchAction(AbstractDungeon.player.discardPile, (card -> card.hasTag(CardTagEnum.DASH)), 1));
+        if (this.upgraded){intVal = 1;}
+        AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new FetchAction(AbstractDungeon.player.discardPile, card -> card.hasTag(CardTagEnum.DASH), 1, fetchedCards -> {
+            for (AbstractCard card : fetchedCards) {
+                card.modifyCostForTurn(-(intVal));
+            }
+        }));
+        //AbstractDungeon.actionManager.addToBottom(new FetchAction(AbstractDungeon.player.discardPile, (card -> card.hasTag(CardTagEnum.DASH)), 1));
 
 
 }       //this "Hopefully" allows a player to get dash cards back from the discard. probabyl gonna break tbh
@@ -74,8 +83,9 @@ public class attackRecoilStrike extends AbstractHollowCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
+            rawDescription = (UPGRADE_DESCRIPTION);
+            this.initializeDescription();
         }
     }
 }

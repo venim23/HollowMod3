@@ -42,7 +42,7 @@ public class skillWhiteLadysBlessing extends AbstractHollowCard {
     private static final CardType TYPE = CardType.SKILL;       //
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
-    private static final int COST = 1;  // COST = 1
+    private static final int COST = 0;  // COST = 1
 
     private static final int VOID = 2;
     private static final int UPGRADED_VOID = 1;
@@ -56,7 +56,6 @@ public class skillWhiteLadysBlessing extends AbstractHollowCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         tags.add(CardTagEnum.ALLY);
         tags.add(CardTagEnum.VOID);
-        this.exhaust = true;
         this.magicNumber = (this.baseMagicNumber = VOID);
     }
 

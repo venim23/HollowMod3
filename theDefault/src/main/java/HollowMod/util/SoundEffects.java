@@ -34,5 +34,23 @@ public class SoundEffects {
     public static final Pair<String, String> MinerLyrics = new Pair<>("HollowMod:MinerLyrics", makeAudioPath("Miner_Lyrics.ogg"));
     public static final Pair<String, String> MinerDeath = new Pair<>("HollowMod:MinerDeath", makeAudioPath("Miner_death.ogg"));
     public static final Pair<String, String> MinerTalk = new Pair<>("HollowMod:MinerTalk", makeAudioPath("Miner_Talk.ogg"));
-
+    public static final Pair<String, String> WeaverScream = new Pair<>("HollowMod:WeaverScream", makeAudioPath("weaver_scream.ogg"));
+    public static final Pair<String, String> DevoutSlash = new Pair<>("HollowMod:DevoutSlash", makeAudioPath("devout_slash.ogg"));
+    public static final Pair<String, String> DevoutOpen = new Pair<>("HollowMod:DevoutOpen", makeAudioPath("devout_open.ogg"));
+    public static final Pair<String, String> SentryBrava = new Pair<>("HollowMod:SentryBrava", makeAudioPath("sentry_brava.ogg"));
+    public static final Pair<String, String> GrimmCape = new Pair<>("HollowMod:GrimmCape", makeAudioPath("grimm_cape.ogg"));
+    public static final Pair<String, String> GrimmCast = new Pair<>("HollowMod:GrimmCast", makeAudioPath("grimm_cast.ogg"));
+    public static final Pair<String, String> GrimmFire = new Pair<>("HollowMod:GrimmFire", makeAudioPath("grimm_fireball.ogg"));
+    public static final Pair<String, String> GrimmSpikes = new Pair<>("HollowMod:GrimmSpikes", makeAudioPath("grimm_spikes.ogg"));
+    public static final Pair<String, String> GrimmDie = new Pair<>("HollowMod:GrimmDie", makeAudioPath("grimm_die.ogg"));
+    public static final Pair<String, String> GrimmCall = new Pair<>("HollowMod:GrimmCall", makeAudioPath("grimm_shout1.ogg"));
+    public static final Pair<String, String> RadBeam = new Pair<>("HollowMod:RadBeam", makeAudioPath("radiance_bigbeam.ogg"));
+    public static final Pair<String, String> RadScream = new Pair<>("HollowMod:RadScream", makeAudioPath("radiance_cry1.ogg"));
+    public static final Pair<String, String> RadMisc = new Pair<>("HollowMod:RadMisc", makeAudioPath("radiance_misc.ogg"));
+    public static final Pair<String, String> RadFlyD = new Pair<>("HollowMod:RadFlyD", makeAudioPath("radiance_flydown.ogg"));
+    public static final Pair<String, String> RadSword = new Pair<>("HollowMod:RadSword", makeAudioPath("radiance_sword.ogg"));
+    public static final Pair<String, String> RadCharge = new Pair<>("HollowMod:RadCharge", makeAudioPath("radiance_prebeam.ogg"));
+    public static final Pair<String, String> RadSong = new Pair<>("HollowMod:RadSong", makeAudioPath("radiance_death.ogg"));
+    public static final Pair<String, String> SpiderBud = new Pair<>("HollowMod:SpiderBud", makeAudioPath("spider_buddy.ogg"));
+    public static final Pair<String, String> SentryBuzz = new Pair<>("HollowMod:SentryBuzz", makeAudioPath("sentry_fly.ogg"));
 }

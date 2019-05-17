@@ -45,7 +45,7 @@ public class skillVoidDash extends AbstractHollowCard {
     private static final int BLOCK = 14;
     private static final int UPGRADE_PLUS_BLOCK =6;
 
-    private static final int REVENGE = 2;
+    private static final int REVENGE = 3;
 
     private static final int VOID = 1;
 

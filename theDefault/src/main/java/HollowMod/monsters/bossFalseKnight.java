@@ -4,21 +4,25 @@ import HollowMod.hollowMod;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 
 public class bossFalseKnight extends AbstractMonster {
 
-    private static final String NAME = "FalseKnight";
-    public static final String ID = hollowMod.makeID(NAME);
-
-
+    public static final String ID = hollowMod.makeID("FalseKnight");
+    private static final MonsterStrings monsterStrings = CardCrawlGame.languagePack.getMonsterStrings(ID);
+    public static final String NAME = monsterStrings.NAME;
+    public static final String[] MOVES = monsterStrings.MOVES;
+    public static final String[] DIALOG = monsterStrings.DIALOG;
     // ****** MOVE AND STAT VALUES ********//
     private int bigGuard = 10;
     private int platedArmor = 10;
@@ -55,7 +59,7 @@ public class bossFalseKnight extends AbstractMonster {
 	final float offsetX, final float offsetY,
 	final boolean ignoreBlights: Not included as false by default?
 	*/
-        super(bossFalseKnight.NAME, ID, 220, 0, 0, 400.0F, 400.0F, null, 1.0F, 1.0F);
+        super(NAME, ID, 220, 0, 0, 400.0F, 400.0F, null, 1.0F, 1.0F);
         this.type = AbstractMonster.EnemyType.BOSS;
 
         if (AbstractDungeon.ascensionLevel >=9)
@@ -94,6 +98,15 @@ public class bossFalseKnight extends AbstractMonster {
         //no idea
         e.setTime(e.getEndTime() * MathUtils.random());
     }
+
+    @Override
+    public void usePreBattleAction() {
+
+        AbstractDungeon.scene.fadeOutAmbiance();
+        CardCrawlGame.music.playTempBgmInstantly("MINDBLOOM", true);
+        AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[0], 4.0f, 4.0f));
+    }
+
     //take turn is actually one of the later things to occur, it happens AFTER the action has been decided and displayed for a turn as intent. deciding the move happens in GetMove
     public void takeTurn()
     {
@@ -139,6 +152,7 @@ public class bossFalseKnight extends AbstractMonster {
                 break;
             case 4: //VULN
                 //add SFX later
+                AbstractDungeon.actionManager.addToTop(new TalkAction(this, DIALOG[1], 4.0f, 4.0f));
                 if (this.hasPower(StrengthPower.POWER_ID)) {
                 AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this, this, StrengthPower.POWER_ID, rageGained));
                 }
@@ -173,8 +187,8 @@ public class bossFalseKnight extends AbstractMonster {
                 break;
             case "RAGE":
                 this.state.setAnimation(0, animBuff, false);
-                this.state.addAnimation(0, animAtt, false,0.5F);
-                this.state.addAnimation(0, animIdle, true, 0.0F);
+                this.state.addAnimation(0, animAtt, false,0.0F);
+                this.state.addAnimation(0, animIdle, true, 1.0F);
                 break;
             case "VULN":
                 this.state.setAnimation(0, animVuln, true);
@@ -198,21 +212,21 @@ public class bossFalseKnight extends AbstractMonster {
     protected void getMove(int i)
     {
         if (rageTimes == rageLimit){
-            setMove((byte) 4, Intent.UNKNOWN);
+            setMove(MOVES[4],(byte) 4, Intent.UNKNOWN);
             rageTimes = 0;
             return;
         }
         if (this.numTurns == 4){
-            setMove((byte) 3, Intent.ATTACK_BUFF, ((DamageInfo) this.damage.get(2)).base);
+            setMove(MOVES[3],(byte) 3, Intent.ATTACK_BUFF, ((DamageInfo) this.damage.get(2)).base);
             return;
         }
         if ((i <=15) || ((this.lastMove((byte)3)) && (rageTimes < rageLimit))) {
 
             if (rageTimes == rageLimit - 1) {
-                setMove((byte) 3, Intent.ATTACK, ((DamageInfo) this.damage.get(2)).base, 2, true);
+                setMove(MOVES[3],(byte) 3, Intent.ATTACK, ((DamageInfo) this.damage.get(2)).base, 2, true);
                 return;
             }
-            setMove((byte) 3, Intent.ATTACK_BUFF, ((DamageInfo) this.damage.get(2)).base);
+            setMove(MOVES[3],(byte) 3, Intent.ATTACK_BUFF, ((DamageInfo) this.damage.get(2)).base);
             return;
         }
         // so for this, it's a modified probability. it's a 30% chance (any roll less than 30) but it's also gauranteed if it's the first turn of the combat
@@ -241,8 +255,6 @@ public class bossFalseKnight extends AbstractMonster {
         public static final byte RAMPAGE = 3;
         public static final byte VULN= 4;
     }
-
-
 
 
 

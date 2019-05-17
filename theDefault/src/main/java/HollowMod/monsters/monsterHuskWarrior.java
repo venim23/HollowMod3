@@ -8,7 +8,9 @@ import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
@@ -16,22 +18,24 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class monsterHuskWarrior extends AbstractMonster {
 
-    private static final String NAME = "HuskWarrior";
-    public static final String ID = hollowMod.makeID(NAME);
-
+    public static final String ID = hollowMod.makeID("HuskWarrior");
+    private static final MonsterStrings monsterStrings = CardCrawlGame.languagePack.getMonsterStrings(ID);
+    public static final String NAME = monsterStrings.NAME;
+    public static final String[] MOVES = monsterStrings.MOVES;
+    public static final String[] DIALOG = monsterStrings.DIALOG;
     //Not sure what special encounter this happens for
     //public static final String SPECIAL_ENCOUNTER_ID = InfiniteSpire.createID("Three Voidlings");
 
 
     // ****** MOVE AND STAT VALUES ********//
-    private int attdefAtt = 9;
-    private int attdefDef = 8;
-    private int flurryDamage = 5;
+    private int attdefAtt = 6;
+    private int attdefDef = 6;
+    private int flurryDamage = 4;
     private int flurryHits = 2;
-    private int chargeBuff = 4;
-    private int shieldVal= 11;
-    private int maxHP = 55;
-    private int minHP = 45;
+    private int chargeBuff = 3;
+    private int shieldVal= 8;
+    private int maxHP = 45;
+    private int minHP = 35;
     // ******* END OF MOVE AND STAT VALUES *********//
 
 
@@ -112,6 +116,7 @@ public class monsterHuskWarrior extends AbstractMonster {
                 }
                 break;
             case 3: //charge
+
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new PlatedArmorPower(this, this.chargeBuff), this.chargeBuff));
                 this.flurryDamage++;
 

@@ -50,18 +50,17 @@ public class powerLordofShades extends AbstractHollowCard {
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
     private static final int COST = 3;
+    private static final int COST_UPGRADED = 2;
 
-    private static final int POWER_TURNS = 3;
-    private static final int UPGRADE_PLUS_POWER_TURNS = 2;
 
-    private static final int VOID = 5;
+    private static final int VOID = 1;
 
     // /STAT DECLARATION/
 
     public powerLordofShades() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
-        magicNumber = this.baseMagicNumber = POWER_TURNS;
+        magicNumber = this.baseMagicNumber = VOID;
         this.defaultSecondMagicNumber = this.defaultBaseSecondMagicNumber = VOID;
         this.isEthereal = true;
 
@@ -74,7 +73,7 @@ public class powerLordofShades extends AbstractHollowCard {
                 new ApplyPowerAction(p, p, new VoidPower(p, defaultSecondMagicNumber), defaultSecondMagicNumber));
 
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new ShadeLordPower(p, magicNumber), magicNumber));
+                new ApplyPowerAction(p, p, new ShadeLordPower(p, magicNumber)));
 
     }
 
@@ -83,7 +82,7 @@ public class powerLordofShades extends AbstractHollowCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(UPGRADE_PLUS_POWER_TURNS);
+            this.upgradeBaseCost(COST_UPGRADED);
             this.initializeDescription();
         }
     }

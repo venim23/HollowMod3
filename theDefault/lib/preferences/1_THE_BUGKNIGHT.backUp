@@ -1,8 +1,9 @@
 {
-  "TOTAL_FLOORS": "64",
-  "ENEMY_KILL": "38",
+  "TOTAL_FLOORS": "169",
+  "ENEMY_KILL": "138",
   "WIN_STREAK": "0",
-  "LOSE_COUNT": "30",
-  "PLAYTIME": "2091",
-  "HIGHEST_FLOOR": "16"
+  "LOSE_COUNT": "79",
+  "PLAYTIME": "2768",
+  "HIGHEST_FLOOR": "16",
+  "BOSS_KILL": "1"
 }

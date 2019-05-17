@@ -41,13 +41,12 @@ public class attackAbyssShriek extends AbstractHollowCard {
     private static final CardType TYPE = CardType.ATTACK;       //
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
-    private static final int COST = 3;
-    private static final int UPGRADE_BASE_COST = 2;
+    private static final int COST = 2;
 
-    private static final int VOID = 2;
+    private static final int VOID = 3;
 
-    private static final int DAMAGE = 15;
-    private static final int UPGRADE_PLUS_DMG = 8;
+    private static final int DAMAGE = 16;
+    private static final int UPGRADE_PLUS_DMG = 6;
 
     // /STAT DECLARATION/
 
@@ -86,7 +85,6 @@ public class attackAbyssShriek extends AbstractHollowCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADE_BASE_COST);
             upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
