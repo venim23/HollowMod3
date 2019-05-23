@@ -66,6 +66,7 @@ public class skillSoulSplash extends AbstractHollowCard {
     private static final int UPGRADED_VULN_AMOUNT = 1;
 
 
+
     // /STAT DECLARATION/
 
 
@@ -75,6 +76,7 @@ public class skillSoulSplash extends AbstractHollowCard {
         this.magicNumber = (this.baseMagicNumber = VULN_AMOUNT);
         this.defaultSecondMagicNumber = (this.defaultBaseSecondMagicNumber = FOCUSCOST);
         this.hollowFocusCost = (hollowBaseFocusCost = FOCUSCOST);
+        this.tags.add(CardTagEnum.SOULFOCUS);
 
     }
 

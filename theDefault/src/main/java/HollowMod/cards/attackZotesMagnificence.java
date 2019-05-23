@@ -1,5 +1,6 @@
 package HollowMod.cards;
 
+import HollowMod.actions.SFXVAction;
 import HollowMod.hollowMod;
 import HollowMod.characters.TheBugKnight;
 import HollowMod.patches.CardTagEnum;
@@ -69,7 +70,7 @@ public class attackZotesMagnificence extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m != null) {
-            AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Zote.getKey()));
+            AbstractDungeon.actionManager.addToBottom(new SFXVAction(SoundEffects.Zote.getKey(), 1.8F));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
         }
         AbstractDungeon.actionManager.addToBottom(

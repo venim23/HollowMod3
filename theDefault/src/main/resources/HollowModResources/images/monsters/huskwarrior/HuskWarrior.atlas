@@ -6,35 +6,35 @@ filter: Linear,Linear
 repeat: none
 Appendage
   rotate: false
-  xy: 92, 181
+  xy: 103, 12
   size: 85, 48
   orig: 85, 48
   offset: 0, 0
   index: -1
 torso
   rotate: false
-  xy: 1, 1
+  xy: 2, 12
   size: 96, 100
   orig: 96, 100
   offset: 0, 0
   index: -1
 head
   rotate: false
-  xy: 1, 103
+  xy: 2, 137
   size: 83, 74
   orig: 83, 74
   offset: 0, 0
   index: -1
 shield
   rotate: false
-  xy: 92, 103
+  xy: 184, 85
   size: 56, 76
   orig: 56, 76
   offset: 0, 0
   index: -1
 sword
   rotate: false
-  xy: 1, 179
+  xy: 90, 137
   size: 89, 51
   orig: 89, 51
   offset: 0, 0

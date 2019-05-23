@@ -9,5 +9,6 @@
   "Screen Shake": "true",
   "Playtester Art": "false",
   "Controller Enabled": "true",
-  "LANGUAGE": "ENG"
+  "LANGUAGE": "ENG",
+  "Ascension Mode Default": "true"
 }

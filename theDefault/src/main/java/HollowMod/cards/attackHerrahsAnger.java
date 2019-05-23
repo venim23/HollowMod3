@@ -57,8 +57,8 @@ public class attackHerrahsAnger extends AbstractHollowCard {
 
     public attackHerrahsAnger() {// This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
-        tags.add(CardTagEnum.ALLY);
+        this.baseDamage = DAMAGE;
+        this.tags.add(CardTagEnum.ALLY);
 
         this.magicNumber = this.baseMagicNumber = TIMES_HIT;
     }

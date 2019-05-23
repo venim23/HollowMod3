@@ -53,6 +53,7 @@ public class skillLuriensSpire extends AbstractHollowCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.exhaust = true;
         tags.add(CardTagEnum.ALLY);
+        this.tags.add(CardTagEnum.SOULFOCUS);
     }
 
 

@@ -79,8 +79,9 @@ public class attackBlackTendrils extends AbstractHollowCard {
         this.defaultSecondMagicNumber = this.defaultBaseSecondMagicNumber = VOID;
         this.isMultiDamage = true;
         this.exhaust = true;
-        tags.add(CardTagEnum.SPELL);
-        tags.add(CardTagEnum.VOID);
+        this.tags.add(CardTagEnum.SPELL);
+        this.tags.add(CardTags.HEALING);
+        this.tags.add(CardTagEnum.VOID);
 
     }
 
@@ -95,7 +96,7 @@ public class attackBlackTendrils extends AbstractHollowCard {
             void_bonus += p.getPower(VoidPower.POWER_ID).amount;
         }
         AbstractDungeon.actionManager.addToBottom(new SFXAction("MONSTER_SLIME_ATTACK"));
-        int healdiv = 4;
+        int healdiv = 3;
         if (this.upgraded){healdiv = 2;}
         AbstractMonster randomMonster = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
         AbstractDungeon.actionManager.addToBottom(

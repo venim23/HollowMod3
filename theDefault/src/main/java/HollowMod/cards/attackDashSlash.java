@@ -70,10 +70,10 @@ public class attackDashSlash extends AbstractHollowCard {
 
     public attackDashSlash() {// This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
-        baseBlock = BLOCK;
+        this.baseDamage = DAMAGE;
+        this.baseBlock = BLOCK;
 
-        tags.add(CardTagEnum.DASH);
+        this.tags.add(CardTagEnum.DASH);
 
     }
 

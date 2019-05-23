@@ -106,7 +106,7 @@ public class monsterHuskWarrior extends AbstractMonster {
             case 1: //calls the assigned block value
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "DEFEND"));
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, this.shieldVal));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new PlatedArmorPower(this,2),2));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new PlatedArmorPower(this,1),1));
                 break;
             case 2: //Flurry
                 for (int i = 0; i < this.flurryHits; i++)

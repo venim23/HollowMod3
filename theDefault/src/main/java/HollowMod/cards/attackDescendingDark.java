@@ -72,8 +72,8 @@ public class attackDescendingDark extends AbstractHollowCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.exhaust = true;
-        tags.add(CardTagEnum.SPELL);
-        tags.add(CardTagEnum.VOID);
+        this.tags.add(CardTagEnum.SPELL);
+        this.tags.add(CardTagEnum.VOID);
         this.isMultiDamage = true;
 
         this.magicNumber = this.baseMagicNumber = VOID;

@@ -4,6 +4,7 @@ import HollowMod.hollowMod;
 import HollowMod.powers.BaldurShellPower;
 import HollowMod.powers.SoulMasterPower;
 import HollowMod.powers.SoulPower;
+import HollowMod.powers.WhiteLadyPower;
 import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -32,19 +33,21 @@ public class FocusSoulAction
 	// to account for powers that reduce the cost of soul
   }
   
-  public boolean canFocusSoulAction()
-  {
+  public boolean canFocusSoulAction() {
     boolean canUse = false;
     if (this.source.hasPower(SoulMasterPower.POWER_ID)) {
       this.cost -= this.source.getPower(SoulMasterPower.POWER_ID).amount;
-      if (this.cost < 1){
+      if (this.cost < 1) {
         this.cost = 1;
       }
     }
-    if (this.source.hasPower(SoulPower.POWER_ID)){
+    if (this.source.hasPower(SoulPower.POWER_ID)) {
       if (this.source.getPower(SoulPower.POWER_ID).amount >= this.cost) {
         canUse = true;
       }
+    }
+    if (this.source.hasPower(WhiteLadyPower.POWER_ID)){
+      canUse = true;
     }
     return canUse;
   }
@@ -52,7 +55,7 @@ public class FocusSoulAction
   
   public void update()
   {
-    if (canFocusSoulAction())
+    if ((canFocusSoulAction()) && this.source.hasPower(SoulPower.POWER_ID))
     {
       AbstractDungeon.actionManager.addToTop(new ReducePowerAction(this.source, this.source, SoulPower.POWER_ID ,this.cost));
       this.source.getPower(SoulPower.POWER_ID).updateDescription();

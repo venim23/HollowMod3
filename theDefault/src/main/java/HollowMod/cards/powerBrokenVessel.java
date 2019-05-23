@@ -50,7 +50,7 @@ public class powerBrokenVessel extends AbstractHollowCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new BrokenVesselPower(p, p )));
+                new ApplyPowerAction(p, p, new BrokenVesselPower(p, p ), 1));
 
     }
 

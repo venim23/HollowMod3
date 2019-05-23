@@ -165,8 +165,9 @@
   "HollowMod:VoidPower": {
     "NAME": "Void",
     "DESCRIPTIONS": [
-      "[#696969]Void Increases [#696969]Void Card damage by, Increases damage Taken by, and Lasts for #b",
-      " turns. Reducing by #b1 at the end of each turn."
+      "Increases [#696969]Void Card damage by #b",
+      " and increases damage taken by #b",
+      ". Reducing by #b1 at the beginning of your turn."
     ]
   },
   "HollowMod:VoidDashPower": {
@@ -180,6 +181,12 @@
     "DESCRIPTIONS": [
       "Each time you play an Attack, deal #b",
       " damage to a random enemy."
+    ]
+  },
+  "HollowMod:WhiteLadyPower": {
+    "NAME": "White Lady's Blessing",
+    "DESCRIPTIONS": [
+      "While in [#696969]Void, you can Focus, but the card will be #yExhausted."
     ]
   }
 

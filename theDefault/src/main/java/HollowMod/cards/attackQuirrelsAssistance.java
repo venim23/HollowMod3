@@ -63,8 +63,8 @@ public class attackQuirrelsAssistance extends AbstractHollowCard {
 
     private static final int DAMAGE = 7;
     private static final int UPGRADE_PLUS_DMG = 4;
-    private static final int WEAK_AMT = 2;
-    private static final int UPGRADE_PLUS_WEAK_AMT = 2;
+    private static final int WEAK_AMT = 1;
+    private static final int UPGRADE_PLUS_WEAK_AMT = 1;
 
 
     // /STAT DECLARATION/
@@ -83,8 +83,8 @@ public class attackQuirrelsAssistance extends AbstractHollowCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Quirrel.getKey()));
         AbstractMonster randomMonster = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(randomMonster, p, new WeakPower(randomMonster, magicNumber, false),magicNumber));
         AbstractDungeon.actionManager.addToBottom(new DamageRandomEnemyAction(new DamageInfo(p, damage), AbstractGameAction.AttackEffect.SLASH_DIAGONAL ));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(randomMonster, p, new WeakPower(randomMonster, magicNumber, false),magicNumber));
     }
 
 

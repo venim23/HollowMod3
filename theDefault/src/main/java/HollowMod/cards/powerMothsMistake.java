@@ -2,6 +2,7 @@ package HollowMod.cards;
 
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
+import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.MothsMistakePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -44,7 +45,7 @@ public class powerMothsMistake extends AbstractHollowCard {
     public powerMothsMistake() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         magicNumber = this.baseMagicNumber = POISON;
-
+        this.tags.add(CardTagEnum.INFECTION);
     }
 
     // Actions the card should do.

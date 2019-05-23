@@ -43,7 +43,7 @@ public class attackVengefulSpirit extends AbstractHollowCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 14;
+    private static final int DAMAGE = 15;
 
 
     private static final int FOCUS_COST = 3;
@@ -56,7 +56,8 @@ public class attackVengefulSpirit extends AbstractHollowCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET, FOCUS_COST);
         baseDamage = DAMAGE;
         this.hollowFocusCost = (hollowBaseFocusCost = FOCUS_COST);
-        tags.add(CardTagEnum.SPELL);
+        this.tags.add(CardTagEnum.SPELL);
+        this.tags.add(CardTagEnum.SOULFOCUS);
 
     }
 

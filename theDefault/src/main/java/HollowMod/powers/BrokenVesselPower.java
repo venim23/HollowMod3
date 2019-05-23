@@ -51,6 +51,12 @@ public class BrokenVesselPower extends AbstractPower implements CloneablePowerIn
         updateDescription();
     }
 
+    public void stackPower(int stackAmount)
+    {
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+    }
+
     // On use card, apply (amount) of Dexterity. (Go to the actual power card for the amount.)
 
     // Note: If you want to apply an effect when a power is being applied you have 3 options:

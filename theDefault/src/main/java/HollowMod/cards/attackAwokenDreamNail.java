@@ -59,7 +59,7 @@ public class attackAwokenDreamNail extends CustomCard {
     public attackAwokenDreamNail() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-
+        this.tags.add(CardTagEnum.SOULFOCUS);
     }
 
 

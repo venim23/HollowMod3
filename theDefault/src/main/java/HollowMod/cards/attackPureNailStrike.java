@@ -54,6 +54,7 @@ public class attackPureNailStrike extends AbstractHollowCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         tags.add(CardTagEnum.SPELL);
+        this.tags.add(CardTagEnum.SOULFOCUS);
         this.magicNumber = (baseMagicNumber = DAMAGE_PER_SOUL);
     }
 

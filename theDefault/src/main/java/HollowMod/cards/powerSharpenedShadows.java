@@ -2,6 +2,7 @@ package HollowMod.cards;
 
 import HollowMod.hollowMod;
 import HollowMod.characters.TheBugKnight;
+import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.sharpenedShadowsPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -57,7 +58,7 @@ public class powerSharpenedShadows extends AbstractHollowCard {
 
     public powerSharpenedShadows() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-
+        this.tags.add(CardTagEnum.VOID);
         magicNumber = this.baseMagicNumber = DASH_DAMAGE;
 
     }

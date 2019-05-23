@@ -39,7 +39,7 @@ public class VoidIdolRelic extends CustomRelic implements OnReceivePowerRelic {
     public static AbstractAnimation Shadeanim;
 
     public VoidIdolRelic() {
-        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.CLINK);
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.CLINK);
     }
 
     // Gain 1 Strength on on equip.

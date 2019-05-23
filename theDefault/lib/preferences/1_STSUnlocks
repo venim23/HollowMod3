@@ -60,5 +60,10 @@
   "HollowMod:SoulMaster": "2",
   "The Silent": "2",
   "Defect": "2",
-  "SLIME": "2"
+  "SLIME": "2",
+  "CHAMP": "2",
+  "GUARDIAN": "2",
+  "HollowMod:VoidIdolRelic": "2",
+  "HollowMod:KingsSoulRelic": "2",
+  "HollowMod:QueensCombRelic": "2"
 }

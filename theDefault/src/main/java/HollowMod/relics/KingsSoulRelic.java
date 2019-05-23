@@ -33,11 +33,11 @@ public class KingsSoulRelic extends CustomRelic {
     public static final String ID = hollowMod.makeID("KingsSoulRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("kingsoul.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("void_idol.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("kingsoul.png"));
     public static final Logger logger = LogManager.getLogger(hollowMod.class.getName());
 
     public KingsSoulRelic() {
-        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.CLINK);
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.CLINK);
     }
 
     // Gain 1 Strength on on equip.

@@ -49,7 +49,7 @@ public class MylasSongHappyEvent extends AbstractImageEvent {
     public void onEnterRoom()
     {
         if (Settings.AMBIANCE_ON) {
-            CardCrawlGame.sound.play(SoundEffects.MinerGood.getKey());
+            CardCrawlGame.sound.playV(SoundEffects.MinerGood.getKey(), 2.0F);
         }
     }
 
@@ -84,7 +84,7 @@ public class MylasSongHappyEvent extends AbstractImageEvent {
 
                         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.LONG, false);
                         // Shake the screen
-                        CardCrawlGame.sound.play(SoundEffects.MinerLyrics.getKey());  // Play Myla Singing
+                        CardCrawlGame.sound.playV(SoundEffects.MinerLyrics.getKey(),2.0F);  // Play Myla Singing
                         int healAmt = (int)(AbstractDungeon.player.maxHealth * 0.25F);
                         AbstractDungeon.player.heal(healAmt);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
@@ -101,7 +101,7 @@ public class MylasSongHappyEvent extends AbstractImageEvent {
 
                         break; // Onto screen 1 we go.
                     case 2: // If you press button the third button (Button at index 2), in this case: Acceptance
-                        CardCrawlGame.sound.play(SoundEffects.DreamNail.getKey());
+                        CardCrawlGame.sound.playV(SoundEffects.DreamNail.getKey(), 1.4F);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                         this.imageEventText.updateDialogOption(0, OPTIONS[0]);
                         this.imageEventText.clearRemainingOptions();
@@ -110,6 +110,8 @@ public class MylasSongHappyEvent extends AbstractImageEvent {
                 }
                 break;
             case 1: // Welcome to screenNum = 1;
+                BaseMod.addEvent(MylasSongSadEvent.ID, MylasSongSadEvent.class);
+                BaseMod.addEvent(MylasSongSadEvent.ID, MylasSongSadEvent.class);
                 BaseMod.addEvent(MylasSongSadEvent.ID, MylasSongSadEvent.class);
                 switch (i) {
                     case 0: // If you press the first (and this should be the only) button,

@@ -2,6 +2,7 @@ package HollowMod.cards;
 
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
+import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.GrubsongPower;
 import HollowMod.powers.OverflowingPower;
 import HollowMod.util.SoundEffects;
@@ -46,6 +47,7 @@ public class powerPureVessel extends AbstractHollowCard {
     public powerPureVessel() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = baseMagicNumber = 1;
+        this.tags.add(CardTagEnum.SOULFOCUS);
 
     }
 

@@ -2,6 +2,7 @@ package HollowMod.cards;
 
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
+import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.SoulEaterPower;
 import HollowMod.powers.SoulVialPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -47,6 +48,7 @@ public class powerSoulVessel extends AbstractHollowCard {
     public powerSoulVessel() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         magicNumber = (baseMagicNumber = SOUL_GAIN);
+        this.tags.add(CardTagEnum.SOULFOCUS);
     }
 
     // Actions the card should do.

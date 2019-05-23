@@ -2,6 +2,7 @@ package HollowMod.cards;
 
 import HollowMod.hollowMod;
 import HollowMod.characters.TheBugKnight;
+import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.SoulPower;
 import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -53,6 +54,7 @@ public class attackSoulStrike extends AbstractHollowCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.magicNumber = (baseMagicNumber = SOUL_GEN);
+        this.tags.add(CardTagEnum.SOULFOCUS);
 
     }
 

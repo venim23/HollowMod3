@@ -55,6 +55,7 @@ public class skillSoulShaman extends AbstractHollowCard {
         this.tags.add(CardTagEnum.SPELL);
         this.magicNumber = (this.baseMagicNumber = ENERGY);
         this.hollowFocusCost = (hollowBaseFocusCost = FOCUS_COST);
+        this.tags.add(CardTagEnum.SOULFOCUS);
 
     }
 

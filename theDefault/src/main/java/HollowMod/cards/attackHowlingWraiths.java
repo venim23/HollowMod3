@@ -63,7 +63,7 @@ public class attackHowlingWraiths extends AbstractHollowCard {
     private static final int UPGRADED_COST = 1;
 
     private static final int DAMAGE = 11;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int UPGRADE_PLUS_DMG = 6;
 
     private static final int FOCUS_COST = 2;
 
@@ -76,6 +76,7 @@ public class attackHowlingWraiths extends AbstractHollowCard {
         this.isMultiDamage = true;
         this.hollowFocusCost = (hollowBaseFocusCost = FOCUS_COST);
         tags.add(CardTagEnum.SPELL);
+        this.tags.add(CardTagEnum.SOULFOCUS);
 
     }
 
@@ -97,7 +98,6 @@ public class attackHowlingWraiths extends AbstractHollowCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

@@ -122,6 +122,8 @@ public class MylasSongSadEvent extends AbstractImageEvent {
             case 1: // Welcome to screenNum = 1;
                 AbstractDungeon.eventList.remove(MylasSongHappyEvent.ID);
                 AbstractDungeon.eventList.remove(MylasSongSadEvent.ID);
+                AbstractDungeon.eventList.remove(MylasSongSadEvent.ID);
+                AbstractDungeon.eventList.remove(MylasSongSadEvent.ID);
                 switch (i) {
                     case 0: // If you press the first (and this should be the only) button,
                         openMap(); // You'll open the map and end the event.

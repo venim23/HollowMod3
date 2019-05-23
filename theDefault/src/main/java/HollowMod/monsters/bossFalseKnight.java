@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -27,7 +28,7 @@ public class bossFalseKnight extends AbstractMonster {
     private int bigGuard = 10;
     private int platedArmor = 10;
     private int rageGrowth = 5;
-    private int baseRagehit = 8;
+    private int baseRagehit = 6;
     private int rageLimit = 3;
     private int rageTimes = 0;
     private int rageGained = 0;
@@ -37,7 +38,7 @@ public class bossFalseKnight extends AbstractMonster {
     private int bigsmashFrail = 2;
     private int fastSmashDmg = 7;
     private int fastSmashtimes = 2;
-    private int numTurns;
+    private int numTurns = 0;
     // ******* END OF MOVE AND STAT VALUES *********//
 
 
@@ -120,6 +121,7 @@ public class bossFalseKnight extends AbstractMonster {
                 //FastAttack
                 for (int i = 0; i < this.fastSmashtimes; ++i) {
                     AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
+                    AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2f));
                     AbstractDungeon.actionManager.addToBottom(new DamageAction(p, this.damage.get(0), AbstractGameAction.AttackEffect.BLUNT_LIGHT, true));
                 }
                 break;
@@ -143,6 +145,7 @@ public class bossFalseKnight extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(p, this.damage.get(2), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
                 if (rageTimes == rageLimit - 1) {
                     AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
+                    AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2f));
                     AbstractDungeon.actionManager.addToBottom(new DamageAction(p, this.damage.get(2), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
                 }
                 rageTimes++;
@@ -175,7 +178,7 @@ public class bossFalseKnight extends AbstractMonster {
             //for this example, sets the animation to attack, and not looping, then adds the looping idle animation as next in line.
             case "ATTACK":
                 this.state.setAnimation(0, animAtt, false);
-                this.state.addAnimation(0, animIdle, true, 0.0F);
+                this.state.addAnimation(0, animIdle, true, 0.9F);
                 break;
             case "DEFEND":
                 this.state.setAnimation(0, animDef, false);
@@ -187,8 +190,8 @@ public class bossFalseKnight extends AbstractMonster {
                 break;
             case "RAGE":
                 this.state.setAnimation(0, animBuff, false);
-                this.state.addAnimation(0, animAtt, false,0.0F);
-                this.state.addAnimation(0, animIdle, true, 1.0F);
+                this.state.addAnimation(0, animAtt, false,1.0F);
+                this.state.addAnimation(0, animIdle, true, 2.0F);
                 break;
             case "VULN":
                 this.state.setAnimation(0, animVuln, true);
@@ -211,6 +214,7 @@ public class bossFalseKnight extends AbstractMonster {
     //
     protected void getMove(int i)
     {
+        numTurns++;
         if (rageTimes == rageLimit){
             setMove(MOVES[4],(byte) 4, Intent.UNKNOWN);
             rageTimes = 0;
@@ -218,9 +222,10 @@ public class bossFalseKnight extends AbstractMonster {
         }
         if (this.numTurns == 4){
             setMove(MOVES[3],(byte) 3, Intent.ATTACK_BUFF, ((DamageInfo) this.damage.get(2)).base);
+
             return;
         }
-        if ((i <=15) || ((this.lastMove((byte)3)) && (rageTimes < rageLimit))) {
+        if (((i <=10) && (numTurns > 4)) || ((this.lastMove((byte)3)) && (rageTimes < rageLimit))) {
 
             if (rageTimes == rageLimit - 1) {
                 setMove(MOVES[3],(byte) 3, Intent.ATTACK, ((DamageInfo) this.damage.get(2)).base, 2, true);

@@ -64,9 +64,18 @@
 		"DIALOG": []
 	},
 	"HollowMod:MossKnight":{
-		"MOVES" : [],
+		"MOVES" : [
+			"Spit",
+			"Ready Stance",
+			"Leaf Me Alone",
+			"Recovery"
+		],
 		"NAME" : "Moss Knight",
-		"DIALOG": []
+		"DIALOG": [
+			"So... Tired... NL Let us rest...",
+			"...New light, in our leaves...",
+			"Unn... Protect us..."
+		]
 	},
 	"HollowMod:HuskWarrior":{
 		"MOVES" : [],
@@ -79,13 +88,21 @@
 		"DIALOG": []
 	},
 	"HollowMod:ViolentHusk":{
-		"MOVES" : [],
-		"NAME" : "ViolentHusk",
+		"MOVES" : [
+			"Charge",
+			"Burst",
+			"Swell"
+		],
+		"NAME" : "Violent Husk",
 		"DIALOG": []
 	},
-	"HollowMod:DroolingHusk":{
-		"MOVES" : [],
-		"NAME" : "Drooling Husk",
+	"HollowMod:SlobberingHusk":{
+		"MOVES" : [
+			"Hop",
+			"Burst",
+			"Spew"
+		],
+		"NAME" : "Slobbering Husk",
 		"DIALOG": []
 	},
 	"HollowMod:Flukemon":{

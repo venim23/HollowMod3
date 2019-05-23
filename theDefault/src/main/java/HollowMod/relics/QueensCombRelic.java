@@ -33,8 +33,8 @@ public class QueensCombRelic extends CustomRelic {
 
     @Override
     public void atTurnStart(){
-        flash();
         if (AbstractDungeon.player.damagedThisCombat <=0){
+            flash();
             AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player,AbstractDungeon.player,HEALVAL));
         }
     }

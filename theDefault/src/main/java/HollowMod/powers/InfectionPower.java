@@ -73,10 +73,12 @@ public class InfectionPower extends AbstractPower implements CloneablePowerInter
         AbstractDungeon.actionManager.addToBottom(new DamageAction(owner, new DamageInfo(owner, InfDamage, DamageInfo.DamageType.THORNS)));
         //I'm hoping this makes the Broken Vessel power work better to deal damage to everyone whenever you take damage.
         if (owner.hasPower(BrokenVesselPower.POWER_ID)){
-            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-                if ((!monster.isDead) && (!monster.isDying)) {
-                    AbstractDungeon.actionManager.addToBottom(
-                            new DamageAction(monster, new DamageInfo(owner, InfDamage, DamageInfo.DamageType.THORNS)));
+            for (int i = owner.getPower(BrokenVesselPower.POWER_ID).amount; i > 0; i--) {
+                for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+                    if ((!monster.isDead) && (!monster.isDying)) {
+                        AbstractDungeon.actionManager.addToBottom(
+                                new DamageAction(monster, new DamageInfo(owner, InfDamage, DamageInfo.DamageType.THORNS)));
+                    }
                 }
             }
         }

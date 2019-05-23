@@ -50,7 +50,7 @@ public class skillLifebloodHeart extends AbstractHollowCard {
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
     private static final int COST = 0;
-    private static final int TEMP_HP = 4;
+    private static final int TEMP_HP = 5;
     private static final int UPGRADE_PLUS_TEMP_HP = 2;
 
 

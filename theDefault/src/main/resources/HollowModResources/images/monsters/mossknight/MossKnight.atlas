@@ -1,0 +1,97 @@
+
+MossKnight.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arm1
+  rotate: false
+  xy: 800, 220
+  size: 21, 44
+  orig: 21, 44
+  offset: 0, 0
+  index: -1
+arm2
+  rotate: false
+  xy: 800, 308
+  size: 32, 47
+  orig: 32, 47
+  offset: 0, 0
+  index: -1
+leg1
+  rotate: false
+  xy: 837, 308
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+torso
+  rotate: false
+  xy: 727, 220
+  size: 68, 98
+  orig: 68, 98
+  offset: 0, 0
+  index: -1
+leg2
+  rotate: false
+  xy: 876, 308
+  size: 52, 19
+  orig: 52, 19
+  offset: 0, 0
+  index: -1
+ear
+  rotate: false
+  xy: 968, 99
+  size: 50, 64
+  orig: 50, 64
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 827, 2
+  size: 136, 167
+  orig: 136, 167
+  offset: 0, 0
+  index: -1
+sheild
+  rotate: false
+  xy: 948, 174
+  size: 62, 158
+  orig: 62, 158
+  offset: 0, 0
+  index: -1
+nail
+  rotate: false
+  xy: 536, 220
+  size: 186, 35
+  orig: 186, 35
+  offset: 0, 0
+  index: -1
+spit
+  rotate: false
+  xy: 968, 2
+  size: 48, 92
+  orig: 48, 92
+  offset: 0, 0
+  index: -1
+slice
+  rotate: false
+  xy: 2, 2
+  size: 529, 216
+  orig: 529, 216
+  offset: 0, 0
+  index: -1
+spitball
+  rotate: false
+  xy: 827, 174
+  size: 116, 129
+  orig: 116, 129
+  offset: 0, 0
+  index: -1
+leafpile
+  rotate: false
+  xy: 536, 2
+  size: 286, 213
+  orig: 286, 213
+  offset: 0, 0
+  index: -1

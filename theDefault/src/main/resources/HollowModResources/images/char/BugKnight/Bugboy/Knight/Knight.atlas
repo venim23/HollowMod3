@@ -1,0 +1,48 @@
+
+Knight.png
+size: 256,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BackCloak
+  rotate: false
+  xy: 2, 123
+  size: 120, 120
+  orig: 120, 120
+  offset: 0, 0
+  index: -1
+Blade
+  rotate: false
+  xy: 127, 248
+  size: 120, 120
+  orig: 120, 120
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 2, 248
+  size: 120, 120
+  orig: 120, 120
+  offset: 0, 0
+  index: -1
+Cloak
+  rotate: false
+  xy: 127, 123
+  size: 120, 120
+  orig: 120, 120
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 2, 373
+  size: 120, 120
+  orig: 120, 120
+  offset: 0, 0
+  index: -1
+Slash
+  rotate: false
+  xy: 2, 2
+  size: 217, 116
+  orig: 217, 116
+  offset: 0, 0
+  index: -1

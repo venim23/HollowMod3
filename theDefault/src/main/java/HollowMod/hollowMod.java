@@ -19,7 +19,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
@@ -127,7 +126,7 @@ public class hollowMod implements
     public static final String THE_BUGKNIGHT_CORPSE = "HollowModResources/images/char/BugKnight/corpse.png";
 
     //Mod Badge - A small icon that appears in the mod settings menu next to your mod.
-    public static final String BADGE_IMAGE = "HollowModResources/images/BadgeBug.png";
+    private static final String BADGE_IMAGE = "HollowModResources/images/BadgeBug.png";
 
     // Atlas and JSON files for the Animations
     public static final String THE_BUGKNIGHT_SKELETON_ATLAS = "HollowModResources/images/char/defaultCharacter/skeleton.atlas";
@@ -312,12 +311,18 @@ public class hollowMod implements
                 new monsterHuskSentry(50.0F)
 
         }));
+        BaseMod.addMonster(monsterSlobberingHusk.ID, () -> new MonsterGroup(new AbstractMonster[]{
+                new monsterViolentHusk(-250.0F),
+                new monsterSlobberingHusk(50.0F)
+
+        }));
         BaseMod.addMonster(eliteStalkingDevout.ID, () -> new MonsterGroup(new AbstractMonster[]{
                 new monsterLittleWeaver(-500.0F, -10.0F),
                 new monsterLittleWeaver(-250.0F, 10.0F),
                 new eliteStalkingDevout(100.0F),
 
         }));
+        BaseMod.addMonster(eliteMossKnight.ID, () -> new eliteMossKnight(0.0F));
         BaseMod.addMonster(bossRadiance.ID, () -> new bossRadiance());
         BaseMod.addMonster(bossFalseKnight.ID, () -> new bossFalseKnight());
         BaseMod.addMonster(bossNKGrimm.ID, () -> new bossNKGrimm());
@@ -331,9 +336,11 @@ public class hollowMod implements
         BaseMod.addBoss(Exordium.ID, bossFalseKnight.ID, "HollowModResources/images/ui/map/FalseKnightIcon.png","HollowModResources/images/ui/map/bossIcon-outline.png");
         BaseMod.addBoss(TheCity.ID, bossNKGrimm.ID, "HollowModResources/images/ui/map/GrimmIcon.png","HollowModResources/images/ui/map/bossIcon-outline.png");
         BaseMod.addBoss(TheBeyond.ID, bossRadiance.ID, "HollowModResources/images/ui/map/RadianceIcon.png","HollowModResources/images/ui/map/bossIcon-outline.png");
-        BaseMod.addMonsterEncounter(Exordium.ID, new MonsterInfo(monsterHuskWarrior.ID,1.0F));
+        BaseMod.addStrongMonsterEncounter(Exordium.ID, new MonsterInfo(monsterHuskWarrior.ID,1.0F));
+        BaseMod.addStrongMonsterEncounter(TheBeyond.ID, new MonsterInfo(monsterSlobberingHusk.ID,1.0F));
         BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(monsterHuskSentry.ID,1.0F));
         BaseMod.addEliteEncounter(TheBeyond.ID, new MonsterInfo(eliteStalkingDevout.ID,1.1F));
+        BaseMod.addEliteEncounter(Exordium.ID, new MonsterInfo(eliteMossKnight.ID,1.1F));
 
         // ================ /ENCOUNTERS/ ===================
     }
@@ -345,6 +352,12 @@ public class hollowMod implements
     //Thanks Alchyr!
     @Override
     public void receiveAddAudio() {
+
+        //May Remove if Too Copyrighty
+        addAudio(SoundEffects.RadBGM);
+
+
+
         addAudio(SoundEffects.Hornet);
         addAudio(SoundEffects.Cyclone);
         addAudio(SoundEffects.Scream);
@@ -391,6 +404,11 @@ public class hollowMod implements
         addAudio(SoundEffects.RadScream);
         addAudio(SoundEffects.RadSong);
         addAudio(SoundEffects.RadSword);
+        addAudio(SoundEffects.ZomBlarg);
+        addAudio(SoundEffects.ZomSpit1);
+        addAudio(SoundEffects.ZomSpit2);
+        addAudio(SoundEffects.ZomSplode1);
+        addAudio(SoundEffects.Midwife);
     }
 
 
@@ -475,7 +493,7 @@ public class hollowMod implements
         BaseMod.addCard(new skillQuickDash_s());
         BaseMod.addCard(new attackNailStrike_s());
         BaseMod.addCard(new skillFocusHeal_s());
-
+        BaseMod.addCard(new skillCornifersMap_s());
 
 
         //attacks
@@ -497,6 +515,7 @@ public class hollowMod implements
         BaseMod.addCard(new attackFastStrike());
         BaseMod.addCard(new attackInfectedCysts());
         BaseMod.addCard(new attackPogoStrike());
+        BaseMod.addCard(new attackMidwifesHunger());
         BaseMod.addCard(new attackAbyssShriek());
         BaseMod.addCard(new attackInfectionAssault());
         BaseMod.addCard(new attackSharpenedNail());
@@ -513,14 +532,14 @@ public class hollowMod implements
         //Skills
         BaseMod.addCard(new skillCloakDash());
         BaseMod.addCard(new skillConfessorsAdvice());
-        //BaseMod.addCard(new skillCornifersMap());
+        //BaseMod.addCard(new skillCornifersMap_s());
         BaseMod.addCard(new skillDoubleDash());
         BaseMod.addCard(new skillMantisMark());
         BaseMod.addCard(new skillMawleksShell());
         BaseMod.addCard(new skillSoulSplash());
         BaseMod.addCard(new skillTheNailsmith());
         BaseMod.addCard(new skillLifebloodCocoon());
-        BaseMod.addCard(new skillStalwartShell());
+        //BaseMod.addCard(new skillStalwartShell());
         BaseMod.addCard(new skillDungDefenderAura());
         BaseMod.addCard(new skillGrimmsGift());
         BaseMod.addCard(new skillRadiancesLament());
@@ -543,9 +562,10 @@ public class hollowMod implements
         BaseMod.addCard(new skillDreamGate());
         BaseMod.addCard(new skillSiblingsShadow());
         BaseMod.addCard(new skillPaleKingsBlessing());
-        BaseMod.addCard(new skillWhiteLadysBlessing());
+
         BaseMod.addCard(new skillShadowDash());
-        BaseMod.addCard(new skillSoulTotem());
+        BaseMod.addCard(new skillGoodIntentions());
+        //BaseMod.addCard(new skillSoulTotem());
 
         //Powers
         BaseMod.addCard(new powerElderbugsWisdom());
@@ -560,9 +580,11 @@ public class hollowMod implements
         BaseMod.addCard(new powerSoulMaster());
         BaseMod.addCard(new powerSoulVessel());
         BaseMod.addCard(new powerSoulEater());
+        BaseMod.addCard(new powerFlukenest());
         BaseMod.addCard(new powerBaldurShell());
         BaseMod.addCard(new powerPureVessel());
         BaseMod.addCard(new powerLordofShades());
+        BaseMod.addCard(new powerWhiteLadysBlessing());
 
 
         //Deprecated
@@ -610,7 +632,7 @@ public class hollowMod implements
         UnlockTracker.unlockCard(skillCloakDash.ID);
         UnlockTracker.unlockCard(skillConfessorsAdvice.ID);
         UnlockTracker.unlockCard(skillDoubleDash.ID);
-        //UnlockTracker.unlockCard(skillCornifersMap.ID);
+        //UnlockTracker.unlockCard(skillCornifersMap_s.ID);
         UnlockTracker.unlockCard(skillMantisMark.ID);
         UnlockTracker.unlockCard(skillMawleksShell.ID);
         UnlockTracker.unlockCard(skillSoulSplash.ID);
@@ -641,7 +663,6 @@ public class hollowMod implements
         UnlockTracker.unlockCard(powerElderbugsWisdom.ID);
         UnlockTracker.unlockCard(powerSlysStrikes.ID);
         UnlockTracker.unlockCard(powerWeaversong.ID);
-        UnlockTracker.unlockCard(powerBrokenVessel.ID);
         UnlockTracker.unlockCard(powerMothsMistake.ID);
         UnlockTracker.unlockCard(powerGrubsong.ID);
         UnlockTracker.unlockCard(powerThornsofAgony.ID);
@@ -682,9 +703,9 @@ public class hollowMod implements
         UnlockTracker.addRelic(IsmasTearRelic.ID);
         UnlockTracker.addRelic(JonisBlessingRelic.ID);
         UnlockTracker.addRelic(DelicateFlowerRelic.ID);
-        BaseMod.addUnlockBundle(new CustomUnlockBundle(skillPaleKingsBlessing.ID, skillWhiteLadysBlessing.ID, skillRadiancesLament.ID), TheBugKnight.Enums.THE_BUGKNIGHT, 4);
+        BaseMod.addUnlockBundle(new CustomUnlockBundle(skillPaleKingsBlessing.ID, powerWhiteLadysBlessing.ID, skillRadiancesLament.ID), TheBugKnight.Enums.THE_BUGKNIGHT, 4);
         UnlockTracker.addCard(skillPaleKingsBlessing.ID);
-        UnlockTracker.addCard(skillWhiteLadysBlessing.ID);
+        UnlockTracker.addCard(powerWhiteLadysBlessing.ID);
         UnlockTracker.addCard(skillRadiancesLament.ID);
 
 

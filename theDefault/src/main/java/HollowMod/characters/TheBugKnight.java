@@ -1,6 +1,7 @@
 package HollowMod.characters;
 
 import HollowMod.hollowMod;
+import HollowMod.patches.CardTagEnum;
 import HollowMod.relics.DelicateFlowerRelic;
 import HollowMod.relics.JonisBlessingRelic;
 import HollowMod.relics.VesselMask;
@@ -9,19 +10,28 @@ import basemod.animations.AbstractAnimation;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.GameActionManager;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ScreenShake;
+import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.PlatedArmorPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import com.megacrit.cardcrawl.ui.MultiPageFtue;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -64,17 +74,49 @@ public class TheBugKnight extends CustomPlayer {
     public static final int STARTING_HP = 75;
     public static final int MAX_HP = 75;
     public static final int STARTING_GOLD = 99;
-    public static final int CARD_DRAW = 6;
+    public static final int CARD_DRAW = 5;
     public static final int ORB_SLOTS = 0;
 
     // =============== /BASE STATS/ =================
-    public static final SpriterAnimation KnightAnim = new SpriterAnimation(
-            "HollowModResources/images/char/BugKnight/Spriter/KnightAnim.scml");
-    public static final SpriterAnimation VoidAnim = new SpriterAnimation(
-            "HollowModResources/images/char/BugKnight/Spriter/KnightAnim.scml");
-    public static final SpriterAnimation VesselAnim = new SpriterAnimation(
-            "HollowModResources/images/char/BugKnight/Spriter/KnightAnim.scml");
-    public static SpriterAnimation CurrentAnim = KnightAnim;
+
+
+    // =============== Animations =================
+
+
+
+    private String currentAtlasURL = "HollowModResources/images/char/BugKnight/Bugboy/Knight/Knight.atlas";
+    private String currentJsonURL = "HollowModResources/images/char/BugKnight/Bugboy/Knight/Knight.json";
+
+    public void reloadAnimation(String key)
+    {
+
+        switch (key)
+        {
+            //for each key, it has a simple little transition between animations,
+            //for this example, sets the animation to attack, and not looping, then adds the looping idle animation as next in line.
+            case "KNIGHT":
+                this.currentAtlasURL = "HollowModResources/images/char/BugKnight/Bugboy/Knight/Knight.atlas";
+                this.currentJsonURL = "HollowModResources/images/char/BugKnight/Bugboy/Knight/Knight.json";
+                break;
+            case "VOID":
+                this.currentAtlasURL = "HollowModResources/images/char/BugKnight/Bugboy/Void/VoidHeart.atlas";
+                this.currentJsonURL = "HollowModResources/images/char/BugKnight/Bugboy/Void/VoidHeart.json";
+                break;
+            case "INF":
+                this.currentAtlasURL = "HollowModResources/images/char/BugKnight/Bugboy/Inf/BrokenVessel.atlas";
+                this.currentJsonURL = "HollowModResources/images/char/BugKnight/Bugboy/Inf/BrokenVessel.json";
+                break;
+            case "SOUL":
+                this.currentAtlasURL = "HollowModResources/images/char/BugKnight/Bugboy/Pure/PureVessel.atlas";
+                this.currentJsonURL = "HollowModResources/images/char/BugKnight/Bugboy/Pure/PureVessel.json";
+                break;
+        }
+
+        this.loadAnimation(this.currentAtlasURL, this.currentJsonURL, 1.0F);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
+        e.setTime(e.getEndTime() * MathUtils.random());
+    }
+
 
     // =============== STRINGS =================
 
@@ -107,8 +149,7 @@ public class TheBugKnight extends CustomPlayer {
 
     public TheBugKnight(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
-                "HollowModResources/images/char/BugKnight/orb/vfx.png", null,
-                CurrentAnim);
+                "HollowModResources/images/char/BugKnight/orb/vfx.png", (String) null, null);
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================  
@@ -124,13 +165,7 @@ public class TheBugKnight extends CustomPlayer {
 
 
         // =============== ANIMATIONS =================  
-
-        //loadAnimation(
-        //        THE_BUGKNIGHT_SKELETON_ATLAS,
-        //        THE_BUGKNIGHT_SKELETON_JSON,
-        //       1.0f);
-        //AnimationState.TrackEntry e = state.setAnimation(0, "animation", true);
-       // e.setTime(e.getEndTime() * MathUtils.random());
+        reloadAnimation("KNIGHT");
 
         // =============== /ANIMATIONS/ =================
 
@@ -187,7 +222,7 @@ public class TheBugKnight extends CustomPlayer {
         logger.info("loading focuses");
         //Skills
         retVal.add(skillFocusHeal_s.ID);
-        retVal.add(skillFocusHeal_s.ID);
+        retVal.add(skillCornifersMap_s.ID);
         //retVal.add(skillSoulTotem.ID);
         //retVal.add(skillSoulSplash.ID);
         //retVal.add(skillTheNailsmith.ID);
@@ -230,7 +265,7 @@ public class TheBugKnight extends CustomPlayer {
         //retVal.add(skillHuntersJournal.ID);
         //retVal.add(skillVoidDash.ID);
         //retVal.add(attackSharpenedNail.ID);
-        //retVal.add(skillCornifersMap.ID);
+        //retVal.add(skillCornifersMap_s.ID);
         //retVal.add(skillLifebloodCore.ID);
         //retVal.add(skillLifebloodHeart.ID);
         //retVal.add(skillHiveblood.ID);
@@ -273,12 +308,6 @@ public class TheBugKnight extends CustomPlayer {
 
 
         return retVal;
-    }
-    public void UpdateCharAnim(SpriterAnimation anim){
-        if (AbstractDungeon.player instanceof TheBugKnight)
-        {
-            ((TheBugKnight)AbstractDungeon.player).UpdateCharAnim(anim);
-        }
     }
 
     // character Select screen effect
@@ -358,6 +387,83 @@ public class TheBugKnight extends CustomPlayer {
         return hollowMod.BUGKNIGHT_PALE;
     }
 
+
+
+    @Override
+    public void preBattlePrep(){
+        int infCount = 0;
+        int voidCount = 0;
+        int spellCount = 0;
+        String animCall = "KNIGHT";
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group){
+            if (c.hasTag(CardTagEnum.INFECTION)){
+                infCount++;
+            }
+            if (c.hasTag(CardTagEnum.VOID)){
+                voidCount++;
+            } else if (c.hasTag(CardTagEnum.SOULFOCUS)) {
+                spellCount++;
+            }
+        }
+
+        if ((infCount > (AbstractDungeon.player.masterDeck.size()/3))&&(infCount >= 4)){
+            animCall = "INF";
+        } else if (voidCount > (AbstractDungeon.player.masterDeck.size()/3)&&(voidCount>= 5)){
+            animCall = "VOID";
+        } else if (spellCount > (AbstractDungeon.player.masterDeck.size()/3)&&(spellCount>= 5)) {
+            animCall = "SOUL";
+        }
+
+        reloadAnimation(animCall);
+
+
+        if (!(Boolean) TipTracker.tips.get("COMBAT_TIP")) {
+            AbstractDungeon.ftue = new MultiPageFtue();
+            TipTracker.neverShowAgain("COMBAT_TIP");
+        }
+
+        AbstractDungeon.actionManager.clear();
+        this.damagedThisCombat = 0;
+        this.cardsPlayedThisTurn = 0;
+        this.maxOrbs = 0;
+        this.orbs.clear();
+        this.increaseMaxOrbSlots(this.masterMaxOrbs, false);
+        this.isBloodied = this.currentHealth <= this.maxHealth / 2;
+        poisonKillCount = 0;
+        GameActionManager.playerHpLastTurn = this.currentHealth;
+        this.endTurnQueued = false;
+        this.gameHandSize = this.masterHandSize;
+        this.isDraggingCard = false;
+        this.isHoveringDropZone = false;
+        this.hoveredCard = null;
+        this.cardInUse = null;
+        this.drawPile.initializeDeck(this.masterDeck);
+        AbstractDungeon.overlayMenu.endTurnButton.enabled = false;
+        this.hand.clear();
+        this.discardPile.clear();
+        this.exhaustPile.clear();
+        this.energy.prep();
+        this.powers.clear();
+        this.isEndingTurn = false;
+        this.healthBarUpdatedEvent();
+        if (ModHelper.isModEnabled("Lethality")) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 3), 3));
+        }
+
+        if (ModHelper.isModEnabled("Terminal")) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new PlatedArmorPower(this, 5), 5));
+        }
+
+        AbstractDungeon.getCurrRoom().monsters.usePreBattleAction();
+        if (Settings.isFinalActAvailable && AbstractDungeon.getCurrMapNode().hasEmeraldKey) {
+            AbstractDungeon.getCurrRoom().applyEmeraldEliteBuff();
+        }
+
+        AbstractDungeon.actionManager.addToTop(new WaitAction(1.0F));
+        this.applyPreCombatLogic();
+
+    }
+
     // Should return an AttackEffect array of any size greater than 0. These effects
     // will be played in sequence as your character's finishing combo on the heart.
     // Attack effects are the same as used in DamageAction and the like.
@@ -377,6 +483,44 @@ public class TheBugKnight extends CustomPlayer {
         return TEXT[1];
     }
 
+    @Override
+    public void useCard(AbstractCard c, AbstractMonster monster, int energyOnUse) {
+        if (c.type == AbstractCard.CardType.ATTACK) {
+            final AnimationState.TrackEntry e = this.state.setAnimation(0, "attack", false);
+            this.state.addAnimation(0, "idle", true, 0.0f);
+            e.setTimeScale(0.6f);
+        }
+
+        c.calculateCardDamage(monster);
+        c.use(this, monster);
+        AbstractDungeon.actionManager.addToBottom(new UseCardAction(c, monster));
+        if (!c.dontTriggerOnUseCard) {
+            this.hand.triggerOnOtherCardPlayed(c);
+        }
+
+        this.hand.removeCard(c);
+        this.cardInUse = c;
+        c.target_x = (float)(Settings.WIDTH / 2);
+        c.target_y = (float)(Settings.HEIGHT / 2);
+        if (c.costForTurn > 0 && !c.freeToPlayOnce && (!this.hasPower("Corruption") || c.type != AbstractCard.CardType.SKILL)) {
+            this.energy.use(c.costForTurn);
+        }
+
+        if (!this.hand.canUseAnyCard() && !this.endTurnQueued) {
+            AbstractDungeon.overlayMenu.endTurnButton.isGlowing = true;
+        }
+
+    }
+
+    @Override
+    public void damage(final DamageInfo info) {
+        if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output - this.currentBlock > 0) {
+            final AnimationState.TrackEntry e = this.state.setAnimation(0, "oof", false);
+            this.state.addAnimation(0, "idle", true, 0.0f);
+            e.setTimeScale(0.6f);
+        }
+        super.damage(info);
+    }
     // The vampire events refer to the base game characters as "brother", "sister",
     // and "broken one" respectively.This method should return a String containing
     // the full text that will be displayed as the first screen of the vampires event.

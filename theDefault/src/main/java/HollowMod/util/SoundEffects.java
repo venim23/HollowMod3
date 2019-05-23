@@ -7,6 +7,10 @@ import static HollowMod.hollowMod.makeAudioPath;
 
 
 public class SoundEffects {
+
+    public static final Pair<String, String> RadBGM = new Pair<>("HollowMod:RadBGM", makeAudioPath("clarkin_radfight.ogg"));
+
+
     public static final Pair<String, String> Parry = new Pair<>("HollowMod:Parry", makeAudioPath("hero_parry.ogg"));
     public static final Pair<String, String> Cyclone = new Pair<>("HollowMod:Cyclone", makeAudioPath("hero_nail_art_cyclone.ogg"));
     public static final Pair<String, String> Fireball = new Pair<>("HollowMod:Fireball", makeAudioPath("hero_fireball.ogg"));
@@ -53,4 +57,13 @@ public class SoundEffects {
     public static final Pair<String, String> RadSong = new Pair<>("HollowMod:RadSong", makeAudioPath("radiance_death.ogg"));
     public static final Pair<String, String> SpiderBud = new Pair<>("HollowMod:SpiderBud", makeAudioPath("spider_buddy.ogg"));
     public static final Pair<String, String> SentryBuzz = new Pair<>("HollowMod:SentryBuzz", makeAudioPath("sentry_fly.ogg"));
+    public static final Pair<String, String> ZomSplode1 = new Pair<>("HollowMod:ZomSplode1", makeAudioPath("zombie_splode1.ogg"));
+    public static final Pair<String, String> ZomSpit2 = new Pair<>("HollowMod:ZomSpit2", makeAudioPath("zombie_spit.ogg"));
+    public static final Pair<String, String> ZomSpit1 = new Pair<>("HollowMod:ZomSpit1", makeAudioPath("zombie_prespit.ogg"));
+    public static final Pair<String, String> ZomBlarg = new Pair<>("HollowMod:ZomBlarg", makeAudioPath("zombie_blarg.ogg"));
+    public static final Pair<String, String> Midwife = new Pair<>("HollowMod:Midwife", makeAudioPath("midwife_laugh.ogg"));
+
+
+
+
 }

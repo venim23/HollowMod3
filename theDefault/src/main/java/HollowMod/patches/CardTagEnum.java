@@ -15,5 +15,7 @@ public class CardTagEnum
     public static AbstractCard.CardTags ALLY;
     @SpireEnum
     public static AbstractCard.CardTags INFECTION;
+    @SpireEnum
+    public static AbstractCard.CardTags SOULFOCUS;
 
 }

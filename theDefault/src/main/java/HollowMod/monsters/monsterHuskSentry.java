@@ -214,7 +214,7 @@ public class monsterHuskSentry extends AbstractMonster {
         this.HPlastturn = this.currentHealth;
 
         // so for this, it's a modified probability. it's a 30% chance (any roll less than 30) but it's also gauranteed if it's the first turn of the combat
-        if ((i < 60) && (AbstractDungeon.getMonsters().monsters.size() ==1 )){
+        if ((i < 60) && (AbstractDungeon.getMonsters().monsters.size() == 1 )){
             setMove((byte) 3, Intent.MAGIC);
 
         } else if (i < 80) {

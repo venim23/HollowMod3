@@ -1,11 +1,13 @@
 package HollowMod.monsters;
 
+import HollowMod.actions.SFXVAction;
 import HollowMod.hollowMod;
 import HollowMod.powers.FlameCloakPower;
 import HollowMod.powers.InfectionPower;
 import HollowMod.util.SoundEffects;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.ShoutAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
@@ -15,6 +17,9 @@ import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
 import com.megacrit.cardcrawl.actions.utility.LoseBlockAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import com.megacrit.cardcrawl.audio.MainMusic;
+import com.megacrit.cardcrawl.audio.MusicMaster;
+import com.megacrit.cardcrawl.audio.TempMusic;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -38,10 +43,11 @@ public class bossRadiance extends AbstractMonster {
     // ****** MOVE AND STAT VALUES ********//
 
     private int infectAmt = 5;
+    private int screamHeal = 25;
     private int bigbeamDmg = 50;
     private int swordsDmg = 8;
     private int swordsHits = 1;
-    private int swordsTurns = 3;
+    private int swordsTurns = 2;
     private int swordsCur = 0;
     private int wallDef = 20;
     private int wallPwr = 3;
@@ -52,8 +58,8 @@ public class bossRadiance extends AbstractMonster {
     private int flyDmg = 15;
     private int flyVln = 2;
     private int turnssinceSR = 2;
-    private int maxHP = 650;
-    private int minHP = 600;
+    private int maxHP = 700;
+    private int minHP = 650;
     private int numTurns;
 
 
@@ -85,14 +91,14 @@ public class bossRadiance extends AbstractMonster {
 	final float offsetX, final float offsetY,
 	final boolean ignoreBlights: Not included as false by default?
 	*/
-        super(NAME, ID, 650, 0, 0, 300.0F, 570.0F, null, 0.0F, -30.0F);
+        super(NAME, ID, 700, 0, 0, 300.0F, 570.0F, null, 0.0F, -30.0F);
         this.type = EnemyType.BOSS;
 
         if (AbstractDungeon.ascensionLevel >=9)
         {
             //For monsters encountered at higher ascension levels adds a bit more HP
-            this.minHP += 10;
-            this.maxHP += 10;
+            this.minHP += 25;
+            this.maxHP += 25;
             this.swordsTurns++;
         }
         if (AbstractDungeon.ascensionLevel >=4)
@@ -135,10 +141,11 @@ public class bossRadiance extends AbstractMonster {
 
     @Override
     public void usePreBattleAction() {
-        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.RadMisc.getKey(),1.6F));
         AbstractDungeon.scene.fadeOutAmbiance();
         CardCrawlGame.music.playTempBgmInstantly("MINDBLOOM", true);
-        AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, DIALOG[0], 2.0f, 2.0f));
+        //CardCrawlGame.sound.playV(SoundEffects.RadBGM.getKey(), 0.6F);
+        CardCrawlGame.sound.playV(SoundEffects.RadMisc.getKey(),2.0F);
+        AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, DIALOG[0], 2.0f, 2.2f));
 
     }
     //take turn is actually one of the later things to occur, it happens AFTER the action has been decided and displayed for a turn as intent. deciding the move happens in GetMove
@@ -155,7 +162,7 @@ public class bossRadiance extends AbstractMonster {
                 //sfxopen
                 //delay
                 //sfx cast
-                AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, DIALOG[1], 2.0f, 2.1f));
+                AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, DIALOG[1], 2.0f, 2.2f));
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "FLY1"));
                 //AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.GrimmCape.getKey()));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new IntangiblePower(this, 1), 1));
@@ -169,7 +176,7 @@ public class bossRadiance extends AbstractMonster {
                 break;
             case 2: //1block malleable power btw Sword Wall
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "SWORDWALL"));
-                AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.RadMisc.getKey()));
+                AbstractDungeon.actionManager.addToBottom(new SFXVAction(SoundEffects.RadMisc.getKey(), 1.8F));
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, this.wallDef));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new MalleablePower(this, this.wallPwr), this.wallPwr));
                 //new regenpower?
@@ -177,8 +184,8 @@ public class bossRadiance extends AbstractMonster {
             case 3: //Sword Rain
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "SWORDRAIN"));
                 for (int i = 0; i < this.swordsHits; ++i) {
-                    AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.RadSword.getKey()));
-                    AbstractDungeon.actionManager.addToBottom(new VFXAction(new FlyingDaggerEffect(this.hb.cX - 120.0F, this.hb.cY, 0, false), 0.2f));
+                    AbstractDungeon.actionManager.addToBottom(new SFXVAction(SoundEffects.RadSword.getKey(), 1.8F));
+                    AbstractDungeon.actionManager.addToBottom(new VFXAction(new DamageImpactLineEffect(p.hb.cX , p.hb.cY), 0.2f));
                     AbstractDungeon.actionManager.addToBottom(new DamageAction(p, this.damage.get(1), AbstractGameAction.AttackEffect.NONE,true));
                 }
                 break;
@@ -187,10 +194,10 @@ public class bossRadiance extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.RadCharge.getKey()));
                 break;
             case 5: //BigBeam
-                AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, DIALOG[2], 2.0f, 2.0f));
+                AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, DIALOG[2], 1.5f, 2.0f));
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "FIREBEAM"));
                 AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.RadBeam.getKey()));
-                AbstractDungeon.actionManager.addToBottom(new VFXAction(new LaserBeamEffect(this.hb.cX, this.hb.cY + 60.0f * Settings.scale), 1.0f));
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(new LaserBeamEffect(this.hb.cX + 10, this.hb.cY + 120.0f * Settings.scale), 1.0f));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(p, this.damage.get(2), AbstractGameAction.AttackEffect.NONE));
                 break;
             case 6: //lightballs
@@ -202,11 +209,11 @@ public class bossRadiance extends AbstractMonster {
                 break;
             case 7: //infscream
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "SCREAM"));
-                AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.RadScream.getKey()));
+                AbstractDungeon.actionManager.addToBottom(new SFXVAction(SoundEffects.RadScream.getKey(), 2.0F));
                 AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(this));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, this, new InfectionPower(p, this.infectAmt),this.infectAmt));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new InflameEffect(this), 0.5f));
-                AbstractDungeon.actionManager.addToBottom(new HealAction(this,this, 10));
+                AbstractDungeon.actionManager.addToBottom(new HealAction(this,this, screamHeal));
 
                 break;
             case 8: //wingattack
@@ -321,7 +328,7 @@ public class bossRadiance extends AbstractMonster {
             }
         }
         //Now we do the actual calcs for the weight of the remaingin 5 moves.
-        if ((this.numTurns > 3) && ((this.currentHealth < (this.maxHealth / 5)) || ((i < 10) && (!lastMove((byte)7))))){
+        if ((this.numTurns > 3) && ((this.currentHealth < (this.maxHealth / 4)) || ((i < 10) && (!lastMove((byte)7))))){
             setMove(MOVES[6],(byte) 7, Intent.STRONG_DEBUFF);
         } else if ((i < 35) && (turnssinceSR > 3)){
             setMove(MOVES[2],(byte)2, Intent.DEFEND_BUFF);
@@ -338,8 +345,8 @@ public class bossRadiance extends AbstractMonster {
     }
 
     public void die() {
-
-        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.RadSong.getKey()));
+        CardCrawlGame.sound.stop(SoundEffects.RadBGM.getKey());
+        CardCrawlGame.sound.playV(SoundEffects.RadSong.getKey(), 2.0F);
         AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, DIALOG[3], 3.0f, 3.0f));
         this.state.setTimeScale(0.1f);
         this.useShakeAnimation(5.0f);

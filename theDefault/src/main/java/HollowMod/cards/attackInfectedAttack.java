@@ -51,7 +51,7 @@ public class attackInfectedAttack extends AbstractHollowCard {
 
     private static final int DAMAGE = 5;
     private static final int POISON = 3;
-    private static final int UPGRADE_PLUS_POISON = 3;
+    private static final int UPGRADE_PLUS_POISON = 2;
 
     private static final int INFECTION = 3;
 

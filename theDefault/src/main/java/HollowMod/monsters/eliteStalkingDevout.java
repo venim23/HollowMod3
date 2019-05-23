@@ -69,20 +69,20 @@ public class eliteStalkingDevout extends AbstractMonster {
         this.type = EnemyType.ELITE;
         this.weavers = new AbstractMonster[2];
 
-        if (AbstractDungeon.ascensionLevel > 9)
+        if (AbstractDungeon.ascensionLevel >= 8)
         {
             //For monsters encountered at higher ascension levels adds a bit more HP
             this.minHP += 10;
             this.maxHP += 10;
 
         }
-        if (AbstractDungeon.ascensionLevel >=4)
+        if (AbstractDungeon.ascensionLevel >=3)
         {
             //increases the power of his multihit and debufff for higher ascensions
             this.slashDamage+= 2;
             this.recoilBlock += 2;
         }
-        if (AbstractDungeon.ascensionLevel >= 19)
+        if (AbstractDungeon.ascensionLevel >= 18)
         {
             this.slashMax -=1;
         }

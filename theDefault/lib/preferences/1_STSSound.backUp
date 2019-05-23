@@ -1,5 +1,7 @@
 {
   "Ambience On": "true",
   "Mute in Bg": "true",
-  "Sound Volume": "0.73857796"
+  "Sound Volume": "0.50000024",
+  "Music Volume": "0.50000024",
+  "Master Volume": "0.50000024"
 }
