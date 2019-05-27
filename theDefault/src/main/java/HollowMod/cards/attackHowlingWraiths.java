@@ -62,7 +62,7 @@ public class attackHowlingWraiths extends AbstractHollowCard {
     private static final int COST = 2;
     private static final int UPGRADED_COST = 1;
 
-    private static final int DAMAGE = 11;
+    private static final int DAMAGE = 13;
     private static final int UPGRADE_PLUS_DMG = 6;
 
     private static final int FOCUS_COST = 2;

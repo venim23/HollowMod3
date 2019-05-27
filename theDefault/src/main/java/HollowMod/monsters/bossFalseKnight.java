@@ -137,19 +137,21 @@ public class bossFalseKnight extends AbstractMonster {
                 break;
             case 3: //rage
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "RAGE"));
-                AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new InflameEffect(this), 0.25f));
+                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2f));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(p, this.damage.get(2), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+                if (rageTimes == rageLimit - 1) {
+                    AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4f));
+                    AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
+                    AbstractDungeon.actionManager.addToBottom(new DamageAction(p, this.damage.get(2), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+                }
                 if (rageTimes < rageLimit - 1) {
+                    AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new InflameEffect(this), 0.25f));
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, this.rageGrowth), this.rageGrowth));
                     rageGained += rageGrowth;
                 }
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(p, this.damage.get(2), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-                if (rageTimes == rageLimit - 1) {
-                    AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
-                    AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2f));
-                    AbstractDungeon.actionManager.addToBottom(new DamageAction(p, this.damage.get(2), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-                }
                 rageTimes++;
                 if (rageTimes >= rageLimit) {
+                    AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4f));
                     AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "VULN"));
                 }
                 break;
@@ -189,9 +191,9 @@ public class bossFalseKnight extends AbstractMonster {
                 this.state.addAnimation(0, animIdle, true, 0.0F);
                 break;
             case "RAGE":
-                this.state.setAnimation(0, animBuff, false);
-                this.state.addAnimation(0, animAtt, false,1.0F);
-                this.state.addAnimation(0, animIdle, true, 2.0F);
+                this.state.setAnimation(0, animAtt, false);
+                this.state.addAnimation(0, animBuff, false,0.0F);
+                this.state.addAnimation(0, animIdle, true, 0.0F);
                 break;
             case "VULN":
                 this.state.setAnimation(0, animVuln, true);
@@ -249,6 +251,7 @@ public class bossFalseKnight extends AbstractMonster {
         this.state.setTimeScale(0.1f);
         this.useShakeAnimation(5.0f);
         super.die();
+        this.onBossVictoryLogic();
     }
 
     //Assigns byte values to the attack names. I can't find this directly called, maybe it's just put in the output for debugging

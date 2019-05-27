@@ -1,11 +1,11 @@
 {
-  "TOTAL_FLOORS": "395",
-  "ENEMY_KILL": "345",
+  "TOTAL_FLOORS": "711",
+  "ENEMY_KILL": "619",
   "WIN_STREAK": "0",
-  "LOSE_COUNT": "114",
-  "PLAYTIME": "22428",
-  "HIGHEST_FLOOR": "24",
-  "BOSS_KILL": "4",
+  "LOSE_COUNT": "158",
+  "PLAYTIME": "42333",
+  "HIGHEST_FLOOR": "39",
+  "BOSS_KILL": "14",
   "FAST_VICTORY": "4163",
   "BEST_WIN_STREAK": "1",
   "WIN_COUNT": "1"

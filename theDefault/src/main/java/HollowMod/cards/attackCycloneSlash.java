@@ -81,7 +81,7 @@ public class attackCycloneSlash extends AbstractHollowCard {
         AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Cyclone.getKey()));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.1F));
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAllEnemiesAction(m, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+                new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         AbstractDungeon.actionManager.addToBottom(new ModifyDamageAction(this.uuid,1));
     }
 

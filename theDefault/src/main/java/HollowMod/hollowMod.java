@@ -19,6 +19,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
@@ -323,6 +324,7 @@ public class hollowMod implements
 
         }));
         BaseMod.addMonster(eliteMossKnight.ID, () -> new eliteMossKnight(0.0F));
+        BaseMod.addMonster(eliteNosk.ID, () -> new eliteNosk(0.0F));
         BaseMod.addMonster(bossRadiance.ID, () -> new bossRadiance());
         BaseMod.addMonster(bossFalseKnight.ID, () -> new bossFalseKnight());
         BaseMod.addMonster(bossNKGrimm.ID, () -> new bossNKGrimm());
@@ -341,6 +343,7 @@ public class hollowMod implements
         BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(monsterHuskSentry.ID,1.0F));
         BaseMod.addEliteEncounter(TheBeyond.ID, new MonsterInfo(eliteStalkingDevout.ID,1.1F));
         BaseMod.addEliteEncounter(Exordium.ID, new MonsterInfo(eliteMossKnight.ID,1.1F));
+        BaseMod.addEliteEncounter(TheCity.ID, new MonsterInfo(eliteNosk.ID,1.1F));
 
         // ================ /ENCOUNTERS/ ===================
     }
@@ -409,6 +412,11 @@ public class hollowMod implements
         addAudio(SoundEffects.ZomSpit2);
         addAudio(SoundEffects.ZomSplode1);
         addAudio(SoundEffects.Midwife);
+        addAudio(SoundEffects.NosRev2);
+        addAudio(SoundEffects.NosRev1);
+        addAudio(SoundEffects.NosShort);
+        addAudio(SoundEffects.NosLong);
+        addAudio(SoundEffects.NosAtt);
     }
 
 
@@ -449,14 +457,19 @@ public class hollowMod implements
         //BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
         //BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.HOLLOW_COLOR);
         //BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.HOLLOW_COLOR);
+        BaseMod.addRelicToCustomPool(new KingsBrandRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
         BaseMod.addRelicToCustomPool(new IsmasTearRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
         BaseMod.addRelicToCustomPool(new MillibellesNoteRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
         BaseMod.addRelicToCustomPool(new VesselMask(), TheBugKnight.Enums.HOLLOW_COLOR);
         BaseMod.addRelicToCustomPool(new DelicateFlowerRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
         BaseMod.addRelicToCustomPool(new VoidIdolRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
         BaseMod.addRelicToCustomPool(new KingsSoulRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
+        BaseMod.addRelicToCustomPool(new GodTunerRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
+        BaseMod.addRelicToCustomPool(new MantisClawRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
 
         // This adds a relic to the Shared pool. Every character can find this relic
+        BaseMod.addRelic(new LifeEnderRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new StagPassRelic(), RelicType.SHARED);
         BaseMod.addRelic(new JonisBlessingRelic(), RelicType.SHARED);
         BaseMod.addRelic(new QueensCombRelic(), RelicType.SHARED);
 
@@ -539,6 +552,7 @@ public class hollowMod implements
         BaseMod.addCard(new skillSoulSplash());
         BaseMod.addCard(new skillTheNailsmith());
         BaseMod.addCard(new skillLifebloodCocoon());
+        BaseMod.addCard(new skillBlackWings());
         //BaseMod.addCard(new skillStalwartShell());
         BaseMod.addCard(new skillDungDefenderAura());
         BaseMod.addCard(new skillGrimmsGift());
@@ -723,40 +737,65 @@ public class hollowMod implements
     public void receiveEditStrings() {
         logger.info("Beginning to edit strings");
 
+
+        String language = null;
+        switch (Settings.language) {
+           /* case ZHS: {
+                language = "zhs";
+                break;
+            }
+            case ZHT: {
+                language = "zht";
+                break;
+            }
+            case FRA: {
+                language = "fra";
+                break;
+            } */
+            case JPN: {
+                language = "jpn";
+                break;
+            }
+            default: {
+                language = "eng";
+                break;
+            }
+        }
+
         // CardStrings
         BaseMod.loadCustomStringsFile(CardStrings.class,
-                getModID() + "Resources/localization/eng/HollowMod-Card-Strings.json");
+                getModID() + "Resources/localization/" + language + "/HollowMod-Card-Strings.json");
 
         // PowerStrings
         BaseMod.loadCustomStringsFile(PowerStrings.class,
-                getModID() + "Resources/localization/eng/HollowMod-Power-Strings.json");
+                getModID() + "Resources/localization/" + language + "/HollowMod-Power-Strings.json");
 
         // RelicStrings
         BaseMod.loadCustomStringsFile(RelicStrings.class,
-                getModID() + "Resources/localization/eng/HollowMod-Relic-Strings.json");
+                getModID() + "Resources/localization/" + language + "/HollowMod-Relic-Strings.json");
 
         // Event Strings
         BaseMod.loadCustomStringsFile(EventStrings.class,
-                getModID() + "Resources/localization/eng/HollowMod-Event-Strings.json");
+                getModID() + "Resources/localization/" + language + "/HollowMod-Event-Strings.json");
 
         // PotionStrings
         BaseMod.loadCustomStringsFile(PotionStrings.class,
-                getModID() + "Resources/localization/eng/HollowMod-Potion-Strings.json");
+                getModID() + "Resources/localization/" + language + "/HollowMod-Potion-Strings.json");
 
         // CharacterStrings
         BaseMod.loadCustomStringsFile(CharacterStrings.class,
-                getModID() + "Resources/localization/eng/HollowMod-Character-Strings.json");
+                getModID() + "Resources/localization/" + language + "/HollowMod-Character-Strings.json");
 
         // OrbStrings
         BaseMod.loadCustomStringsFile(OrbStrings.class,
-                getModID() + "Resources/localization/eng/HollowMod-Orb-Strings.json");
+                getModID() + "Resources/localization/" + language + "/HollowMod-Orb-Strings.json");
         //UI
         BaseMod.loadCustomStringsFile(UIStrings.class,
-                getModID() + "Resources/localization/eng/HollowMod-UI-Strings.json");
+                getModID() + "Resources/localization/" + language + "/HollowMod-UI-Strings.json");
 
         //Monster
        BaseMod.loadCustomStringsFile(MonsterStrings.class,
-                getModID() + "Resources/localization/eng/HollowMod-Monster-Strings.json");
+                getModID() + "Resources/localization/" + language + "/HollowMod-Monster-Strings.json");
 
         logger.info("Done edittting strings");
     }
@@ -774,9 +813,33 @@ public class hollowMod implements
         // If you're using multiword keywords, the first element in your NAMES array in your keywords-strings.json has to be the same as the PROPER_NAME.
         // That is, in Card-Strings.json you would have #yA_Long_Keyword (#y highlights the keyword in yellow).
         // In Keyword-Strings.json you would have PROPER_NAME as A Long Keyword and the first element in NAMES be a long keyword, and the second element be a_long_keyword
+        String language = null;
+        switch (Settings.language) {
+           /* case ZHS: {
+                language = "zhs";
+                break;
+            }
+            case ZHT: {
+                language = "zht";
+                break;
+            }
+            case FRA: {
+                language = "fra";
+                break;
+            } */
+            case JPN: {
+                language = "jpn";
+                break;
+            }
+            default: {
+                language = "eng";
+                break;
+            }
+        }
+
 
         Gson gson = new Gson();
-        String json = Gdx.files.internal(getModID() + "Resources/localization/eng/HollowMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String json = Gdx.files.internal(getModID() + "Resources/localization/" + language + "/HollowMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
 
         if (keywords != null) {

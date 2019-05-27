@@ -30,6 +30,7 @@ public class attackHornetsHelp extends CustomCard {
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
 
     // /TEXT DECLARATION/
@@ -73,6 +74,7 @@ public class attackHornetsHelp extends CustomCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADED_MAGIC);
+            rawDescription = (UPGRADE_DESCRIPTION);
             initializeDescription();
         }
     }

@@ -36,12 +36,23 @@ public class QueensCombRelic extends CustomRelic {
         if (AbstractDungeon.player.damagedThisCombat <=0){
             flash();
             AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player,AbstractDungeon.player,HEALVAL));
+        } else {
+            this.stopPulse(); // Pulse while the player can click on it.
         }
     }
+    @Override
+    public void atPreBattle() {
+        beginLongPulse();     // Pulse while the player can click on it.
+    }
+
+    @Override
+    public void onVictory() {
+        stopPulse(); // Don't keep pulsing past the victory screen/outside of combat.
+    }
+
 
     // Description
     @Override
-
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0] + HEALVAL + DESCRIPTIONS[1];
     }

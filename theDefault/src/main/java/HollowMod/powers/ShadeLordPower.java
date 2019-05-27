@@ -32,12 +32,11 @@ public class ShadeLordPower extends AbstractPower implements CloneablePowerInter
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("voidking_power84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("voidking_power32.png"));
 
-    public ShadeLordPower(final AbstractCreature owner, final int amount) {
+    public ShadeLordPower(final AbstractCreature owner) {
         name = NAME;
         ID = POWER_ID;
 
         this.owner = owner;
-        this.amount = amount;
 
         type = PowerType.BUFF;
         isTurnBased = true;
@@ -55,7 +54,6 @@ public class ShadeLordPower extends AbstractPower implements CloneablePowerInter
             int halfblock = (c.block / 2);
 
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new ThornsPower(owner, halfblock),halfblock));
-            c.block = (c.block - halfblock);
             //AbstractDungeon.actionManager.addToBottom(new LoseBlockAction(owner, owner, blockreduced));
 
         }
@@ -63,9 +61,15 @@ public class ShadeLordPower extends AbstractPower implements CloneablePowerInter
     }
     @Override
     public void atStartOfTurn() {
+        int reducer = 0;
         if (owner.hasPower(ThornsPower.POWER_ID)) {
+            if (this.owner.getPower(ThornsPower.POWER_ID).amount > 1)
+                reducer = this.owner.getPower(ThornsPower.POWER_ID).amount / 2;
+            else {
+                reducer = 1;
+            }
             if (owner.getPower(ThornsPower.POWER_ID).amount > 0) {
-                AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(owner, owner, ThornsPower.POWER_ID, (this.owner.getPower(ThornsPower.POWER_ID).amount / 2)));
+                AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(owner, owner, ThornsPower.POWER_ID, reducer));
             }
         }
     }
@@ -74,11 +78,11 @@ public class ShadeLordPower extends AbstractPower implements CloneablePowerInter
 
     @Override
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+        this.description = (DESCRIPTIONS[0]);
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new ShadeLordPower(owner, amount);
+        return new ShadeLordPower(owner);
     }
 }

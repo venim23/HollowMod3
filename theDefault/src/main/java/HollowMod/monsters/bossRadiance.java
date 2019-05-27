@@ -350,7 +350,11 @@ public class bossRadiance extends AbstractMonster {
         AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, DIALOG[3], 3.0f, 3.0f));
         this.state.setTimeScale(0.1f);
         this.useShakeAnimation(5.0f);
+
         super.die();
+        this.onBossVictoryLogic();
+
+
     }
 
     //Assigns byte values to the attack names. I can't find this directly called, maybe it's just put in the output for debugging

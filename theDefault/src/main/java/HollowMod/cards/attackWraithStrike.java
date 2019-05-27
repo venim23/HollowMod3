@@ -66,7 +66,7 @@ public class attackWraithStrike extends AbstractHollowCard {
 
     private static final int UPGRADE_PLUS_WEAK = 1;
 
-    private static final int DAMAGE = 12;
+    private static final int DAMAGE = 11;
 
     private static final int UPGRAD_PLUS_DAMAGE = 3;
 
@@ -75,7 +75,6 @@ public class attackWraithStrike extends AbstractHollowCard {
 
     public attackWraithStrike() {// This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-
         baseDamage = DAMAGE;
         this.magicNumber = this.baseMagicNumber = WEAK;
         this.defaultSecondMagicNumber = this.defaultBaseSecondMagicNumber = VOID;
@@ -85,19 +84,32 @@ public class attackWraithStrike extends AbstractHollowCard {
     }
 
 
+    public float calculateModifiedCardDamage(final AbstractPlayer player, final AbstractMonster mo, final float tmp) {
+        int void_bonus = 0;
+
+        if ((mo != null) && (player.hasPower(VoidPower.POWER_ID))){
+            void_bonus += player.getPower(VoidPower.POWER_ID).amount;
+        }
+
+        return tmp + (2 * void_bonus);
+    }
+
+
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
+        /*
         int void_bonus = 0;
 
         if (p.hasPower(VoidPower.POWER_ID)){
             void_bonus += p.getPower(VoidPower.POWER_ID).amount;
         }
+        */
 
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, (damage + void_bonus), damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m,p, new WeakPower(m, magicNumber, false)));
+                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m,p, new WeakPower(m, magicNumber, false), magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VoidPower(p, this.defaultSecondMagicNumber), this.defaultSecondMagicNumber));
     }
 

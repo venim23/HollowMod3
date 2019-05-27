@@ -75,7 +75,7 @@ public class attackVengefulVoid extends AbstractHollowCard {
     public attackVengefulVoid() {// This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
-        baseDamage = DAMAGE;
+        this.baseDamage = DAMAGE;
         this.magicNumber = this.baseMagicNumber = TIMES_HIT;
         this.defaultSecondMagicNumber = this.defaultBaseSecondMagicNumber = VOID;
         this.isMultiDamage = true;
@@ -85,21 +85,27 @@ public class attackVengefulVoid extends AbstractHollowCard {
 
     }
 
+    public float calculateModifiedCardDamage(final AbstractPlayer player, final AbstractMonster mo, final float tmp) {
+        int void_bonus = 0;
+
+        if ((mo != null) && (player.hasPower(VoidPower.POWER_ID))){
+            void_bonus += player.getPower(VoidPower.POWER_ID).amount;
+        }
+
+        return tmp + void_bonus;
+    }
+
+
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        int void_bonus = 0;
-
-        if (p.hasPower(VoidPower.POWER_ID)){
-            void_bonus += p.getPower(VoidPower.POWER_ID).amount;
-        }
         AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Fireball.getKey()));
 
         for (int i = this.magicNumber; i > 0; i--){
             AbstractDungeon.actionManager.addToBottom(
-                    new DamageAction(m, new DamageInfo(p, (damage + void_bonus), damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
+                    new DamageAction(m, new DamageInfo(p, (damage), damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
         }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VoidPower(p, this.defaultSecondMagicNumber), this.defaultSecondMagicNumber));
     }

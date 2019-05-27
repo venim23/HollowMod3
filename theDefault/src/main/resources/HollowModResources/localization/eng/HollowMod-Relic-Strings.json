@@ -3,7 +3,7 @@
     "NAME": "Knight's Mask",
     "FLAVOR": "All vessels carry a mask.",
     "DESCRIPTIONS": [
-      "Gain #b1 #ySoul each time you damage an enemy with an Attack. (Except #bSpell or #bAlly Attacks)"
+      "Gain #b1 #ySoul each time you play an Attack card. NL (Except #bSpell or #bAlly Attacks)"
     ]
   },
   "HollowMod:PlaceholderRelic": {
@@ -53,6 +53,13 @@
       " #gHP."
     ]
   },
+  "HollowMod:LifeEnderRelic": {
+    "NAME": "Life Ender",
+    "FLAVOR": "Another fool to be cut down by Life Ender...",
+    "DESCRIPTIONS": [
+      "Draw a Card after playing #b5 attacks."
+    ]
+  },
   "HollowMod:MillibellesNoteRelic": {
     "NAME": "Millibelle's Note",
     "FLAVOR": "Still not interested? You're far too hesitant.",
@@ -60,11 +67,18 @@
       "Begin each Combat with 2 #ySoul."
     ]
   },
+  "HollowMod:MantisClawRelic": {
+    "NAME": "Mantis Claw",
+    "FLAVOR": "Claw carved from bone.",
+    "DESCRIPTIONS": [
+      "Playing #b3 [#60CFFF]Dash cards in one turn, will give you #b1 [E]"
+    ]
+  },
   "HollowMod:JonisBlessing": {
     "NAME": "Joni's Blessing",
     "FLAVOR": "Blessed by Joni, the kindly heretic. Transfigures vital fluids into blue lifeblood.",
     "DESCRIPTIONS": [
-      "Begin Each Combat with #b15 #bLifeblood. Healing in Combat instead increases #bLifeblood"
+      "Begin Each Combat with #b15 #bLifeblood. Healing in Combat instead increases #bLifeblood. NL ( #bLifeblood is Temporary HP.)"
     ]
   },
   "HollowMod:IsmasTear": {
@@ -81,18 +95,32 @@
       "If your HP is Full, gain Max Soul at the Beginning of Each turn."
     ]
   },
+  "HollowMod:KingsBrand": {
+    "NAME": "The King's Brand",
+    "FLAVOR": "Hallownest's ancient places shall open before it.",
+    "DESCRIPTIONS": [
+      "As long as you have enough [#FFA200]Infection, [#EFFAFF]Focus[] will spend [#FFA200]Infection instead of #ySoul (Even while in [#696969]Void[])."
+    ]
+  },
+  "HollowMod:StagPassRelic": {
+    "NAME": "Stag's Pass",
+    "FLAVOR": "The sound of the bell will always call me back.",
+    "DESCRIPTIONS": [
+      "Cards Purchased from Shops are automatically upgraded."
+    ]
+  },
   "HollowMod:KingsSoulRelic": {
     "NAME": "King's Soul",
     "FLAVOR": "Holy charm symbolising a union between higher beings.",
     "DESCRIPTIONS": [
-      "Replaces Vessel Mask or Vóid Idol, No longer Generate #ySoul by attacking, Gain #b2 #ySoul at the beginning of each round, increase #ySoul #yMeter by #b2"
+      "Replaces Vessel Mask or Vóid Idol, No longer Generate #ySoul by attacking, Gain #b3 #ySoul at the beginning of each round, increase #ySoul #yMeter by #b2"
     ]
   },
   "HollowMod:GodTunerRelic": {
     "NAME": "GodTuner",
     "FLAVOR": "Device that resonates with beings of great power.",
     "DESCRIPTIONS": [
-      "At the beginning of each round, Gain #b1 [E]. Lower Soul Meter by 4"
+      "At the beginning of each round, Gain #b1 [E] . Soul Meter Limit is reduced by #b3."
     ]
   }
 }

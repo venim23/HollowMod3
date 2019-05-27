@@ -1,6 +1,7 @@
 package HollowMod.monsters;
 
 import HollowMod.hollowMod;
+import HollowMod.powers.FlameCastPower;
 import HollowMod.powers.FlameCloakPower;
 import HollowMod.util.SoundEffects;
 import com.badlogic.gdx.math.MathUtils;
@@ -39,19 +40,19 @@ public class bossNKGrimm extends AbstractMonster {
 
     private int fbatDmg = 10;
     private int fbats = 2;
-    private int lingerDefVal = 55;
+    private int lingerDefVal = 65;
     private int turnsTillLoop = 0;
-    private int normalBlock = 15;
+    private int normalBlock = 12;
     private int normalRegen = 10;
-    private int maxHP = 375;
-    private int minHP = 350;
-    private int spikeDefVal = 15;
+    private int maxHP = 320;
+    private int minHP = 310;
+    private int spikeDefVal = 10;
     private int spikePwrVal = 1;
     private int tpDamage = 5;
     private int lingerBlockTurns = 3;
-    private int flameVal = 6;
+    private int flameVal = 5;
     private int fpillerDmg = 20;
-    private int fpillarPwer = 4;
+    private int fpillarPwer = 3;
     private int numTurns;
     private int defVal = 0;
     private int defDmg = 0;
@@ -171,6 +172,7 @@ public class bossNKGrimm extends AbstractMonster {
             case 3: //BlockMODE
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "FIREBLOCK"));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new BarricadePower(this)));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this,this, new FlameCastPower(this)));
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, this.lingerDefVal));
                 break;
             case 4: //TPPunch
@@ -196,6 +198,12 @@ public class bossNKGrimm extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "FIRESUMMON"));
                 AbstractDungeon.actionManager.addToBottom(new LoseBlockAction(this, this, defVal));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new InflameEffect(this), 0.5f));
+                if (this.hasPower(FlameCastPower.POWER_ID)){
+                    AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this,this,FlameCastPower.POWER_ID));
+                }
+                if (this.hasPower(FlameCloakPower.POWER_ID)){
+                    AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, FlameCloakPower.POWER_ID));
+                }
                 if (this.hasPower(BarricadePower.POWER_ID)){
                     AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, BarricadePower.POWER_ID));
                 }
@@ -305,24 +313,24 @@ public class bossNKGrimm extends AbstractMonster {
             return;
         }
 
-        if ((i <15) && (!lastMove((byte)2))){
+        if ((i <10) && (!lastMove((byte)2))){
             setMove((byte) 2, Intent.DEFEND_BUFF);
-        } else if ((i < 30) || ((this.numTurns > 4) && (i<50))) {
+        } else if ((i < 25) || ((this.numTurns > 4) && (i<50))) {
             if (!lastMove((byte)0)){
                 setMove((byte)0, Intent.ATTACK_DEBUFF, ((DamageInfo)this.damage.get(0)).base, this.fbats, true);
             } else
-            setMove((byte) 4, Intent.ATTACK_DEBUFF, ((DamageInfo) this.damage.get(2)).base);
+            setMove(MOVES[4],(byte) 4, Intent.ATTACK_DEBUFF, ((DamageInfo) this.damage.get(2)).base);
         } else if (i < 65) {
             if (!lastMove((byte)1)){
                 setMove((byte)1, Intent.ATTACK_BUFF, ((DamageInfo)this.damage.get(1)).base);
             } else {
-                setMove((byte) 4, Intent.ATTACK_DEBUFF, ((DamageInfo) this.damage.get(2)).base);
+                setMove(MOVES[4],(byte) 4, Intent.ATTACK_DEBUFF, ((DamageInfo) this.damage.get(2)).base);
             }
                 //so anything over 44 will be this i think?  so 65% generic attacks.
         } else if ((i < 85) && ((!this.lastMove((byte)5)) && (!this.lastMoveBefore((byte)5)))){
             setMove((byte)5, Intent.DEFEND_BUFF);
         } else {
-            setMove((byte)4 , Intent.ATTACK_DEBUFF, ((DamageInfo) this.damage.get(2)).base);
+            setMove(MOVES[4],(byte)4 , Intent.ATTACK_DEBUFF, ((DamageInfo) this.damage.get(2)).base);
         }
     }
 
@@ -332,6 +340,7 @@ public class bossNKGrimm extends AbstractMonster {
         this.state.setTimeScale(0.1f);
         this.useShakeAnimation(5.0f);
         super.die();
+        this.onBossVictoryLogic();
     }
 
     //Assigns byte values to the attack names. I can't find this directly called, maybe it's just put in the output for debugging

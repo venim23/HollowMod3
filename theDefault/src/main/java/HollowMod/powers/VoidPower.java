@@ -82,7 +82,7 @@ public class VoidPower extends AbstractPower implements CloneablePowerInterface 
     }
 
 
-    @Override
+   /* @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         if ((info.type != DamageInfo.DamageType.THORNS) && (info.owner != this.owner)) {
             flashWithoutSound();
@@ -90,8 +90,15 @@ public class VoidPower extends AbstractPower implements CloneablePowerInterface 
             //damageAmount += this.amount;
         }
         return damageAmount;
-    }
+    }*/
 
+
+    public float atDamageReceive(final float damage, final DamageInfo.DamageType type) {
+        if (type != DamageInfo.DamageType.NORMAL) {
+            return damage;
+        }
+        return damage * 1.25f;
+    }
     // Note: If you want to apply an effect when a power is being applied you have 3 options:
     //onInitialApplication is "When THIS power is first applied for the very first time only."
     //onApplyPower is "When the owner applies a power to something else (only used by Sadistic Nature)."
@@ -115,7 +122,7 @@ public class VoidPower extends AbstractPower implements CloneablePowerInterface 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + this.amount  + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
+        this.description = (DESCRIPTIONS[0] + this.amount  + DESCRIPTIONS[1]);
     }
 
     @Override

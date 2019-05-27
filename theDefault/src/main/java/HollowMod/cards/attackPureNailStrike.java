@@ -1,12 +1,15 @@
 package HollowMod.cards;
 
+import HollowMod.actions.FocusSoulAction;
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.SoulPower;
+import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -44,8 +47,8 @@ public class attackPureNailStrike extends AbstractHollowCard {
 
     private static final int DAMAGE = 9;
 
-    private static final int DAMAGE_PER_SOUL = 2;
-    private static final int UPGRADE_DAMAGE_PER_SOUL = 3;
+    private static final int DAMAGE_PER_SOUL = 3;
+    private static final int UPGRADE_DAMAGE_PER_SOUL = 2;
 
     // /STAT DECLARATION/
 
@@ -66,9 +69,10 @@ public class attackPureNailStrike extends AbstractHollowCard {
         if (p.hasPower(SoulPower.POWER_ID)) {
             soulspent = p.getPower(SoulPower.POWER_ID).amount;
         }
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.DreamNail.getKey()));
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, (damage + (soulspent * magicNumber)) , damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, SoulPower.POWER_ID, soulspent));
+        AbstractDungeon.actionManager.addToBottom(new FocusSoulAction(p, soulspent));
         }
 
     // Upgraded stats.

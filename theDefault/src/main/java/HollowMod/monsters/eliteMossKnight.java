@@ -214,6 +214,8 @@ public class eliteMossKnight extends AbstractMonster {
                 break;
             case 6: // Harden
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "REST"));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this,1),1));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, this, new StrengthPower(p, 1),1));
                 break;
         }
         //unsure here, I think it basically  uses an action to send this monsters data to the AbstractMonster.rollMove , which activates the DefaultMonster.getMove and sends a rng amount?
@@ -265,6 +267,7 @@ public class eliteMossKnight extends AbstractMonster {
                 this.state.setAnimation(0, animSpec2, false);
                 this.state.addAnimation(0, animIdle, true, 0.0F);
                 this.nextMove = 0;
+                this.setMove((byte)0, Intent.ATTACK_DEFEND,((DamageInfo)this.damage.get(0)).base );
                 this.intent = (Intent.ATTACK_DEFEND);
 
                 this.leafMode = false;
@@ -330,7 +333,7 @@ public class eliteMossKnight extends AbstractMonster {
             return;
         }
         if (this.leafMode){
-            setMove((byte) 5, Intent.BUFF);
+            setMove((byte) 5, Intent.MAGIC);
             return;
         }
         if ((this.numAliveLice() < 1) && (i % 2 == 0 )){ //should do this 50% of the time if no lice are alive.
@@ -340,7 +343,7 @@ public class eliteMossKnight extends AbstractMonster {
         if ((i < 20) || ((i < 60) && (this.numAliveLice() > 0))){
             setMove((byte) 2, Intent.DEFEND_BUFF);
         } else if (i < 40) {
-            setMove((byte) 6, Intent.NONE);
+            setMove((byte) 6, Intent.BUFF);
         } else {
             setMove((byte)0, Intent.ATTACK_DEFEND,((DamageInfo)this.damage.get(0)).base );
         }

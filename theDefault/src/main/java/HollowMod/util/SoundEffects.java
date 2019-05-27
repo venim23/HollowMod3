@@ -63,6 +63,12 @@ public class SoundEffects {
     public static final Pair<String, String> ZomBlarg = new Pair<>("HollowMod:ZomBlarg", makeAudioPath("zombie_blarg.ogg"));
     public static final Pair<String, String> Midwife = new Pair<>("HollowMod:Midwife", makeAudioPath("midwife_laugh.ogg"));
 
+    public static final Pair<String, String> NosShort = new Pair<>("HollowMod:NosShort", makeAudioPath("nosk_short.ogg"));
+    public static final Pair<String, String> NosLong = new Pair<>("HollowMod:NosLong", makeAudioPath("nosk_long.ogg"));
+    public static final Pair<String, String> NosAtt = new Pair<>("HollowMod:NosAtt", makeAudioPath("nosk_att.ogg"));
+    public static final Pair<String, String> NosRev1 = new Pair<>("HollowMod:NosRev1", makeAudioPath("nosk_tran1.ogg"));
+    public static final Pair<String, String> NosRev2 = new Pair<>("HollowMod:NosRev2", makeAudioPath("nosk_tran2.ogg"));
+
 
 
 

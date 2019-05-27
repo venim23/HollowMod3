@@ -30,14 +30,14 @@ public class monsterViolentHusk extends AbstractMonster {
 
 
     // ****** MOVE AND STAT VALUES ********//
-    private int slashdmg = 15;
-    private int chargeDmg = 30;
+    private int slashdmg = 10;
+    private int chargeDmg = 13;
     private int swellAmt = 2;
     private int stdSelf = 5;
     private int popDmg = 20;
     private int popPwr = 5;
-    private int maxHP = 375;
-    private int minHP = 325;
+    private int maxHP = 300;
+    private int minHP = 250;
     // ******* END OF MOVE AND STAT VALUES *********//
 
 
@@ -173,7 +173,7 @@ public class monsterViolentHusk extends AbstractMonster {
     protected void getMove(int i)
     {
         // so for this, it's a modified probability. it's a 30% chance (any roll less than 30) but it's also gauranteed if it's the first turn of the combat
-        if ((i < 65) && (this.currentHealth < (this.maxHealth/3))){ // Burst
+        if ((i < 65) && (this.currentHealth < (this.maxHealth/2))){ // Burst
             setMove(MOVES[1],(byte)1, Intent.MAGIC);
         } else if ((i < 35)&& (!this.lastMove((byte)3))) { // Swell
             setMove(MOVES[2],(byte)3, Intent.DEBUFF);

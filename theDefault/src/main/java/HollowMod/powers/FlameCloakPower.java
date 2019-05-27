@@ -82,7 +82,11 @@ public class FlameCloakPower extends AbstractPower implements CloneablePowerInte
 
     @Override
     public void atStartOfTurn(){
-        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, FlameCloakPower.POWER_ID, (this.amount/2)));
+        int reducer = this.amount/2;
+        if (this.amount/2 < 1){
+            reducer = 1;
+        }
+        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, FlameCloakPower.POWER_ID, (reducer)));
     }
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override

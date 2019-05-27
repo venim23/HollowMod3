@@ -65,6 +65,7 @@ public class powerBaldurShell extends AbstractHollowCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.isInnate = true;
+            rawDescription = (UPGRADE_DESCRIPTION);
             upgradeMagicNumber(UPGRADE_BLOCK_ON_FOCUS);
             this.initializeDescription();
         }

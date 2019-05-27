@@ -43,11 +43,12 @@ public class attackVengefulSpirit extends AbstractHollowCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 15;
+    private static final int DAMAGE = 16;
+    private static final int UPGRADE_PLUS_DMG = 4;
 
 
-    private static final int FOCUS_COST = 3;
-    private static final int UPGRADE_FOCUS_COST = 2;
+    private static final int FOCUS_COST = 2;
+
 
     // /STAT DECLARATION/
 
@@ -77,7 +78,7 @@ public class attackVengefulSpirit extends AbstractHollowCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeFocusCost(UPGRADE_FOCUS_COST);
+            upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
     }

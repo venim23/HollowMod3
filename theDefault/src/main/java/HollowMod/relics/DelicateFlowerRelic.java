@@ -42,12 +42,26 @@ public class DelicateFlowerRelic extends CustomRelic {
         if (DelicateFlowerRelic.this.isActive()) {
             DelicateFlowerRelic.this.flash();
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SoulPower(AbstractDungeon.player, 999), 999));
+        } else {
+            stopPulse();
         }
-}
+
+    }
 
     private boolean isActive(){
         return AbstractDungeon.player.currentHealth >= AbstractDungeon.player.maxHealth;
     }
+
+    @Override
+    public void atPreBattle() {
+        beginLongPulse();     // Pulse while the player can click on it.
+    }
+
+    @Override
+    public void onVictory() {
+        stopPulse(); // Don't keep pulsing past the victory screen/outside of combat.
+    }
+
     // Description
     @Override
     public String getUpdatedDescription() {

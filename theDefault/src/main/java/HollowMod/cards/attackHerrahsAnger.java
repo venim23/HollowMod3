@@ -63,21 +63,32 @@ public class attackHerrahsAnger extends AbstractHollowCard {
         this.magicNumber = this.baseMagicNumber = TIMES_HIT;
     }
 
+    public float calculateModifiedCardDamage(final AbstractPlayer player, final AbstractMonster mo, final float tmp) {
+        int void_bonus = 0;
+
+        if ((mo != null) && (player.hasPower(VoidPower.POWER_ID))){
+            void_bonus += player.getPower(VoidPower.POWER_ID).amount;
+        }
+
+        return tmp + void_bonus;
+    }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //all this shit is basically to let Void increase the damage of this card, annoying because the multidamage is an array.
+        /*
         int void_bonus = 0;
 
         if (p.hasPower(VoidPower.POWER_ID)){
             void_bonus += p.getPower(VoidPower.POWER_ID).amount;
         }
+
+        */
         for (int i = this.magicNumber; i > 0; i--){
             AbstractDungeon.actionManager.addToBottom(
-                    new DamageAction(m, new DamageInfo(p, (damage + void_bonus), damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+                    new DamageAction(m, new DamageInfo(p, this.damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
         }
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VoidPower(p, this.defaultSecondMagicNumber), this.defaultSecondMagicNumber));
     }
 
 

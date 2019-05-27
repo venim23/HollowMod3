@@ -59,7 +59,7 @@ public class VoidDashPower extends AbstractPower implements CloneablePowerInterf
     public int onAttacked(DamageInfo info, int damageAmount){
         if ((info.owner != null) && (info.type != DamageInfo.DamageType.THORNS) && (info.type != DamageInfo.DamageType.HP_LOSS) && (info.owner != this.owner)) {
              flash();
-             AbstractDungeon.actionManager.addToBottom(new DamageAction(info.owner, new DamageInfo(info.owner, this.amount),true));
+             AbstractDungeon.actionManager.addToBottom(new DamageAction(info.owner, new DamageInfo(info.owner, this.amount, DamageInfo.DamageType.THORNS),true));
         }
         return damageAmount;
     }

@@ -1,6 +1,7 @@
 package HollowMod.powers;
 
 import HollowMod.hollowMod;
+import HollowMod.relics.GodTunerRelic;
 import HollowMod.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
@@ -37,6 +38,9 @@ public class SoulPower extends AbstractPower implements CloneablePowerInterface 
         } else {
             SOUL_METER = 6;
         }
+        if (AbstractDungeon.player.hasRelic(GodTunerRelic.ID)){
+            SOUL_METER = SOUL_METER - 3;
+        }
 
         if (owner.hasPower(VoidPower.POWER_ID)){
             this.amount = 0;
@@ -67,6 +71,11 @@ public class SoulPower extends AbstractPower implements CloneablePowerInterface 
             } else {
                 SOUL_METER = 6;
             }
+
+            if (AbstractDungeon.player.hasRelic(GodTunerRelic.ID)){
+                SOUL_METER = SOUL_METER - 3;
+            }
+
 
             if ((this.amount + stackAmount) > SOUL_METER) {
                 this.amount = SOUL_METER;

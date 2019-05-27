@@ -63,11 +63,11 @@ public class attackBlackTendrils extends AbstractHollowCard {
 
     private static final int COST = 1;
 
-    private static final int VOID = 2;
+    private static final int VOID = 3;
 
     private static final int TIMES_HIT = 2;
 
-    private static final int DAMAGE = 3;
+    private static final int DAMAGE = 6;
 
     // /STAT DECLARATION/
 
@@ -85,23 +85,36 @@ public class attackBlackTendrils extends AbstractHollowCard {
 
     }
 
+    public float calculateModifiedCardDamage(final AbstractPlayer player, final AbstractMonster mo, final float tmp) {
+        int void_bonus = 0;
+
+        if ((mo != null) && (player.hasPower(VoidPower.POWER_ID))){
+            void_bonus += player.getPower(VoidPower.POWER_ID).amount;
+        }
+
+        return tmp + void_bonus;
+    }
+
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
+        /*
         int void_bonus = 0;
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new VoidPower(p, this.defaultSecondMagicNumber), this.defaultSecondMagicNumber));
+
         if (p.hasPower(VoidPower.POWER_ID)){
             void_bonus += p.getPower(VoidPower.POWER_ID).amount;
         }
+        */
+
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new VoidPower(p, this.defaultSecondMagicNumber), this.defaultSecondMagicNumber));
         AbstractDungeon.actionManager.addToBottom(new SFXAction("MONSTER_SLIME_ATTACK"));
         int healdiv = 3;
         if (this.upgraded){healdiv = 2;}
         AbstractMonster randomMonster = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(randomMonster, new DamageInfo(p, (damage + void_bonus), damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
-        AbstractDungeon.actionManager.addToBottom(new HealAction(p,p,(this.damage + void_bonus)/healdiv));
+                new DamageAction(randomMonster, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new HealAction(p,p,(this.damage/healdiv)));
 
     }
 

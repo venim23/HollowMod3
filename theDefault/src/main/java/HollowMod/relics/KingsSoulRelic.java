@@ -2,6 +2,7 @@ package HollowMod.relics;
 
 import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
+import HollowMod.powers.InfectionPower;
 import HollowMod.powers.SoulPower;
 import HollowMod.powers.SoulVialPower;
 import HollowMod.util.TextureLoader;
@@ -28,7 +29,7 @@ public class KingsSoulRelic extends CustomRelic {
      *
      * At the start of each combat, gain 1 Strength (i.e. Vajra)
      */
-    private  static final int SoulUp = 2;
+    private  static final int SoulUp = 3;
     // ID, images, text.
     public static final String ID = hollowMod.makeID("KingsSoulRelic");
 
@@ -57,6 +58,7 @@ public class KingsSoulRelic extends CustomRelic {
     {
         flash();
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SoulPower(AbstractDungeon.player, SoulUp),SoulUp));
+        AbstractDungeon.player.getPower(SoulPower.POWER_ID).updateDescription();
     }
 
 
@@ -64,6 +66,7 @@ public class KingsSoulRelic extends CustomRelic {
     {
         flash();
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SoulVialPower(AbstractDungeon.player, AbstractDungeon.player, SoulUp),SoulUp));
+
 
     }
 

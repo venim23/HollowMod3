@@ -73,7 +73,7 @@ public class powerLordofShades extends AbstractHollowCard {
                 new ApplyPowerAction(p, p, new VoidPower(p, defaultSecondMagicNumber), defaultSecondMagicNumber));
 
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new ShadeLordPower(p, magicNumber)));
+                new ApplyPowerAction(p, p, new ShadeLordPower(p)));
 
     }
 

@@ -45,8 +45,7 @@ public class attackRecoilStrike extends AbstractHollowCard {
     private static final int COST = 1;
 
     private static final int DAMAGE = 9;
-
-    private static int intVal = 0;
+    private static int intVal;
 
 
     // /STAT DECLARATION/
@@ -62,14 +61,15 @@ public class attackRecoilStrike extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.intVal = 0;
         AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Parry.getKey()));
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         //this Deals Damage
-        if (this.upgraded){intVal = 1;}
+        if (this.upgraded){this.intVal = 1;}
         AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new FetchAction(AbstractDungeon.player.discardPile, card -> card.hasTag(CardTagEnum.DASH), 1, fetchedCards -> {
             for (AbstractCard card : fetchedCards) {
-                card.modifyCostForTurn(-(intVal));
+                card.modifyCostForTurn(-(this.intVal));
             }
         }));
         //AbstractDungeon.actionManager.addToBottom(new FetchAction(AbstractDungeon.player.discardPile, (card -> card.hasTag(CardTagEnum.DASH)), 1));

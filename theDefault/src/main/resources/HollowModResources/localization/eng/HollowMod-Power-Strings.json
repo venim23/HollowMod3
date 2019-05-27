@@ -24,6 +24,12 @@
       "Whenever you play an #bAlly, Draw #b1 Card."
     ]
   },
+  "HollowMod:FlameCastPower": {
+    "NAME": "Preparing Flame Cast",
+    "DESCRIPTIONS": [
+      "After Charging up Grimm will absorb all remaining block, and deal that amount of damage"
+    ]
+  },
   "HollowMod:FlameCloakPower": {
     "NAME": "Flame Cloak",
     "DESCRIPTIONS": [
@@ -103,7 +109,7 @@
   "HollowMod:ShadesPower": {
     "NAME": "Lord of Shades",
     "DESCRIPTIONS": [
-      "For #b", " Turns, 50% of all Block is gained as Thorns instead, at the end of your turn, lose half your thorns"
+      "While you have [#696969]Void, 50% of all Block is also gained as Thorns, at the end of your turn, lose half your thorns"
     ]
   },
   "HollowMod:SharpenedShadowsPower": {
@@ -166,8 +172,7 @@
     "NAME": "Void",
     "DESCRIPTIONS": [
       "Increases [#696969]Void Card damage by #b",
-      " and increases damage taken by #b",
-      ". Reducing by #b1 at the beginning of your turn."
+      " and increases damage taken by #r25%. NL Reducing by #b1 at the beginning of your turn."
     ]
   },
   "HollowMod:VoidDashPower": {

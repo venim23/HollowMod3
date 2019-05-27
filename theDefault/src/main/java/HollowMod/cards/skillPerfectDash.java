@@ -69,7 +69,7 @@ public class skillPerfectDash extends AbstractHollowCard {
 
 
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p,p,new IntangiblePlayerPower(p,1)));
+                new ApplyPowerAction(p,p,new IntangiblePlayerPower(p,1),1));
     }
 
 

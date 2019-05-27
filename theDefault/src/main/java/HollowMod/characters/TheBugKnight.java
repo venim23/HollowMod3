@@ -74,7 +74,7 @@ public class TheBugKnight extends CustomPlayer {
     public static final int STARTING_HP = 75;
     public static final int MAX_HP = 75;
     public static final int STARTING_GOLD = 99;
-    public static final int CARD_DRAW = 5;
+    public static final int CARD_DRAW = 6;
     public static final int ORB_SLOTS = 0;
 
     // =============== /BASE STATS/ =================
@@ -109,6 +109,10 @@ public class TheBugKnight extends CustomPlayer {
             case "SOUL":
                 this.currentAtlasURL = "HollowModResources/images/char/BugKnight/Bugboy/Pure/PureVessel.atlas";
                 this.currentJsonURL = "HollowModResources/images/char/BugKnight/Bugboy/Pure/PureVessel.json";
+                break;
+            case "ALLY":
+                this.currentAtlasURL = "HollowModResources/images/char/BugKnight/Bugboy/Hornet/Hornet.atlas";
+                this.currentJsonURL = "HollowModResources/images/char/BugKnight/Bugboy/Hornet/Hornet.json";
                 break;
         }
 
@@ -394,10 +398,14 @@ public class TheBugKnight extends CustomPlayer {
         int infCount = 0;
         int voidCount = 0;
         int spellCount = 0;
+        int allyCount = 0;
         String animCall = "KNIGHT";
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group){
             if (c.hasTag(CardTagEnum.INFECTION)){
                 infCount++;
+            }
+            if (c.hasTag(CardTagEnum.ALLY)){
+                allyCount++;
             }
             if (c.hasTag(CardTagEnum.VOID)){
                 voidCount++;
@@ -405,12 +413,13 @@ public class TheBugKnight extends CustomPlayer {
                 spellCount++;
             }
         }
-
-        if ((infCount > (AbstractDungeon.player.masterDeck.size()/3))&&(infCount >= 4)){
+        if ((allyCount >6) && (allyCount > (AbstractDungeon.player.masterDeck.size()/4))){
+            animCall = "ALLY";
+        } else if ((infCount > (AbstractDungeon.player.masterDeck.size()/4))&&(infCount >= 5)){
             animCall = "INF";
-        } else if (voidCount > (AbstractDungeon.player.masterDeck.size()/3)&&(voidCount>= 5)){
+        } else if (voidCount > (AbstractDungeon.player.masterDeck.size()/4)&&(voidCount>= 6)){
             animCall = "VOID";
-        } else if (spellCount > (AbstractDungeon.player.masterDeck.size()/3)&&(spellCount>= 5)) {
+        } else if (spellCount > (AbstractDungeon.player.masterDeck.size()/3)&&(spellCount>= 7)) {
             animCall = "SOUL";
         }
 

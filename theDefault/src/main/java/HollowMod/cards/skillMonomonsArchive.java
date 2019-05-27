@@ -38,10 +38,10 @@ public class skillMonomonsArchive extends AbstractHollowCard {
     private static final CardType TYPE = CardType.SKILL;       //
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int FOCUS_COST = 5;
-    private static final int BLOCK_AMOUNT = 10;
-    private static final int UPGRADED_BLOCK_AMOUNT= 15;
+    private static final int BLOCK_AMOUNT = 15;
+    private static final int UPGRADED_BLOCK_AMOUNT= 5;
 
 
     // /STAT DECLARATION/

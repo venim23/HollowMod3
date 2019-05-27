@@ -72,9 +72,13 @@ public class skillConfessorsAdvice extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
+        AbstractCard CardtoCopy;
         AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Jiji.getKey()));
-        AbstractCard CardtoCopy = AbstractDungeon.player.drawPile.getTopCard();
+        if (AbstractDungeon.player.drawPile.size() == 0) {
+            CardtoCopy = AbstractDungeon.player.discardPile.getBottomCard();
+        } else {
+            CardtoCopy = AbstractDungeon.player.drawPile.getTopCard();
+        }
         AbstractDungeon.actionManager.addToBottom( new PlayTopCardAction(
                 AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), false));
 

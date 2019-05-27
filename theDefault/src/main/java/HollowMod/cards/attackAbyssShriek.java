@@ -61,20 +61,32 @@ public class attackAbyssShriek extends AbstractHollowCard {
         this.magicNumber = this.baseMagicNumber = VOID;
     }
 
+    public float calculateModifiedCardDamage(final AbstractPlayer player, final AbstractMonster mo, final float tmp) {
+        int void_bonus = 0;
+
+        if ((mo != null) && (player.hasPower(VoidPower.POWER_ID))){
+            void_bonus += player.getPower(VoidPower.POWER_ID).amount;
+        }
+
+        return tmp + void_bonus;
+    }
+
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //all this shit is basically to let Void increase the damage of this card, annoying because the multidamage is an array.
+        /*
         int[] finalDamage = multiDamage;
         if (p.hasPower(VoidPower.POWER_ID)) {
             for (int i =0; i < finalDamage.length; i++){
                     finalDamage[i] += p.getPower(VoidPower.POWER_ID).amount;
             }
         }
+        */
         AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Scream.getKey()));
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAllEnemiesAction(p, finalDamage , damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+                new DamageAllEnemiesAction(p, multiDamage , damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VoidPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new EntanglePower(p)));
     }

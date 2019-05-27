@@ -10,7 +10,7 @@
   {
     "TEXT": [
       "[#696969]Void",
-      "[#696969]Void negates #ySoul, and prevents [#EFFAFF]Focus. NL [#696969]Void increases the damage dealt by [#696969]Void [#60CFFF]Spells and the #rdamage #rtaken from #renemy #rattacks. NL [#696969]Void goes down by #b1 at the beginning of each turn."
+      "[#696969]Void negates #ySoul, and prevents [#EFFAFF]Focus. NL [#696969]Void increases the damage dealt by [#696969]Void [#60CFFF]Spells based on the stacks NL And the #rdamage #rtaken from #renemy #rattacks by #r25%. NL [#696969]Void goes down by #b1 at the beginning of each turn."
     ]
   },
   "HollowMod:Infection":

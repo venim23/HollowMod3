@@ -42,7 +42,7 @@ public class skillShadowDash extends AbstractHollowCard {
 
 
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON; //  Up to you, I like auto-complete on these
+    private static final CardRarity RARITY = CardRarity.COMMON; //  Up to you, I like auto-complete on these
     private static final CardTarget TARGET = CardTarget.SELF;  //   since they don't change much.
     private static final CardType TYPE = CardType.SKILL;       //
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
@@ -78,15 +78,16 @@ public class skillShadowDash extends AbstractHollowCard {
             blockval = blockval * 2;
         }
         if (p.hasPower(ShadeLordPower.POWER_ID)){
-            blockval = blockval/2;
-            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p,p, new ThornsPower(p,blockval),blockval));
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p,p, new ThornsPower(p,(blockval/2)),(blockval/2)));
         }
+
+        this.block+=blockval;
         // janky AF
         AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(p,p, block));
         AbstractDungeon.actionManager.addToBottom(new SFXVAction(SoundEffects.Evade.getKey()));
-        AbstractDungeon.actionManager.addToBottom(
-                new GainBlockAction(p,p, blockval));
+        //AbstractDungeon.actionManager.addToBottom(
+                //new GainBlockAction(p,p, block));
 
     }
 

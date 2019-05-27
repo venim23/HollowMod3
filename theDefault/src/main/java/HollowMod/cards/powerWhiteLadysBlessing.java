@@ -45,7 +45,7 @@ public class powerWhiteLadysBlessing extends AbstractHollowCard {
 
     private static final int COST = 0;  // COST = 1
 
-    private static final int VOID = 2;
+    private static final int VOID = 1;
     private static final int UPGRADED_VOID = 1;
 
 

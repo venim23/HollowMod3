@@ -4,6 +4,7 @@ import HollowMod.actions.TopDiscardPileToHandAction;
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -63,7 +64,7 @@ public class skillDreamGate extends AbstractHollowCard {
 
     public skillDreamGate() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = CARD_RECOVER;
+        this.magicNumber = (this.baseMagicNumber = CARD_RECOVER);
         this.exhaust = true;
 
     }
@@ -72,7 +73,12 @@ public class skillDreamGate extends AbstractHollowCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ExhaustAction(p, p, 1, false, false, false));
-        AbstractDungeon.actionManager.addToBottom(new TopDiscardPileToHandAction(magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new TopDiscardPileToHandAction(2));
+
+        AbstractDungeon.actionManager.addToBottom(new FetchAction(p.discardPile, (card -> (card == p.discardPile.getTopCard())), 1));
+        if (upgraded){
+            AbstractDungeon.actionManager.addToBottom(new FetchAction(p.discardPile, (card -> (card == p.discardPile.getTopCard())), 1));
+        }
     }
 
     // Upgraded stats.
