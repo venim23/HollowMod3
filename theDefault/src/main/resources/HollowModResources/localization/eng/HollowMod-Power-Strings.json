@@ -149,7 +149,8 @@
   "HollowMod:SoulPower": {
     "NAME": "Soul Meter",
     "DESCRIPTIONS": [
-      "The amount of #ySoul Gathered. Used to activate #bSpells. Current Limit: #b",
+      "The amount of #ySoul Gathered. Used to activate #bSpells. NL Current #ySoul: ",
+      " NL Current Limit: #b",
       " #ySoul."
     ]
   },

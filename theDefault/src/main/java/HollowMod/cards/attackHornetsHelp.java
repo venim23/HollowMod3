@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import com.megacrit.cardcrawl.vfx.combat.DieDieDieEffect;
@@ -39,7 +40,7 @@ public class attackHornetsHelp extends CustomCard {
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.RARE;
-    private static final CardTarget TARGET = CardTarget.NONE;
+    private static final CardTarget TARGET = CardTarget.SELF_AND_ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
@@ -56,6 +57,35 @@ public class attackHornetsHelp extends CustomCard {
 
     }
 
+    public void applyPowers() {
+        super.applyPowers();
+    }
+
+
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        updateValues(mo);
+        super.calculateCardDamage(mo);
+    }
+
+    public void updateValues(AbstractMonster m){
+        int energyConsumed = EnergyPanel.totalCount;;
+        if (AbstractDungeon.player.hasRelic(ChemicalX.ID)) {
+            AbstractDungeon.player.getRelic(ChemicalX.ID).flash();
+            energyConsumed += 2;
+        }
+       // if (upgraded) {
+       //     energyConsumed++;
+       // }
+        this.baseBlock = this.baseDamage = energyConsumed;
+    }
+
+    @Override
+    public void calculateDamageDisplay(AbstractMonster mo) {
+        calculateCardDamage(mo);
+        super.calculateDamageDisplay(mo);
+    }
 
     // Actions the card should do.
     @Override
@@ -63,10 +93,14 @@ public class attackHornetsHelp extends CustomCard {
         if (energyOnUse < EnergyPanel.totalCount) {
             energyOnUse = EnergyPanel.totalCount;
         }
+        updateValues(AbstractDungeon.getCurrRoom().monsters.getRandomMonster());
         AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Hornet.getKey()));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new DieDieDieEffect(), 0.1F));
-        AbstractDungeon.actionManager.addToBottom(new HornetsHelpAction(p, m, magicNumber,
-                upgraded, damageTypeForTurn, freeToPlayOnce, energyOnUse));
+        AbstractDungeon.actionManager.addToBottom(new HornetsHelpAction(p, m, this.damage, this.block, this.magicNumber));
+
+        if (!freeToPlayOnce) {
+            p.energy.use(EnergyPanel.totalCount);
+        }
     }
     //Upgraded stats.
     @Override
@@ -74,7 +108,7 @@ public class attackHornetsHelp extends CustomCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADED_MAGIC);
-            rawDescription = (UPGRADE_DESCRIPTION);
+            //rawDescription = (UPGRADE_DESCRIPTION);
             initializeDescription();
         }
     }

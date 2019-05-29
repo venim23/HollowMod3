@@ -30,6 +30,7 @@ public class KingsSoulRelic extends CustomRelic {
      * At the start of each combat, gain 1 Strength (i.e. Vajra)
      */
     private  static final int SoulUp = 3;
+    private  static final int SoulLimitUp = 2;
     // ID, images, text.
     public static final String ID = hollowMod.makeID("KingsSoulRelic");
 
@@ -57,16 +58,14 @@ public class KingsSoulRelic extends CustomRelic {
     public void atTurnStart()
     {
         flash();
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SoulPower(AbstractDungeon.player, SoulUp),SoulUp));
-        AbstractDungeon.player.getPower(SoulPower.POWER_ID).updateDescription();
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SoulPower(AbstractDungeon.player, SoulUp),SoulUp));
     }
 
 
     public void atBattleStart()
     {
         flash();
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SoulVialPower(AbstractDungeon.player, AbstractDungeon.player, SoulUp),SoulUp));
-
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SoulVialPower(AbstractDungeon.player, AbstractDungeon.player, SoulLimitUp),SoulLimitUp));
 
     }
 

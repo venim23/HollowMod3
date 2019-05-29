@@ -33,8 +33,9 @@ public class SoulPower extends AbstractPower implements CloneablePowerInterface 
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;
+        SOUL_METER = 6;
         if (owner.hasPower(SoulVialPower.POWER_ID)){
-            SOUL_METER = (6 + owner.getPower(SoulVialPower.POWER_ID).amount);
+            SOUL_METER += owner.getPower(SoulVialPower.POWER_ID).amount;
         } else {
             SOUL_METER = 6;
         }
@@ -58,7 +59,7 @@ public class SoulPower extends AbstractPower implements CloneablePowerInterface 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
-        updateDescription();
+        this.updateDescription();
     }
 
     public void stackPower(int stackAmount)
@@ -85,12 +86,12 @@ public class SoulPower extends AbstractPower implements CloneablePowerInterface 
         } else {
             this.amount = 0;
         }
-        updateDescription();
+        this.updateDescription();
     }
 
     @Override
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + SOUL_METER + DESCRIPTIONS[1]);
+        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + SOUL_METER + DESCRIPTIONS[2]);
     }
 
     @Override

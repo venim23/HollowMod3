@@ -19,11 +19,11 @@ public class HornetsHelpAction extends AbstractGameAction {
     private AbstractPlayer p;
     private int energyOnUse;
     private boolean upgraded;
+    private int damage;
+    private int block;
 
     public HornetsHelpAction(final AbstractPlayer p, final AbstractMonster m,
-                             final int magicNumber, final boolean upgraded,
-                             final DamageInfo.DamageType damageTypeForTurn, final boolean freeToPlayOnce,
-                             final int energyOnUse)
+                             final int damage, final int block, final int magicNumber)
 
     {
         this.freeToPlayOnce = false;
@@ -33,10 +33,13 @@ public class HornetsHelpAction extends AbstractGameAction {
         actionType = ActionType.SPECIAL;
         this.energyOnUse = energyOnUse;
         this.upgraded = upgraded;
+        this.damage = damage;
+        this.block = block;
     }
 
     @Override
     public void update() {
+       /*
         int effect = EnergyPanel.totalCount;
         if (energyOnUse != -1) {
             effect = energyOnUse;
@@ -46,24 +49,21 @@ public class HornetsHelpAction extends AbstractGameAction {
             p.getRelic(ChemicalX.ID).flash();
         }
         if (upgraded) {
-            ++effect;
+            effect++;
         }
-        int repVal = magicNumber;
-        int BaseEffect = effect;
-        int BlockEffect = BaseEffect;
-        int DamEffect = BaseEffect;
-        if (p.hasPower(DexterityPower.POWER_ID)){
+         */
+        /*if (p.hasPower(DexterityPower.POWER_ID)){
             BlockEffect = (BaseEffect + p.getPower(DexterityPower.POWER_ID).amount);
         }
         if (p.hasPower(StrengthPower.POWER_ID)){
-            DamEffect = (BaseEffect + p.getPower(StrengthPower.POWER_ID).amount);
+            this.damage = (BaseEffect + p.getPower(StrengthPower.POWER_ID).amount);
         }
+        */
+        if (this.block >0 || this.damage> 0) {
+            for (int i = 0; i < this.magicNumber; ++i) {
 
-        if (effect > 0) {
-            for (int i = 0; i < repVal; ++i) {
-
-                AbstractDungeon.actionManager.addToBottom(new DamageRandomEnemyAction(new DamageInfo(p, DamEffect, damageType), AttackEffect.NONE));
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p,p,BlockEffect));
+                AbstractDungeon.actionManager.addToBottom(new DamageRandomEnemyAction(new DamageInfo(p, this.damage, damageType), AttackEffect.NONE));
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p,p,this.block));
             }
             if (!freeToPlayOnce) {
                 p.energy.use(EnergyPanel.totalCount);

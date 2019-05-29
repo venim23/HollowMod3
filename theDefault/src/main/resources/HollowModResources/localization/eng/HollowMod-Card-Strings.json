@@ -2,9 +2,9 @@
 	"HollowMod:STARTINGCARDS": {
 		"NAME": "",
 		"DESCRIPTION": ""
-	},	
-	
-	
+	},
+
+
 	"HollowMod:NailStrikeStart": {
 		"NAME": "Nail Strike",
 		"DESCRIPTION": "Deal !D! damage."
@@ -28,7 +28,7 @@
 		"NAME": "",
 		"DESCRIPTION": ""
 	},
-	
+
 
 	"HollowMod:AbyssShriek": {
 		"NAME": "Abyss Shriek",
@@ -85,8 +85,8 @@
 	},
 	"HollowMod:HornetsHelp": {
 		"NAME": "Hornet's Help",
-		"DESCRIPTION": "[#60CFFF]Ally NL Gain X Block !M! times. NL Deal X damage to a random enemy !M! times.",
-		"UPGRADE_DESCRIPTION": "[#60CFFF]Ally NL Gain X+1 Block !M! times. NL Deal X+1 damage to a random enemy !M! times."
+		"DESCRIPTION": "[#60CFFF]Ally NL Gain X Block and deal X damage to a random enemy !M! times.",
+		"UPGRADE_DESCRIPTION": "[#60CFFF]Ally NL  Gain X Block and deal X damage to a random enemy !M! times.."
 	},
 	"HollowMod:HowlingWraiths": {
 		"NAME": "Howling Wraiths",
@@ -149,13 +149,13 @@
 		"NAME": "Zote's Magnificence",
 		"DESCRIPTION": "[#60CFFF]Ally NL Deal !D! damage, at the cost of all your Current Block. Exhaust"
 	},
-	
+
 	"HollowMod:POWERCARDS": {
 		"NAME": "",
 		"DESCRIPTION": ""
 	},
-	
-	
+
+
 	"HollowMod:BaldurShell": {
 		"NAME": "Baldur Shell",
 		"DESCRIPTION": "Whenever you [#EFFAFF]Focus[], gain !M! Block.",
@@ -224,8 +224,8 @@
 		"NAME": "White Lady's Blessing",
 		"DESCRIPTION": "[#60CFFF]Ally NL [#696969]Void[] !M!: While [#696969]Void[] is active, you may [#EFFAFF]Focus[] NL The [#60CFFF]Spell will be Exhausted."
 	},
-	
-	
+
+
 	"HollowMod:SKILLCARDS": {
 		"NAME": "",
 		"DESCRIPTION": ""
@@ -401,5 +401,21 @@
 	"HollowMod:VoidDash": {
 		"NAME": "Void Dash",
 		"DESCRIPTION": "[#60CFFF]Dash NL [#696969]Void[] 1: Gain !B! Block, Deal !M! damage to any enemy who's attacks you block this turn."
+	},
+
+	"HollowMod:NEWCARDS": {
+		"NAME": "Sorry Fish",
+		"DESCRIPTION": ""
+	},
+
+
+	"HollowMod:NewJinnsSoul": {
+		"NAME": "Jinn's Soul",
+		"DESCRIPTION": "[#60CFFF]Ally NL Lose all stacks of hollowmod:Soul , [#696969]Void[] and [#FFA200]Infection[] . Gain 1 Temporary Health for every stack lost. NL Exhaust."
+	},
+
+	"HollowMod:NewLittleFool": {
+		"NAME": "The Little Fool",
+		"DESCRIPTION": "[#60CFFF]Ally NL Exhaust a card. If you do, deal !D! damage."
 	}
 }

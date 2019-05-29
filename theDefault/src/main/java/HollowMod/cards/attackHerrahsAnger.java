@@ -47,7 +47,7 @@ public class attackHerrahsAnger extends AbstractHollowCard {
     private static final int COST = 2;
 
     private static final int TIMES_HIT = 4;
-    private static final int UPGRADE_TIMES_HIT = 2;
+    private static final int UPGRADE_TIMES_HIT = 1;
 
     private static final int DAMAGE = 3;
 

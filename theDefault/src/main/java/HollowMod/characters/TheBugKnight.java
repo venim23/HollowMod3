@@ -413,13 +413,13 @@ public class TheBugKnight extends CustomPlayer {
                 spellCount++;
             }
         }
-        if ((allyCount >6) && (allyCount > (AbstractDungeon.player.masterDeck.size()/4))){
+        if ((allyCount > 5) && (allyCount > (AbstractDungeon.player.masterDeck.size()/4))){
             animCall = "ALLY";
         } else if ((infCount > (AbstractDungeon.player.masterDeck.size()/4))&&(infCount >= 5)){
             animCall = "INF";
         } else if (voidCount > (AbstractDungeon.player.masterDeck.size()/4)&&(voidCount>= 6)){
             animCall = "VOID";
-        } else if (spellCount > (AbstractDungeon.player.masterDeck.size()/3)&&(spellCount>= 7)) {
+        } else if (spellCount > (AbstractDungeon.player.masterDeck.size()/4)&&(spellCount>= 7)) {
             animCall = "SOUL";
         }
 

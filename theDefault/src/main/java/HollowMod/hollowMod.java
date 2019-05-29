@@ -417,6 +417,8 @@ public class hollowMod implements
         addAudio(SoundEffects.NosShort);
         addAudio(SoundEffects.NosLong);
         addAudio(SoundEffects.NosAtt);
+        addAudio(SoundEffects.Jinn);
+        addAudio(SoundEffects.Fool);
     }
 
 
@@ -520,6 +522,8 @@ public class hollowMod implements
         BaseMod.addCard(new attackInfectedAttack());
         BaseMod.addCard(new attackQuirrelsAssistance());
         BaseMod.addCard(new attackSoulStrike());
+        BaseMod.addCard(new attackLittleFool());
+
 
         BaseMod.addCard(new attackWraithStrike());
         BaseMod.addCard(new attackVengefulVoid());
@@ -579,6 +583,7 @@ public class hollowMod implements
 
         BaseMod.addCard(new skillShadowDash());
         BaseMod.addCard(new skillGoodIntentions());
+        BaseMod.addCard(new skillJinnsSoul());
         //BaseMod.addCard(new skillSoulTotem());
 
         //Powers

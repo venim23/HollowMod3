@@ -43,8 +43,8 @@ public class attackDesolateDive extends AbstractHollowCard {
 
     private static final int COST = 0;
 
-    private static final int FOCUS_COST = 4;
-    private static final int UPGRADE_FOCUS_COST = 3;
+    private static final int FOCUS_COST = 5;
+    private static final int UPGRADE_FOCUS_COST = 4;
 
 
 
