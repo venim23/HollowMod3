@@ -61,7 +61,7 @@ public class attackSharpenedNail extends AbstractHollowCard {
 
     private static final int COST = 1;
     private static final int DAMAGE = 9;
-    private static final int UPGRADE_PLUS_DMG = 5;
+    private static final int UPGRADE_PLUS_DMG = 4;
 
     // /STAT DECLARATION/
 

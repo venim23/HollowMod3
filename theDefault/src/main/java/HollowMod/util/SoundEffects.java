@@ -72,6 +72,10 @@ public class SoundEffects {
     public static final Pair<String, String> Jinn = new Pair<>("HollowMod:Jinn", makeAudioPath("jinn.ogg"));
     public static final Pair<String, String> Fool = new Pair<>("HollowMod:Fool", makeAudioPath("lil_fool.ogg"));
 
+    public static final Pair<String, String> Stag3 = new Pair<>("HollowMod:Stag3", makeAudioPath("Stag_e3.ogg"));
+    public static final Pair<String, String> Stag2 = new Pair<>("HollowMod:Stag2", makeAudioPath("Stag_e2.ogg"));
+    public static final Pair<String, String> Stag1 = new Pair<>("HollowMod:Stag1", makeAudioPath("Stag_e1.ogg"));
+    public static final Pair<String, String> Stag = new Pair<>("HollowMod:Stag", makeAudioPath("Stag.ogg"));
 
 
 

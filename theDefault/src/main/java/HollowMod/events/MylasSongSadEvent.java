@@ -87,9 +87,9 @@ public class MylasSongSadEvent extends AbstractImageEvent {
                         CardCrawlGame.sound.play(SoundEffects.DreamNail.getKey());  // Play Dream Nail
                         int dmgAmount = (int)(AbstractDungeon.player.currentHealth * 0.25F);
                         boolean MylaLived = false;
-                        /*if ((CardHelper.hasCardWithID(attackAwokenDreamNail.ID)) || CardHelper.hasCardWithID(powerLordofShades.ID)){
+                        if ((CardHelper.hasCardWithID(attackAwokenDreamNail.ID)) || CardHelper.hasCardWithID(powerLordofShades.ID)){
                             MylaLived = true;
-                        }*/
+                        }
                         AbstractDungeon.player.damage(new DamageInfo(null, dmgAmount));
 
                         if (!MylaLived) {

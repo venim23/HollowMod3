@@ -58,8 +58,8 @@ public class bossRadiance extends AbstractMonster {
     private int flyDmg = 15;
     private int flyVln = 2;
     private int turnssinceSR = 2;
-    private int maxHP = 700;
-    private int minHP = 650;
+    private int maxHP = 675;
+    private int minHP = 625;
     private int numTurns;
 
 

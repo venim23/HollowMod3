@@ -97,7 +97,7 @@ public class VoidPower extends AbstractPower implements CloneablePowerInterface 
         if (type != DamageInfo.DamageType.NORMAL) {
             return damage;
         }
-        return damage * 1.25f;
+        return damage * 1.50f;
     }
     // Note: If you want to apply an effect when a power is being applied you have 3 options:
     //onInitialApplication is "When THIS power is first applied for the very first time only."

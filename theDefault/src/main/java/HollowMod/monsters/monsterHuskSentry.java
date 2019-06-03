@@ -68,17 +68,23 @@ public class monsterHuskSentry extends AbstractMonster {
         super(monsterHuskSentry.NAME, ID, 90, 0.0F, 0.0F, 200.0F, 400.0F, null, xOffset, 50.0F);
 
 
-        if (AbstractDungeon.ascensionLevel > 7)
+        if (AbstractDungeon.ascensionLevel >= 7)
         {
             //For monsters encountered at higher ascension levels adds a bit more HP
             this.minHP += 8;
             this.maxHP += 8;
 
         }
-        if (AbstractDungeon.ascensionLevel > 2)
+        if (AbstractDungeon.ascensionLevel >= 2)
         {
             //for Ascenction 3 and higher, adds a bit more damage
             this.attSlashDamage += 4;
+            this.salutBuff += 1;
+        }
+
+        if (AbstractDungeon.ascensionLevel >= 17)
+        {
+            //for Ascenction 3 and higher, adds a bit more damage
             this.salutBuff += 1;
         }
         //set the min and max hp bounds,

@@ -109,19 +109,19 @@
   "HollowMod:ShadesPower": {
     "NAME": "Lord of Shades",
     "DESCRIPTIONS": [
-      "While you have [#696969]Void, 50% of all Block is also gained as Thorns, at the end of your turn, lose half your thorns"
+      "While you have [#696969]Void, gain 1 thorn for every 2 block gained, at the end of your turn, lose half your thorns"
     ]
   },
   "HollowMod:SharpenedShadowsPower": {
     "NAME": "Sharpened Shadows",
     "DESCRIPTIONS": [
-      "While you have [#696969]Void, When you play a #yDash deal #b", " damage to a random enemy."
+      "While you have [#696969]Void, when you play a #yDash deal #b", " damage to a random enemy."
     ]
   },
   "HollowMod:SiblingSoulPower": {
     "NAME": "Sibling's Souls",
     "DESCRIPTIONS": [
-      "The next Attack or Skill card played will be copied"
+      "The next attack or skill card played will be copied"
     ]
   },
   "HollowMod:SlysStrikesPower": {
@@ -134,22 +134,22 @@
   "HollowMod:SoulEaterPower": {
     "NAME": "Soul Eater",
     "DESCRIPTIONS": [
-      "Gain a bonus #b",
-      " #ySoul whenever you use an attack. Excluding #yAlly or #ySpell attacks)."
+      "Whenever you play an attack, gain #b",
+      " additional #ySoul. (Excluding #yAlly or #ySpell attacks)."
     ]
   },
   "HollowMod:SoulMasterPower": {
     "NAME": "Soul Twister",
     "DESCRIPTIONS": [
       "#ySoul #bSpells cost #b",
-      " less #ySoul to cast (to a minimum of 1). [#696969]Void Spells generate #b",
-      " more [#696969]Void when cast."
+      " less #ySoul to play (to a minimum of 1). [#696969]Void Spells generate #b",
+      " more [#696969]Void when played."
     ]
   },
   "HollowMod:SoulPower": {
     "NAME": "Soul Meter",
     "DESCRIPTIONS": [
-      "The amount of #ySoul Gathered. Used to activate #bSpells. NL Current #ySoul: ",
+      "The amount of #ySoul gathered. Used to activate #bSpells. NL Current #ySoul: ",
       " NL Current Limit: #b",
       " #ySoul."
     ]
@@ -157,8 +157,8 @@
   "HollowMod:SoulVialPower": {
     "NAME": "Soul Vessels",
     "DESCRIPTIONS": [
-      "Allows you to store #b",
-      " Extra #ySoul."
+      "Allows you to store an additional #b",
+      " #ySoul."
     ]
   },
   "HollowMod:UnnPower": {
@@ -173,26 +173,26 @@
     "NAME": "Void",
     "DESCRIPTIONS": [
       "Increases [#696969]Void Card damage by #b",
-      " and increases damage taken by #r25%. NL Reducing by #b1 at the beginning of your turn."
+      " . Increases damage taken by #r50%. NL Reducing by #b1 at the beginning of your turn."
     ]
   },
   "HollowMod:VoidDashPower": {
     "NAME": "Shade Cloak",
     "DESCRIPTIONS": [
-      "Deals #b", " damage to anyone who's attacks you block this turn."
+      "Whenever you block an attack this turn, return #b", " damage."
     ]
   },
   "HollowMod:WeaverSongPower": {
     "NAME": "Weaversong",
     "DESCRIPTIONS": [
-      "Each time you play an Attack, deal #b",
+      "Whenever you play an attack, deal #b",
       " damage to a random enemy."
     ]
   },
   "HollowMod:WhiteLadyPower": {
     "NAME": "White Lady's Blessing",
     "DESCRIPTIONS": [
-      "While in [#696969]Void, you can Focus, but the card will be #yExhausted."
+      "While you have [#696969]Void, you can use #yFocus, but the card will be #yExhausted."
     ]
   }
 

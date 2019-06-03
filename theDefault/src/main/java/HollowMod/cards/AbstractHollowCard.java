@@ -93,8 +93,9 @@ public abstract class AbstractHollowCard extends CustomCard {
             return new HollowMod.actions.FocusSoulAction(AbstractDungeon.player, this.hollowFocusCost).canFocusSoulAction();
             //Calls an action that checks if the player can use that ability or not
         }
-        return true;
+        return this.cardPlayable(m) && this.hasEnoughEnergy();
     }
+
     public void upgradeFocusCost(int newcost)
     {
         this.hollowBaseFocusCost = newcost;

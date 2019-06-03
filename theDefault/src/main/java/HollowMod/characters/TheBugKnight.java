@@ -3,6 +3,7 @@ package HollowMod.characters;
 import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
 import HollowMod.relics.DelicateFlowerRelic;
+import HollowMod.relics.GreatKnightMask;
 import HollowMod.relics.JonisBlessingRelic;
 import HollowMod.relics.VesselMask;
 import basemod.abstracts.CustomPlayer;
@@ -113,6 +114,10 @@ public class TheBugKnight extends CustomPlayer {
             case "ALLY":
                 this.currentAtlasURL = "HollowModResources/images/char/BugKnight/Bugboy/Hornet/Hornet.atlas";
                 this.currentJsonURL = "HollowModResources/images/char/BugKnight/Bugboy/Hornet/Hornet.json";
+                break;
+            case "ZOTE":
+                this.currentAtlasURL = "HollowModResources/images/char/BugKnight/Bugboy/Zote/PCZote.atlas";
+                this.currentJsonURL = "HollowModResources/images/char/BugKnight/Bugboy/Zote/PCZote.json";
                 break;
         }
 
@@ -413,7 +418,9 @@ public class TheBugKnight extends CustomPlayer {
                 spellCount++;
             }
         }
-        if ((allyCount > 5) && (allyCount > (AbstractDungeon.player.masterDeck.size()/4))){
+        if (AbstractDungeon.player.hasRelic(GreatKnightMask.ID)){
+            animCall = "ZOTE";
+        }else if ((allyCount > 5) && (allyCount > (AbstractDungeon.player.masterDeck.size()/4))){
             animCall = "ALLY";
         } else if ((infCount > (AbstractDungeon.player.masterDeck.size()/4))&&(infCount >= 5)){
             animCall = "INF";

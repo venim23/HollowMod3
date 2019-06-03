@@ -137,7 +137,7 @@ public class bossFalseKnight extends AbstractMonster {
                 break;
             case 3: //rage
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "RAGE"));
-                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2f));
+                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.3f));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(p, this.damage.get(2), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
                 if (rageTimes == rageLimit - 1) {
                     AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4f));

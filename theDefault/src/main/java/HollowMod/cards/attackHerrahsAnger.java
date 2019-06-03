@@ -39,15 +39,16 @@ public class attackHerrahsAnger extends AbstractHollowCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON; //  Up to you, I like auto-complete on these
+    private static final CardRarity RARITY = CardRarity.RARE; //  Up to you, I like auto-complete on these
     private static final CardTarget TARGET = CardTarget.ENEMY;  //   since they don't change much.
     private static final CardType TYPE = CardType.ATTACK;       //
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
     private static final int COST = 2;
 
-    private static final int TIMES_HIT = 4;
-    private static final int UPGRADE_TIMES_HIT = 1;
+
+    private static final int TIMES_HIT = 3;
+    private static final int UPGRADE_TIMES_HIT = 4;
 
     private static final int DAMAGE = 3;
 
@@ -87,7 +88,7 @@ public class attackHerrahsAnger extends AbstractHollowCard {
         */
         for (int i = this.magicNumber; i > 0; i--){
             AbstractDungeon.actionManager.addToBottom(
-                    new DamageAction(m, new DamageInfo(p, this.damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+                    new DamageAction(m, new DamageInfo(p, this.damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
     }
 

@@ -44,7 +44,7 @@ public class skillGoodIntentions extends AbstractHollowCard {
 
     private static final int SOUL = 2;
 
-    private static final int BLOCK = 9;
+    private static final int BLOCK = 10;
 
     private static final int PLATED = 1;
 

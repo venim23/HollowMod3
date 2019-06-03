@@ -93,13 +93,11 @@ public class attackHornetsHelp extends CustomCard {
         if (energyOnUse < EnergyPanel.totalCount) {
             energyOnUse = EnergyPanel.totalCount;
         }
-        updateValues(AbstractDungeon.getCurrRoom().monsters.getRandomMonster());
-        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Hornet.getKey()));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new DieDieDieEffect(), 0.1F));
-        AbstractDungeon.actionManager.addToBottom(new HornetsHelpAction(p, m, this.damage, this.block, this.magicNumber));
-
-        if (!freeToPlayOnce) {
-            p.energy.use(EnergyPanel.totalCount);
+        if ((energyOnUse > 0) || (p.hasRelic(ChemicalX.ID))) {
+            updateValues(AbstractDungeon.getCurrRoom().monsters.getRandomMonster());
+            AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Hornet.getKey()));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new DieDieDieEffect(), 0.1F));
+            AbstractDungeon.actionManager.addToBottom(new HornetsHelpAction(p, m, this.damage, this.block, this.magicNumber));
         }
     }
     //Upgraded stats.

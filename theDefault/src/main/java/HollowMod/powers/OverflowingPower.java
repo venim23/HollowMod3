@@ -71,15 +71,21 @@ public class OverflowingPower extends AbstractPower implements CloneablePowerInt
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner,this.owner, OverflowingPower.POWER_ID));
 
             if (this.owner.hasPower("Strength")){
-                if (this.amount >= owner.getPower("Strength").amount){
-                    AbstractDungeon.actionManager.addToBottom(
-                            new ReducePowerAction(this.owner, this.owner, "Strength", this.amount));
-                } else {
-                    AbstractDungeon.actionManager.addToBottom(
-                            new RemoveSpecificPowerAction(this.owner, this.owner, "Strength"));
-                }
-            }
+                    int StrAdded = 0;
+                    int tempval = this.amount - 1;
 
+                    for (int i = tempval; i > 0; i--) {
+                        StrAdded += tempval;
+                    }
+                    StrAdded =- 1;
+                    if (StrAdded <= owner.getPower("Strength").amount) {
+                        AbstractDungeon.actionManager.addToBottom(
+                                new ReducePowerAction(this.owner, this.owner, "Strength", StrAdded));
+                    } else {
+                        AbstractDungeon.actionManager.addToBottom(
+                                new RemoveSpecificPowerAction(this.owner, this.owner, "Strength"));
+                    }
+                }
         } else {
             AbstractDungeon.actionManager.addToBottom(
                     new ReducePowerAction(this.owner, this.owner, SoulPower.POWER_ID, this.amount));

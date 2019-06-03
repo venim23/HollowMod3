@@ -132,18 +132,22 @@
 	},
 	"HollowMod:Zote":{
 		"MOVES" : [
-		"Life Ender",
-		"Frontal Assault",
-		"Recovery",
-		"The Grey Prince",
-		"Flail",
-		"Zoteling"
+			"Life Ender",
+			"Frontal Assault",
+			"Recovery",
+			"The Grey Prince",
+			"Flail",
+			"Zoteling"
 		],
 		"NAME" : "Zote the Mighty",
 		"DIALOG": [
-		"Know this, cur. I am Zote the Mighty",
-		"Hoy! What are you doing, you clumsy little oaf?",
-		"Go on, cur! Scurry away! Lest I humiliate you further!"
+			"I am Zote the Mighty, a knight of great renown. NL My weapon, 'Life Ender' has struck down hundreds of foes. NL Begone, or you'll be next!",
+			"Know this, cur. I am Zote the Mighty",
+			"Hoy! What are you doing, you clumsy little oaf?",
+			"Go on, cur! Scurry away! Lest I humiliate you further!",
+			"Begone! Lest I draw my nail..",
+			"I'm not interested in your childish games. I need my rest."
+
 		]
 	}
 	

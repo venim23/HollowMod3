@@ -3,7 +3,7 @@
     "NAME": "Knight's Mask",
     "FLAVOR": "All vessels carry a mask.",
     "DESCRIPTIONS": [
-      "Gain #b1 #ySoul each time you play an Attack card. NL (Except #bSpell or #bAlly Attacks)"
+      "Gain #b1 #ySoul each time you play an Attack card. (Except #bSpell or #bAlly Attacks)"
     ]
   },
   "HollowMod:PlaceholderRelic": {
@@ -42,14 +42,14 @@
     "NAME": "Void Idol",
     "FLAVOR": "A Mask formed of liquid from the Abyss, perfectly still.",
     "DESCRIPTIONS": [
-      "Replaces Vessel's Mask or King's Soul, You can no longer Gain #ySoul, [#696969]Void[] Cards lose #yExhaust, at the beginning of each Combat #r-1 #yDexterity, #r-1 #yStrength."
+      "Replaces Vessel's Mask or King's Soul. You can no longer Gain #ySoul. [#696969]Void[] cards lose #yExhaust. At the beginning of each combat, #r-1 #yDexterity, #r-1 #yStrength."
     ]
   },
   "HollowMod:QueensCombRelic": {
     "NAME": "Queens Comb",
     "FLAVOR": "Golden nugget of the Hive's precious comb.",
     "DESCRIPTIONS": [
-      "Upon Pickup #rLose #r50% #rMax #rHP. Until you take Damage each Combat: At the beginning of your turn: heal for #g",
+      "Upon Pickup #rLose #r50% #rMax #rHP. Until you take health damage each combat: At the beginning of your turn: heal for #g",
       " #gHP."
     ]
   },
@@ -57,37 +57,37 @@
     "NAME": "Life Ender",
     "FLAVOR": "Another fool to be cut down by Life Ender...",
     "DESCRIPTIONS": [
-      "Draw a Card after playing #b5 attacks."
+      "Draw a card after playing #b5 attacks."
     ]
   },
   "HollowMod:MillibellesNoteRelic": {
     "NAME": "Millibelle's Note",
     "FLAVOR": "Still not interested? You're far too hesitant.",
     "DESCRIPTIONS": [
-      "Begin each Combat with 2 #ySoul."
+      "Begin each combat with #b2 #ySoul."
     ]
   },
   "HollowMod:MantisClawRelic": {
     "NAME": "Mantis Claw",
     "FLAVOR": "Claw carved from bone.",
     "DESCRIPTIONS": [
-      "Playing #b3 [#60CFFF]Dash cards in one turn, will give you #b1 [E]"
+      "Whenever you play #b3 [#60CFFF]Dash cards in one turn, gain #b1 [E]"
     ]
   },
   "HollowMod:JonisBlessing": {
     "NAME": "Joni's Blessing",
     "FLAVOR": "Blessed by Joni, the kindly heretic. Transfigures vital fluids into blue lifeblood.",
     "DESCRIPTIONS": [
-      "Begin Each Combat with #b15 #bLifeblood. Healing in Combat instead increases #bLifeblood. NL ( #bLifeblood is Temporary HP.)"
+      "Begin each combat with #b15 Temporary_HP. Healing in combat instead increases Temporary_HP.)"
     ]
   },
   "HollowMod:IsmasTear": {
     "NAME": "Isma's Tear",
     "FLAVOR": "Fruit formed from a single hardened tear.",
     "DESCRIPTIONS": [
-    "Take #b1 Less Damage Whenever [#FFA200]Infection Ticks."
-  ]
-},
+      "Whenever[#FFA200]Infection damages you, take #b1 less damage."
+    ]
+  },
   "HollowMod:DelicateFlower": {
     "NAME": "Delicate Flower",
     "FLAVOR": "The Grey Mourner sends her Love.",
@@ -113,14 +113,21 @@
     "NAME": "King's Soul",
     "FLAVOR": "Holy charm symbolising a union between higher beings.",
     "DESCRIPTIONS": [
-      "Replaces Vessel Mask or Vóid Idol, No longer Generate #ySoul by attacking, Gain #b3 #ySoul at the beginning of each round, increase #ySoul #yMeter by #b2"
+      "Replaces Vessel Mask or [#696969]Void[] Idol. Gain #b3 #ySoul at the beginning of each round, increase #ySoul #yMeter by #b2"
     ]
   },
   "HollowMod:GodTunerRelic": {
     "NAME": "GodTuner",
     "FLAVOR": "Device that resonates with beings of great power.",
     "DESCRIPTIONS": [
-      "At the beginning of each round, Gain #b1 [E] . Soul Meter Limit is reduced by #b3."
+      "Gain #b1 [E] at the start of each turn. #ySoul #yMeter #yLimit is reduced by #b3."
+    ]
+  },
+  "HollowMod:GreatKnightMask": {
+    "NAME": "The Great Knight's Mask",
+    "FLAVOR": "Fear not, cur... Your death will be swift",
+    "DESCRIPTIONS": [
+      "Zote needs no effect."
     ]
   }
 }

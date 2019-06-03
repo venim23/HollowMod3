@@ -53,6 +53,13 @@ public class KingsSoulRelic extends CustomRelic {
         } else  {
             super.obtain();
         }
+
+        if (AbstractDungeon.player.hasRelic(VesselMask.ID)){
+            AbstractDungeon.player.relics.remove(0);
+        }
+        if (AbstractDungeon.player.hasRelic(VoidIdolRelic.ID)){
+            AbstractDungeon.player.relics.remove(0);
+        }
     }
 
     public void atTurnStart()

@@ -36,7 +36,7 @@ public class monsterSlobberingHusk extends AbstractMonster {
     private int hopDmg = 14;
     private int stdSelf = 5;
     private int hopDbf = 1;
-    private int popDmg = 20;
+    private int popDmg = 30;
     private int popPwr = 5;
     private int maxHP = 325;
     private int minHP = 275;
@@ -61,19 +61,23 @@ public class monsterSlobberingHusk extends AbstractMonster {
         super(monsterSlobberingHusk.NAME, ID, 400, 0.0F, 0.0F, 200.0F, 300.0F, null, xOffset, 0.0F);
 
 
-        if (AbstractDungeon.ascensionLevel > 7)
+        if (AbstractDungeon.ascensionLevel >= 7)
         {
             //For monsters encountered at higher ascension levels adds a bit more HP
             this.minHP += 25;
             this.maxHP += 25;
 
         }
-        if (AbstractDungeon.ascensionLevel > 2)
+        if (AbstractDungeon.ascensionLevel >= 2)
         {
             //for Ascenction 3 and higher, adds a bit more damage
             this.slashdmg += 2;
             this.hopDmg += 2;
-            this.popPwr += 1;
+
+        }
+        if (AbstractDungeon.ascensionLevel >= 17)
+        {
+            this.popPwr += 3;
         }
         //set the min and max hp bounds,
         setHp(this.minHP, this.maxHP);

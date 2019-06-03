@@ -1,5 +1,6 @@
 package HollowMod.events;
 
+import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
 import HollowMod.util.SoundEffects;
 import basemod.BaseMod;
@@ -110,9 +111,11 @@ public class MylasSongHappyEvent extends AbstractImageEvent {
                 }
                 break;
             case 1: // Welcome to screenNum = 1;
-                BaseMod.addEvent(MylasSongSadEvent.ID, MylasSongSadEvent.class);
-                BaseMod.addEvent(MylasSongSadEvent.ID, MylasSongSadEvent.class);
-                BaseMod.addEvent(MylasSongSadEvent.ID, MylasSongSadEvent.class);
+                if (AbstractDungeon.player instanceof TheBugKnight) {
+                    BaseMod.addEvent(MylasSongSadEvent.ID, MylasSongSadEvent.class);
+                    BaseMod.addEvent(MylasSongSadEvent.ID, MylasSongSadEvent.class);
+                    BaseMod.addEvent(MylasSongSadEvent.ID, MylasSongSadEvent.class);
+                }
                 switch (i) {
                     case 0: // If you press the first (and this should be the only) button,
                         openMap(); // You'll open the map and end the event.

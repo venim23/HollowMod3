@@ -35,6 +35,7 @@ public class skillLifebloodCore extends AbstractHollowCard {
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
     private static final int COST = 1;
+    private static final int TEMP_HP = 2;
 
 
 
@@ -44,6 +45,7 @@ public class skillLifebloodCore extends AbstractHollowCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.exhaust = true;
         this.isEthereal = true;
+        this.magicNumber = this.baseMagicNumber = TEMP_HP;
 
     }
 
@@ -51,7 +53,7 @@ public class skillLifebloodCore extends AbstractHollowCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int newlife = AbstractDungeon.player.currentBlock;
-        AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(p,p,(newlife * 2)));
+        AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(p,p,(newlife * this.magicNumber)));
         AbstractDungeon.actionManager.addToBottom(new LoseBlockAction(p,p,newlife));
     }
 

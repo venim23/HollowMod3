@@ -40,7 +40,7 @@ public class skillCrystalDash extends AbstractHollowCard {
 
     private static final int COST = 2;  // COST = 1
 
-    private static final int BLOCK_PER_CARD = 3;
+    private static final int BLOCK_PER_CARD = 4;
     private static final int UPGRADED_BLOCK_PER_CARD = 1;
 
 

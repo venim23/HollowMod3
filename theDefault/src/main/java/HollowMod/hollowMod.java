@@ -1,6 +1,8 @@
 package HollowMod;
 
+import HollowMod.events.ExploreStagwaysEvent;
 import HollowMod.events.MylasSongHappyEvent;
+import HollowMod.events.ZoteMeetingEvent;
 import HollowMod.monsters.*;
 import HollowMod.potions.*;
 import HollowMod.relics.*;
@@ -297,8 +299,9 @@ public class hollowMod implements
         // part of the game, simply don't include the dungeon ID
         // If you want to have a character-specific event, look at slimebound (CityRemoveEventPatch).
         // Essentially, you need to patch the game and say "if a player is not playing my character class, remove the event from the pool"
-
+        BaseMod.addEvent(ZoteMeetingEvent.ID, ZoteMeetingEvent.class, TheCity.ID);
         BaseMod.addEvent(MylasSongHappyEvent.ID, MylasSongHappyEvent.class);
+        //BaseMod.addEvent(ExploreStagwaysEvent.ID, ExploreStagwaysEvent.class);
         // =============== /EVENTS/ =================
         logger.info("Done loading badge Image and mod options");
         // =============== MONSTERS =================
@@ -323,6 +326,7 @@ public class hollowMod implements
                 new eliteStalkingDevout(100.0F),
 
         }));
+        BaseMod.addMonster(eventZote.ID, () -> new eventZote(50.0F));
         BaseMod.addMonster(eliteMossKnight.ID, () -> new eliteMossKnight(0.0F));
         BaseMod.addMonster(eliteNosk.ID, () -> new eliteNosk(0.0F));
         BaseMod.addMonster(bossRadiance.ID, () -> new bossRadiance());
@@ -419,6 +423,10 @@ public class hollowMod implements
         addAudio(SoundEffects.NosAtt);
         addAudio(SoundEffects.Jinn);
         addAudio(SoundEffects.Fool);
+        addAudio(SoundEffects.Stag3);
+        addAudio(SoundEffects.Stag2);
+        addAudio(SoundEffects.Stag1);
+        addAudio(SoundEffects.Stag);
     }
 
 
@@ -437,10 +445,10 @@ public class hollowMod implements
         // Class Specific Potion. If you want your potion to not be class-specific,
         // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
-        BaseMod.addPotion(VoidPotion.class, VOID_POTION_COLOR, VOID_POTION_COLOR, VOID_POTION_COLOR, VoidPotion.POTION_ID, TheBugKnight.Enums.THE_BUGKNIGHT);
-        BaseMod.addPotion(SoulPotion.class, SOUL_POTION_COLOR, SOUL_POTION_COLOR, SOUL_POTION_COLOR, SoulPotion.POTION_ID, TheBugKnight.Enums.THE_BUGKNIGHT);
-        BaseMod.addPotion(LifebloodPotion.class, LIFEBLOOD_POTION_COLOR, LIFEBLOOD_POTION_COLOR, LIFEBLOOD_POTION_COLOR, LifebloodPotion.POTION_ID, TheBugKnight.Enums.THE_BUGKNIGHT);
-        BaseMod.addPotion(InfectionPotion.class, INFECTION_POTION_COLOR, INFECTION_POTION_COLOR, INFECTION_POTION_COLOR, InfectionPotion.POTION_ID, TheBugKnight.Enums.THE_BUGKNIGHT);
+        //BaseMod.addPotion(VoidPotion.class, VOID_POTION_COLOR, VOID_POTION_COLOR, VOID_POTION_COLOR, VoidPotion.POTION_ID, TheBugKnight.Enums.THE_BUGKNIGHT);
+       // BaseMod.addPotion(SoulPotion.class, SOUL_POTION_COLOR, SOUL_POTION_COLOR, SOUL_POTION_COLOR, SoulPotion.POTION_ID, TheBugKnight.Enums.THE_BUGKNIGHT);
+       // BaseMod.addPotion(LifebloodPotion.class, LIFEBLOOD_POTION_COLOR, LIFEBLOOD_POTION_COLOR, LIFEBLOOD_POTION_COLOR, LifebloodPotion.POTION_ID, TheBugKnight.Enums.THE_BUGKNIGHT);
+       // BaseMod.addPotion(InfectionPotion.class, INFECTION_POTION_COLOR, INFECTION_POTION_COLOR, INFECTION_POTION_COLOR, InfectionPotion.POTION_ID, TheBugKnight.Enums.THE_BUGKNIGHT);
 
 
         logger.info("Done editing potions");

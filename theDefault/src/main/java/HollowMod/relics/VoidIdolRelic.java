@@ -53,6 +53,13 @@ public class VoidIdolRelic extends CustomRelic implements OnReceivePowerRelic {
         } else  {
             super.obtain();
         }
+
+        if (AbstractDungeon.player.hasRelic(VesselMask.ID)){
+            AbstractDungeon.player.relics.remove(0);
+        }
+        if (AbstractDungeon.player.hasRelic(KingsSoulRelic.ID)){
+            AbstractDungeon.player.relics.remove(0);
+        }
     }
 
         //AbstractDungeon.player.
@@ -60,8 +67,9 @@ public class VoidIdolRelic extends CustomRelic implements OnReceivePowerRelic {
 
     public void onUseCard(AbstractCard card, UseCardAction action)
     {
-        flash();
+
         if ((card.hasTag(CardTagEnum.VOID)) && (card.exhaust)) {
+            flash();
             action.exhaustCard = false;
         }
     }

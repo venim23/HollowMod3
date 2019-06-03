@@ -301,6 +301,10 @@ public class eliteNosk extends AbstractMonster {
         AbstractDungeon.actionManager.addToBottom(new SFXVAction(SoundEffects.NosRev2.getKey(), 1.2F));
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2f));
         AbstractDungeon.actionManager.addToBottom(new SFXVAction(SoundEffects.NosLong.getKey(), 1.8F));
+        this.nextMove = 4;
+        this.setMove((byte)0, Intent.ATTACK,((DamageInfo)this.damage.get(1)).base );
+        this.intent = (Intent.ATTACK);
+        this.setMove((byte)0, Intent.ATTACK,((DamageInfo)this.damage.get(1)).base );
         this.hb_x = 0 * Settings.scale;
         this.hb_h = 350 * Settings.scale;
         this.hb_w = 300 * Settings.scale;
@@ -316,9 +320,7 @@ public class eliteNosk extends AbstractMonster {
         refreshHitboxLocation();
         healthBarUpdatedEvent();
         AbstractDungeon.getCurrRoom().cannotLose = false;
-        this.nextMove = 4;
-        this.setMove((byte)0, Intent.ATTACK,((DamageInfo)this.damage.get(1)).base );
-        this.intent = (Intent.ATTACK);
+
     }
 
     //This is where the monster recieves a roll between 0 and 99 (so a full 1/100 chances is easily done) the getMove method uses that number to determine probability of assigning a specific action

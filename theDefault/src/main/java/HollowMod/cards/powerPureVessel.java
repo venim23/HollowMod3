@@ -62,6 +62,13 @@ public class powerPureVessel extends AbstractHollowCard {
 
     }
 
+    public void triggerOnEndOfTurnForPlayingCard()
+    {
+        if (!canUpgrade()) {
+            this.retain = true;
+        }
+    }
+
     // Upgraded stats.
     @Override
     public void upgrade() {

@@ -43,7 +43,7 @@ public class attackVengefulSpirit extends AbstractHollowCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 16;
+    private static final int DAMAGE = 13;
     private static final int UPGRADE_PLUS_DMG = 4;
 
 

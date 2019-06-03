@@ -43,6 +43,7 @@ public class InfectionPower extends AbstractPower implements CloneablePowerInter
         this.amount = amount;
         this.isTurnBased = true;
         this.type = PowerType.DEBUFF;
+        this.priority = 99;
 
         logger.info("spawn infection power loaded", amount);
 

@@ -57,7 +57,7 @@ public class monsterHuskWarrior extends AbstractMonster {
         super(monsterHuskWarrior.NAME, ID, 32, 0.0F, 0.0F, 200.0F, 300.0F, null, xOffset, 0.0F);
 
 
-        if (AbstractDungeon.ascensionLevel > 7)
+        if (AbstractDungeon.ascensionLevel >= 7)
         {
             //For monsters encountered at higher ascension levels adds a bit more HP
             this.minHP += 2;
@@ -65,12 +65,16 @@ public class monsterHuskWarrior extends AbstractMonster {
             this.shieldVal += 2;
 
         }
-        if (AbstractDungeon.ascensionLevel > 2)
+        if (AbstractDungeon.ascensionLevel >= 2)
         {
             //for Ascenction 3 and higher, adds a bit more damage
             this.attdefAtt += 1;
             this.attdefDef += 1;
             this.flurryDamage += 1;
+        }
+        if (AbstractDungeon.ascensionLevel >= 17)
+        {
+            this.chargeBuff+=1;
         }
         //set the min and max hp bounds,
         setHp(this.minHP, this.maxHP);
