@@ -1,0 +1,90 @@
+
+Radiance.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Wing1
+  rotate: false
+  xy: 1212, 510
+  size: 351, 288
+  orig: 351, 288
+  offset: 0, 0
+  index: -1
+Wing2
+  rotate: false
+  xy: 1568, 711
+  size: 238, 252
+  orig: 238, 252
+  offset: 0, 0
+  index: -1
+Wing4
+  rotate: false
+  xy: 1601, 2
+  size: 299, 177
+  orig: 299, 177
+  offset: 0, 0
+  index: -1
+Wing3
+  rotate: false
+  xy: 1568, 510
+  size: 318, 196
+  orig: 318, 196
+  offset: 0, 0
+  index: -1
+legs1
+  rotate: false
+  xy: 2, 2
+  size: 600, 600
+  orig: 600, 600
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 1212, 2
+  size: 384, 503
+  orig: 384, 503
+  offset: 0, 0
+  index: -1
+eyebeam
+  rotate: false
+  xy: 607, 2
+  size: 600, 546
+  orig: 600, 546
+  offset: 0, 0
+  index: -1
+sword
+  rotate: false
+  xy: 2, 968
+  size: 373, 51
+  orig: 373, 51
+  offset: 0, 0
+  index: -1
+lightball
+  rotate: false
+  xy: 1811, 711
+  size: 128, 138
+  orig: 128, 138
+  offset: 0, 0
+  index: -1
+eyeglow1
+  rotate: false
+  xy: 1811, 854
+  size: 107, 111
+  orig: 107, 111
+  offset: 0, 0
+  index: -1
+floorglow
+  rotate: false
+  xy: 1905, 2
+  size: 118, 111
+  orig: 118, 111
+  offset: 0, 0
+  index: -1
+floorportal
+  rotate: false
+  xy: 1891, 184
+  size: 89, 188
+  orig: 89, 188
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,69 @@
+{
+  "HollowMod:MylasSongHappyEvent": {
+    "NAME": "Myla's Song",
+    "DESCRIPTIONS": [
+      "As you wander through The Spire, you meet a miner, mining for crystals, Her voice breaks the silence. NL 'Ohhh, bury my mother, pale and slight, bury my father with his eyes shut tight!' NL 'Bury my sisters, two by two, and then when you're done, let's bury me toooo!'",
+      "Ha ha ha, do you know that one? It's one of my f-favourites! NL We can sing something else if you like. You start singing and I'll join in. NL I bet you have a b-b-beautiful singing voice! Ha ha ha!",
+      "'Ohh, bury the knight with her broken nail, bury the lady, lovely and pale!' NL 'Bury the priest in his tattered gown, then bury the beggar with his shining croooown'",
+      "Myla Seems not to notice, but you can understand her thoughts. NL #bKeep #bwhispering, #bcrystals! NL [#FFA200]MORE... NL #bI #bcan #balmost #bhear #bwhat #byou're #bsaying!"
+    ],
+    "OPTIONS": [
+      "[Leave]",
+      "[Talk to Myla] #gRemove #ga #gCard #gfrom #gyour #gdeck.",
+      "Select a Card to Remove",
+      "[Listen] #gHeal #g",
+      " #gHP.",
+      "[Dream Nail] Learn More"
+    ]
+  },
+    "HollowMod:MylasSongSadEvent": {
+      "NAME": "Myla's Fate",
+      "DESCRIPTIONS": [
+        "As you wander through The Spire, you see Myla, she looks... different? NL Her voice breaks the silence. NL '... Bury ... [#FFA200]KNIGHT ... [#FFA200]DANGEROUS ... nail? Bury... Lady... [#FFA200]LIGHT... Pale??'",
+        "Myla Falls to the floor, Broken, the Color Drains from her Eyes, NL You feel a bit [#FFA200]Broken as well",
+        "Your current Dream Nail simply reveals her thoughts: NL #b...how #bmuch #blonger... [#FFA200]KILL [#FFA200]IT... #bmust #bI #bdig...? NL [#FFA200]OUR... [#FFA200]ANCIENT... [#FFA200]ENEMY...",
+        "The #bAwoken #bDream #bNail cleaves through the Infection and nothing else. NL Myla seems confused but happy to see you NL Every once in awhile you c-c-come to visit me! I'm glad... ha ha... I'm glad you like the sound of my voice!",
+        "I'll wait here forever...till light blooms again..."
+      ],
+      "OPTIONS": [
+        "[Leave]",
+        "[Kill Myla] #rRemove #rall Nail Strikes. #gGet #g4 Infected Attacks.",
+        "[Dream Nail] #rLose #r", " #rHP. #gGain #ga #yRare #gCard.",
+        "[Walk Away] Abandon Myla to her fate."
+      ]
+    },
+    "HollowMod:TheStagways": {
+      "NAME": "Exploring the Stagways",
+      "DESCRIPTIONS": [
+        "As you wander through The Spire, You hear a great rumbling, through the tunnel charges a massive beetle. NL Greetings, little one! It's been an age since I last heard the ringing of a station bell. NL It echoed down the stagways and called me to you. NL As I visit more places I feel my memories returning to me, like the stagways of my mind are running once more.'",
+        "'I tire so easily now, and my old legs seem to ache more and more. Still, I'm lucky to grow old at all... so many others haven't.'",
+        "'My, this place much changed since I last saw it. NL The greenery grows so wild the station's like to be consumed by it. NL Still, I'd like to see more stations...'",
+        "'Little one, we stand in the King's Station!' NL 'Named of course for the King of Hallownest, NL he who ordered the building of the stagways and stations.NL ... Shall we press on?'",
+        "'Being back in my old home... I feel the weight of my long life bearing down on me. NL I carry it proudly, though. Wherever I travel, NL the memories of my family and my kind come with me. NL Thank you, little one'",
+        "I can tell you still have important work to do, don't you little one? NL I will be your companion as long as my old body still serves. NL Shall I help?"
+     ],
+      "OPTIONS": [
+        "[Leave]",
+        "[Unlock the Next Station] Costs #y",
+        " #yGold ",
+        "[Locked] Requires #y",
+        " #yGold.",
+        "[Accept] Gain #g5 #gMax #gHP",
+        "[Accept] #gGain The Last Stag #gCard.",
+        "[Accept] The Stag offers you a Pass #gRelic"
+      ]
+  },
+  "HollowMod:ZoteMeetingEvent": {
+    "NAME": "The Great Knight",
+    "DESCRIPTIONS": [
+      "Making your way through the City, you bump into a huddled mass of Grey, NL 'Hoy! Watch where you're going, you soggy vagabond!' NL  'I don't want you splashing me. I've had a miserable time trying to keep dry.' NL 'I am Zote the Mighty, a knight of great renown.' NL 'My weapon, 'Life Ender' has struck down hundreds of foes. Begone, or you'll be next!'",
+      "Very well then. Zote the Mighty will grant your desire...",
+      "You must be one of my fans!, very well, you can touch 'Life Ender'. NL Bring it back once you understand my greatness."
+    ],
+    "OPTIONS": [
+      "[Leave]",
+      "[Fight!] Challenge Zote the Mighty.",
+      "[Pay] The Great and Mighty Knight #rDemands #rALL of your #yGold."
+    ]
+  }
+}

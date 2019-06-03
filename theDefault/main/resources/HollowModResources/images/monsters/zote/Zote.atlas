@@ -1,0 +1,41 @@
+
+Zote.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 209, 2
+  size: 33, 34
+  orig: 33, 34
+  offset: 0, 0
+  index: -1
+lifeender
+  rotate: false
+  xy: 189, 105
+  size: 36, 34
+  orig: 36, 34
+  offset: 0, 0
+  index: -1
+cloak
+  rotate: false
+  xy: 132, 105
+  size: 52, 48
+  orig: 52, 48
+  offset: 0, 0
+  index: -1
+badhead
+  rotate: false
+  xy: 132, 2
+  size: 72, 98
+  orig: 72, 98
+  offset: 0, 0
+  index: -1
+badfall
+  rotate: false
+  xy: 2, 2
+  size: 125, 104
+  orig: 125, 104
+  offset: 0, 0
+  index: -1

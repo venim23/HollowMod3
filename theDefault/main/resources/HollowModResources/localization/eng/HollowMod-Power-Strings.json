@@ -1,0 +1,202 @@
+{
+  "HollowMod:BaldurShellPower": {
+    "NAME": "Baldur Shell",
+    "DESCRIPTIONS": [
+      "Whenever you [#EFFAFF]Focus #ySoul, Gain #b",
+      " Block."
+    ]
+  },
+  "HollowMod:BrokenVesselPower": {
+    "NAME": "Broken Vessel",
+    "DESCRIPTIONS": [
+      "Whenever you take damage from [#FFA200]Infection, deal that damage to All Enemies"
+    ]
+  },
+  "HollowMod:DungDefenderPower": {
+    "NAME": "Dung Defender's Aura",
+    "DESCRIPTIONS": [
+      "Apply #b", " Poison to any enemy who attacks you this turn"
+    ]
+  },
+  "HollowMod:ElderbugPower": {
+    "NAME": "Elderbugs Wisdom",
+    "DESCRIPTIONS": [
+      "Whenever you play an #bAlly, Draw #b1 Card."
+    ]
+  },
+  "HollowMod:FlameCastPower": {
+    "NAME": "Preparing Flame Cast",
+    "DESCRIPTIONS": [
+      "After Charging up Grimm will absorb all remaining block, and deal that amount of damage"
+    ]
+  },
+  "HollowMod:FlameCloakPower": {
+    "NAME": "Flame Cloak",
+    "DESCRIPTIONS": [
+      "When Damaged, the Attacker takes #b",
+      " Damage, Loses Half it's stacks each turn."
+    ]
+  },
+  "HollowMod:FlukenestPower": {
+    "NAME": "Flukenest",
+    "DESCRIPTIONS": [
+      "When you play a #bSpell: deal #b1 damage to #b",
+      " Random Enemies."
+    ]
+  },
+  "HollowMod:GrimmGiftPower": {
+    "NAME": "Grimm's Gift",
+    "DESCRIPTIONS": [
+      "Applies #b1 #yVulnerable to any enemy attacked this turn."
+    ]
+  },
+  "HollowMod:GrubsongPower": {
+    "NAME": "Grubsong",
+    "DESCRIPTIONS": [
+      "The first #b",
+      " time you take damage each turn, gain 1 #ySoul.",
+      " times you take damage each turn, gain 1 #ySoul."
+    ]
+  },
+  "HollowMod:InfectionPower": {
+    "NAME": "Infection Level",
+    "DESCRIPTIONS": [
+      "at the end of the round take #b",
+      " damage and reduce the [#FFA200]Infection [#FFA200]Level by #b2"
+    ]
+  },
+  "HollowMod:LifeCocoonPower": {
+    "NAME": "Lifeblood Cocoon",
+    "DESCRIPTIONS": [
+      "For the rest of this turn, whenever you play an Attack, gain #b",
+      " #bTemporary #bHealth."
+    ]
+  },
+  "HollowMod:LifeHeartPower": {
+    "NAME": "Lifeblood Heart",
+    "DESCRIPTIONS": [
+      "If you take no Unblocked damage this turn, gain #b",
+      " #bTemporary #bHealth next round."
+    ]
+  },
+  "HollowMod:MonarchWingsPower": {
+    "NAME": "Monarch Wings",
+    "DESCRIPTIONS": [
+      "For the next #b",
+      " Turns, the Block of all #bDashes are Doubled."
+    ]
+  },
+  "HollowMod:MothsMistakePower": {
+    "NAME": "Moth's Mistake",
+    "DESCRIPTIONS": [
+      "At the start of Your Turn: Apply #b",
+      " Poison to all enemies, and #b",
+      " [#FFA200]Infection to you."
+    ]
+  },
+  "HollowMod:NailsmithPower": {
+    "NAME": "The Nailsmith",
+    "DESCRIPTIONS": [
+      "Each time you play an attack this turn, it is #yUpgraded"
+    ]
+  },
+  "HollowMod:OverflowingPower": {
+    "NAME": "Overflowing",
+    "DESCRIPTIONS": [
+      "At the start of your turn, spend #b", " #ySoul to gain #b", " Strength. If you cannot afford it, lose this power and gained Strength. NL At the end of your turn this power gains #b1 stack"
+    ]
+  },
+  "HollowMod:ShadesPower": {
+    "NAME": "Lord of Shades",
+    "DESCRIPTIONS": [
+      "While you have [#696969]Void, 50% of all Block is also gained as Thorns, at the end of your turn, lose half your thorns"
+    ]
+  },
+  "HollowMod:SharpenedShadowsPower": {
+    "NAME": "Sharpened Shadows",
+    "DESCRIPTIONS": [
+      "While you have [#696969]Void, When you play a #yDash deal #b", " damage to a random enemy."
+    ]
+  },
+  "HollowMod:SiblingSoulPower": {
+    "NAME": "Sibling's Souls",
+    "DESCRIPTIONS": [
+      "The next Attack or Skill card played will be copied"
+    ]
+  },
+  "HollowMod:SlysStrikesPower": {
+    "NAME": "Sly's Strikes",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " Strength."
+    ]
+  },
+  "HollowMod:SoulEaterPower": {
+    "NAME": "Soul Eater",
+    "DESCRIPTIONS": [
+      "Gain a bonus #b",
+      " #ySoul whenever you use an attack. Excluding #yAlly or #ySpell attacks)."
+    ]
+  },
+  "HollowMod:SoulMasterPower": {
+    "NAME": "Soul Twister",
+    "DESCRIPTIONS": [
+      "#ySoul #bSpells cost #b",
+      " less #ySoul to cast (to a minimum of 1). [#696969]Void Spells generate #b",
+      " more [#696969]Void when cast."
+    ]
+  },
+  "HollowMod:SoulPower": {
+    "NAME": "Soul Meter",
+    "DESCRIPTIONS": [
+      "The amount of #ySoul Gathered. Used to activate #bSpells. NL Current #ySoul: ",
+      " NL Current Limit: #b",
+      " #ySoul."
+    ]
+  },
+  "HollowMod:SoulVialPower": {
+    "NAME": "Soul Vessels",
+    "DESCRIPTIONS": [
+      "Allows you to store #b",
+      " Extra #ySoul."
+    ]
+  },
+  "HollowMod:UnnPower": {
+    "NAME": "Unn's Shape",
+    "DESCRIPTIONS": [
+      "Whenever you play a #bSpell return #b",
+      " #bDash card from your discard pile to your hand.",
+      " #bDash cards from your discard pile to your hand."
+    ]
+  },
+  "HollowMod:VoidPower": {
+    "NAME": "Void",
+    "DESCRIPTIONS": [
+      "Increases [#696969]Void Card damage by #b",
+      " and increases damage taken by #r50%. NL Reducing by #b1 at the beginning of your turn."
+    ]
+  },
+  "HollowMod:VoidDashPower": {
+    "NAME": "Shade Cloak",
+    "DESCRIPTIONS": [
+      "Deals #b", " damage to anyone who's attacks you block this turn."
+    ]
+  },
+  "HollowMod:WeaverSongPower": {
+    "NAME": "Weaversong",
+    "DESCRIPTIONS": [
+      "Each time you play an Attack, deal #b",
+      " damage to a random enemy."
+    ]
+  },
+  "HollowMod:WhiteLadyPower": {
+    "NAME": "White Lady's Blessing",
+    "DESCRIPTIONS": [
+      "While in [#696969]Void, you can Focus, but the card will be #yExhausted."
+    ]
+  }
+
+
+
+
+}

@@ -1,0 +1,55 @@
+
+ViolentHusk.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+backbulge
+  rotate: false
+  xy: 355, 2
+  size: 99, 89
+  orig: 99, 89
+  offset: 0, 0
+  index: -1
+leg1
+  rotate: false
+  xy: 475, 2
+  size: 11, 17
+  orig: 11, 17
+  offset: 0, 0
+  index: -1
+leg2
+  rotate: false
+  xy: 459, 2
+  size: 11, 21
+  orig: 11, 21
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 244, 96
+  size: 91, 85
+  orig: 91, 85
+  offset: 0, 0
+  index: -1
+belly
+  rotate: false
+  xy: 2, 2
+  size: 237, 240
+  orig: 237, 240
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 244, 186
+  size: 60, 65
+  orig: 60, 65
+  offset: 0, 0
+  index: -1
+particles1
+  rotate: false
+  xy: 244, 2
+  size: 106, 89
+  orig: 106, 89
+  offset: 0, 0
+  index: -1

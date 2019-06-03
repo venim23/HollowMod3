@@ -1,0 +1,62 @@
+
+HuskSentry.png
+size: 256,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+wingblur
+  rotate: false
+  xy: 2, 2
+  size: 151, 131
+  orig: 151, 131
+  offset: 0, 0
+  index: -1
+leg2
+  rotate: false
+  xy: 40, 138
+  size: 55, 29
+  orig: 55, 29
+  offset: 0, 0
+  index: -1
+leg1
+  rotate: false
+  xy: 40, 172
+  size: 34, 25
+  orig: 34, 25
+  offset: 0, 0
+  index: -1
+torso
+  rotate: false
+  xy: 158, 119
+  size: 86, 95
+  orig: 86, 95
+  offset: 0, 0
+  index: -1
+arm2
+  rotate: false
+  xy: 100, 171
+  size: 31, 29
+  orig: 31, 29
+  offset: 0, 0
+  index: -1
+handr
+  rotate: false
+  xy: 2, 138
+  size: 33, 116
+  orig: 33, 116
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 158, 2
+  size: 79, 112
+  orig: 79, 112
+  offset: 0, 0
+  index: -1
+handl
+  rotate: false
+  xy: 100, 138
+  size: 39, 28
+  orig: 39, 28
+  offset: 0, 0
+  index: -1

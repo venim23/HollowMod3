@@ -1,0 +1,55 @@
+
+SlobberingHusk.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+appendage2
+  rotate: false
+  xy: 2, 186
+  size: 7, 40
+  orig: 7, 40
+  offset: 0, 0
+  index: -1
+appendage1
+  rotate: false
+  xy: 14, 186
+  size: 8, 34
+  orig: 8, 34
+  offset: 0, 0
+  index: -1
+backbulge
+  rotate: false
+  xy: 113, 2
+  size: 99, 89
+  orig: 99, 89
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 2, 96
+  size: 71, 85
+  orig: 71, 85
+  offset: 0, 0
+  index: -1
+headbulge
+  rotate: false
+  xy: 78, 181
+  size: 74, 61
+  orig: 74, 61
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 78, 96
+  size: 70, 80
+  orig: 70, 80
+  offset: 0, 0
+  index: -1
+particles1
+  rotate: false
+  xy: 2, 2
+  size: 106, 89
+  orig: 106, 89
+  offset: 0, 0
+  index: -1
