@@ -15,7 +15,8 @@
 	},
 	"HollowMod:FocusHealStart": {
 		"NAME": "Simple Focus",
-		"DESCRIPTION": "[#60CFFF]Spell NL [#EFFAFF]Focus[] !HollowMod:focusCost!:  Heal !M!. NL Heals for 2 less each time it's used this combat. NL Exhaust on the final use."
+		"DESCRIPTION": "[#60CFFF]Spell NL [#EFFAFF]Focus[] !HollowMod:focusCost!:  Heal !M!. NL Heals for 2 less each time it's used this combat. NL Exhaust on the final use.",
+		"UPGRADE_DESCRIPTION": "[#60CFFF]Spell NL Heal !M!. NL Heals for 2 less each time it's used this combat. NL Exhaust on the final use."
 	},
 	"HollowMod:CornifersMapStart": {
 		"NAME": "Cornifer's Map",
@@ -131,7 +132,7 @@
 	},
 	"HollowMod:SoulStrike": {
 		"NAME": "Soul Strike",
-		"DESCRIPTION": "Deal !D! damage. NL Gain !M! Additional hollowmod:Soul"
+		"DESCRIPTION": "Deal !D! damage. NL Gain !M! Additional hollowmod:Soul ."
 	},
 	"HollowMod:VengefulSpirit": {
 		"NAME": "Vengeful Spirit",
@@ -210,7 +211,7 @@
 	},
 	"HollowMod:SoulVessel": {
 		"NAME": "Soul Vessel",
-		"DESCRIPTION": "Increase the maximum hollowmod:Soul the Soul Meter can hold by !M! this Combat."
+		"DESCRIPTION": "Increase the maximum hollowmod:Soul the Soul Meter can hold by !M! this combat."
 	},
 	"HollowMod:ThornsofAgony": {
 		"NAME": "Thorns of Agony",
@@ -222,7 +223,7 @@
 	},
 	"HollowMod:WhiteLadysBlessing": {
 		"NAME": "White Lady's Blessing",
-		"DESCRIPTION": "[#60CFFF]Ally NL [#696969]Void[] !M!: While [#696969]Void[] is active, you may [#EFFAFF]Focus[] NL The [#60CFFF]Spell will be Exhausted."
+		"DESCRIPTION": "[#60CFFF]Ally NL [#696969]Void[] !M!: While you have [#696969]Void[], you may [#EFFAFF]Focus[] NL The [#60CFFF]Spell will be Exhausted."
 	},
 
 
@@ -234,7 +235,7 @@
 
 	"HollowMod:BlackWings": {
 		"NAME": "Black Wings",
-		"DESCRIPTION": "Lose all [#696969]Void[] . NL For every !M! [#696969]Void[] lost, gain 1 #yPlated #yArmor. Exhaust."
+		"DESCRIPTION": "Lose all [#696969]Void[] . NL For every !M! [#696969]Void[] lost, gain 1 Plated Armor. Exhaust."
 	},
 	"HollowMod:ChannelNail": {
 		"NAME": "Channel Nail",
@@ -275,7 +276,7 @@
 	"HollowMod:GoodIntentions": {
 		"NAME": "Good Intentions",
 		"DESCRIPTION": "Gain !B! Block. NL Gain !M! hollowmod:Soul.",
-		"UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! hollowmod:Soul. NL Gain 1 #yPlated #yArmor"
+		"UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! hollowmod:Soul. NL Gain 1 Plated Armor"
 	},
 	"HollowMod:GrimmsGift": {
 		"NAME": "Grimm's Gift",
@@ -283,7 +284,7 @@
 	},
 	"HollowMod:Hiveblood": {
 		"NAME": "Hiveblood",
-		"DESCRIPTION": "Lose !M! HP. Gain half that amount as #yRegen. Exhaust."
+		"DESCRIPTION": "Lose !M! HP. Gain half that amount as Regen. Exhaust."
 	},
 	"HollowMod:HuntersJournal": {
 		"NAME": "Hunter's Journal",

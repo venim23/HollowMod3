@@ -53,7 +53,7 @@ public class skillCornifersMap_s extends AbstractHollowCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
@@ -61,7 +61,7 @@ public class skillCornifersMap_s extends AbstractHollowCard {
     private static final int COST = 0;
     private static final int FOCUSCOST = 4;
     private static final int UPGRADE_FOCUSCOST = 3;
-    private static final int CARDDRAW = 2;
+    private static final int CARDDRAW = 3;
 
 
 

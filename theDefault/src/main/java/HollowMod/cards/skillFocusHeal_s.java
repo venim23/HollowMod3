@@ -60,11 +60,12 @@ public class skillFocusHeal_s extends AbstractHollowCard {
     private static final CardTarget TARGET = CardTarget.SELF;  //   since they don't change much.
     private static final CardType TYPE = CardType.SKILL;       //
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     private static final int COST = 1;
     private static final int FOCUSCOST = 3;
-    private static final int UPGRADED_FOCUS = 2;
-    private static final int HEAL_START= 6;
+    private static final int UPGRADED_FOCUS = 0;
+    private static final int HEAL_START = 6;
 
 
     // /STAT DECLARATION/
@@ -74,7 +75,7 @@ public class skillFocusHeal_s extends AbstractHollowCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET, FOCUSCOST);
         this.tags.add(CardTags.HEALING);
         this.tags.add(CardTagEnum.SPELL);
-        this.baseMagicNumber =  HEAL_START;
+        this.baseMagicNumber =  (this.magicNumber = HEAL_START);
         this.exhaust = false;
         this.hollowFocusCost = (hollowBaseFocusCost = FOCUSCOST);
         this.tags.add(CardTagEnum.SOULFOCUS);
@@ -86,11 +87,13 @@ public class skillFocusHeal_s extends AbstractHollowCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.magicNumber <= 2){
-        this.exhaust = true;
+            this.exhaust = true;
         }
-        AbstractDungeon.actionManager.addToBottom(new SFXVAction(SoundEffects.Healing.getKey()));
-        AbstractDungeon.actionManager.addToTop(new FocusSoulAction(p,hollowFocusCost));
-        AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, this.baseMagicNumber));
+        AbstractDungeon.actionManager.addToBottom(new SFXVAction(SoundEffects.Healing.getKey(), 1.4F));
+        if (!this.upgraded) {
+            AbstractDungeon.actionManager.addToTop(new FocusSoulAction(p, hollowFocusCost));
+        }
+        AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ModifyMagicNumAction(this.uuid, -2));
         AbstractDungeon.actionManager.addToBottom(new UpdateCardDescriptionAction(this));
 
@@ -103,6 +106,7 @@ public class skillFocusHeal_s extends AbstractHollowCard {
         if (!upgraded) {
             upgradeName();
             upgradeFocusCost(UPGRADED_FOCUS);
+            rawDescription = (UPGRADE_DESCRIPTION);
             initializeDescription();
         }
     }

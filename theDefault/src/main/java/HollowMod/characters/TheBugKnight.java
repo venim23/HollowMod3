@@ -6,6 +6,7 @@ import HollowMod.relics.DelicateFlowerRelic;
 import HollowMod.relics.GreatKnightMask;
 import HollowMod.relics.JonisBlessingRelic;
 import HollowMod.relics.VesselMask;
+import HollowMod.util.SoundEffects;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.AbstractAnimation;
 import basemod.animations.SpriterAnimation;
@@ -231,7 +232,7 @@ public class TheBugKnight extends CustomPlayer {
         logger.info("loading focuses");
         //Skills
         retVal.add(skillFocusHeal_s.ID);
-        retVal.add(skillCornifersMap_s.ID);
+        retVal.add(attackPogoStrike.ID);
         //retVal.add(skillSoulTotem.ID);
         //retVal.add(skillSoulSplash.ID);
         //retVal.add(skillTheNailsmith.ID);
@@ -322,7 +323,7 @@ public class TheBugKnight extends CustomPlayer {
     // character Select screen effect
     @Override
     public void doCharSelectScreenSelectEffect() {
-        CardCrawlGame.sound.playA("ATTACK_MAGIC_SLOW_1", 1.25f); // Sound Effect
+        CardCrawlGame.sound.playV(SoundEffects.Nail.getKey(), 1.6f); // Sound Effect
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT,
                 false); // Screen Effect
     }
@@ -330,7 +331,7 @@ public class TheBugKnight extends CustomPlayer {
     // character Select on-button-press sound effect
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
-        return "ATTACK_MAGIC_SLOW_1";
+        return SoundEffects.Nail.getKey();
     }
 
     // Should return how much HP your maximum HP reduces by when starting a run at

@@ -267,7 +267,7 @@ public class hollowMod implements
     public void receiveEditCharacters() {
         logger.info("Beginning to edit characters. " + "Add " + TheBugKnight.Enums.THE_BUGKNIGHT.toString());
 
-        BaseMod.addCharacter(new TheBugKnight("the Bug Knight", TheBugKnight.Enums.THE_BUGKNIGHT),
+        BaseMod.addCharacter(new TheBugKnight("The Bug Knight", TheBugKnight.Enums.THE_BUGKNIGHT),
                 THE_BUGKNIGHT_BUTTON, THE_BUGKNIGHT_PORTRAIT, TheBugKnight.Enums.THE_BUGKNIGHT);
 
         receiveEditPotions();
@@ -630,17 +630,22 @@ public class hollowMod implements
         UnlockTracker.unlockCard(attackNailStrike_s.ID);
         UnlockTracker.unlockCard(skillQuickDash_s.ID);
         UnlockTracker.unlockCard(skillFocusHeal_s.ID);
+        UnlockTracker.unlockCard(skillCornifersMap_s.ID);
+
 
         //Attacks
         UnlockTracker.unlockCard(attackCoiledNail.ID);
         UnlockTracker.unlockCard(attackCycloneSlash.ID);
         UnlockTracker.unlockCard(attackDashSlash.ID);
+        UnlockTracker.unlockCard(attackBlackTendrils.ID);
         UnlockTracker.unlockCard(attackDescendingDark.ID);
         UnlockTracker.unlockCard(attackHornetsHelp.ID);
         UnlockTracker.unlockCard(attackInfectedAttack.ID);
         UnlockTracker.unlockCard(attackQuirrelsAssistance.ID);
         UnlockTracker.unlockCard(attackSoulStrike.ID);
+        UnlockTracker.unlockCard(attackLittleFool.ID);
         UnlockTracker.unlockCard(attackVengefulVoid.ID);
+        UnlockTracker.unlockCard(attackMidwifesHunger.ID);
         UnlockTracker.unlockCard(attackWraithStrike.ID);
         UnlockTracker.unlockCard(attackZotesMagnificence.ID);
         UnlockTracker.unlockCard(attackRecoilStrike.ID);
@@ -648,7 +653,7 @@ public class hollowMod implements
         UnlockTracker.unlockCard(attackInfectedCysts.ID);
         UnlockTracker.unlockCard(attackPogoStrike.ID);
         UnlockTracker.unlockCard(attackAbyssShriek.ID);
-        //UnlockTracker.unlockCard(attackInfectionAssault.ID);
+        UnlockTracker.unlockCard(attackInfectionAssault.ID);
         UnlockTracker.unlockCard(attackSharpenedNail.ID);
         UnlockTracker.unlockCard(attackGreatSlash.ID);
         UnlockTracker.unlockCard(attackFuryoftheFallen.ID);
@@ -663,17 +668,19 @@ public class hollowMod implements
         UnlockTracker.unlockCard(skillMantisMark.ID);
         UnlockTracker.unlockCard(skillMawleksShell.ID);
         UnlockTracker.unlockCard(skillSoulSplash.ID);
-        UnlockTracker.unlockCard(skillSoulTotem.ID);
         UnlockTracker.unlockCard(skillTheNailsmith.ID);
+        UnlockTracker.unlockCard(skillGoodIntentions.ID);
         UnlockTracker.unlockCard(skillLifebloodCocoon.ID);
-        UnlockTracker.unlockCard(skillStalwartShell.ID);
         UnlockTracker.unlockCard(skillDungDefenderAura.ID);
         UnlockTracker.unlockCard(skillGrimmsGift.ID);
+        UnlockTracker.unlockCard(skillShadowDash.ID);
+        UnlockTracker.unlockCard(skillJinnsSoul.ID);
         //UnlockTracker.unlockCard(skillRadiancesLament.ID);
         UnlockTracker.unlockCard(skillCrystalDash.ID);
         UnlockTracker.unlockCard(skillHuntersJournal.ID);
         UnlockTracker.unlockCard(skillVoidDash.ID);
         UnlockTracker.unlockCard(skillLifebloodCore.ID);
+        UnlockTracker.unlockCard(skillSoulShaman.ID);
         UnlockTracker.unlockCard(skillHiveblood.ID);
         UnlockTracker.unlockCard(skillPerfectDash.ID);
         UnlockTracker.unlockCard(skillLifebloodHeart.ID);
@@ -695,6 +702,10 @@ public class hollowMod implements
         UnlockTracker.unlockCard(powerThornsofAgony.ID);
         UnlockTracker.unlockCard(powerShapeofUnn.ID);
         UnlockTracker.unlockCard(powerSoulMaster.ID);
+        UnlockTracker.unlockCard(powerSoulVessel.ID);
+        UnlockTracker.unlockCard(powerSoulEater.ID);
+        UnlockTracker.unlockCard(powerBaldurShell.ID);
+        UnlockTracker.unlockCard(powerFlukenest.ID);
         //Deprecated
 
         //UnlockTracker.unlockCard(OrbSkill.ID);
