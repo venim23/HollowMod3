@@ -33,16 +33,16 @@ public class skillPaleKingsBlessing extends AbstractHollowCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
-    private static final int COST = 2;
-    private static final int UPGRADED_COST = 1;
-    private static final int HEALTH_GAIN = 6;
+    private static final int COST = 1;
+    private static final int UPGRADED_COST = 0;
+    private static final int HEALTH_GAIN = 4;
 
-    private static final int HP_INF = 1;
+    private static final int HP_INF = 2;
 
 
 
@@ -64,7 +64,9 @@ public class skillPaleKingsBlessing extends AbstractHollowCard {
         if (p.hasPower(InfectionPower.POWER_ID)){
             newval =  defaultSecondMagicNumber * (p.getPower(InfectionPower.POWER_ID).amount);
         }
-        AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, (magicNumber+ newval)));
+        AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, (magicNumber + newval)));
+
+
     }
 
     // Upgraded stats.

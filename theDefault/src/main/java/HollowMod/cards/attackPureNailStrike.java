@@ -5,6 +5,7 @@ import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.SoulPower;
+import HollowMod.powers.VoidPower;
 import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -32,6 +33,7 @@ public class attackPureNailStrike extends AbstractHollowCard {
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -59,6 +61,7 @@ public class attackPureNailStrike extends AbstractHollowCard {
         tags.add(CardTagEnum.SPELL);
         this.tags.add(CardTagEnum.SOULFOCUS);
         this.magicNumber = (baseMagicNumber = DAMAGE_PER_SOUL);
+        this.defaultSecondMagicNumber = this.defaultBaseSecondMagicNumber = 0;
     }
 
 
@@ -73,7 +76,32 @@ public class attackPureNailStrike extends AbstractHollowCard {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, (damage + (soulspent * magicNumber)) , damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         AbstractDungeon.actionManager.addToBottom(new FocusSoulAction(p, soulspent));
+    }
+
+    public void applyPowers()
+    {
+        super.applyPowers();
+        int newval = this.magicNumber;
+        this.defaultSecondMagicNumber = 0;
+        this.defaultBaseSecondMagicNumber = 0;
+        if (AbstractDungeon.player.hasPower(SoulPower.POWER_ID)) {
+            for ( int i = (AbstractDungeon.player.getPower(SoulPower.POWER_ID).amount); i > 0; i--) {
+                this.defaultBaseSecondMagicNumber += newval;
+            }
         }
+        if (this.defaultBaseSecondMagicNumber > 0)
+        {
+            this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
+            initializeDescription();
+        }
+    }
+
+    public void onMoveToDiscard()
+    {
+        this.rawDescription = DESCRIPTION;
+        initializeDescription();
+    }
+
 
     // Upgraded stats.
     @Override

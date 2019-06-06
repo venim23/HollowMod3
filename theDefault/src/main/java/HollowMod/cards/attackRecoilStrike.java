@@ -1,5 +1,6 @@
 package HollowMod.cards;
 
+import HollowMod.actions.RecoverDashAction;
 import HollowMod.patches.CardTagEnum;
 import HollowMod.util.SoundEffects;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
@@ -61,17 +62,13 @@ public class attackRecoilStrike extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.intVal = 0;
         AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Parry.getKey()));
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         //this Deals Damage
-        if (this.upgraded){this.intVal = 1;}
-        AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new FetchAction(AbstractDungeon.player.discardPile, card -> card.hasTag(CardTagEnum.DASH), 1, fetchedCards -> {
-            for (AbstractCard card : fetchedCards) {
-                card.modifyCostForTurn(-(this.intVal));
-            }
-        }));
+        AbstractDungeon.actionManager.addToBottom(new RecoverDashAction(p, 1,(this.upgraded)));
+
+
         //AbstractDungeon.actionManager.addToBottom(new FetchAction(AbstractDungeon.player.discardPile, (card -> card.hasTag(CardTagEnum.DASH)), 1));
 
 

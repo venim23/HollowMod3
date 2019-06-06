@@ -28,7 +28,11 @@ public class QueensCombRelic extends CustomRelic {
     // Flash at the start of Battle.
     @Override
     public void onEquip() {
+
         AbstractDungeon.player.maxHealth = (AbstractDungeon.player.maxHealth/2);
+        if (AbstractDungeon.player.currentHealth>AbstractDungeon.player.maxHealth){
+            AbstractDungeon.player.currentHealth = AbstractDungeon.player.maxHealth;
+        }
     }
 
     @Override

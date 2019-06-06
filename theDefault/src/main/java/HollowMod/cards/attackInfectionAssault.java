@@ -4,6 +4,7 @@ import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.InfectionPower;
+import HollowMod.powers.SoulPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -33,6 +34,7 @@ public class attackInfectionAssault extends AbstractHollowCard {
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -62,6 +64,7 @@ public class attackInfectionAssault extends AbstractHollowCard {
     }
 
 
+
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -73,6 +76,29 @@ public class attackInfectionAssault extends AbstractHollowCard {
                 new DamageAction(m, new DamageInfo(p, newDamage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
     }
 
+    public void applyPowers()
+    {
+        super.applyPowers();
+        int newval = this.magicNumber;
+        this.defaultSecondMagicNumber = 0;
+        this.defaultBaseSecondMagicNumber = 0;
+        if (AbstractDungeon.player.hasPower(InfectionPower.POWER_ID)) {
+            for ( int i = (AbstractDungeon.player.getPower(InfectionPower.POWER_ID).amount); i > 0; i--) {
+                this.defaultBaseSecondMagicNumber += newval;
+            }
+        }
+        if (this.defaultBaseSecondMagicNumber > 0)
+        {
+            this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
+            initializeDescription();
+        }
+    }
+
+    public void onMoveToDiscard()
+    {
+        this.rawDescription = DESCRIPTION;
+        initializeDescription();
+    }
 
     // Upgraded stats.
     @Override

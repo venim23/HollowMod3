@@ -91,6 +91,13 @@ public class skillRadiancesLament extends AbstractHollowCard {
         }
     }
 
+    public void triggerOnEndOfTurnForPlayingCard()
+    {
+        if (!canUpgrade()) {
+            this.retain = true;
+        }
+    }
+
     //Add stuff about Them costing 1 less this turn and exhausting?
 
     // Upgraded stats.

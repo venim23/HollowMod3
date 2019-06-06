@@ -82,10 +82,9 @@ public class attackPogoStrike extends AbstractHollowCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Parry.getKey()));
-        AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, 1, false));
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-
+        AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, 1, false));
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
     }
 

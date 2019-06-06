@@ -34,6 +34,7 @@ public class skillShadowDash extends AbstractHollowCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -62,7 +63,10 @@ public class skillShadowDash extends AbstractHollowCard {
         this.baseBlock = BASEBLOCK;
         tags.add(CardTagEnum.DASH);
         tags.add(CardTagEnum.VOID);
+        this.magicNumber = 0;
     }
+
+
 
 
     // Actions the card should do.
@@ -89,6 +93,31 @@ public class skillShadowDash extends AbstractHollowCard {
         //AbstractDungeon.actionManager.addToBottom(
                 //new GainBlockAction(p,p, block));
 
+    }
+
+    public void applyPowers()
+    {
+        super.applyPowers();
+
+
+        this.baseMagicNumber = this.magicNumber = 2;
+        if (AbstractDungeon.player.hasPower(VoidPower.POWER_ID)) {
+            for ( int i = (AbstractDungeon.player.getPower(VoidPower.POWER_ID).amount); i > 0; i--) {
+                this.baseMagicNumber++;
+            }
+        }
+        if (this.baseMagicNumber > 0)
+        {
+            this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
+            initializeDescription();
+        }
+    }
+
+
+    public void onMoveToDiscard()
+    {
+        this.rawDescription = DESCRIPTION;
+        initializeDescription();
     }
 
 

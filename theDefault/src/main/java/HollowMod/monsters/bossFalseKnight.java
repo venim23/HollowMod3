@@ -104,7 +104,7 @@ public class bossFalseKnight extends AbstractMonster {
     public void usePreBattleAction() {
 
         AbstractDungeon.scene.fadeOutAmbiance();
-        CardCrawlGame.music.playTempBgmInstantly("MINDBLOOM", true);
+        CardCrawlGame.music.playTempBgmInstantly("BOSS_FALSE", true);
         AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[0], 4.0f, 4.0f));
     }
 

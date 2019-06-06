@@ -127,7 +127,7 @@ public class bossNKGrimm extends AbstractMonster {
     public void usePreBattleAction() {
         AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.GrimmDie.getKey()));
         AbstractDungeon.scene.fadeOutAmbiance();
-        CardCrawlGame.music.playTempBgmInstantly("MINDBLOOM", true);
+        CardCrawlGame.music.playTempBgmInstantly("BOSS_GRIMM", true);
         AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[0], 5.0f, 5.0f));
 
     }

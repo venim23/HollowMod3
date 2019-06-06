@@ -6,6 +6,7 @@ import HollowMod.events.ZoteMeetingEvent;
 import HollowMod.monsters.*;
 import HollowMod.potions.*;
 import HollowMod.relics.*;
+import HollowMod.util.Config;
 import HollowMod.util.SoundEffects;
 import HollowMod.variables.FocusCostVariable;
 import basemod.*;
@@ -19,6 +20,7 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
@@ -26,6 +28,7 @@ import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
@@ -42,9 +45,11 @@ import HollowMod.util.TextureLoader;
 import HollowMod.variables.DefaultCustomVariable;
 import HollowMod.variables.DefaultSecondMagicNumber;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.util.Properties;
 
 
 //TODO: FIRST THINGS FIRST: RENAME YOUR PACKAGE AND ID NAMES FIRST-THING!!!
@@ -75,6 +80,7 @@ public class hollowMod implements
         AddAudioSubscriber,
         PostInitializeSubscriber,
         SetUnlocksSubscriber{
+
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
     public static final Logger logger = LogManager.getLogger(hollowMod.class.getName());
@@ -100,6 +106,11 @@ public class hollowMod implements
     public static final Color LIFEBLOOD_POTION_COLOR = CardHelper.getColor(0f, 244.0f, 244.0f); // Super Dark Red/Brown
     public static final Color INFECTION_POTION_COLOR = CardHelper.getColor(255.0f, 135f, 15f);
     public static final Color SOUL_POTION_COLOR = CardHelper.getColor(255.0f, 255f, 255f);
+
+
+
+    private static boolean disableEnemies = false;
+    private static Properties DEFAULTS_CONFIG = new Properties();
 
 
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
@@ -171,6 +182,17 @@ public class hollowMod implements
     // =============== /MAKE IMAGE PATHS/ =================
 
     // =============== /INPUT TEXTURE LOCATION/ =================
+
+
+    //GET CONFIG
+    public static boolean getDisableEnemies() {
+        return disableEnemies;
+    }
+    public static void setDisableEnemies(boolean disableEnemies) {
+        hollowMod.disableEnemies = disableEnemies;
+    }
+
+    ///END CONFIG
 
 
     // =============== SUBSCRIBE, CREATE THE COLOR_GRAY, INITIALIZE =================
@@ -251,9 +273,21 @@ public class hollowMod implements
     // ====== YOU CAN EDIT AGAIN ======
 
 
+    public static void BugConfig() {
+        try {
+
+            DEFAULTS_CONFIG.setProperty(Config.DISABLE_ENEMIES, "false");
+            final SpireConfig config = new SpireConfig("Hollow Mod", "Common", DEFAULTS_CONFIG);
+            setDisableEnemies(config.getBool(Config.DISABLE_ENEMIES));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     @SuppressWarnings("unused")
     public static void initialize() {
         logger.info("========================= Initializing Default Mod. Hi. =========================");
+        BugConfig();
         hollowMod defaultmod = new hollowMod();
         logger.info("========================= /Default Mod Initialized. Hello World./ =========================");
     }
@@ -288,13 +322,26 @@ public class hollowMod implements
 
         // Create the Mod Menu
         ModPanel settingsPanel = new ModPanel();
-        settingsPanel.addUIElement(new ModLabel("HollowMod doesn't have any settings! An example of those may come later.", 400.0f, 700.0f,
+        settingsPanel.addUIElement(new ModLabel("The Bug Knight doesn't have any other settings!", 400.0f, 700.0f,
                 settingsPanel, (me) -> {
         }));
+        final ModLabeledToggleButton toggleMonsters = new ModLabeledToggleButton(Config.TOGGLE_ENEMIES_LABEL, Config.BOSSES_TOGGLE_START_X, Config.BOSSES_TOGGLE_START_Y , Settings.CREAM_COLOR, FontHelper.charDescFont, disableEnemies, settingsPanel, label -> {}, button -> {
+            try {
+                SpireConfig config = new SpireConfig(MODNAME, "Common", DEFAULTS_CONFIG);
+                setDisableEnemies(button.enabled);
+                config.setBool(Config.DISABLE_ENEMIES, button.enabled);
+                config.save();
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+            return;
+        });
+        settingsPanel.addUIElement(toggleMonsters);
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
         // =============== EVENTS =================
-
+        receiveEditMonsters();
         // This event will be exclusive to the City (act 2). If you want an event that's present at any
         // part of the game, simply don't include the dungeon ID
         // If you want to have a character-specific event, look at slimebound (CityRemoveEventPatch).
@@ -306,55 +353,60 @@ public class hollowMod implements
         logger.info("Done loading badge Image and mod options");
         // =============== MONSTERS =================
         //BaseMod.addMonster("infinitespire:MassOfShapes", MassOfShapes::new);
-        BaseMod.addMonster(monsterHuskWarrior.ID, () -> new MonsterGroup(new AbstractMonster[]{
-                new monsterHuskWarrior(100.0f),
-                new monsterHuskWarrior(-250.0F)
-        }));
-        BaseMod.addMonster(monsterHuskSentry.ID, () -> new MonsterGroup(new AbstractMonster[]{
-                new monsterHuskSentry(-250.0F),
-                new monsterHuskSentry(50.0F)
-
-        }));
-        BaseMod.addMonster(monsterSlobberingHusk.ID, () -> new MonsterGroup(new AbstractMonster[]{
-                new monsterViolentHusk(-250.0F),
-                new monsterSlobberingHusk(50.0F)
-
-        }));
-        BaseMod.addMonster(eliteStalkingDevout.ID, () -> new MonsterGroup(new AbstractMonster[]{
-                new monsterLittleWeaver(-500.0F, -10.0F),
-                new monsterLittleWeaver(-250.0F, 10.0F),
-                new eliteStalkingDevout(100.0F),
-
-        }));
-        BaseMod.addMonster(eventZote.ID, () -> new eventZote(50.0F));
-        BaseMod.addMonster(eliteMossKnight.ID, () -> new eliteMossKnight(0.0F));
-        BaseMod.addMonster(eliteNosk.ID, () -> new eliteNosk(0.0F));
-        BaseMod.addMonster(bossRadiance.ID, () -> new bossRadiance());
-        BaseMod.addMonster(bossFalseKnight.ID, () -> new bossFalseKnight());
-        BaseMod.addMonster(bossNKGrimm.ID, () -> new bossNKGrimm());
-
-        //BaseMod.addBoss("TheBeyond", "infinitespire:MassOfShapes", createPath("ui/map/massBoss.png"), createPath("ui/map/massBoss-outline.png"));
-        // =============== /MONSTERS/ =================
-
-
-        // ================ ADD ENCOUNTERS ===================
-
-        BaseMod.addBoss(Exordium.ID, bossFalseKnight.ID, "HollowModResources/images/ui/map/FalseKnightIcon.png","HollowModResources/images/ui/map/bossIcon-outline.png");
-        BaseMod.addBoss(TheCity.ID, bossNKGrimm.ID, "HollowModResources/images/ui/map/GrimmIcon.png","HollowModResources/images/ui/map/bossIcon-outline.png");
-        BaseMod.addBoss(TheBeyond.ID, bossRadiance.ID, "HollowModResources/images/ui/map/RadianceIcon.png","HollowModResources/images/ui/map/bossIcon-outline.png");
-        BaseMod.addStrongMonsterEncounter(Exordium.ID, new MonsterInfo(monsterHuskWarrior.ID,1.0F));
-        BaseMod.addStrongMonsterEncounter(TheBeyond.ID, new MonsterInfo(monsterSlobberingHusk.ID,1.0F));
-        BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(monsterHuskSentry.ID,1.0F));
-        BaseMod.addEliteEncounter(TheBeyond.ID, new MonsterInfo(eliteStalkingDevout.ID,1.1F));
-        BaseMod.addEliteEncounter(Exordium.ID, new MonsterInfo(eliteMossKnight.ID,1.1F));
-        BaseMod.addEliteEncounter(TheCity.ID, new MonsterInfo(eliteNosk.ID,1.1F));
 
         // ================ /ENCOUNTERS/ ===================
     }
 
     // =============== / POST-INITIALIZE/ =================
 
+    public void receiveEditMonsters(){
+        BaseMod.addMonster(eventZote.ID, () -> new eventZote(50.0F));
+        if (!hollowMod.getDisableEnemies()) {
+            BaseMod.addMonster(monsterHuskWarrior.ID, () -> new MonsterGroup(new AbstractMonster[]{
+                    new monsterHuskWarrior(100.0f),
+                    new monsterHuskWarrior(-250.0F)
+            }));
+            BaseMod.addMonster(monsterHuskSentry.ID, () -> new MonsterGroup(new AbstractMonster[]{
+                    new monsterHuskSentry(-250.0F),
+                    new monsterHuskSentry(50.0F)
 
+            }));
+            BaseMod.addMonster(monsterSlobberingHusk.ID, () -> new MonsterGroup(new AbstractMonster[]{
+                    new monsterViolentHusk(-250.0F),
+                    new monsterSlobberingHusk(50.0F)
+
+            }));
+            BaseMod.addMonster(eliteStalkingDevout.ID, () -> new MonsterGroup(new AbstractMonster[]{
+                    new monsterLittleWeaver(-500.0F, -10.0F),
+                    new monsterLittleWeaver(-250.0F, 10.0F),
+                    new eliteStalkingDevout(100.0F),
+
+            }));
+
+            BaseMod.addMonster(eliteMossKnight.ID, () -> new eliteMossKnight(0.0F));
+            BaseMod.addMonster(eliteNosk.ID, () -> new eliteNosk(0.0F));
+            BaseMod.addMonster(bossRadiance.ID, () -> new bossRadiance());
+            BaseMod.addMonster(bossFalseKnight.ID, () -> new bossFalseKnight());
+            BaseMod.addMonster(bossNKGrimm.ID, () -> new bossNKGrimm());
+
+            //BaseMod.addBoss("TheBeyond", "infinitespire:MassOfShapes", createPath("ui/map/massBoss.png"), createPath("ui/map/massBoss-outline.png"));
+            // =============== /MONSTERS/ =================
+
+
+            // ================ ADD ENCOUNTERS ===================
+
+            logger.info("Bossses Loaded");
+            BaseMod.addBoss(Exordium.ID, bossFalseKnight.ID, "HollowModResources/images/ui/map/FalseKnightIcon.png", "HollowModResources/images/ui/map/bossIcon-outline.png");
+            BaseMod.addBoss(TheCity.ID, bossNKGrimm.ID, "HollowModResources/images/ui/map/GrimmIcon.png", "HollowModResources/images/ui/map/bossIcon-outline.png");
+            BaseMod.addBoss(TheBeyond.ID, bossRadiance.ID, "HollowModResources/images/ui/map/RadianceIcon.png", "HollowModResources/images/ui/map/bossIcon-outline.png");
+            BaseMod.addStrongMonsterEncounter(Exordium.ID, new MonsterInfo(monsterHuskWarrior.ID, 1.0F));
+            BaseMod.addStrongMonsterEncounter(TheBeyond.ID, new MonsterInfo(monsterSlobberingHusk.ID, 1.0F));
+            BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(monsterHuskSentry.ID, 1.0F));
+            BaseMod.addEliteEncounter(TheBeyond.ID, new MonsterInfo(eliteStalkingDevout.ID, 1.1F));
+            BaseMod.addEliteEncounter(Exordium.ID, new MonsterInfo(eliteMossKnight.ID, 1.1F));
+            BaseMod.addEliteEncounter(TheCity.ID, new MonsterInfo(eliteNosk.ID, 1.1F));
+        }
+    }
     // ================ ADD AUDIO ===================
     //Thanks Alchyr!
     @Override
@@ -556,6 +608,7 @@ public class hollowMod implements
 
         //Skills
         BaseMod.addCard(new skillCloakDash());
+        BaseMod.addCard(new skillInfectedGuardian());
         BaseMod.addCard(new skillConfessorsAdvice());
         //BaseMod.addCard(new skillCornifersMap_s());
         BaseMod.addCard(new skillDoubleDash());
@@ -574,7 +627,7 @@ public class hollowMod implements
         BaseMod.addCard(new skillVoidDash());
         BaseMod.addCard(new skillLifebloodCore());
         BaseMod.addCard(new skillHiveblood());
-        BaseMod.addCard(new skillLifebloodHeart());
+        //BaseMod.addCard(new skillLifebloodHeart());
         BaseMod.addCard(new skillPerfectDash());
         BaseMod.addCard(new skillSiblingsSouls());
         BaseMod.addCard(new skillLuriensSpire());
@@ -612,6 +665,7 @@ public class hollowMod implements
         BaseMod.addCard(new powerPureVessel());
         BaseMod.addCard(new powerLordofShades());
         BaseMod.addCard(new powerWhiteLadysBlessing());
+        BaseMod.addCard(new powerGlowingWomb());
 
 
         //Deprecated
@@ -683,7 +737,7 @@ public class hollowMod implements
         UnlockTracker.unlockCard(skillSoulShaman.ID);
         UnlockTracker.unlockCard(skillHiveblood.ID);
         UnlockTracker.unlockCard(skillPerfectDash.ID);
-        UnlockTracker.unlockCard(skillLifebloodHeart.ID);
+        //UnlockTracker.unlockCard(skillLifebloodHeart.ID);
         UnlockTracker.unlockCard(skillMonarchWings.ID);
         UnlockTracker.unlockCard(skillSiblingsSouls.ID);
         UnlockTracker.unlockCard(skillChannelNail.ID);

@@ -164,7 +164,7 @@
   "HollowMod:UnnPower": {
     "NAME": "Unn's Shape",
     "DESCRIPTIONS": [
-      "Whenever you play a #bSpell return #b",
+      "Whenever you play a #bSpell, return #b",
       " #bDash card from your discard pile to your hand.",
       " #bDash cards from your discard pile to your hand."
     ]
@@ -172,7 +172,7 @@
   "HollowMod:VoidPower": {
     "NAME": "Void",
     "DESCRIPTIONS": [
-      "Increases [#696969]Void Card damage by #b",
+      "Increases [#696969]Void card damage by #b",
       " . Increases damage taken by #r50%. NL Reducing by #b1 at the beginning of your turn."
     ]
   },
@@ -193,6 +193,14 @@
     "NAME": "White Lady's Blessing",
     "DESCRIPTIONS": [
       "While you have [#696969]Void, you can use #yFocus, but the card will be #yExhausted."
+    ]
+  },
+  "HollowMod:NewGlowingWombPower": {
+    "NAME": "Glowing Womb",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " Block (scaling with Dexterity), and #b",
+      " [#FFA200]Infection."
     ]
   }
 

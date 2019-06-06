@@ -142,7 +142,7 @@ public class bossRadiance extends AbstractMonster {
     @Override
     public void usePreBattleAction() {
         AbstractDungeon.scene.fadeOutAmbiance();
-        CardCrawlGame.music.playTempBgmInstantly("MINDBLOOM", true);
+        CardCrawlGame.music.playTempBgmInstantly("BOSS_RAD", true);
         //CardCrawlGame.sound.playV(SoundEffects.RadBGM.getKey(), 0.6F);
         CardCrawlGame.sound.playV(SoundEffects.RadMisc.getKey(),2.0F);
         AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, DIALOG[0], 2.0f, 2.2f));
