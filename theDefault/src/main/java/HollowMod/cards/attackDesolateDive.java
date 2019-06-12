@@ -56,6 +56,7 @@ public class attackDesolateDive extends AbstractHollowCard {
 
     public attackDesolateDive() {// This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET, FOCUS_COST);
+        this.SetCardHeader(CardHeaders.Spell);
         this.baseDamage = DAMAGE;
         this.tags.add(CardTagEnum.SPELL);
         this.tags.add(CardTagEnum.SOULFOCUS);

@@ -2,19 +2,26 @@ package HollowMod.cards;
 
 import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
+import HollowMod.util.Utilities;
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import basemod.helpers.TooltipInfo;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 import java.util.ArrayList;
-
+import java.util.Objects;
 
 
 public abstract class AbstractHollowCard extends CustomCard {
@@ -35,6 +42,9 @@ public abstract class AbstractHollowCard extends CustomCard {
     public int hollowBaseFocusCost;
     public boolean upgradedHollowFocusCost;
     public boolean isHollowFocusCostModified;
+
+    private CardHeader cardheader;
+
 
     private static final UIStrings focusStrings = CardCrawlGame.languagePack.getUIString(hollowMod.makeID("Focus"));
     private static final UIStrings infectionStrings = CardCrawlGame.languagePack.getUIString(hollowMod.makeID("Infection"));
@@ -114,6 +124,88 @@ public abstract class AbstractHollowCard extends CustomCard {
             isHollowFocusCostModified = true;
         }
     }
+
+
+    public boolean HasCardHeader(AbstractCard other)
+    {
+        AbstractHollowCard card = Utilities.SafeCast(other, AbstractHollowCard.class);
+        if (card != null && card.cardheader != null)
+        {
+            return this.cardheader != null && (HasExactCardHeader(card.cardheader));
+        }
+
+        return false;
+    }
+
+    public boolean HasExactCardHeader(CardHeader cardheader)
+    {
+        return Objects.equals(this.cardheader, cardheader);
+    }
+
+
+
+    public CardHeader GetCardHeader()
+    {
+        return cardheader;
+    }
+
+    @Override
+    public void render(SpriteBatch sb)
+    {
+        super.render(sb);
+        RenderCardHeader(sb);
+    }
+
+    @Override
+    public void renderInLibrary(SpriteBatch sb)
+    {
+        super.renderInLibrary(sb);
+        RenderCardHeader(sb);
+    }
+
+    private void RenderCardHeader(SpriteBatch sb)
+    {
+
+        if (this.cardheader != null)
+        {
+            if (!this.isFlipped)//room == null || !(room.event instanceof GremlinMatchGame))
+            {
+                float originalScale = FontHelper.cardTitleFont_small_N.getData().scaleX;
+
+
+                // New Color : public static final Color COOLBLUE = new Color(0.4F, 0.7F, 1.0F, 1.0F);
+                /*if (HasActiveCardHeader())
+                {
+                    FontHelper.cardTitleFont_small_N.getData().setScale(this.drawScale * 0.85f);
+                    textColor = Color.YELLOW.cpy();
+                }
+                else
+                {*/
+                FontHelper.cardTitleFont_small_N.getData().setScale(this.drawScale * 0.9F);
+                Color textColor = Color.SKY.cpy();
+                //textColor = Settings.CREAM_COLOR.cpy();
+                //}
+
+                // New Color : public static final Color COOLBLUE = new Color(0.4F, 0.7F, 1.0F, 1.0F);
+
+                FontHelper.renderRotatedText(sb, FontHelper.cardTitleFont_small_N, this.cardheader.NAME,
+                        this.current_x, this.current_y, 0.0F, 400.0F * Settings.scale * this.drawScale / 2.0F,
+                        this.angle, true, textColor);
+
+                FontHelper.cardTitleFont_small_N.getData().setScale(originalScale);
+            }
+        }
+    }
+
+
+
+    public void SetCardHeader(CardHeader cardheader)
+    {
+        //SetCardHeader(cardheader, false);
+        this.cardheader = cardheader;
+    }
+
+    //Possibly unneeded
 
     /*@Override
     public List<TooltipInfo> getCustomTooltips() {

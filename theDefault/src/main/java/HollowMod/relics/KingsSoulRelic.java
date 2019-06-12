@@ -47,19 +47,20 @@ public class KingsSoulRelic extends CustomRelic {
     public void obtain()
     {
         if (AbstractDungeon.player.hasRelic(VesselMask.ID)) {
-            instantObtain(AbstractDungeon.player, 0, false);
+            instantObtain(AbstractDungeon.player, AbstractDungeon.player.getRelic(VesselMask.ID).getColumn(), false);
         } else if (AbstractDungeon.player.hasRelic(VoidIdolRelic.ID)) {
-            instantObtain(AbstractDungeon.player, 0, false);
+            instantObtain(AbstractDungeon.player, AbstractDungeon.player.getRelic(VoidIdolRelic.ID).getColumn(), false);
         } else  {
             super.obtain();
         }
 
-        if (AbstractDungeon.player.hasRelic(VesselMask.ID)){
+       /* if (AbstractDungeon.player.hasRelic(VesselMask.ID)){
             AbstractDungeon.player.relics.remove(0);
         }
         if (AbstractDungeon.player.hasRelic(VoidIdolRelic.ID)){
             AbstractDungeon.player.relics.remove(0);
         }
+        */
     }
 
     public void atTurnStart()

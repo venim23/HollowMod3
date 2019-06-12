@@ -61,7 +61,7 @@ public class skillSoulSplash extends AbstractHollowCard {
 
     private static final int COST = 0;
     private static final int FOCUSCOST = 2;
-    private static final int UPGRADED_FOCUS = 1;
+    //private static final int UPGRADED_FOCUS = 1;
     private static final int VULN_AMOUNT = 1;
     private static final int UPGRADED_VULN_AMOUNT = 1;
 
@@ -72,6 +72,7 @@ public class skillSoulSplash extends AbstractHollowCard {
 
     public skillSoulSplash() {// This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET, FOCUSCOST);
+        this.SetCardHeader(CardHeaders.Spell);
         this.tags.add(CardTagEnum.SPELL);
         this.magicNumber = (this.baseMagicNumber = VULN_AMOUNT);
         this.defaultSecondMagicNumber = (this.defaultBaseSecondMagicNumber = FOCUSCOST);
@@ -98,7 +99,7 @@ public class skillSoulSplash extends AbstractHollowCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeFocusCost(UPGRADED_FOCUS);
+            //upgradeFocusCost(UPGRADED_FOCUS);
             upgradeMagicNumber(UPGRADED_VULN_AMOUNT);
             initializeDescription();
         }

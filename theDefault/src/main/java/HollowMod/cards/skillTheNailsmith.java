@@ -62,7 +62,7 @@ public class skillTheNailsmith extends AbstractHollowCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
         magicNumber = this.baseMagicNumber = ROUNDS_ADDED;
-
+        this.SetCardHeader(CardHeaders.Ally);
         this.tags.add(CardTagEnum.ALLY);
 
     }

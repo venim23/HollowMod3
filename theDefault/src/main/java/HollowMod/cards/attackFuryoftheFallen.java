@@ -57,8 +57,8 @@ public class attackFuryoftheFallen extends AbstractHollowCard {
     private static final int COST = 1;
 
     private static final int DAMAGE = 9;
-    private static final int LOWHP_MULT= 2;
-    private static final int UPGRADE_PLUS_LOWHP_MULT= 2;
+    private static final int LOWHP_MULT= 3;
+    private static final int UPGRADE_PLUS_LOWHP_MULT= 1;
 
     // /STAT DECLARATION/
 

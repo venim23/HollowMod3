@@ -70,6 +70,7 @@ public class attackDashSlash extends AbstractHollowCard {
 
     public attackDashSlash() {// This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        this.SetCardHeader(CardHeaders.Dash);
         this.baseDamage = DAMAGE;
         this.baseBlock = BLOCK;
 

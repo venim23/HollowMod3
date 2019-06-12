@@ -47,19 +47,20 @@ public class VoidIdolRelic extends CustomRelic implements OnReceivePowerRelic {
     public void obtain()
     {
         if (AbstractDungeon.player.hasRelic(VesselMask.ID)) {
-            instantObtain(AbstractDungeon.player, 0, false);
+            instantObtain(AbstractDungeon.player, AbstractDungeon.player.getRelic(VesselMask.ID).getColumn(), false);
         } else if (AbstractDungeon.player.hasRelic(KingsSoulRelic.ID)) {
-            instantObtain(AbstractDungeon.player, 0, false);
+            instantObtain(AbstractDungeon.player, AbstractDungeon.player.getRelic(KingsSoulRelic.ID).getColumn(), false);
         } else  {
             super.obtain();
         }
-
+        /*
         if (AbstractDungeon.player.hasRelic(VesselMask.ID)){
             AbstractDungeon.player.relics.remove(0);
         }
         if (AbstractDungeon.player.hasRelic(KingsSoulRelic.ID)){
             AbstractDungeon.player.relics.remove(0);
         }
+        */
     }
 
         //AbstractDungeon.player.

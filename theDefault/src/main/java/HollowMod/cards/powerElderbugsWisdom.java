@@ -63,6 +63,7 @@ public class powerElderbugsWisdom extends AbstractHollowCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
         magicNumber = this.baseMagicNumber = DRAW_AMOUNT_PER_CARD;
+        this.SetCardHeader(CardHeaders.Ally);
 
         this.tags.add(CardTagEnum.ALLY);
 

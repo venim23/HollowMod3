@@ -50,7 +50,7 @@ public class powerGlowingWomb extends AbstractHollowCard {
     private static final int BLOCK = 3;
 
 
-    private static final int INFECTION = 3;
+    private static final int INFECTION = 4;
 
 
 

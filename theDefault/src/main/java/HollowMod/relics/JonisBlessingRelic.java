@@ -37,7 +37,7 @@ public class JonisBlessingRelic extends CustomRelic {
     @Override
     public int onPlayerHeal(int healAmount)
     {
-        if ((AbstractDungeon.currMapNode != null) && (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT))
+        if ((AbstractDungeon.currMapNode != null) && (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) && (AbstractDungeon.player.currentHealth != 0))
         {
             flash();
             AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(

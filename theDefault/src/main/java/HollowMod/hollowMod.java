@@ -348,7 +348,7 @@ public class hollowMod implements
         // Essentially, you need to patch the game and say "if a player is not playing my character class, remove the event from the pool"
         BaseMod.addEvent(ZoteMeetingEvent.ID, ZoteMeetingEvent.class, TheCity.ID);
         BaseMod.addEvent(MylasSongHappyEvent.ID, MylasSongHappyEvent.class);
-        //BaseMod.addEvent(ExploreStagwaysEvent.ID, ExploreStagwaysEvent.class);
+        BaseMod.addEvent(ExploreStagwaysEvent.ID, ExploreStagwaysEvent.class);
         // =============== /EVENTS/ =================
         logger.info("Done loading badge Image and mod options");
         // =============== MONSTERS =================
@@ -518,7 +518,7 @@ public class hollowMod implements
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
         //BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
         //BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.HOLLOW_COLOR);
-        //BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.HOLLOW_COLOR);
+        BaseMod.addRelicToCustomPool(new GreatKnightMask(), TheBugKnight.Enums.HOLLOW_COLOR);
         BaseMod.addRelicToCustomPool(new KingsBrandRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
         BaseMod.addRelicToCustomPool(new IsmasTearRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
         BaseMod.addRelicToCustomPool(new MillibellesNoteRelic(), TheBugKnight.Enums.HOLLOW_COLOR);
@@ -609,7 +609,7 @@ public class hollowMod implements
         //Skills
         BaseMod.addCard(new skillCloakDash());
         BaseMod.addCard(new skillInfectedGuardian());
-        BaseMod.addCard(new skillConfessorsAdvice());
+        //BaseMod.addCard(new skillConfessorsAdvice());
         //BaseMod.addCard(new skillCornifersMap_s());
         BaseMod.addCard(new skillDoubleDash());
         BaseMod.addCard(new skillMantisMark());
@@ -633,6 +633,7 @@ public class hollowMod implements
         BaseMod.addCard(new skillLuriensSpire());
         BaseMod.addCard(new skillMonarchWings());
         BaseMod.addCard(new skillChannelNail());
+        BaseMod.addCard(new skillLastStag());
         //BaseMod.addCard(new skillSporeShroom());
         BaseMod.addCard(new skillSoulShaman());
         BaseMod.addCard(new skillMonomonsArchive());
@@ -660,7 +661,7 @@ public class hollowMod implements
         BaseMod.addCard(new powerSoulMaster());
         BaseMod.addCard(new powerSoulVessel());
         BaseMod.addCard(new powerSoulEater());
-        BaseMod.addCard(new powerFlukenest());
+        //BaseMod.addCard(new powerFlukenest());
         BaseMod.addCard(new powerBaldurShell());
         BaseMod.addCard(new powerPureVessel());
         BaseMod.addCard(new powerLordofShades());
@@ -716,7 +717,7 @@ public class hollowMod implements
 
         //Skills
         UnlockTracker.unlockCard(skillCloakDash.ID);
-        UnlockTracker.unlockCard(skillConfessorsAdvice.ID);
+        //UnlockTracker.unlockCard(skillConfessorsAdvice.ID);
         UnlockTracker.unlockCard(skillDoubleDash.ID);
         //UnlockTracker.unlockCard(skillCornifersMap_s.ID);
         UnlockTracker.unlockCard(skillMantisMark.ID);
@@ -759,7 +760,7 @@ public class hollowMod implements
         UnlockTracker.unlockCard(powerSoulVessel.ID);
         UnlockTracker.unlockCard(powerSoulEater.ID);
         UnlockTracker.unlockCard(powerBaldurShell.ID);
-        UnlockTracker.unlockCard(powerFlukenest.ID);
+        //UnlockTracker.unlockCard(powerFlukenest.ID);
         //Deprecated
 
         //UnlockTracker.unlockCard(OrbSkill.ID);

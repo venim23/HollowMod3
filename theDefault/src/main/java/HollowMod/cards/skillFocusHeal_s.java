@@ -74,6 +74,7 @@ public class skillFocusHeal_s extends AbstractHollowCard {
     public skillFocusHeal_s() {// This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET, FOCUSCOST);
         this.tags.add(CardTags.HEALING);
+        this.SetCardHeader(CardHeaders.Spell);
         this.tags.add(CardTagEnum.SPELL);
         this.baseMagicNumber =  (this.magicNumber = HEAL_START);
         this.exhaust = false;

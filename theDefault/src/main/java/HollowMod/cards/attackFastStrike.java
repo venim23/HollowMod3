@@ -73,7 +73,7 @@ public class attackFastStrike extends AbstractHollowCard {
     public attackFastStrike() {// This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-
+        this.tags.add(CardTags.STRIKE);
         magicNumber = baseMagicNumber = ENEMIES;
         this.isMultiDamage = true;
     }

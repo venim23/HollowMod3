@@ -57,6 +57,7 @@ public class attackVengefulSpirit extends AbstractHollowCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET, FOCUS_COST);
         baseDamage = DAMAGE;
         this.hollowFocusCost = (hollowBaseFocusCost = FOCUS_COST);
+        this.SetCardHeader(CardHeaders.Spell);
         this.tags.add(CardTagEnum.SPELL);
         this.tags.add(CardTagEnum.SOULFOCUS);
 

@@ -63,6 +63,7 @@ public class attackMidwifesHunger extends AbstractHollowCard {
     public attackMidwifesHunger() {// This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        this.SetCardHeader(CardHeaders.Ally);
         tags.add(CardTagEnum.ALLY);
 
         this.magicNumber = this.baseMagicNumber = 0 ;

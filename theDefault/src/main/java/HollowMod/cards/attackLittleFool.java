@@ -70,7 +70,7 @@ public class attackLittleFool extends AbstractHollowCard {
     public attackLittleFool() {// This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
-
+        this.SetCardHeader(CardHeaders.Ally);
         this.tags.add(CardTagEnum.ALLY);
 
     }

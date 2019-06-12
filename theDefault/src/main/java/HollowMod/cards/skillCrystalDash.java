@@ -51,6 +51,7 @@ public class skillCrystalDash extends AbstractHollowCard {
     public skillCrystalDash() {// This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK_PER_CARD;
+        this.SetCardHeader(CardHeaders.Dash);
         tags.add(CardTagEnum.DASH);
     }
 

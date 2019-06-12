@@ -58,8 +58,10 @@ public class attackPureNailStrike extends AbstractHollowCard {
     public attackPureNailStrike() {// This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        this.SetCardHeader(CardHeaders.Spell);
         tags.add(CardTagEnum.SPELL);
         this.tags.add(CardTagEnum.SOULFOCUS);
+        this.tags.add(CardTags.STRIKE);
         this.magicNumber = (baseMagicNumber = DAMAGE_PER_SOUL);
         this.defaultSecondMagicNumber = this.defaultBaseSecondMagicNumber = 0;
     }

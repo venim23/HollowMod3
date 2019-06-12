@@ -78,8 +78,10 @@ public class attackWraithStrike extends AbstractHollowCard {
         baseDamage = DAMAGE;
         this.magicNumber = this.baseMagicNumber = WEAK;
         this.defaultSecondMagicNumber = this.defaultBaseSecondMagicNumber = VOID;
+        this.SetCardHeader(CardHeaders.Spell);
         tags.add(CardTagEnum.SPELL);
         tags.add(CardTagEnum.VOID);
+        this.tags.add(CardTags.STRIKE);
 
     }
 

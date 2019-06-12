@@ -124,12 +124,11 @@ public class eliteStalkingDevout extends AbstractMonster {
             case 1: //RECOIL
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "DEFEND"));
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, this.recoilBlock));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new BlurPower(this,2),2));
                 break;
             case 2: //slashes
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "SLASH"));
+                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4f));
                 AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.DevoutOpen.getKey()));
-                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.5f));
                 for (int i = 0; i < this.slashHits; i++)
                 {
                     AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2f));
@@ -250,7 +249,7 @@ public class eliteStalkingDevout extends AbstractMonster {
         }
         if (i < 25) {
             if (!lastMove((byte) 1)) {
-                setMove((byte) 1, Intent.DEFEND_BUFF);
+                setMove((byte) 1, Intent.DEFEND);
             } else {
                 setMove((byte) 5, Intent.DEFEND_BUFF);
             }
@@ -258,7 +257,7 @@ public class eliteStalkingDevout extends AbstractMonster {
             if (!lastMove((byte) 5)) {
                 setMove((byte) 5, Intent.DEFEND_BUFF);
             } else {
-                setMove((byte) 1, Intent.DEFEND_BUFF);
+                setMove((byte) 1, Intent.DEFEND);
             }
         } else if (i < 80){
             setMove((byte)3, Intent.BUFF);

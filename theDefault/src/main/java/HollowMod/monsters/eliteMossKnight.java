@@ -199,6 +199,12 @@ public class eliteMossKnight extends AbstractMonster {
                 break;
             case 3: //ENDDEFSTANCE
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "DEFBREAK"));
+                for (final AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+                    if (m.isDying) {
+                        continue;
+                    }
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new PlatedArmorPower(m, 1), 1));
+                }
                 break;
             case 4: //LEAFFORM
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "LEAFMODE"));
@@ -214,7 +220,7 @@ public class eliteMossKnight extends AbstractMonster {
                 break;
             case 6: // Harden
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "REST"));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this,1),1));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 3),3));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, this, new StrengthPower(p, 1),1));
                 break;
         }
@@ -324,7 +330,7 @@ public class eliteMossKnight extends AbstractMonster {
     protected void getMove(int i)
     {
         if (this.lastMove((byte) 2)) {
-            setMove((byte) 3, Intent.NONE);
+            setMove((byte) 3, Intent.BUFF);
             return;
         }
         if ((this.currentHealth < this.maxHealth/2) && (!this.leafedHas)){
@@ -340,9 +346,9 @@ public class eliteMossKnight extends AbstractMonster {
             setMove(MOVES[0], (byte) 1, Intent.ATTACK_BUFF,((DamageInfo)this.damage.get(1)).base);
             return;
         }
-        if ((i < 20) || ((i < 60) && (this.numAliveLice() > 0))){
+        if ((i < 20) || ((i < 50) && (this.numAliveLice() > 0))){
             setMove((byte) 2, Intent.DEFEND_BUFF);
-        } else if (i < 40) {
+        } else if (i < 60) {
             setMove((byte) 6, Intent.BUFF);
         } else {
             setMove((byte)0, Intent.ATTACK_DEFEND,((DamageInfo)this.damage.get(0)).base );

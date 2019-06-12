@@ -1,10 +1,7 @@
 package HollowMod.events;
 
-import HollowMod.cards.skillRadiancesLament;
+import HollowMod.cards.*;
 import HollowMod.hollowMod;
-import HollowMod.cards.attackInfectedAttack;
-import HollowMod.cards.powerLordofShades;
-import HollowMod.cards.attackAwokenDreamNail;
 import HollowMod.util.SoundEffects;
 import basemod.BaseMod;
 import basemod.helpers.BaseModCardTags;
@@ -20,6 +17,7 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.EventStrings;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.sun.crypto.provider.DESCipher;
@@ -94,10 +92,10 @@ public class MylasSongSadEvent extends AbstractImageEvent {
 
                         if (!MylaLived) {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new skillRadiancesLament(), Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new powerGlowingWomb(), Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
                         } else {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
-                            //AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new skillMylasSalvation(), Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new skillMylasSalvation(), Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
                         }
                         this.imageEventText.updateDialogOption(0, OPTIONS[0]);
                         this.imageEventText.clearRemainingOptions();

@@ -62,6 +62,7 @@ public class skillShadowDash extends AbstractHollowCard {
         this.exhaust = true;
         this.baseBlock = BASEBLOCK;
         tags.add(CardTagEnum.DASH);
+        this.SetCardHeader(CardHeaders.Dash);
         tags.add(CardTagEnum.VOID);
         this.magicNumber = 0;
     }

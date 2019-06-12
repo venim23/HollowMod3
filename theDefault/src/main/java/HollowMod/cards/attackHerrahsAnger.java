@@ -48,7 +48,7 @@ public class attackHerrahsAnger extends AbstractHollowCard {
 
 
     private static final int TIMES_HIT = 3;
-    private static final int UPGRADE_TIMES_HIT = 4;
+    private static final int UPGRADE_TIMES_HIT = 2;
 
     private static final int DAMAGE = 3;
 
@@ -59,6 +59,7 @@ public class attackHerrahsAnger extends AbstractHollowCard {
     public attackHerrahsAnger() {// This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
+        this.SetCardHeader(CardHeaders.Ally);
         this.tags.add(CardTagEnum.ALLY);
 
         this.magicNumber = this.baseMagicNumber = TIMES_HIT;

@@ -179,7 +179,7 @@
   "HollowMod:VoidDashPower": {
     "NAME": "Shade Cloak",
     "DESCRIPTIONS": [
-      "Whenever you block an attack this turn, return #b", " damage."
+      "Whenever you block an attack this turn, return #b", " damage and apply #b2 #yWeak."
     ]
   },
   "HollowMod:WeaverSongPower": {
@@ -198,8 +198,8 @@
   "HollowMod:NewGlowingWombPower": {
     "NAME": "Glowing Womb",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b",
-      " Block (scaling with Dexterity), and #b",
+      "At the start of your turn, if you have [#FFA200]Infection, gain #b",
+      " Block (scaling with Dexterity), and lose #b",
       " [#FFA200]Infection."
     ]
   }

@@ -20,7 +20,7 @@ import com.megacrit.cardcrawl.vfx.combat.DieDieDieEffect;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class attackHornetsHelp extends CustomCard {
+public class attackHornetsHelp extends AbstractHollowCard {
 
 
     // TEXT DECLARATION
@@ -52,6 +52,7 @@ public class attackHornetsHelp extends CustomCard {
 
     public attackHornetsHelp() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        this.SetCardHeader(CardHeaders.Ally);
         this.tags.add(CardTagEnum.ALLY);
         magicNumber = baseMagicNumber = MAGIC;
 

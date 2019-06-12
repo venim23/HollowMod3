@@ -50,10 +50,10 @@ public class skillMawleksShell extends AbstractHollowCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int DEXTERITY = 1;
 
-    private static final int INFECTION = 5;
+    private static final int INFECTION = 4;
     private static final int UPGRADE_INFECTION = (-2);
 
 

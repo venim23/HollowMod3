@@ -31,7 +31,7 @@ public class monsterHuskSentry extends AbstractMonster {
     // ****** MOVE AND STAT VALUES ********//
     private int attSlashDamage = 10;
     private int attSlashWk = 1;
-    private int attBravaDmg = 15;
+    private int attBravaDmg = 14;
     private int attBravaFrl = 2;
     private int swingDmg = 4 ;
     private int swingHits = 3;
@@ -78,7 +78,7 @@ public class monsterHuskSentry extends AbstractMonster {
         if (AbstractDungeon.ascensionLevel >= 2)
         {
             //for Ascenction 3 and higher, adds a bit more damage
-            this.attSlashDamage += 4;
+            this.attSlashDamage += 2;
             this.salutBuff += 1;
         }
 

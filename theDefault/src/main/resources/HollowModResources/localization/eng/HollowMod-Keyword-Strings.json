@@ -5,6 +5,25 @@
       "soul",
       "Soul"
     ],
-    "DESCRIPTION": "A unique resource the player can [#EFFAFF]Focus to activate certain [#60CFFF]Spells."
+    "DESCRIPTION": "A unique resource the player can spend with [#EFFAFF]Focus to activate certain [#60CFFF]Spells."
+  },
+  {
+    "PROPER_NAME": "[#EFFAFF]Soul [#EFFAFF]Meter",
+    "NAMES": [
+      "Meter",
+      "meter"
+    ],
+    "DESCRIPTION": "Holds your collected [#EFFAFF]Soul . By default, the [#EFFAFF]Soul [#EFFAFF]Meter limit is #b6 stored [#EFFAFF]Soul."
+  },
+  {
+    "PROPER_NAME": "[#60CFFF]Dash , [#60CFFF]Ally , [#60CFFF]Spell",
+    "NAMES": [
+      "ally",
+      "Ally",
+      "dash",
+      "spell",
+      "Spell"
+    ],
+    "DESCRIPTION": "[#60CFFF]Dash , [#60CFFF]Ally and [#60CFFF]Spell have no innate effects, but may be given effects from other sources."
   }
 ]

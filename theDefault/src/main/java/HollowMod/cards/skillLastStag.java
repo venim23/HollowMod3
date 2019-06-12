@@ -62,6 +62,7 @@ public class skillLastStag extends AbstractHollowCard {
 
     public skillLastStag() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        this.SetCardHeader(CardHeaders.Ally);
         this.tags.add(CardTagEnum.ALLY);
         this.magicNumber = this.baseMagicNumber = CARDDRAW;
 
@@ -70,7 +71,7 @@ public class skillLastStag extends AbstractHollowCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.MinerTalk.getKey()));
+        AbstractDungeon.actionManager.addToBottom(new SFXAction(SoundEffects.Stag.getKey()));
         AbstractDungeon.actionManager.addToBottom(new FetchAction(p.drawPile, this.magicNumber));
         if (this.upgraded){
             AbstractDungeon.actionManager.addToBottom(new FetchAction(p.discardPile, this.magicNumber));

@@ -58,6 +58,7 @@ public class skillChannelNail extends AbstractHollowCard {
 
     public skillChannelNail() {// This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET, FOCUS_COST);
+        this.SetCardHeader(CardHeaders.Spell);
         tags.add(CardTagEnum.SPELL);
         this.tags.add(CardTagEnum.SOULFOCUS);
         this.exhaust = true;

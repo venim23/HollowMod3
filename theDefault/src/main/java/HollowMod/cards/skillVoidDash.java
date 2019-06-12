@@ -45,7 +45,7 @@ public class skillVoidDash extends AbstractHollowCard {
     private static final int BLOCK = 15;
     private static final int UPGRADE_PLUS_BLOCK =5;
 
-    private static final int REVENGE = 5;
+    private static final int REVENGE = 3;
 
     private static final int VOID = 2;
 
@@ -57,6 +57,7 @@ public class skillVoidDash extends AbstractHollowCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
         magicNumber = (baseMagicNumber = REVENGE);
+        this.SetCardHeader(CardHeaders.Dash);
         tags.add(CardTagEnum.DASH);
         tags.add(CardTagEnum.VOID);
     }

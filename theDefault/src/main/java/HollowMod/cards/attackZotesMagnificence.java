@@ -21,7 +21,7 @@ import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 
 import static HollowMod.hollowMod.makeCardPath;
 
-public class attackZotesMagnificence extends CustomCard {
+public class attackZotesMagnificence extends AbstractHollowCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -61,6 +61,7 @@ public class attackZotesMagnificence extends CustomCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.exhaust = true;
+        this.SetCardHeader(CardHeaders.Ally);
         tags.add(CardTagEnum.ALLY);
 
     }

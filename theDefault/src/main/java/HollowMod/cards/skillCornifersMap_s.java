@@ -71,6 +71,7 @@ public class skillCornifersMap_s extends AbstractHollowCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.hollowFocusCost = (hollowBaseFocusCost = FOCUSCOST);
         this.magicNumber = this.baseMagicNumber = CARDDRAW;
+        this.SetCardHeader(CardHeaders.AllySpell);
         this.tags.add(CardTagEnum.ALLY);
         this.tags.add(CardTagEnum.SPELL);
         this.tags.add(CardTagEnum.SOULFOCUS);

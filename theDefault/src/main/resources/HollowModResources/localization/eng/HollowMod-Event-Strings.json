@@ -35,12 +35,13 @@
     "HollowMod:TheStagways": {
       "NAME": "Exploring the Stagways",
       "DESCRIPTIONS": [
-        "As you wander through The Spire, You hear a great rumbling, through the tunnel charges a massive beetle. NL Greetings, little one! It's been an age since I last heard the ringing of a station bell. NL It echoed down the stagways and called me to you. NL As I visit more places I feel my memories returning to me, like the stagways of my mind are running once more.'",
+        "As you wander through The Spire, You hear a great rumbling, th[rough the tunnel charges a massive beetle. NL 'Greetings, little one! It's been an age since I last heard the ringing of a station bell.' NL 'It echoed down the stagways and called me to you. NL As I visit more places I feel my memories returning to me, like the stagways of my mind are running once more.'",
         "'I tire so easily now, and my old legs seem to ache more and more. Still, I'm lucky to grow old at all... so many others haven't.'",
-        "'My, this place much changed since I last saw it. NL The greenery grows so wild the station's like to be consumed by it. NL Still, I'd like to see more stations...'",
-        "'Little one, we stand in the King's Station!' NL 'Named of course for the King of Hallownest, NL he who ordered the building of the stagways and stations.NL ... Shall we press on?'",
-        "'Being back in my old home... I feel the weight of my long life bearing down on me. NL I carry it proudly, though. Wherever I travel, NL the memories of my family and my kind come with me. NL Thank you, little one'",
-        "I can tell you still have important work to do, don't you little one? NL I will be your companion as long as my old body still serves. NL Shall I help?"
+        "The Stagways of the Spire lead to a lush green Jungle. NL 'My, this place much changed since I last saw it.' NL 'The greenery grows so wild the station's like to be consumed by it.' NL 'Still, I'd like to see more stations...'",
+        "The next station brings you to a massive City. NL 'Little one, we stand in the King's Station!' NL 'Named of course for the King of Hallownest,' NL 'he who ordered the building of the stagways and stations. NL ... Shall we press on?'",
+        "The final station is amid a strange land Beyond your understanding. 'Being back in my old home... I feel the weight of my long life bearing down on me.' NL 'I carry it proudly, though. Wherever I travel,' NL 'the memories of my family and my kind come with me. NL Thank you, little one'",
+        "'I can tell you still have important work to do, don't you little one?' NL 'I will be your companion as long as my old body still serves. NL Shall I help?'",
+        "Until we meet again."
      ],
       "OPTIONS": [
         "[Leave]",
@@ -48,9 +49,11 @@
         " #yGold ",
         "[Locked] Requires #y",
         " #yGold.",
-        "[Accept] Gain #g5 #gMax #gHP",
-        "[Accept] #gGain The Last Stag #gCard.",
-        "[Accept] The Stag offers you a Pass #gRelic"
+        "[Accept] #gGain #g5 #gMax #gHP",
+        "[Accept] #gGain #ga #gUnique #gCard.",
+        "[Accept] #gGain #ga #gUnique #gRelic.",
+        "[Stop Here] Say goodbye to the stag.",
+        "[Return] Your journey is complete."
       ]
   },
   "HollowMod:ZoteMeetingEvent": {

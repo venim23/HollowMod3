@@ -58,8 +58,8 @@ public class attackHeavyBlow extends AbstractHollowCard {
 
     private static final int COST = 2;
 
-    private static final int DAMAGE = 11;
-    private static final int UPGRADE_PLUS_DMG = 4;
+    private static final int DAMAGE = 10;
+    private static final int UPGRADE_PLUS_DMG = 5;
 
     private static final int WEAK = 2;
     private static final int UPGRADE_PLUS_WEAK = 1;

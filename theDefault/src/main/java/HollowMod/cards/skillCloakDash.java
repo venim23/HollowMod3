@@ -29,6 +29,7 @@ public class skillCloakDash extends AbstractHollowCard {
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -56,7 +57,7 @@ public class skillCloakDash extends AbstractHollowCard {
     public skillCloakDash() {// This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
-
+        this.SetCardHeader(CardHeaders.Dash);
         tags.add(CardTagEnum.DASH);
         this.exhaust = true;
         this.magicNumber = (this.baseMagicNumber = CARD_DRAW);
@@ -82,6 +83,7 @@ public class skillCloakDash extends AbstractHollowCard {
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
             upgradeMagicNumber(UPGRADED_CARD_DRAW);
+            this.rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

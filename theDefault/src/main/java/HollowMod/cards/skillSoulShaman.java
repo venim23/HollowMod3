@@ -52,6 +52,7 @@ public class skillSoulShaman extends AbstractHollowCard {
 
     public skillSoulShaman() {// This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET, FOCUS_COST);
+        this.SetCardHeader(CardHeaders.Spell);
         this.tags.add(CardTagEnum.SPELL);
         this.magicNumber = (this.baseMagicNumber = ENERGY);
         this.hollowFocusCost = (hollowBaseFocusCost = FOCUS_COST);

@@ -56,6 +56,7 @@ public class skillInfectedGuardian extends AbstractHollowCard {
         this.magicNumber = this.baseMagicNumber = MIN_INF;
         this.exhaust = true;
         this.tags.add(CardTagEnum.INFECTION);
+        this.SetCardHeader(CardHeaders.Ally);
         tags.add(CardTagEnum.ALLY);
     }
 

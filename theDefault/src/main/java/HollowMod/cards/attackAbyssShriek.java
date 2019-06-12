@@ -54,6 +54,7 @@ public class attackAbyssShriek extends AbstractHollowCard {
     public attackAbyssShriek() {// This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        this.SetCardHeader(CardHeaders.Spell);
         tags.add(CardTagEnum.SPELL);
         tags.add(CardTagEnum.VOID);
         this.isMultiDamage = true;

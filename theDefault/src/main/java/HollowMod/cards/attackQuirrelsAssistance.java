@@ -74,6 +74,7 @@ public class attackQuirrelsAssistance extends AbstractHollowCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.magicNumber = this.baseMagicNumber = WEAK_AMT;
+        this.SetCardHeader(CardHeaders.Ally);
         tags.add(CardTagEnum.ALLY);
     }
 

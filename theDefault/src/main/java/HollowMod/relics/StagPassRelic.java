@@ -23,7 +23,7 @@ public class StagPassRelic extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("trampass_relic.png"));
 
     public StagPassRelic() {
-        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.CLINK);
+        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.CLINK);
     }
     boolean canwork = false;
     // Flash at the start of Battle.

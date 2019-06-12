@@ -54,6 +54,7 @@ public class skillPaleKingsBlessing extends AbstractHollowCard {
         this.defaultSecondMagicNumber = defaultBaseSecondMagicNumber = HP_INF;
         this.exhaust = true;
         this.tags.add(CardTags.HEALING);
+        this.SetCardHeader(CardHeaders.Ally);
         tags.add(CardTagEnum.ALLY);
     }
 

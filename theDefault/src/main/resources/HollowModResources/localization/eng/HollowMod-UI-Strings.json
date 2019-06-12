@@ -10,7 +10,7 @@
   {
     "TEXT": [
       "[#696969]Void",
-      "[#696969]Void negates #ySoul, and prevents [#EFFAFF]Focus. NL [#696969]Void increases the damage dealt by [#696969]Void [#60CFFF]Spells based on the stacks NL And the #rdamage #rtaken from #renemy #rattacks by #r50%. NL [#696969]Void goes down by #b1 at the beginning of each turn."
+      "[#696969]Void negates #ySoul, and prevents [#EFFAFF]Focus. NL [#696969]Void increases the damage dealt by [#696969]Void [#60CFFF]Spells based on the stacks. Increases the #rdamage #rtaken from #renemy #rattacks by #r50%. NL [#696969]Void goes down by #b1 at the beginning of each turn."
     ]
   },
 
@@ -21,25 +21,18 @@
       "A lingering debuff, [#FFA200]Infection [#FFA200]Level damages you and decrements by #b2 at the end of your turn."
     ]
   },
-  "HollowMod:Dash":
+  "HollowMod:CardHeaders":
   {
-    "TEXT": [
-      "[#60CFFF]Dash",
-      "Doesn't have any special effect unless another effect gives it one."
-    ]
-  },
-  "HollowMod:Ally":
-  {
-    "TEXT": [
-      "[#60CFFF]Ally",
-      "Doesn't have any special effect unless another effect gives it one."
-    ]
-  },
-  "HollowMod:Spell":
-  {
-    "TEXT": [
-      "[#60CFFF]Spell",
-      "Doesn't have any special effect unless another effect gives it one."
+    "TEXT":
+    [
+      "[none]",
+      "Dash",
+      "Spell",
+      "Ally",
+      "Ally  Dash",
+      "Dash  Spell",
+      "Ally  Spell",
+      "Ally  Dash  Spell"
     ]
   },
   "HollowMod:DisableEnemies": {

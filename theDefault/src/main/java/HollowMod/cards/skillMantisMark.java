@@ -50,7 +50,7 @@ public class skillMantisMark extends AbstractHollowCard {
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
 
     private static final int COST = 0;
-    private static final int STRENGTH = 1;
+    private static final int STRENGTH = 2;
     private static final int UPGRADED_STRENGTH = 1;
 
 
@@ -59,6 +59,7 @@ public class skillMantisMark extends AbstractHollowCard {
 
     public skillMantisMark() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        this.SetCardHeader(CardHeaders.Ally);
         this.tags.add(CardTagEnum.ALLY);
         this.magicNumber = this.baseMagicNumber = STRENGTH;
         this.exhaust = true;

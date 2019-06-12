@@ -62,6 +62,7 @@ public class skillMylasSalvation extends AbstractHollowCard {
     public skillMylasSalvation() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.tags.add(CardTagEnum.ALLY);
+        this.SetCardHeader(CardHeaders.Ally);
         this.exhaust = true;
 
     }

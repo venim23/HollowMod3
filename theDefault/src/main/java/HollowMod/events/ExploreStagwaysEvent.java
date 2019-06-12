@@ -1,7 +1,11 @@
 package HollowMod.events;
 
+import HollowMod.cards.powerShapeofUnn;
+import HollowMod.cards.skillLastStag;
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
+import HollowMod.relics.GreatKnightMask;
+import HollowMod.relics.StagPassRelic;
 import HollowMod.util.SoundEffects;
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,9 +14,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.EventStrings;
+import com.megacrit.cardcrawl.relics.Circlet;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 
 import static HollowMod.hollowMod.makeEventPath;
 
@@ -44,7 +52,7 @@ public class ExploreStagwaysEvent extends AbstractImageEvent {
         } else {
             this.imageEventText.setDialogOption(OPTIONS[3] + OPTIONS[4], true);
         }
-        imageEventText.setDialogOption(OPTIONS[0]); // Leave
+        imageEventText.setDialogOption(OPTIONS[8]); // Leave
 
 
     }
@@ -73,7 +81,7 @@ public class ExploreStagwaysEvent extends AbstractImageEvent {
                         } else {
                             this.imageEventText.setDialogOption(OPTIONS[3] + goldcost +OPTIONS[4], true);
                         }
-                        this.imageEventText.setDialogOption( OPTIONS[0]);
+                        this.imageEventText.setDialogOption( OPTIONS[8]);
 
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         screenNum = 2;
@@ -143,7 +151,6 @@ public class ExploreStagwaysEvent extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[5]);
                         this.imageEventText.setDialogOption(OPTIONS[5]);
                         this.imageEventText.setDialogOption(OPTIONS[0]);
-                        this.imageEventText.clearRemainingOptions();
                         screenNum = 5;
 
                         break; // Onto screen 1 we go.
@@ -157,10 +164,9 @@ public class ExploreStagwaysEvent extends AbstractImageEvent {
                         this.stations += 1;
 
                         //ADD EVENT TWO TO THE POOL
-                        this.imageEventText.setDialogOption(OPTIONS[7]);
-                        this.imageEventText.setDialogOption(OPTIONS[0]);
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[9]);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
-                        this.imageEventText.clearRemainingOptions();
 
                         screenNum = 4;
                         this.imageEventText.loadImage(IMG4);
@@ -170,9 +176,9 @@ public class ExploreStagwaysEvent extends AbstractImageEvent {
                     case 1: // If you press button the second button (Button at index 1), in this case: Deinal
 
                         this.imageEventText.updateBodyText(DESCRIPTIONS[5]);
-                        this.imageEventText.updateDialogOption(0, OPTIONS[5]);
-                        this.imageEventText.updateDialogOption(1, OPTIONS[0]);
-                        this.imageEventText.clearRemainingOptions();
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[7]);
+                        this.imageEventText.setDialogOption(OPTIONS[0]);
                         screenNum = 5;
 
                         break; //
@@ -184,8 +190,9 @@ public class ExploreStagwaysEvent extends AbstractImageEvent {
                         CardCrawlGame.sound.playV(SoundEffects.Stag3.getKey(), 2.0F);
                         AbstractDungeon.player.loseGold(75);
                         this.stations += 1;
-                        this.imageEventText.updateDialogOption(0, OPTIONS[0]);// 1. Change the first button to the [Leave] button
-                        this.imageEventText.clearRemainingOptions();// 2. and remove all others
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[6], CardLibrary.getCopy(skillLastStag.ID));
+                        this.imageEventText.setDialogOption(OPTIONS[0]);
                         screenNum = 5;
 
 
@@ -194,10 +201,18 @@ public class ExploreStagwaysEvent extends AbstractImageEvent {
                 break;
             case 5: // PRELEAVE
                 switch (i) {
-                    case 0: // Proceed
+                    case 0: // Accept Gift
                         payout(this.stations);
-                        this.imageEventText.updateDialogOption(0, OPTIONS[0]);// 1. Change the first button to the [Leave] button
-                        this.imageEventText.clearRemainingOptions();// 2. and remove all others
+                        this.imageEventText.updateBodyText(DESCRIPTIONS[6]);
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption( OPTIONS[0]);// 1. Change the first button to the [Leave] button
+
+                        screenNum = 1;
+                        break; // Onto screen 1 we go.
+                    case 1: // Refuse
+                        this.imageEventText.updateBodyText(DESCRIPTIONS[6]);
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[0]);// 1. Change the first button to the [Leave] button
                         screenNum = 1;
                         break; // Onto screen 1 we go.
                 }
@@ -208,27 +223,29 @@ public class ExploreStagwaysEvent extends AbstractImageEvent {
     private void payout(int i){
         switch (i){
             case 0: //max hp
+
                 break;
             case 1: //stag pass
+                AbstractDungeon.player.increaseMaxHp(5, true);
+
                 break;
             case 2: //the last stag
+                if (AbstractDungeon.player.hasRelic(StagPassRelic.ID)) {
+                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, new Circlet());
+                } else {
+                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, new StagPassRelic());
+                }
+
                 break;
             case 3:
+                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new skillLastStag(), Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
+                break;
+            case 4:
+                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new skillLastStag(), Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
                 break;
 
         }
     }
 
-    public void update() { // We need the update() when we use grid screens (such as, in this case, the screen for selecting a card to remove)
-        super.update(); // Do everything the original update()
-        if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) { // Once the grid screen isn't empty (we selected a card for removal)
-            AbstractCard c = (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0); // Get the card
-            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, (float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2))); // Create the card removal effect
-            AbstractDungeon.player.masterDeck.removeCard(c); // Remove it from the deck
-            AbstractDungeon.gridSelectScreen.selectedCards.clear(); // Or you can .remove(c) instead of clear,
-            // if you want to continue using the other selected cards for something
-        }
-
-    }
 
 }

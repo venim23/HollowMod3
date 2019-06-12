@@ -3,7 +3,7 @@
     "NAME": "Knight's Mask",
     "FLAVOR": "All vessels carry a mask.",
     "DESCRIPTIONS": [
-      "Gain #b1 #ySoul each time you play an Attack card. (Except #bSpell or #bAlly Attacks)"
+      "Gain #b1 #yhollowmod:Soul each time you play an Attack card. (Except #bhollowmod:Spell or #bAlly Attacks)"
     ]
   },
   "HollowMod:PlaceholderRelic": {
@@ -78,7 +78,7 @@
     "NAME": "Joni's Blessing",
     "FLAVOR": "Blessed by Joni, the kindly heretic. Transfigures vital fluids into blue lifeblood.",
     "DESCRIPTIONS": [
-      "Begin each combat with #b15 Temporary_HP. Healing in combat instead increases Temporary_HP.)"
+      "Begin each combat with #b15 #bTemporary #bHP. Healing in combat instead increases #bTemporary #bHP.)"
     ]
   },
   "HollowMod:IsmasTear": {
@@ -113,7 +113,7 @@
     "NAME": "King's Soul",
     "FLAVOR": "Holy charm symbolising a union between higher beings.",
     "DESCRIPTIONS": [
-      "Replaces Vessel Mask or [#696969]Void[] Idol. Gain #b3 #ySoul at the beginning of each round, increase #ySoul #yMeter by #b2"
+      "Replaces Vessel Mask or [#696969]Void[] Idol. Gain #b3 #ySoul at the beginning of each round, increase #ySoul #yMeter #yLimit by #b2"
     ]
   },
   "HollowMod:GodTunerRelic": {

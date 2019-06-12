@@ -50,6 +50,8 @@ public class skillSiblingsShadow extends AbstractHollowCard {
     public skillSiblingsShadow() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = CARDS_RECOVERED;
+        this.SetCardHeader(CardHeaders.Ally);
+        tags.add(CardTagEnum.ALLY);
         this.exhaust = true;
 
     }

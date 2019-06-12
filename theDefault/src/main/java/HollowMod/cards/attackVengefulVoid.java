@@ -80,6 +80,7 @@ public class attackVengefulVoid extends AbstractHollowCard {
         this.defaultSecondMagicNumber = this.defaultBaseSecondMagicNumber = VOID;
         this.isMultiDamage = true;
         this.exhaust = true;
+        this.SetCardHeader(CardHeaders.Spell);
         tags.add(CardTagEnum.SPELL);
         tags.add(CardTagEnum.VOID);
 

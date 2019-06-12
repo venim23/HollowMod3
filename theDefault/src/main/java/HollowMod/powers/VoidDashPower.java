@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static HollowMod.hollowMod.makePowerPath;
 
@@ -60,6 +61,7 @@ public class VoidDashPower extends AbstractPower implements CloneablePowerInterf
         if ((info.owner != null) && (info.type != DamageInfo.DamageType.THORNS) && (info.type != DamageInfo.DamageType.HP_LOSS) && (info.owner != this.owner)) {
              flash();
              AbstractDungeon.actionManager.addToBottom(new DamageAction(info.owner, new DamageInfo(info.owner, this.amount, DamageInfo.DamageType.THORNS),true));
+             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(info.owner, this.owner, new WeakPower(info.owner, 2, false), 2));
         }
         return damageAmount;
     }

@@ -55,6 +55,7 @@ public class attackSoulStrike extends AbstractHollowCard {
         baseDamage = DAMAGE;
         this.magicNumber = (baseMagicNumber = SOUL_GEN);
         this.tags.add(CardTagEnum.SOULFOCUS);
+        this.tags.add(CardTags.STRIKE);
 
     }
 

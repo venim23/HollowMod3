@@ -2,6 +2,7 @@ package HollowMod.cards;
 
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
+import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.BrokenVesselPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -42,6 +43,7 @@ public class powerBrokenVessel extends AbstractHollowCard {
 
     public powerBrokenVessel() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        tags.add(CardTagEnum.INFECTION);
 
     }
 
@@ -60,8 +62,6 @@ public class powerBrokenVessel extends AbstractHollowCard {
         if (!this.upgraded) {
             this.upgradeName();
             upgradeBaseCost(UPGRADE_BASE_COST);
-            this.isInnate = true;
-            this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
     }

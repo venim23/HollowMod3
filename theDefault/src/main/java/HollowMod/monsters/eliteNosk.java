@@ -51,9 +51,9 @@ public class eliteNosk extends AbstractMonster {
     //There's a LOT of variable you could assign, but you will usually have to deal with them yourself to count things.
     //Make sure you have a maxHP and minHP
 
-    private int maxHP = 40;
-    private int minHP = 30;
-    private int newHP = 130;
+    private int maxHP = 50;
+    private int minHP = 40;
+    private int newHP = 140;
 
 
     //I almost always use Dmg and Def at the end of thinks I want as damage or Block, otherwise my naming conventions are kinda a tossup.

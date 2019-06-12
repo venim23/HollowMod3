@@ -49,7 +49,7 @@ public class powerSlysStrikes extends AbstractHollowCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
         magicNumber = this.baseMagicNumber = STRENGTH_PER_TURN;
-
+        this.SetCardHeader(CardHeaders.Ally);
         this.tags.add(CardTagEnum.ALLY);
         this.isEthereal = true;
 

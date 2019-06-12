@@ -64,7 +64,7 @@ public class skillConfessorsAdvice extends AbstractHollowCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
         magicNumber = this.baseMagicNumber = CARDS_COPIED;
-
+        this.SetCardHeader(CardHeaders.Ally);
         this.tags.add(CardTagEnum.ALLY);
 
     }

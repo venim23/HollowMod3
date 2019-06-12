@@ -59,7 +59,7 @@ public class attackInfectedCysts extends AbstractHollowCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON; //  Up to you, I like auto-complete on these
+    private static final CardRarity RARITY = CardRarity.COMMON; //  Up to you, I like auto-complete on these
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;  //   since they don't change much.
     private static final CardType TYPE = CardType.ATTACK;       //
     public static final CardColor COLOR = TheBugKnight.Enums.HOLLOW_COLOR;
@@ -67,8 +67,8 @@ public class attackInfectedCysts extends AbstractHollowCard {
     private static final int COST = 2;  // COST = 2
 
     private static final int DAMAGE = 11;    // DAMAGE = 7
-    private static final int POISON = 3;
-    private static final int UPGRADE_PLUS_POISON = 3;
+    private static final int POISON = 4;
+    private static final int UPGRADE_PLUS_POISON = 2;
     private static final int INFECTION = 3;
 
 

@@ -74,7 +74,7 @@ public class attackBlackTendrils extends AbstractHollowCard {
 
     public attackBlackTendrils() {// This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-
+        this.SetCardHeader(CardHeaders.Spell);
         baseDamage = DAMAGE;
         this.defaultSecondMagicNumber = this.defaultBaseSecondMagicNumber = VOID;
         this.isMultiDamage = true;

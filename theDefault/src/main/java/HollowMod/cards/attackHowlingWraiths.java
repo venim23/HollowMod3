@@ -75,6 +75,7 @@ public class attackHowlingWraiths extends AbstractHollowCard {
         baseDamage = DAMAGE;
         this.isMultiDamage = true;
         this.hollowFocusCost = (hollowBaseFocusCost = FOCUS_COST);
+        this.SetCardHeader(CardHeaders.Spell);
         tags.add(CardTagEnum.SPELL);
         this.tags.add(CardTagEnum.SOULFOCUS);
 

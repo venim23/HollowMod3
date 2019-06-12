@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -67,13 +68,21 @@ public class GlowingWombPower extends AbstractPower implements CloneablePowerInt
     // On use card, apply (amount) of Dexterity. (Go to the actual power card for the amount.)
     @Override
     public void atStartOfTurnPostDraw() {
+
         int blockval = this.amount;
         if (this.owner.hasPower(DexterityPower.POWER_ID)){
             blockval += this.owner.getPower(DexterityPower.POWER_ID).amount;
         }
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner,this.owner, blockval));
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(this.owner, this.owner, new InfectionPower(AbstractDungeon.player, this.INFECTEDVALUE ), this.INFECTEDVALUE));
+        if (this.owner.hasPower(InfectionPower.POWER_ID)){
+            if (this.owner.getPower(InfectionPower.POWER_ID).amount >= this.INFECTEDVALUE){
+                flash();
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, blockval));
+
+                AbstractDungeon.actionManager.addToBottom(
+                        new ReducePowerAction(this.owner, this.owner, InfectionPower.POWER_ID, this.INFECTEDVALUE));
+            }
+        }
+
     }
 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
