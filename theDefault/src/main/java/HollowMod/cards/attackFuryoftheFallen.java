@@ -2,6 +2,7 @@ package HollowMod.cards;
 
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
+import HollowMod.powers.VoidPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -70,6 +71,14 @@ public class attackFuryoftheFallen extends AbstractHollowCard {
     }
 
 
+    public float calculateModifiedCardDamage(final AbstractPlayer player, final AbstractMonster mo, final float tmp) {
+        int lowhp = 1;
+        if ((mo != null) && (player.currentHealth <= (player.maxHealth/4))){
+            lowhp = this.magicNumber;
+        }
+
+        return tmp * lowhp;
+    }
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {

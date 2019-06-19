@@ -4,6 +4,7 @@ import HollowMod.actions.SFXVAction;
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
 import HollowMod.patches.CardTagEnum;
+import HollowMod.powers.InfectionPower;
 import HollowMod.powers.VoidPower;
 import HollowMod.util.SoundEffects;
 import com.badlogic.gdx.graphics.Color;
@@ -38,6 +39,7 @@ public class attackMidwifesHunger extends AbstractHollowCard {
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -97,6 +99,24 @@ public class attackMidwifesHunger extends AbstractHollowCard {
             AbstractDungeon.actionManager.addToBottom(
                     new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
+    }
+
+    public void applyPowers()
+    {
+        super.applyPowers();
+        this.defaultSecondMagicNumber = this.defaultBaseSecondMagicNumber = countAllyCards();
+
+        if (this.defaultBaseSecondMagicNumber > 0)
+        {
+            this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
+            initializeDescription();
+        }
+    }
+
+    public void onMoveToDiscard()
+    {
+        this.rawDescription = DESCRIPTION;
+        initializeDescription();
     }
 
 

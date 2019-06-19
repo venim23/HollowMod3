@@ -78,7 +78,7 @@
     "NAME": "Joni's Blessing",
     "FLAVOR": "Blessed by Joni, the kindly heretic. Transfigures vital fluids into blue lifeblood.",
     "DESCRIPTIONS": [
-      "Begin each combat with #b15 #bTemporary #bHP. Healing in combat instead increases #bTemporary #bHP."
+      "Begin each combat with #b15 #bTemporary #bHP. Healing in combat instead increases #bTemporary #bHP.)"
     ]
   },
   "HollowMod:IsmasTear": {

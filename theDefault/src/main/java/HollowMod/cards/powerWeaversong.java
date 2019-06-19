@@ -37,7 +37,7 @@ public class powerWeaversong extends AbstractHollowCard {
 
     private static final int COST = 2;
 
-    private static final int SPIDER_DAMAGE = 2;
+    private static final int SPIDER_DAMAGE = 3;
     private static final int UPGRADE_PLUS_SPIDER_DAMAGE = 2;
 
     // /STAT DECLARATION/

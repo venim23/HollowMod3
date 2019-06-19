@@ -1,0 +1,18 @@
+{
+        "HollowMod:VoidPotion": {
+                "NAME": "Void Potion",
+                "DESCRIPTIONS": ["Gain ", " Void."]
+        },
+        "HollowMod:SoulPotion": {
+                "NAME": "Soul Potion",
+                "DESCRIPTIONS": ["Gain ", " Soul."]
+        },
+        "HollowMod:LifebloodPotion": {
+                "NAME": "Lifeblood Potion",
+                "DESCRIPTIONS": ["Gain ", " Temporary Health."]
+        },
+        "HollowMod:InfectionPotion": {
+                "NAME": "Infected Potion",
+                "DESCRIPTIONS": ["Apply", " Poison, and gain ", "Infection."]
+        }
+}

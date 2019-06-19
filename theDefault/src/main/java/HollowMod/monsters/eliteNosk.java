@@ -57,21 +57,15 @@ public class eliteNosk extends AbstractMonster {
 
 
     //I almost always use Dmg and Def at the end of thinks I want as damage or Block, otherwise my naming conventions are kinda a tossup.
-    private int rearDef = 15 ;
+    private int rearDef = 18 ;
     private int cryAmt = -1 ;
     private int vesselDmg = 5;
-    private int trampleDmg = 10;
+    private int trampleDmg = 12;
     private int trampleAmt = 2;
-    private int stompDmg = 14;
+    private int stompDmg = 15;
     private int sprayAmt = 2;
 
 
-
-    private boolean leafedHas = false;
-    private boolean leafMode = false;
-    private boolean defStance = false;
-    private int leafHeal = 10 ;
-    private int leafBlock = 35 ;
 
     //this variable is handy to keep track of too, I recommend using something like it.
     private int numTurns;

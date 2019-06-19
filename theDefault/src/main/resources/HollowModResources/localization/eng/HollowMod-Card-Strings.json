@@ -33,7 +33,7 @@
 
 	"HollowMod:AbyssShriek": {
 		"NAME": "Abyss Shriek",
-		"DESCRIPTION": "[#696969]Void[] 3: Deal !D! damage to ALL Enemies. NL You cannot play any more Attacks this turn."
+		"DESCRIPTION": "[#696969]Void[] 3: Deal !D! damage to ALL enemies. NL You cannot play any more Attacks this turn."
 	},
 	"HollowMod:AwokenDreamNail": {
 		"NAME": "Awoken Dream Nail",
@@ -62,7 +62,7 @@
 	},
 	"HollowMod:DesolateDive": {
 		"NAME": "Desolate Dive",
-		"DESCRIPTION": "[#EFFAFF]Focus[] !HollowMod:focusCost! : Deal !D! damage to ALL Enemies."
+		"DESCRIPTION": "[#EFFAFF]Focus[] !HollowMod:focusCost! : Deal !D! damage to ALL enemies."
 	},
 	"HollowMod:FallenFury": {
 		"NAME": "Fury of the Fallen",
@@ -74,7 +74,7 @@
 	},
 	"HollowMod:GreatSlash": {
 		"NAME": "Great Slash",
-		"DESCRIPTION": "Deal !D! damage to ALL Enemies !M! times."
+		"DESCRIPTION": "Deal !D! damage to ALL enemies !M! times."
 	},
 	"HollowMod:HeavyBlow": {
 		"NAME": "Heavy Blow",
@@ -108,7 +108,8 @@
 	},
 	"HollowMod:MidwifesHunger": {
 		"NAME": "Midwife's Hunger",
-		"DESCRIPTION": "Deal !D! damage 1 time for every permanent [#60CFFF]Ally in your deck."
+		"DESCRIPTION": "Deal !D! damage 1 time for every permanent [#60CFFF]Ally in your deck.",
+		"EXTENDED_DESCRIPTION": [" ( attacks !HollowMod:SecondMagic! times.)"]
 	},
 	"HollowMod:PogoStrike": {
 		"NAME": "Pogo Strike",
@@ -150,7 +151,7 @@
 	},
 	"HollowMod:ZotesMagnificence": {
 		"NAME": "Zote's Magnificence",
-		"DESCRIPTION": "Deal !D! damage, Lose of ALL your Current Block. Exhaust"
+		"DESCRIPTION": "Deal !D! damage, Lose ALL of your current Block. Exhaust"
 	},
 
 	"HollowMod:POWERCARDS": {
@@ -175,7 +176,7 @@
 	},
 	"HollowMod:Flukenest": {
 		"NAME": "Flukenest",
-		"DESCRIPTION": "Whenever you play a [#60CFFF]Spell , Deal 1 damage to !M! Random Enemies"
+		"DESCRIPTION": "Whenever you play a [#60CFFF]Spell , Deal 1 damage to !M! random enemies"
 	},
 	"HollowMod:Grubsong": {
 		"NAME": "Grubsong",
@@ -192,7 +193,7 @@
 	},
 	"HollowMod:ShapeofUnn": {
 		"NAME": "Shape of Unn",
-		"DESCRIPTION": "Whenever you play a [#60CFFF]Spell, Place 1 [#60CFFF]Dash card in your Discard into your Hand."
+		"DESCRIPTION": "Whenever you play a [#60CFFF]Spell, Return 1 [#60CFFF]Dash in your Discard pile to your hand."
 	},
 	"HollowMod:SharpenedShadows": {
 		"NAME": "Sharpened Shadows",
@@ -221,7 +222,7 @@
 	},
 	"HollowMod:Weaversong": {
 		"NAME": "Weaversong",
-		"DESCRIPTION": "Whenever you play an attack, Deal !M! damage to a random enemy."
+		"DESCRIPTION": "Whenever you play an attack, deal !M! damage to a random enemy."
 	},
 	"HollowMod:WhiteLadysBlessing": {
 		"NAME": "White Lady's Blessing",
@@ -371,7 +372,7 @@
 	},
 	"HollowMod:SiblingsShadow": {
 		"NAME": "Sibling's Shadow",
-		"DESCRIPTION": "[#696969]Void[] 1: Return !M! [#696969]Void[] Cards from your Exhaust pile to your hand. Exhaust."
+		"DESCRIPTION": "[#696969]Void[] 1: Return !M! [#696969]Void[] cards from your Exhaust pile to your hand. Exhaust."
 	},
 	"HollowMod:SiblingsSouls": {
 		"NAME": "Sibling's Souls",
@@ -430,7 +431,7 @@
 	},
 	"HollowMod:NewGlowingWomb": {
 		"NAME": "Glowing Womb",
-		"DESCRIPTION": "At the start of your turn, if you have [#FFA200]Infection[] , gain !M! Block and  and lose 1 [#FFA200]Infection[]. Block Gained Scales with Dexterity. [#FFA200]Infection[] !HollowMod:SecondMagic!."
+		"DESCRIPTION": "At the start of your turn, if you have [#FFA200]Infection[], gain !M! Block and  and lose 1 [#FFA200]Infection[]. NL Block Gained Scales with Dexterity. NL [#FFA200]Infection[] !HollowMod:SecondMagic!."
 	},
 	"HollowMod:NewInfectedGuardian": {
 		"NAME": "Infected Guardian",

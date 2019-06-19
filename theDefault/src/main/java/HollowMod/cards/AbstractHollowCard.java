@@ -198,7 +198,6 @@ public abstract class AbstractHollowCard extends CustomCard {
     }
 
 
-
     public void SetCardHeader(CardHeader cardheader)
     {
         //SetCardHeader(cardheader, false);

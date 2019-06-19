@@ -40,7 +40,7 @@ public class bossNKGrimm extends AbstractMonster {
 
     private int fbatDmg = 10;
     private int fbats = 2;
-    private int lingerDefVal = 65;
+    private int lingerDefVal = 70;
     private int turnsTillLoop = 0;
     private int normalBlock = 12;
     private int normalRegen = 10;
@@ -48,7 +48,7 @@ public class bossNKGrimm extends AbstractMonster {
     private int minHP = 310;
     private int spikeDefVal = 10;
     private int spikePwrVal = 1;
-    private int tpDamage = 5;
+    private int tpDamage = 6;
     private int lingerBlockTurns = 3;
     private int flameVal = 5;
     private int fpillerDmg = 20;

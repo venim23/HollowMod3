@@ -1,0 +1,212 @@
+{
+  "HollowMod:BaldurShellPower": {
+    "NAME": "博德之门 贝壳",
+    "DESCRIPTIONS": [
+      "每次使用 [#EFFAFF]集中 #y心灵， 得到 #b",
+      " 点 #y格挡。"
+    ]
+  },
+  "HollowMod:BrokenVesselPower": {
+    "NAME": "破 容器",
+    "DESCRIPTIONS": [
+      "每当你从 [#FFA200]感染 受到伤害时， 对所有敌人造成同样的伤害。"
+    ]
+  },
+  "HollowMod:DungDefenderPower": {
+    "NAME": "粪 辩护人 灵气",
+    "DESCRIPTIONS": [
+      "每受到一次 #y攻击 这一轮 ，将 #b", " 中毒 应用于攻击者 。"
+    ]
+  },
+  "HollowMod:ElderbugPower": {
+    "NAME": "老甲虫 智慧",
+    "DESCRIPTIONS": [
+      "你每打出一张 牌 #b盟友牌 ， 抽 #b1 张牌。"
+    ]
+  },
+  "HollowMod:FlameCastPower": {
+    "NAME": "充电 火焰铸造",
+    "DESCRIPTIONS": [
+      "很快所有区块都会受到伤害。"
+    ]
+  },
+  "HollowMod:FlameCloakPower": {
+    "NAME": "火焰披风",
+    "DESCRIPTIONS": [
+      "每受到一次 #y攻击 ，造成 #b",
+      " 点反伤。 每轮失去一半的积分。"
+    ]
+  },
+  "HollowMod:FlukenestPower": {
+    "NAME": "Flukenest",
+    "DESCRIPTIONS": [
+      "",
+      ""
+    ]
+  },
+  "HollowMod:GrimmGiftPower": {
+    "NAME": "严肃 礼物",
+    "DESCRIPTIONS": [
+      "给予 #b1 #y易伤  每次你在这一轮造成伤害。"
+    ]
+  },
+  "HollowMod:GrubsongPower": {
+    "NAME": "蝤 歌曲",
+    "DESCRIPTIONS": [
+      "第 #b",
+      " 轮我第一次第一次受伤， 获取 #b1 #y心灵。",
+      " 次我每回合都受伤了， 获取 #b1 #y心灵。"
+    ]
+  },
+  "HollowMod:InfectionPower": {
+    "NAME": "感染 量",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，受到 #b",
+      " 点伤害。 在你的回合结束时，失去 #b2 [#FFA200]感染 点 。"
+    ]
+  },
+  "HollowMod:LifeCocoonPower": {
+    "NAME": "人生血 茧",
+    "DESCRIPTIONS": [
+      "你每打出一张 #y攻击牌 ， 获得 #b",
+      " #b暂时性生命。"
+    ]
+  },
+  "HollowMod:LifeHeartPower": {
+    "NAME": "Lifeblood Heart",
+    "DESCRIPTIONS": [
+      "",
+      ""
+    ]
+  },
+  "HollowMod:MonarchWingsPower": {
+    "NAME": "君主的翅膀",
+    "DESCRIPTIONS": [
+      "对你造成 #b",
+      " 点伤害。来自 #b突 牌 的 #y格挡 的数量加倍。"
+    ]
+  },
+  "HollowMod:MothsMistakePower": {
+    "NAME": "蛀 误",
+    "DESCRIPTIONS": [
+      "在你的回合开始时， 给予所有敌人 #b",
+      " 层 #y中毒 ， 得到 [#FFA200]感染 #b",
+      " 点。"
+    ]
+  },
+  "HollowMod:NailsmithPower": {
+    "NAME": "钉 主",
+    "DESCRIPTIONS": [
+      "你在这回合每打出一张攻击牌， 升级那张卡。"
+    ]
+  },
+  "HollowMod:OverflowingPower": {
+    "NAME": "满溢",
+    "DESCRIPTIONS": [
+      "在你的回合开始时， 花 #b", " #y心灵 获得 #b", " 点 #y力量。 如果你不能付钱， 失去这种力量并获得了 #y力量。 NL 在你的回合结束时， 点上升 #b1 。"
+    ]
+  },
+  "HollowMod:ShadesPower": {
+    "NAME": "影子之王",
+    "DESCRIPTIONS": [
+      "虽然你有 [#696969]虚， 获得 1 荆棘 每一个 2 #y格挡 点， 在你的回合结束时， 失去 50% 荆棘"
+    ]
+  },
+  "HollowMod:SharpenedShadowsPower": {
+    "NAME": "尖锐的阴影",
+    "DESCRIPTIONS": [
+      "虽然你有 [#696969]虚， 你每打出一张 #y突， 对一名随机敌人造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "HollowMod:SiblingSoulPower": {
+    "NAME": "兄弟 的精神",
+    "DESCRIPTIONS": [
+      "你打出的下一张技能或攻牌会打出复制。"
+    ]
+  },
+  "HollowMod:SlysStrikesPower": {
+    "NAME": "Sly 的罢工",
+    "DESCRIPTIONS": [
+      "在你的回合开始时， 获得 #b",
+      " 点 #y力量 。"
+    ]
+  },
+  "HollowMod:SoulEaterPower": {
+    "NAME": "心灵 吃",
+    "DESCRIPTIONS": [
+      "你每打出一张  #y攻击牌， 获得 #b",
+      " #y心灵。 (不是 #y盟友 牌 或 #y咒语 牌)。"
+    ]
+  },
+  "HollowMod:SoulMasterPower": {
+    "NAME": "心灵 捻线机",
+    "DESCRIPTIONS": [
+      "#y心灵 #b魅力 成本低 #b",
+      "  #y心灵  (最少1)。 [#696969]虚 魅力 得到 #b",
+      " 额外[#696969]虚"
+    ]
+  },
+  "HollowMod:SoulPower": {
+    "NAME": "心灵 仪表",
+    "DESCRIPTIONS": [
+      "收集的 #y心灵 数量 。 花这个 #bSpells 使用 。 NL 当前值 #y心灵: ",
+      " NL 当前最大值: #b",
+      " #y心灵。"
+    ]
+  },
+  "HollowMod:SoulVialPower": {
+    "NAME": "心灵 容器",
+    "DESCRIPTIONS": [
+      "将 #y心灵 的限制提高 #b",
+      " 点 。"
+    ]
+  },
+  "HollowMod:UnnPower": {
+    "NAME": "Unn 的形状",
+    "DESCRIPTIONS": [
+      "你每打出一张 牌 #b魅力 牌 ， 将弃牌堆中的一 #b",
+      " #b突 张牌放入你的手牌。",
+      " #b突 张牌放入你的手牌。"
+    ]
+  },
+  "HollowMod:VoidPower": {
+    "NAME": "虚",
+    "DESCRIPTIONS": [
+      "使 [#696969]虚 伤害提高 #b",
+      "点 。 受到的伤害提高 #r50％。 NL 在回合的开始，合减1。"
+    ]
+  },
+  "HollowMod:VoidDashPower": {
+    "NAME": "暗影斗篷",
+    "DESCRIPTIONS": [
+      "每受到一次 #y攻击 ，造成 #b",
+      " 点反伤  给予敌人 #b2 #y虚弱。"
+    ]
+  },
+  "HollowMod:WeaverSongPower": {
+    "NAME": "韦弗 歌曲",
+    "DESCRIPTIONS": [
+      "你每打出一张  #y攻击牌， 对一名随机敌人造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "HollowMod:WhiteLadyPower": {
+    "NAME": "白女士们的祝福",
+    "DESCRIPTIONS": [
+      "虽然你有 [#696969]虚，  你可以用 #y集中， 该卡将被 #y消耗。"
+    ]
+  },
+  "HollowMod:NewGlowingWombPower": {
+    "NAME": "发光的子宫",
+    "DESCRIPTIONS": [
+      "在你的回合开始时， 如果你有 [#FFA200]感染， 得到 #b",
+      " #y格挡 (包括 #y敏捷)， 失去 #b",
+      " [#FFA200]感染 点 。"
+    ]
+  }
+
+
+
+
+}

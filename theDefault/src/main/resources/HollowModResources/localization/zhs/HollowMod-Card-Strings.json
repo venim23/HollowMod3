@@ -1,0 +1,441 @@
+{
+	"HollowMod:STARTINGCARDS": {
+		"NAME": "",
+		"DESCRIPTION": ""
+	},
+
+
+	"HollowMod:NailStrikeStart": {
+		"NAME": "钉 打击",
+		"DESCRIPTION": "造成 !D! 点伤害。"
+	},
+	"HollowMod:QuickDashStart": {
+		"NAME": "快 短跑",
+		"DESCRIPTION": "获得 !B! 点 格挡 。"
+	},
+	"HollowMod:FocusHealStart": {
+		"NAME": "Simple 集中",
+		"DESCRIPTION": "[#EFFAFF]集中[] !HollowMod:focusCost!:  回复 !M! 生命。 NL Heals for 2 less each time it's used this combat. NL 最后一次。 消耗 。",
+		"UPGRADE_DESCRIPTION": "回复 !M! 生命。. NL Heals for 2 less each time it's used this combat. NL 最后一次。 消耗 。"
+	},
+	"HollowMod:CornifersMapStart": {
+		"NAME": "Cornifer's Map",
+		"DESCRIPTION": "[#EFFAFF]集中[] !HollowMod:focusCost! : 抽!M!张牌。"
+	},
+
+
+
+	"HollowMod:ATTACKCARDS": {
+		"NAME": "",
+		"DESCRIPTION": ""
+	},
+
+
+	"HollowMod:AbyssShriek": {
+		"NAME": "Abyss Shriek",
+		"DESCRIPTION": "[#696969]虚[] 3: Deal !D! damage to ALL enemies. NL You cannot play any more Attacks this turn."
+	},
+	"HollowMod:AwokenDreamNail": {
+		"NAME": "Awoken Dream Nail",
+		"DESCRIPTION": "造成 !D! 点伤害。 Increase the [#F4D03F]Soul hollowmod:Meter Limit by 1 for this combat, and fill your [#F4D03F]Soul hollowmod:Meter"
+	},
+	"HollowMod:BlackTendrils": {
+		"NAME": "Black Tendrils",
+		"DESCRIPTION": "[#696969]虚[] 3: Deal !D! damage to a random enemy. NL Heal for 33% the total damage dealt. (Including [#696969]虚[] bonus.) Exhaust.",
+		"UPGRADE_DESCRIPTION": "[#696969]虚[] 3: Deal !D! damage to a random enemy. NL Heal for 50% the total damage dealt. (Including [#696969]虚[] bonus.) Exhaust."
+	},
+	"HollowMod:CoiledNail": {
+		"NAME": "Coiled Nail",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL If the target is Vulnerable, repeat this effect."
+	},
+	"HollowMod:CycloneSlash": {
+		"NAME": "Cyclone Slash",
+		"DESCRIPTION": "Deal !D! damage to ALL enemies. NL Increase this cards damage by 1 for the rest of the combat."
+	},
+	"HollowMod:DashSlash": {
+		"NAME": "Dash Slash",
+		"DESCRIPTION": "获得 !B! Block. NL 造成 !D! 点伤害。 "
+	},
+	"HollowMod:DescendingDark": {
+		"NAME": "Descending Dark",
+		"DESCRIPTION": "[#696969]虚[] 2: Deal !D! damage to ALL enemies. Exhaust."
+	},
+	"HollowMod:DesolateDive": {
+		"NAME": "Desolate Dive",
+		"DESCRIPTION": "[#EFFAFF]集中[] !HollowMod:focusCost! : Deal !D! damage to ALL enemies."
+	},
+	"HollowMod:FallenFury": {
+		"NAME": "Fury of the Fallen",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL If you are below 25% HP, Deal !M! times that amount instead."
+	},
+	"HollowMod:FastStrike": {
+		"NAME": "Fast Strike",
+		"DESCRIPTION": "Discard 1 card. Deal !D! damage and apply 1 Vulnerable to !M! random enemies."
+	},
+	"HollowMod:GreatSlash": {
+		"NAME": "Great Slash",
+		"DESCRIPTION": "Deal !D! damage to ALL enemies !M! times."
+	},
+	"HollowMod:HeavyBlow": {
+		"NAME": "Heavy Blow",
+		"DESCRIPTION": "Deal !D! damage and apply !M! Weak."
+	},
+	"HollowMod:HerrahsAnger": {
+		"NAME": "Herrah's Anger",
+		"DESCRIPTION": "Deal !D! damage !M! Times. NL This damage can be augmented by [#696969]虚[]."
+	},
+	"HollowMod:HornetsHelp": {
+		"NAME": "Hornet's Help",
+		"DESCRIPTION": "获得 X Block and deal X damage to a random enemy !M! times.",
+		"UPGRADE_DESCRIPTION": "获得 X Block and deal X damage to a random enemy !M! times.."
+	},
+	"HollowMod:HowlingWraiths": {
+		"NAME": "Howling Wraiths",
+		"DESCRIPTION": "[#EFFAFF]集中[] !HollowMod:focusCost!: Deal !D! damage to ALL enemies."
+	},
+	"HollowMod:InfectionAssault": {
+		"NAME": "Infection Assault",
+		"DESCRIPTION": "Deal !D! damage, plus an additional !M! damage for every [#FFA200]传染[].",
+		"EXTENDED_DESCRIPTION": [" ( !HollowMod:SecondMagic! additional damage.)"]
+	},
+	"HollowMod:InfectedAttack": {
+		"NAME": "Infected Attack",
+		"DESCRIPTION": "造成 !D! 点伤害。 Apply !M! Poison. NL [#FFA200]传染[] 2."
+	},
+	"HollowMod:InfectedCysts": {
+		"NAME": "Infected Cysts",
+		"DESCRIPTION": "Deal !D! damage and apply !M! Poison to ALL enemies. NL [#FFA200]传染[] 3. Exhaust"
+	},
+	"HollowMod:MidwifesHunger": {
+		"NAME": "Midwife's Hunger",
+		"DESCRIPTION": "Deal !D! damage 1 time for every permanent [#60CFFF]Ally in your deck.",
+		"EXTENDED_DESCRIPTION": [" ( attacks !HollowMod:SecondMagic! times.)"]
+	},
+	"HollowMod:PogoStrike": {
+		"NAME": "Pogo Strike",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL Discard 1 card. Draw 1 card."
+	},
+	"HollowMod:PureNailStrike": {
+		"NAME": "Pure Nail Strike",
+		"DESCRIPTION": "[#EFFAFF]集中[] X: 造成 !D! 点伤害。 Deal an additional !M! damage for each hollowmod:Soul Spent.",
+		"EXTENDED_DESCRIPTION": [" ( !HollowMod:SecondMagic! additional damage.)"]
+	},
+	"HollowMod:QuirrelsAssistance": {
+		"NAME": "Quirrel's Assistance",
+		"DESCRIPTION": "Deal !D! damage to a random enemy. NL  Apply !M! Weak to a random enemy."
+	},
+	"HollowMod:RecoilStrike": {
+		"NAME": "Recoil Strike",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL Return a [#60CFFF]Dash card from your discard pile to hand.",
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Return a [#60CFFF]Dash card from your discard pile to hand. It costs 1 Less [E] this turn."
+	},
+	"HollowMod:SharpenedNail": {
+		"NAME": "Sharpened Nail",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL If the enemy is Weak, Deal the same damage to ALL other enemies. "
+	},
+	"HollowMod:SoulStrike": {
+		"NAME": "Soul Strike",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! Additional hollowmod:Soul."
+	},
+	"HollowMod:VengefulSpirit": {
+		"NAME": "Vengeful Spirit",
+		"DESCRIPTION": "[#EFFAFF]集中[] !HollowMod:focusCost!:  造成 !D! 点伤害。"
+	},
+	"HollowMod:VengefulVoid": {
+		"NAME": "Vengeful Void",
+		"DESCRIPTION": "[#696969]虚[] 2: Deal !D! damage !M! times. NL 消耗。"
+	},
+	"HollowMod:WraithStrike": {
+		"NAME": "Wraith Strike",
+		"DESCRIPTION": "[#696969]虚[] 1: Deal !D! damage and Apply !M! Weak. [#696969]虚[] Bonus affects this cards damage 2 times."
+	},
+	"HollowMod:ZotesMagnificence": {
+		"NAME": "Zote's Magnificence",
+		"DESCRIPTION": "Deal !D! damage, Lose ALL of your current Block. Exhaust"
+	},
+
+	"HollowMod:POWERCARDS": {
+		"NAME": "",
+		"DESCRIPTION": ""
+	},
+
+
+	"HollowMod:BaldurShell": {
+		"NAME": "Baldur Shell",
+		"DESCRIPTION": "Whenever you [#EFFAFF]集中[], 获得 !M! Block.",
+		"UPGRADE_DESCRIPTION": "Innate. Whenever you [#EFFAFF]集中[], 获得 !M! Block."
+	},
+	"HollowMod:BrokenVessel": {
+		"NAME": "Broken Vessel",
+		"DESCRIPTION": "Whenever you take damage from [#FFA200]传染[], deal that damage to ALL enemies. NL This Effect can Stack.",
+		"UPGRADE_DESCRIPTION": "Innate. Whenever you take damage from [#FFA200]传染[], deal that damage to ALL enemies. NL This Effect Can Stack."
+	},
+	"HollowMod:ElderbugsWisdom": {
+		"NAME": "Elderbug's Wisdom",
+		"DESCRIPTION": "Whenever you play an [#60CFFF]Ally card, draw 1 card."
+	},
+	"HollowMod:Flukenest": {
+		"NAME": "Flukenest",
+		"DESCRIPTION": "Whenever you play a [#60CFFF]魅力 , Deal 1 damage to !M! random enemies"
+	},
+	"HollowMod:Grubsong": {
+		"NAME": "Grubsong",
+		"DESCRIPTION": "The first time you take damage each turn, 获得 1 hollowmod:Soul.",
+		"UPGRADE_DESCRIPTION": "The first !M! times you take damage each turn, 获得 1 hollowmod:Soul."
+	},
+	"HollowMod:LordofShades": {
+		"NAME": "Lord of Shades",
+		"DESCRIPTION": "Ethereal NL [#696969]虚[] !M!: While [#696969]虚[] is active, 获得 1 Thorn for every 2 Block gained. ALL Thorn is reduced by half at the end of each turn."
+	},
+	"HollowMod:MothsMistake": {
+		"NAME": "Moth's Mistake",
+		"DESCRIPTION": "At the Start of your turn, apply !M! Poison to ALL enemies, and 获得 1 [#FFA200]传染[]."
+	},
+	"HollowMod:ShapeofUnn": {
+		"NAME": "Shape of Unn",
+		"DESCRIPTION": "Whenever you play a [#60CFFF]魅力, Return 1 [#60CFFF]Dash in your Discard pile to your hand."
+	},
+	"HollowMod:SharpenedShadows": {
+		"NAME": "Sharpened Shadows",
+		"DESCRIPTION": "While you have [#696969]虚[], Playing a [#60CFFF]Dash Card will deal !M! damage to a random enemy."
+	},
+	"HollowMod:SlysStrikes": {
+		"NAME": "Sly's Strikes",
+		"DESCRIPTION": "Ethereal. NL 获得 1 Strength at the beginning of each of your turns."
+	},
+	"HollowMod:SoulEater": {
+		"NAME": "Soul Eater",
+		"DESCRIPTION": "Whenever you play an attack card, generate 1 hollowmod:Soul . Doesn't work for [#60CFFF]魅力 or [#60CFFF]Ally attacks."
+	},
+	"HollowMod:SoulMaster": {
+		"NAME": "Soul Master",
+		"DESCRIPTION": "hollowmod:Soul [#60CFFF]魅力 cost 1 less hollowmod:Soul. NL [#696969]虚[] [#60CFFF]魅力 generate 1 more [#696969]虚[].",
+		"UPGRADE_DESCRIPTION": "Innate. NL hollowmod:Soul [#60CFFF]魅力 cost 1 less hollowmod:Soul. NL [#696969]虚[] [#60CFFF]魅力 generate 1 more [#696969]虚[]."
+	},
+	"HollowMod:SoulVessel": {
+		"NAME": "Soul Vessel",
+		"DESCRIPTION": "Increase the maximum hollowmod:Soul the [#F4D03F]Soul hollowmod:Meter can hold by !M! this combat."
+	},
+	"HollowMod:ThornsofAgony": {
+		"NAME": "Thorns of Agony",
+		"DESCRIPTION": "获得 !M! Thorns."
+	},
+	"HollowMod:Weaversong": {
+		"NAME": "Weaversong",
+		"DESCRIPTION": "Whenever you play an attack, deal !M! damage to a random enemy."
+	},
+	"HollowMod:WhiteLadysBlessing": {
+		"NAME": "White Lady's Blessing",
+		"DESCRIPTION": "[#696969]虚[] !M!: While you have [#696969]虚[], you may [#EFFAFF]集中[] NL The [#60CFFF]魅力 will be Exhausted."
+	},
+
+
+	"HollowMod:SKILLCARDS": {
+		"NAME": "",
+		"DESCRIPTION": ""
+	},
+
+
+	"HollowMod:BlackWings": {
+		"NAME": "Black Wings",
+		"DESCRIPTION": "Lose all [#696969]虚[] . NL For every !M! [#696969]虚[] lost, 获得 1 Plated Armor. NL 消耗。"
+	},
+	"HollowMod:ChannelNail": {
+		"NAME": "Channel Nail",
+		"DESCRIPTION": "[#EFFAFF]集中[] 3: Next turn, 获得 [E] and Draw 1 Extra Card. NL 消耗。",
+		"UPGRADE_DESCRIPTION": "[#EFFAFF]集中[] 3: Next turn, 获得 [E] and Draw 1 Extra Card."
+	},
+	"HollowMod:CloakDash": {
+		"NAME": "Cloak Dash",
+		"DESCRIPTION": "获得 !B! Block. NL Draw !M! card. NL 消耗。",
+		"UPGRADE_DESCRIPTION": "NL 获得 !B! Block. NL Draw !M! cards. NL 消耗。"
+	},
+	"HollowMod:ConfessorsAdvice": {
+		"NAME": "Confessor's Advice",
+		"DESCRIPTION": "NL Play the top card of your deck, add a copy of it to your discard pile. NL it costs 0 until played.",
+		"UPGRADE_DESCRIPTION": "Play the top card of your deck, add 2 copies of it to your discard pile. NL they cost 0 until played."
+	},
+	"HollowMod:CrystalDash": {
+		"NAME": "Crystal Dash",
+		"DESCRIPTION": "Discard your hand and 获得 !B! Block for each card discarded."
+	},
+	"HollowMod:DreamGate": {
+		"NAME": "Dream Gate",
+		"DESCRIPTION": "Exhaust a card, return the top card of Your Discard pile to your hand. Exhaust",
+		"UPGRADE_DESCRIPTION": "Exhaust a card, return the top 2 cards of Your Discard pile to your hand. Exhaust"
+	},
+	"HollowMod:DoubleDash": {
+		"NAME": "Double Dash",
+		"DESCRIPTION": "获得 !B! Block. NL 获得 !M! Block next turn."
+	},
+	"HollowMod:DungDefenderAura": {
+		"NAME": "Defender's Aura",
+		"DESCRIPTION": "获得 !B! Block. Whenever an enemy attacks you this turn, apply !M! Poison to them."
+	},
+	"HollowMod:EmbracetheVoid": {
+		"NAME": "WIP Embrace the Void ",
+		"DESCRIPTION": "Costs 1 [E] Less for each [#696969]虚[]. Draw Cards until you draw a [#696969]虚[] or draw 5 cards. Exhaust",
+		"UPGRADE_DESCRIPTION": "Costs 1 [E] Less for each [#696969]虚[]. Draw Cards until you draw a [#696969]虚[] or draw 5 cards."
+	},
+	"HollowMod:GoodIntentions": {
+		"NAME": "Good Intentions",
+		"DESCRIPTION": "获得 !B! Block. NL 获得 !M! hollowmod:Soul.",
+		"UPGRADE_DESCRIPTION": "获得 !B! Block. NL 获得 !M! hollowmod:Soul. NL 获得 1 Plated Armor"
+	},
+	"HollowMod:GrimmsGift": {
+		"NAME": "Grimm's Gift",
+		"DESCRIPTION": "Each time you damage an enemy this turn, apply 1 Vulnerable to them. "
+	},
+	"HollowMod:Hiveblood": {
+		"NAME": "Hiveblood",
+		"DESCRIPTION": "Lose !M! HP. 获得 half that amount as Regen. NL 消耗。"
+	},
+	"HollowMod:HuntersJournal": {
+		"NAME": "Hunter's Journal",
+		"DESCRIPTION": "Draw !M! Cards. Exhaust",
+		"UPGRADE_DESCRIPTION": "Draw !M! Cards, 获得 1 [E]. NL Exhaust"
+	},
+	"HollowMod:LifebloodCocoon": {
+		"NAME": "Lifeblood Cocoon",
+		"DESCRIPTION": "获得 !M! Temporary_HP each time you play an attack this turn."
+	},
+	"HollowMod:LifebloodCore": {
+		"NAME": "Lifeblood Core",
+		"DESCRIPTION": "Ethereal NL Lose all Block. NL 获得 !M! Temporary_HP for each Block lost. Exhaust",
+		"UPGRADE_DESCRIPTION": " Lose all Block. NL 获得 !M! Temporary_HP for each Block lost. Exhaust"
+	},
+	"HollowMod:LifebloodHeart": {
+		"NAME": "DEPRECATED Lifeblood Heart",
+		"DESCRIPTION": "获得 !M! Temporary_HP, If you take no unblocked damage this turn, repeat this effect next turn. NL 消耗。"
+	},
+	"HollowMod:LuriensSpire": {
+		"NAME": "Lurien's Spire",
+		"DESCRIPTION": "Remove all [#FFA200]传染[] and 获得 that amount of hollowmod:Soul. NL 消耗。",
+		"UPGRADE_DESCRIPTION": "Remove all [#FFA200]传染[] and 获得 that amount of hollowmod:Soul NL or, if you have [#696969]虚[], 获得 [#696969]虚[] instead. NL 消耗。"
+	},
+	"HollowMod:MantisClaw": {
+		"NAME": "DEPRECATED Mantis Claw",
+		"DESCRIPTION": "Exhaust 3 Cards in your hand. Draw 1 Card and Deal !D! damage to a single enemy for each card Exhausted. NL 消耗。"
+	},
+	"HollowMod:MantisMark": {
+		"NAME": "Mantis Mark",
+		"DESCRIPTION": "获得 !M! Strength. NL 消耗。"
+	},
+	"HollowMod:MawleksShell": {
+		"NAME": "Mawlek's Shell",
+		"DESCRIPTION": "获得 !M! Dexterity. NL [#FFA200]传染[] !HollowMod:SecondMagic!."
+	},
+	"HollowMod:MonarchWings": {
+		"NAME": "Monarch Wings",
+		"DESCRIPTION": "For the next !M! turns, double the Block of any [#60CFFF]Dash cards played. NL 消耗。"
+	},
+	"HollowMod:MonomonsArchive": {
+		"NAME": "Monomon's Archive",
+		"DESCRIPTION": "[#EFFAFF]集中[] 5: 获得 !B! Block."
+	},
+	"HollowMod:MylasSalvation": {
+		"NAME": "Myla's Salvation",
+		"DESCRIPTION": "Return a card from your Exhaust pile to your Hand. NL 消耗。"
+	},
+	"HollowMod:theNailsmith": {
+		"NAME": "The Nailsmith",
+		"DESCRIPTION": "Whenever a Non - [#60CFFF]魅力 attack is used this turn, upgrade it for the rest of the combat."
+	},
+	"HollowMod:Overcharmed": {
+		"NAME": "DEPRECATED Overcharmed",
+		"DESCRIPTION": "Lose 6 HP. 获得 !M! Strength until the end of the turn."
+	},
+	"HollowMod:PaleKingsBlessing": {
+		"NAME": "Pale King's Blessing",
+		"DESCRIPTION": "Heal !M! HP. Heal !HollowMod:SecondMagic! Additional HP for each [#FFA200]传染[].  消耗。"
+	},
+	"HollowMod:PerfectDash": {
+		"NAME": "Perfect Dash",
+		"DESCRIPTION": "获得 1 Intangible. NL 消耗。",
+		"UPGRADE_DESCRIPTION": "获得 1 Intangible. 获得 !B! Block. NL 消耗。"
+	},
+	"HollowMod:PureVessel": {
+		"NAME": "Pure Vessel",
+		"DESCRIPTION": "At the start of your turn, pay 1 hollowmod:Soul to 获得 1 Strength. NL These values increase by 1 each turn. If you cannot pay: lose this power and any gained Strength.",
+		"UPGRADE_DESCRIPTION": "Retain NL At the start of your turn Turn, pay 1 hollowmod:Soul to 获得 1 Strength. NL These values increase by 1 each turn. If you cannot pay: lose this power and any gained Strength."
+	},
+	"HollowMod:RadiancesLament": {
+		"NAME": "Radiance's Lament",
+		"DESCRIPTION": "Return all [#FFA200]Infection cards from your discard and Exhaust piles to your hand. Exhaust",
+		"UPGRADE_DESCRIPTION": "Return all [#FFA200]传染[] cards from your discard, draw and Exhaust piles to your hand. NL 消耗。 Retain."
+	},
+	"HollowMod:ShadowDash": {
+		"NAME": "Shadow Dash",
+		"DESCRIPTION": "[#696969]虚[] 2: 获得 2 Block. 获得 Additional Block equal to your [#696969]虚[] Level. Exhaust",
+		"UPGRADE_DESCRIPTION": "[#696969]虚[] 2: 获得 2 Block. 获得 Additional Block equal to your [#696969]虚[] Level.",
+		"EXTENDED_DESCRIPTION": [" ( !M! additional Block.)"]
+	},
+	"HollowMod:SiblingsShadow": {
+		"NAME": "Sibling's Shadow",
+		"DESCRIPTION": "[#696969]虚[] 1: Return !M! [#696969]虚[] cards from your Exhaust pile to your hand. NL 消耗。"
+	},
+	"HollowMod:SiblingsSouls": {
+		"NAME": "Sibling's Souls",
+		"DESCRIPTION": "Add a Copy of the next played attack or skill to your hand. NL 消耗。"
+	},
+	"HollowMod:SoulShaman": {
+		"NAME": "Soul Shaman",
+		"DESCRIPTION": "[#EFFAFF]集中[] 5: 获得 [E].",
+		"UPGRADE_DESCRIPTION": "[#EFFAFF]集中[] 5: 获得 [E] [E]."
+	},
+	"HollowMod:SoulSplash": {
+		"NAME": "Soul Splash",
+		"DESCRIPTION": "[#EFFAFF]集中[] !HollowMod:focusCost! : Apply !M! Vulnerable to ALL enemies. 抽 1 张牌。"
+	},
+	"HollowMod:SoulTotem": {
+		"NAME": "DEPRECATED Soul Totem",
+		"DESCRIPTION": "获得 !M! hollowmod:Soul. 抽 !HollowMod:SecondMagic! 张牌。 !HollowMod:SecondMagic!  NL 消耗。",
+		"UPGRADE_DESCRIPTION": "获得 !M! hollowmod:Soul. 抽 !HollowMod:SecondMagic! 张牌。 NL 消耗。"
+	},
+	"HollowMod:SporeShroom": {
+		"NAME": "WIP Spore Shroom",
+		"DESCRIPTION": "[#EFFAFF]集中[] 3: Discard up to 3 Cards. Heal 2 HP and Apply 1 Poison to all enemies for each Card Discarded. NL 消耗。"
+	},
+	"HollowMod:StalwartShell": {
+		"NAME": "DEPRECATED Stalwart Shell",
+		"DESCRIPTION": "获得 !M! #yPlated #yArmor. NL 消耗。"
+	},
+	"HollowMod:TaintedHusks": {
+		"NAME": "Tainted Husks",
+		"DESCRIPTION": "Apply 2 Poison to a random enemy !M! times. NL [#FFA200]传染[] 3."
+	},
+	"HollowMod:VoidDash": {
+		"NAME": "Void Dash",
+		"DESCRIPTION": "[#696969]虚[] 2: 获得 !B! Block. Whenever you are attacked this turn, deal !M! damage back and apply 2 Weak."
+	},
+
+	"HollowMod:NEWCARDS": {
+		"NAME": "Sorry Fish",
+		"DESCRIPTION": ""
+	},
+
+
+	"HollowMod:NewJinnsSoul": {
+		"NAME": "Jinn's Soul",
+		"DESCRIPTION": "Lose all hollowmod:Soul , [#696969]虚[] and [#FFA200]传染[] . 获得 1 Temporary_HP for each point lost. NL 消耗。"
+	},
+
+	"HollowMod:NewLittleFool": {
+		"NAME": "小傻瓜",
+		"DESCRIPTION": "消耗 一张牌。NL 如果你做, 造成 !D! 点伤害."
+	},
+	"HollowMod:NewLastStag": {
+		"NAME": "The Last Stag",
+		"DESCRIPTION": "Take a card from your draw pile into hand.",
+		"UPGRADE_DESCRIPTION": "Take a card from your draw pile into hand. NL Take a card from your discard pile into hand."
+	},
+	"HollowMod:NewGlowingWomb": {
+		"NAME": "Glowing Womb",
+		"DESCRIPTION": "At the start of your turn, if you have [#FFA200]传染[], 获得 !M! Block and  and lose 1 [#FFA200]传染[]. NL Block Gained Scales with Dexterity. NL [#FFA200]传染[] !HollowMod:SecondMagic!."
+	},
+	"HollowMod:NewInfectedGuardian": {
+		"NAME": "Infected Guardian",
+		"DESCRIPTION": "Can only be played if you have at least !M! [#FFA200]传染[], NL Double ALL enemies Poison. Double Your [#FFA200]传染[]。 NL 消耗。",
+		"UPGRADE_DESCRIPTION": "Not enough [#FFA200]传染[]"
+	}
+}

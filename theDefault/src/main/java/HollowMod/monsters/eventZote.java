@@ -147,7 +147,7 @@ public class eventZote extends AbstractMonster {
                 CardCrawlGame.music.silenceTempBgmInstantly();
 
                 AbstractDungeon.actionManager.addToBottom(new WaitAction(1.0f));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, this, new StrengthPower(p, this.falbuff)));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, this, new StrengthPower(p, this.falbuff), this.falbuff));
 
                 break;
             case 1: //Spit

@@ -1,0 +1,31 @@
+[
+  {
+    "PROPER_NAME": "[#EFFAFF]心灵",
+    "NAMES": [
+      "心灵 ",
+      "Soul"
+    ],
+    "DESCRIPTION": "独特的资源玩家可以花。  使用 [#EFFAFF]集中 激活 [#60CFFF]魅力."
+  },
+  {
+    "PROPER_NAME": "[#EFFAFF]心灵仪表",
+    "NAMES": [
+      "心灵仪表",
+      "心灵仪表",
+      "Meter"
+
+    ],
+    "DESCRIPTION": "拥有你的 [#EFFAFF]心灵 . 默认情况下 [#EFFAFF]心灵仪表 限制是 #b6 囤 [#EFFAFF]心灵."
+  },
+  {
+    "PROPER_NAME": "[#60CFFF]短跑 , [#60CFFF]盟友 , [#60CFFF]魅力",
+    "NAMES": [
+      "盟友",
+      "盟友",
+      "短跑",
+      "spell",
+      "魅力"
+    ],
+    "DESCRIPTION": "[#60CFFF]短跑 , [#60CFFF]盟友, [#60CFFF]魅力 除非有一个，否则这些没有特殊效果。"
+  }
+]

@@ -31,13 +31,13 @@ public class monsterHuskSentry extends AbstractMonster {
     // ****** MOVE AND STAT VALUES ********//
     private int attSlashDamage = 10;
     private int attSlashWk = 1;
-    private int attBravaDmg = 14;
+    private int attBravaDmg = 12;
     private int attBravaFrl = 2;
-    private int swingDmg = 4 ;
+    private int swingDmg = 4;
     private int swingHits = 3;
-    private int salutBuff = 1;
-    private int maxHP = 90;
-    private int minHP = 80;
+    private int salutBuff = 2;
+    private int maxHP = 75;
+    private int minHP = 65;
     private int HPlastturn = 100;
     // ******* END OF MOVE AND STAT VALUES *********//
 
@@ -65,7 +65,7 @@ public class monsterHuskSentry extends AbstractMonster {
 	final float offsetX, final float offsetY,
 	final boolean ignoreBlights: Not included as false by default?
 	*/
-        super(monsterHuskSentry.NAME, ID, 90, 0.0F, 0.0F, 200.0F, 400.0F, null, xOffset, 50.0F);
+        super(monsterHuskSentry.NAME, ID, 75, 0.0F, 0.0F, 200.0F, 400.0F, null, xOffset, 50.0F);
 
 
         if (AbstractDungeon.ascensionLevel >= 7)
@@ -80,6 +80,7 @@ public class monsterHuskSentry extends AbstractMonster {
             //for Ascenction 3 and higher, adds a bit more damage
             this.attSlashDamage += 2;
             this.salutBuff += 1;
+            this.swingDmg += 2;
         }
 
         if (AbstractDungeon.ascensionLevel >= 17)

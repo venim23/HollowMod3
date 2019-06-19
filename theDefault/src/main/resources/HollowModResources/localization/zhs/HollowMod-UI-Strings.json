@@ -1,0 +1,42 @@
+{
+  "HollowMod:Focus":
+  {
+    "TEXT": [
+      "[#EFFAFF]集中",
+      "失去这一数量的 #y心灵 来玩这张牌。"
+    ]
+  },
+  "HollowMod:Void":
+  {
+    "TEXT": [
+      "[#696969]虚",
+      "[#696969]虚 这将删除 #y心灵 并阻止 [#EFFAFF]集中。 NL [#696969]虚  这增加了 [#696969]虚 [#60CFFF]魅力 根据金额所造成的损害。 使受到的伤害提高 #r50％ NL [#696969]虚 在每个回合开始时下降 #b1。"
+    ]
+  },
+
+  "HollowMod:Infection":
+  {
+    "TEXT": [
+      "[#FFA200]传染",
+      "一个挥之不去的。[#FFA200]传染 [#FFA200]水平 在你的回合结束时损坏你并减少 #b2."
+    ]
+  },
+  "HollowMod:CardHeaders":
+  {
+    "TEXT":
+    [
+      "[none]",
+      "突",
+      "魅力",
+      "盟友",
+      "盟友  突",
+      "突  魅力",
+      "盟友  魅力",
+      "盟友  突  魅力"
+    ]
+  },
+  "HollowMod:DisableEnemies": {
+    "TEXT": ["Disable custom Enemies. (Must restart game, Zote Event Enemy will still be included.) "
+    ]
+  }
+}

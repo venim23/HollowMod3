@@ -2,6 +2,7 @@ package HollowMod.cards;
 
 import HollowMod.characters.TheBugKnight;
 import HollowMod.hollowMod;
+import HollowMod.patches.CardTagEnum;
 import HollowMod.powers.DungDefenderPower;
 import HollowMod.util.SoundEffects;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -56,6 +57,9 @@ public class skillDungDefenderAura extends AbstractHollowCard {
     public skillDungDefenderAura() {// This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
+        this.tags.add(CardTagEnum.ALLY);
+        this.SetCardHeader(CardHeaders.Ally);
+
         this.magicNumber = (this.baseMagicNumber = POISON);
     }
 
