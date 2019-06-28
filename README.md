@@ -1,6 +1,6 @@
 # The Bug Knight
 
-A Hollow Knight Themed Charachter (and more) mod for Lay the Spire
+A Hollow Knight Themed Charachter (and more) mod for Slay the Spire
 
 Hollow Knight and Associated Characters, Art, Story and Sounds propery of Team Cherry.
 
