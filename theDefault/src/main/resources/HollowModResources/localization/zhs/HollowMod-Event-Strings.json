@@ -1,72 +1,72 @@
 {
   "HollowMod:MylasSongHappyEvent": {
-    "NAME": "Myla's Song",
+    "NAME": "米拉之歌",
     "DESCRIPTIONS": [
-      "当你漫步在The Spire，你会遇到一个矿工，挖掘水晶，她的声音打破了沉默。 NL '喔， 埋葬我的母亲，苍白而轻微，闭着眼睛埋葬我的父亲！' NL '两个一个地埋葬我的姐妹，然后当你完成时，我们也要埋葬我！'",
-      "Ha ha ha, do you know that one? It's one of my f-favourites! NL We can sing something else if you like. You start singing and I'll join in. NL I bet you have a b-b-beautiful singing voice! Ha ha ha!",
-      "'Ohh, bury the knight with her broken nail, bury the lady, lovely and pale!' NL 'Bury the priest in his tattered gown, then bury the beggar with his shining croooown'",
-      "Myla Seems not to notice, but you can understand her thoughts. NL #bKeep #bwhispering, #bcrystals! NL [#FFA200]MORE... NL #bI #bcan #balmost #bhear #bwhat #byou're #bsaying!"
+      "当你在尖塔内漫游时，你遇见一个正在挖水晶的人。她的歌声打破了沉默。 NL “哦哦哦，埋葬我的母亲，她苍白又脆弱；埋葬我的父亲，他双眼紧紧闭！” NL “埋葬我的姐妹，两个两个土里去！等你干完手里活计，把我也埋土里！”",
+      "哈哈哈，你这到这首歌吗？这是我最最喜欢的一首！ NL 你愿意的话咱们也可以唱点别的。你起头，我跟着你唱。 NL 你的歌喉肯定很动动听！哈哈哈！",
+      "“哦哦哦，将骑士和她的骨钉一起埋葬；埋了这位夫人，她可爱又苍白！” NL “埋了法衣褴褛的教士，再埋了头冠闪耀的乞丐！”",
+      "米拉好像没有注意，但是你可以理解她的想法。 NL #b继续低吟吧，水晶！ NL [#FFA200]继续 …… NL #b我就要听到你们在说什么了！"
     ],
     "OPTIONS": [
-      "[Leave]",
-      "[Talk to Myla] #gRemove #ga #gCard #gfrom #gyour #gdeck.",
-      "Select a Card to Remove",
-      "[Listen] #gHeal #g",
-      " #gHP.",
-      "[Dream Nail] Learn More"
+      "[离开]",
+      "[与米拉聊天] #g从你的牌组中移除一张牌。 ",
+      "选择一张卡去移除",
+      "[聆听] #g回复 #g",
+      " #g滴血。",
+      "[梦之钉] 了解更多"
     ]
   },
     "HollowMod:MylasSongSadEvent": {
-      "NAME": "Myla's Fate",
+      "NAME": "米拉的命运",
       "DESCRIPTIONS": [
-        "As you wander through The Spire, you see Myla, she looks... different? NL Her voice breaks the silence. NL '... Bury ... [#FFA200]KNIGHT ... [#FFA200]DANGEROUS ... nail? Bury... Lady... [#FFA200]LIGHT... Pale??'",
-        "Myla Falls to the floor, Broken, the Color Drains from her Eyes, NL You feel a bit [#FFA200]Broken as well",
-        "Your current Dream Nail simply reveals her thoughts: NL #b...how #bmuch #blonger... [#FFA200]KILL [#FFA200]IT... #bmust #bI #bdig...? NL [#FFA200]OUR... [#FFA200]ANCIENT... [#FFA200]ENEMY...",
-        "The #bAwoken #bDream #bNail cleaves through the Infection and nothing else. NL Myla seems confused but happy to see you NL Every once in awhile you c-c-come to visit me! I'm glad... ha ha... I'm glad you like the sound of my voice!",
-        "I'll wait here forever...till light blooms again..."
+        "当你在尖塔内漫游时，你遇见米拉，她看起来…………有些不同？ NL 她的歌声打破了沉默。 NL “……埋葬…… [#FFA200]骑士 …… [#FFA200]危险 ……骨钉？埋葬……夫人…… [#FFA200]光芒……苍白？？”",
+        "米拉倒在地上，破碎，她的眼睛失去了光芒， NL 你心中也感觉到了 [#FFA200]破碎",
+        "你的梦之钉揭示了她的想法： NL #b我到底还要挖…… [#FFA200]消灭它 …… #b多久……？ NL [#FFA200]我们……古老……敌人",
+        "#b觉醒的梦之钉 穿透的只有感染。 NL 米拉看以来有些困惑但是很高兴见到你。 NL 你还会时不时地来看……看……看我！我真高兴……哈哈……真高兴你喜欢我的声音！",
+        "我会在这等下去的……直到光辉回复的时刻……"
       ],
       "OPTIONS": [
-        "[Leave]",
-        "[Kill Myla] #rRemove #rall Nail Strikes. #gGet #g4 Infected Attacks.",
-        "[Dream Nail] #rLose #r", " #rHP. #gGain #ga #yRare #gCard.",
-        "[Walk Away] Abandon Myla to her fate."
+        "[离开]",
+        "[杀死米拉] #r移除所有 钉击 #r。 #g得到4个 感染攻击 #g。",
+        "[梦之钉] #r失去 #r", " #r滴血。 #g获得一张稀有牌。",
+        "[走开] 接受米拉的命运"
       ]
     },
     "HollowMod:TheStagways": {
-      "NAME": "Exploring the Stagways",
+      "NAME": "探索鹿角虫道",
       "DESCRIPTIONS": [
-        "As you wander through The Spire, You hear a great rumbling, th[rough the tunnel charges a massive beetle. NL 'Greetings, little one! It's been an age since I last heard the ringing of a station bell.' NL 'It echoed down the stagways and called me to you. NL As I visit more places I feel my memories returning to me, like the stagways of my mind are running once more.'",
-        "'I tire so easily now, and my old legs seem to ache more and more. Still, I'm lucky to grow old at all... so many others haven't.'",
-        "The Stagways of the Spire lead to a lush green Jungle. NL 'My, this place much changed since I last saw it.' NL 'The greenery grows so wild the station's like to be consumed by it.' NL 'Still, I'd like to see more stations...'",
-        "The next station brings you to a massive City. NL 'Little one, we stand in the King's Station!' NL 'Named of course for the King of Hallownest,' NL 'he who ordered the building of the stagways and stations. NL ... Shall we press on?'",
-        "The final station is amid a strange land Beyond your understanding. 'Being back in my old home... I feel the weight of my long life bearing down on me.' NL 'I carry it proudly, though. Wherever I travel,' NL 'the memories of my family and my kind come with me. NL Thank you, little one'",
-        "'I can tell you still have important work to do, don't you little one?' NL 'I will be your companion as long as my old body still serves. NL Shall I help?'",
-        "Until we meet again."
+        "当你在尖塔内漫游时，你听见了隆隆声。隧道里突然冲出来一直大甲虫。 NL “你好，小家伙!上次听到车站响铃已经是很久以前的事了。” NL “铃声在鹿角虫道上回响，让我找到了你。 NL 我在这许多年里变得僵硬又疲倦，还忘记了许多东西。但只要听到铃声我就会回来。”",
+        "“我现在累的快，而且我这双老腿也一天不如一天。但是，我能活到老算是我的幸运……好多做不到这一点。”",
+        "尖塔的鹿角虫道带你们来到了一片丛林。 NL “比起我上次来的时候，这个地方真是变了好多。” NL “车站好似被绿叶给吞噬了。” NL “就算这样，我也是想多见一些车站啊……”",
+        "下一站带你们来到一个大型城市。 NL “小家伙！我们来到了王站！” NL “这自然是以圣巢国王而命名的，” NL “是他的命令建起了这些道路和车站。 NL ……我们继续吗？”",
+        "最后一站是在一个不可思议的大地中。“回到老家了……我能感到长寿的沉重。” NL “但是这也是我随我走的骄傲，” NL “我的家人和种族的记忆跟着我走。 NL 多谢你，小家伙。”",
+        "“你看起来是有重要的事去做的，是不是，小家伙？” NL “只要我这身体还能动，我就可以当你的伴侣。 NL 需要我的帮助吗？”",
+        "直到我们下次再见。"
      ],
       "OPTIONS": [
-        "[Leave]",
-        "[Unlock the Next Station] Costs #y",
-        " #yGold ",
-        "[Locked] Requires #y",
-        " #yGold.",
-        "[Accept] #gGain #g5 #gMax #gHP",
-        "[Accept] #gGain #ga #gUnique #gCard.",
-        "[Accept] #gGain #ga #gUnique #gRelic.",
-        "[Stop Here] Say goodbye to the stag.",
-        "[Return] Your journey is complete."
+        "[离开]",
+        "[解锁下一站] 花费 #y",
+        " #金币。",
+        "[未解锁] 需要 #y",
+        " #金币。",
+        "[接受] #g获得5最大生命值。",
+        "[接受] #g获得一张特殊卡。",
+        "[接受] #g获得一个特殊遗物。",
+        "[在这停下吧] 和鹿角虫再见。",
+        "[回去] 你的路程已完成。"
       ]
   },
   "HollowMod:ZoteMeetingEvent": {
-    "NAME": "The Great Knight",
+    "NAME": "伟大的骑士",
     "DESCRIPTIONS": [
-      "Making your way through the City, you bump into a huddled mass of Grey, NL 'Hoy! Watch where you're going, you soggy vagabond!' NL  'I don't want you splashing me. I've had a miserable time trying to keep dry.' NL 'I am Zote the Mighty, a knight of great renown.' NL 'My weapon, 'Life Ender' has struck down hundreds of foes. Begone, or you'll be next!'",
-      "Very well then. Zote the Mighty will grant your desire...",
-      "You must be one of my fans!, very well, you can touch 'Life Ender'. NL Bring it back once you understand my greatness."
+      "当你在城市中走的时候，你撞到了一团灰球， NL “嘿！走路看着点，你这个潮湿的流浪汉！” NL  “我不想你溅到我身上。想要保持干燥很费劲的！” NL “我是伟大的的佐特，声名卓著的骑士。” NL “再惹我试试，到时候你就会知道我的武器为什么叫‘生命终结者’”",
+      "来吧。伟大的佐特会实现你的愿望的……",
+      "原来你是我的粉丝！好吧，你可以碰下‘生命终结者’。 NL 当你理解我的强大的时候就还回来吧。"
     ],
     "OPTIONS": [
-      "[Leave]",
-      "[Fight!] Challenge Zote the Mighty.",
-      "[Pay] The Great and Mighty Knight #rDemands #rALL of your #yGold."
+      "[离开]",
+      "[战斗！] 挑战伟大的佐特。",
+      "[交钱] 声名卓著的骑士 #y要求 你 #r所有的 #y金币。"
     ]
   }
 }

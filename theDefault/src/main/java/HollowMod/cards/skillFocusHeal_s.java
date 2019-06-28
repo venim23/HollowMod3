@@ -72,7 +72,7 @@ public class skillFocusHeal_s extends AbstractHollowCard {
 
 
     public skillFocusHeal_s() {// This one and the one right under the imports are the most important ones, don't forget them
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET, FOCUSCOST);
+        super(ID, NAME, getimg(AbstractDungeon.ascensionLevel), COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET, FOCUSCOST);
         this.tags.add(CardTags.HEALING);
         this.SetCardHeader(CardHeaders.Spell);
         this.tags.add(CardTagEnum.SPELL);
@@ -81,6 +81,15 @@ public class skillFocusHeal_s extends AbstractHollowCard {
         this.hollowFocusCost = (hollowBaseFocusCost = FOCUSCOST);
         this.tags.add(CardTagEnum.SOULFOCUS);
 
+    }
+
+    private static String getimg(int alevel){
+
+        String IMG1 = IMG;
+        if (alevel >=8){
+            IMG1 = makeCardPath("skillFocusHeal2.png");
+        }
+        return IMG1;
     }
 
 

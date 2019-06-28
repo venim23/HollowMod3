@@ -1,31 +1,43 @@
 [
   {
-    "PROPER_NAME": "[#EFFAFF]心灵",
+    "PROPER_NAME": "[#EFFAFF]灵魂",
     "NAMES": [
-      "心灵 ",
-      "Soul"
+      "灵魂",
+      "灵魂"
     ],
-    "DESCRIPTION": "独特的资源玩家可以花。  使用 [#EFFAFF]集中 激活 [#60CFFF]魅力."
+    "DESCRIPTION": "一个特殊的资源。玩家能用 [#EFFAFF]聚集 来发出某些 [#60CFFF]法术 。"
   },
   {
-    "PROPER_NAME": "[#EFFAFF]心灵仪表",
+    "PROPER_NAME": "[#EFFAFF]灵魂限制",
     "NAMES": [
-      "心灵仪表",
-      "心灵仪表",
-      "Meter"
-
+      "限制",
+      "限制"
     ],
-    "DESCRIPTION": "拥有你的 [#EFFAFF]心灵 . 默认情况下 [#EFFAFF]心灵仪表 限制是 #b6 囤 [#EFFAFF]心灵."
+    "DESCRIPTION": "你的容器存有着 [#EFFAFF]灵魂 。初始时，你的 [#EFFAFF]最大灵魂限制 是 #b6 。"
   },
   {
-    "PROPER_NAME": "[#60CFFF]短跑 , [#60CFFF]盟友 , [#60CFFF]魅力",
+    "PROPER_NAME": "[#60CFFF]冲刺 ， [#60CFFF]同伴 ， [#60CFFF]法术",
     "NAMES": [
-      "盟友",
-      "盟友",
-      "短跑",
-      "spell",
-      "魅力"
+      "同伴",
+      "同伴",
+      "冲刺",
+      "法术",
+      "法术"
     ],
-    "DESCRIPTION": "[#60CFFF]短跑 , [#60CFFF]盟友, [#60CFFF]魅力 除非有一个，否则这些没有特殊效果。"
+    "DESCRIPTION": "[#60CFFF]冲刺 ， [#60CFFF]同伴 和 [#60CFFF]法术 没有什么特殊效果，但是别的东西可以影响他们的效果。"
+  },
+  
+  
+  
+  
+  
+    {
+    "PROPER_NAME": "雏儿",
+    "NAMES": [
+      "雏儿",
+      "雏儿",
+      "雏儿"
+    ],
+    "DESCRIPTION": "雏儿 牌是耗能为 #b0 的消耗攻击牌。 NL 根据玩家的状态 雏儿 牌会有不同的效果。"
   }
 ]

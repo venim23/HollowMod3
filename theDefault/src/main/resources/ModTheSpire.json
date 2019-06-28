@@ -3,7 +3,7 @@
   "name": "The Bug Knight",
   "author_list": ["Venim"],
   "description": "A mod that attempts to add the Knight from Hollow Knight as a Playable Character, NL All rights for Hollow Knight belong to Team Cherry. NL Please Support them by playing Hollow Knight: https://hollowknight.com/. NL Hollow Knight: Silksong is coming out soon! ",
-  "credits" : "Thanks in part due to the efforts of Gremious, the Great people at the STS Modding Discord, and of course: Team Cherry, Silksong HYPE",
+  "credits" : "Thanks in part due to the efforts of Gremious, the Great people at the STS Modding Discord, and of course: Team Cherry, Simplified Chinese Translations provided by AmethystProductions.",
   "version": "${project.version}",
   "sts_version": "${SlayTheSpire.version}",
   "mts_version": "${ModTheSpire.version}",

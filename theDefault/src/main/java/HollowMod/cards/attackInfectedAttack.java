@@ -50,21 +50,32 @@ public class attackInfectedAttack extends AbstractHollowCard {
     private static final int COST = 1;
 
     private static final int DAMAGE = 5;
-    private static final int POISON = 3;
+    private static final int POISON = 4;
     private static final int UPGRADE_PLUS_POISON = 2;
 
-    private static final int INFECTION = 2;
+    private static final int INFECTION = 3;
 
     // /STAT DECLARATION/
 
 
     public attackInfectedAttack() {// This one and the one right under the imports are the most important ones, don't forget them
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, getimg(AbstractDungeon.ascensionLevel), COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = POISON;
         defaultSecondMagicNumber = defaultBaseSecondMagicNumber = INFECTION;
         tags.add(CardTagEnum.INFECTION);
     }
+
+
+    private static String getimg(int alevel){
+
+        String IMG1 = IMG;
+        if (alevel >=3){
+            IMG1 = makeCardPath("attackInfectedAttack2.png");
+        }
+        return IMG1;
+    }
+
 
 
     // Actions the card should do.

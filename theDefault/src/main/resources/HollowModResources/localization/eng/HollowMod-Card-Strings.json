@@ -80,10 +80,14 @@
 		"NAME": "Heavy Blow",
 		"DESCRIPTION": "Deal !D! damage and apply !M! Weak."
 	},
-	"HollowMod:HerrahsAnger": {
-		"NAME": "Herrah's Anger",
-		"DESCRIPTION": "Deal !D! damage !M! Times. NL This damage can be augmented by [#696969]Void[]."
-	},
+
+
+
+
+
+
+
+
 	"HollowMod:HornetsHelp": {
 		"NAME": "Hornet's Help",
 		"DESCRIPTION": "Gain X Block and deal X damage to a random enemy !M! times.",
@@ -437,5 +441,44 @@
 		"NAME": "Infected Guardian",
 		"DESCRIPTION": "Can only be played if you have at least !M! [#FFA200]Infection[], NL Double ALL enemies Poison. Double Your [#FFA200]Infection[]. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Not enough [#FFA200]Infection[]"
+	},
+
+
+
+	"HollowMod:MORENEWCARDS": {
+		"NAME": "Sorry Amethyst!",
+		"DESCRIPTION": ""
+	},
+
+	"HollowMod:HerrahsAnger": {
+		"NAME": "Herrah's Nest",
+		"DESCRIPTION": "At the start of your next turn, add !M! hollowmod:Nestlings to your hand, plus an additional [#F4D03F]Nestling for each [#60CFFF]Ally card played this turn."
+	},
+
+
+
+
+
+
+
+	"HollowMod:NewNestling": {
+		"NAME": "Nestling",
+		"DESCRIPTION": "Deal !D! damage. NL Exhaust."
+	},
+	"HollowMod:NewInfectling": {
+		"NAME": "Infectling",
+		"DESCRIPTION": "Apply !M! Poison. NL Exhaust."
+	},
+	"HollowMod:NewDarkNestling": {
+		"NAME": "Dark Nestling",
+		"DESCRIPTION": "[#696969]Void[] 1: Deal !D! damage. For every !M! [#696969]Void[] increase the damage dealt by 1. NL Exhaust."
+	},
+	"HollowMod:NewSoulNestling": {
+		"NAME": "Spirit Nestling",
+		"DESCRIPTION": "[#EFFAFF]Focus[] 1: Deal !D! damage. Heal !M! HP. NL Exhaust."
+	},
+	"HollowMod:NewZoteling": {
+		"NAME": "Zoteling",
+		"DESCRIPTION": "Deal !D! damage. Draw !M! card. NL Exhaust."
 	}
 }

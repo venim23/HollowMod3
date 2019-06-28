@@ -74,7 +74,7 @@ public class attackWraithStrike extends AbstractHollowCard {
 
 
     public attackWraithStrike() {// This one and the one right under the imports are the most important ones, don't forget them
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, getimg(AbstractDungeon.ascensionLevel), COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.magicNumber = this.baseMagicNumber = WEAK;
         this.defaultSecondMagicNumber = this.defaultBaseSecondMagicNumber = VOID;
@@ -84,6 +84,16 @@ public class attackWraithStrike extends AbstractHollowCard {
         this.tags.add(CardTags.STRIKE);
 
     }
+
+    private static String getimg(int alevel){
+
+        String IMG1 = IMG;
+        if (alevel >=5){
+            IMG1 = makeCardPath("attackWraithStrike2.png");
+        }
+        return IMG1;
+    }
+
 
 
     public float calculateModifiedCardDamage(final AbstractPlayer player, final AbstractMonster mo, final float tmp) {

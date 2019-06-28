@@ -58,7 +58,7 @@ public class attackZotesMagnificence extends AbstractHollowCard {
 
 
     public attackZotesMagnificence() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, getimg(AbstractDungeon.ascensionLevel), COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.exhaust = true;
         this.SetCardHeader(CardHeaders.Ally);
@@ -66,6 +66,14 @@ public class attackZotesMagnificence extends AbstractHollowCard {
 
     }
 
+    private static String getimg(int alevel){
+
+        String IMG1 = IMG;
+        if (alevel >=7){
+            IMG1 = makeCardPath("attackZotesMagnificence2.png");
+        }
+        return IMG1;
+    }
 
     // Actions the card should do.
     @Override

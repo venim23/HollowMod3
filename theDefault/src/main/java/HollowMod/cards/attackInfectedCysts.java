@@ -66,10 +66,10 @@ public class attackInfectedCysts extends AbstractHollowCard {
 
     private static final int COST = 2;  // COST = 2
 
-    private static final int DAMAGE = 11;    // DAMAGE = 7
+    private static final int DAMAGE = 12;    // DAMAGE = 7
     private static final int POISON = 4;
-    private static final int UPGRADE_PLUS_POISON = 2;
-    private static final int INFECTION = 3;
+    private static final int UPGRADE_PLUS_POISON = 3;
+    private static final int INFECTION = 4;
 
 
     // /STAT DECLARATION/

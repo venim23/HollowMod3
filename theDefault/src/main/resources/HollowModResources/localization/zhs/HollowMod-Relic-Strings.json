@@ -1,9 +1,9 @@
 {
   "HollowMod:VesselMask": {
-    "NAME": "Knight's Mask",
-    "FLAVOR": "All vessels carry a mask.",
+    "NAME": "骑士的面具",
+    "FLAVOR": "所有的容器都带有面具。",
     "DESCRIPTIONS": [
-      "Gain #b1 #yhollowmod:Soul each time you play an Attack card. (Except #bhollowmod:Spell or #bAlly Attacks)"
+      "每当你打出一张攻击牌时，获得 #b1 #yhollowmod:灵魂 。（ hollowmod:法术 和 #b同伴 除外）"
     ]
   },
   "HollowMod:PlaceholderRelic": {
@@ -39,95 +39,95 @@
     ]
   },
   "HollowMod:VoidIdolRelic": {
-    "NAME": "Void Idol",
-    "FLAVOR": "A Mask formed of liquid from the Abyss, perfectly still.",
+    "NAME": "虚空偶像",
+    "FLAVOR": "一个从深渊中的液体形成，完全静止的面具。",
     "DESCRIPTIONS": [
-      "Replaces Vessel's Mask or King's Soul. You can no longer Gain #ySoul. [#696969]Void[] cards lose #yExhaust. At the beginning of each combat, #r-1 #yDexterity, #r-1 #yStrength."
+      "替换骑士的面具或者国王之魂。你不能获得 #y灵魂 。 [#696969]虚空[] 牌失去 #y消耗 。在每场战斗开始时： #r-1 #y敏捷 ， #r-1 #y力量 。"
     ]
   },
   "HollowMod:QueensCombRelic": {
-    "NAME": "Queens Comb",
-    "FLAVOR": "Golden nugget of the Hive's precious comb.",
+    "NAME": "王后蜂窝",
+    "FLAVOR": "流着蜂巢珍贵的金液。",
     "DESCRIPTIONS": [
-      "Upon Pickup #rLose #r50% #rMax #rHP. Until you take health damage each combat: At the beginning of your turn: heal for #g",
+      "捡起时， #r丢失50%最大血量值 。每回合开始时（直到你战斗第一次受到伤害）：回血#g",
       " #gHP."
     ]
   },
   "HollowMod:LifeEnderRelic": {
-    "NAME": "Life Ender",
-    "FLAVOR": "Another fool to be cut down by Life Ender...",
+    "NAME": "生命终结者",
+    "FLAVOR": "又一条命……",
     "DESCRIPTIONS": [
-      "Draw a card after playing #b5 attacks."
+      "每打出 #b5 张牌时，抓一张牌。"
     ]
   },
   "HollowMod:MillibellesNoteRelic": {
-    "NAME": "Millibelle's Note",
-    "FLAVOR": "Still not interested? You're far too hesitant.",
+    "NAME": "米莉贝莉的信条",
+    "FLAVOR": "你还是不感兴趣吗？你太迟疑了。",
     "DESCRIPTIONS": [
-      "Begin each combat with #b2 #ySoul."
+      "在每场战斗开始时，获得 #b2 #y灵魂。"
     ]
   },
   "HollowMod:MantisClawRelic": {
-    "NAME": "Mantis Claw",
-    "FLAVOR": "Claw carved from bone.",
+    "NAME": "螳螂爪",
+    "FLAVOR": "由骨尔做。",
     "DESCRIPTIONS": [
-      "Whenever you play #b3 [#60CFFF]Dash cards in one turn, gain #b1 [E]"
+      "每当你在一回合内打出 #b3 张 [#60CFFF]冲刺 牌时，获得 #b1 [E] 。"
     ]
   },
   "HollowMod:JonisBlessing": {
-    "NAME": "Joni's Blessing",
-    "FLAVOR": "Blessed by Joni, the kindly heretic. Transfigures vital fluids into blue lifeblood.",
+    "NAME": "乔尼的祝福",
+    "FLAVOR": "乔尼，慈善的异教徒，的祝福。 将重要的液体变成生命血。",
     "DESCRIPTIONS": [
-      "Begin each combat with #b15 #bTemporary #bHP. Healing in combat instead increases #bTemporary #bHP.)"
+      "在每场战斗开始时，获得 #b15 #b暂时血量 。在战斗时回血会变成 #b暂时血量 。"
     ]
   },
   "HollowMod:IsmasTear": {
-    "NAME": "Isma's Tear",
-    "FLAVOR": "Fruit formed from a single hardened tear.",
+    "NAME": "伊斯玛的眼泪",
+    "FLAVOR": "从一滴眼泪形成的果肉。",
     "DESCRIPTIONS": [
-      "Whenever[#FFA200]Infection damages you, take #b1 less damage."
+      "每当 [#FFA200]感染 对你造成伤害时，你受到的伤害 #b-1 。"
     ]
   },
   "HollowMod:DelicateFlower": {
-    "NAME": "Delicate Flower",
-    "FLAVOR": "The Grey Mourner sends her Love.",
+    "NAME": "娇嫩的花",
+    "FLAVOR": "灰色哀悼者的爱。",
     "DESCRIPTIONS": [
-      "If your HP is Full, gain Max Soul at the Beginning of Each turn."
+      "如果你是满血，在每回合开始时获得满 #y灵魂 。"
     ]
   },
   "HollowMod:KingsBrand": {
-    "NAME": "The King's Brand",
-    "FLAVOR": "Hallownest's ancient places shall open before it.",
+    "NAME": "王之烙印",
+    "FLAVOR": "圣巢的古老深处会比他先打开。",
     "DESCRIPTIONS": [
-      "As long as you have enough [#FFA200]Infection, [#EFFAFF]Focus[] will spend [#FFA200]Infection instead of #ySoul (Even while in [#696969]Void[])."
+      "只要你有足够的 [#FFA200]感染 ， [#EFFAFF]聚集[] 使用 [#FFA200]感染 ，而不是 #y灵魂 。（即使你有 [#696969]虚空[]）"
     ]
   },
   "HollowMod:StagPassRelic": {
-    "NAME": "Stag's Pass",
-    "FLAVOR": "The sound of the bell will always call me back.",
+    "NAME": "鹿角证",
+    "FLAVOR": "只要听到铃声我就会回来。",
     "DESCRIPTIONS": [
-      "Cards Purchased from Shops are automatically upgraded."
+      "从商店买的牌时升级的。"
     ]
   },
   "HollowMod:KingsSoulRelic": {
-    "NAME": "King's Soul",
-    "FLAVOR": "Holy charm symbolising a union between higher beings.",
+    "NAME": "国王之魂",
+    "FLAVOR": "神圣点缀，代表了高等生物的联盟。",
     "DESCRIPTIONS": [
-      "Replaces Vessel Mask or [#696969]Void[] Idol. Gain #b3 #ySoul at the beginning of each round, increase #ySoul #yMeter #yLimit by #b2"
+      "替换骑士的面具或者 [#696969]虚空[] 偶像。在每回合开始时，获得 #b3 #y灵魂 ，你 #y最大灵魂限制 #b+2 。"
     ]
   },
   "HollowMod:GodTunerRelic": {
-    "NAME": "GodTuner",
-    "FLAVOR": "Device that resonates with beings of great power.",
+    "NAME": "神之调谐器",
+    "FLAVOR": "会与强大的存在共鸣的机器。",
     "DESCRIPTIONS": [
-      "Gain #b1 [E] at the start of each turn. #ySoul #yMeter #yLimit is reduced by #b3."
+      "每回合开始时，获得 #b1 [E] 。你 #y最大灵魂限制 #b-3 。"
     ]
   },
   "HollowMod:GreatKnightMask": {
-    "NAME": "The Great Knight's Mask",
-    "FLAVOR": "Fear not, cur... Your death will be swift",
+    "NAME": "伟大的骑士的面具",
+    "FLAVOR": "不要怕，杂种……你会死的很快的。",
     "DESCRIPTIONS": [
-      "Zote needs no effect."
+      "佐特不需要任何效果。"
     ]
   }
 }

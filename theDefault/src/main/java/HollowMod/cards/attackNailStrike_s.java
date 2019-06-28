@@ -67,12 +67,20 @@ public class attackNailStrike_s extends AbstractHollowCard {
 
 
     public attackNailStrike_s() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, getimg(AbstractDungeon.ascensionLevel), COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.tags.add(CardTags.STRIKE);
         tags.add(BaseModCardTags.BASIC_STRIKE);
     }
 
+    private static String getimg(int alevel){
+
+        String IMG1 = IMG;
+        if (alevel >=4){
+            IMG1 = makeCardPath("attackNailStrike2.png");
+        }
+        return IMG1;
+    }
 
     // Actions the card should do.
     @Override

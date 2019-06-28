@@ -1,18 +1,18 @@
 {
         "HollowMod:VoidPotion": {
-                "NAME": "Void Potion",
-                "DESCRIPTIONS": ["Gain ", " Void."]
+                "NAME": "虚空药水",
+                "DESCRIPTIONS": ["获得 ", " 点虚空。"]
         },
         "HollowMod:SoulPotion": {
-                "NAME": "Soul Potion",
-                "DESCRIPTIONS": ["Gain ", " Soul."]
+                "NAME": "灵魂药水",
+                "DESCRIPTIONS": ["获得 ", " 点灵魂。"]
         },
         "HollowMod:LifebloodPotion": {
-                "NAME": "Lifeblood Potion",
-                "DESCRIPTIONS": ["Gain ", " Temporary Health."]
+                "NAME": "生命血药水",
+                "DESCRIPTIONS": ["获得 ", " 点暂时血量。"]
         },
         "HollowMod:InfectionPotion": {
-                "NAME": "Infected Potion",
-                "DESCRIPTIONS": ["Apply", " Poison, and gain ", "Infection."]
+                "NAME": "感染药水",
+                "DESCRIPTIONS": ["给与 ", " 层中毒然后获得 ", " 层感染。"]
         }
 }

@@ -51,11 +51,20 @@ public class attackHornetsHelp extends AbstractHollowCard {
 
 
     public attackHornetsHelp() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, getimg(AbstractDungeon.ascensionLevel), COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.SetCardHeader(CardHeaders.Ally);
         this.tags.add(CardTagEnum.ALLY);
         magicNumber = baseMagicNumber = MAGIC;
 
+    }
+
+    private static String getimg(int alevel){
+
+        String IMG1 = IMG;
+        if (alevel >=9){
+            IMG1 = makeCardPath("attackHornetsHelp2.png");
+        }
+        return IMG1;
     }
 
     public void applyPowers() {

@@ -58,12 +58,21 @@ public class skillMantisMark extends AbstractHollowCard {
     // /STAT DECLARATION/
 
     public skillMantisMark() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, getimg(AbstractDungeon.ascensionLevel), COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.SetCardHeader(CardHeaders.Ally);
         this.tags.add(CardTagEnum.ALLY);
         this.magicNumber = this.baseMagicNumber = STRENGTH;
         this.exhaust = true;
 
+    }
+
+    private static String getimg(int alevel){
+
+        String IMG1 = IMG;
+        if (alevel >=18){
+            IMG1 = makeCardPath("skillMantisMark2.png");
+        }
+        return IMG1;
     }
 
     // Actions the card should do.

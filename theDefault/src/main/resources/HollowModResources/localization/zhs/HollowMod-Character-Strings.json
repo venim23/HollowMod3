@@ -1,13 +1,13 @@
 {
   "HollowMod:BugKnightCharacter": {
     "NAMES": [
-      "The Bug Knight",
-      "the Bug Knight"
+      "虫骑士",
+      "虫骑士"
     ],
     "TEXT": [
-      "A Vessel Born of Pale remorse, filled by the Void, NL This silent protagonist of slight stature is stronger than it appears. ",
-      "NL You Pierce the heart.",
-      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~'Small you may be, but join us, and your bite will be feared..'"
+      "一个从苍白怜悯出生的容器，充满了虚空， NL 这个小巧沉默的主角比它的样貌看起来要强很多。",
+      "NL 你穿刺了心脏。",
+      "在一条昏暗的街上，你遇见几个戴着兜帽的人在进行某种黑暗的仪式。当你靠近时，他们全都同时转身面对你，让你觉得十分诡异。 其中个子最高的一个微微一笑，露出了长长的尖牙，向你伸出了一只苍白而瘦长的手： NL ~“你虽然小，但是只要加入我们，你和你的尖牙会被畏惧的……”"
     ]
   }
 }

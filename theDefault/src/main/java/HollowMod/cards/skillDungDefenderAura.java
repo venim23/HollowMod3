@@ -55,12 +55,21 @@ public class skillDungDefenderAura extends AbstractHollowCard {
 
 
     public skillDungDefenderAura() {// This one and the one right under the imports are the most important ones, don't forget them
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, getimg(AbstractDungeon.ascensionLevel), COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
         this.tags.add(CardTagEnum.ALLY);
         this.SetCardHeader(CardHeaders.Ally);
 
         this.magicNumber = (this.baseMagicNumber = POISON);
+    }
+
+    private static String getimg(int alevel){
+
+        String IMG1 = IMG;
+        if (alevel >=13){
+            IMG1 = makeCardPath("skillDungDefendersAura2.png");
+        }
+        return IMG1;
     }
 
 

@@ -1,108 +1,108 @@
 {
 	"HollowMod:NKGrimm": {
 		"MOVES":[
-			"Fire Bats",
-			"Flame Pillar",
-			"Ritual of Fire",
-			"Flame Cloak",
-			"Unblockable Punch",
-			"Cloak Spikes",
-			"Swaddled Flames",
-			"Channel Power",
-			"Released Fury"
+			"火焰蝙蝠",
+			"火柱",
+			"炎火仪式",
+			"火焰披风",
+			"穿透拳",
+			"披风刺",
+			"包裹火焰",
+			"积聚能量",
+			"愤怒爆发"
 			
 		],
-		"NAME": "Nightmare King Grimm",
+		"NAME": "梦魇国王格林",
 		"DIALOG": [
-			"Dance with me, my friend. The crowd awaits. NL Show them you are worthy of a starring role!",
-			"#rThe #rRitual...",
-			"#rHeart #rof #rFlame...",
-			"Our scarlet eyes will watch you keenly... friend."
+			"朋友，与我起舞吧。观众等着呢。 NL 展现给他们你主演的价值！",
+			"#r仪式……",
+			"#r火之心……",
+			"我们型红色的眼睛会专注你的……朋友。"
 		]
 	},
 	"HollowMod:FalseKnight":{
 		"MOVES": [
-			"Slam",
-			"Heavy Smash",
-			"Charge",
-			"Rampage",
-			"Exposed"
+			"猛撞",
+			"重锤",
+			"冲击",
+			"乱闹",
+			"暴露"
 		],
-		"NAME": "The False Knight",
+		"NAME": "假骑士",
 		"DIALOG": [
-			"This great shell... NL ...It belongs to me!",
-			"I wanted... NL ...The strength to protect the others..."
+			"这大壳…… NL ……是属于我的！",
+			"我只是想要…… NL ……能保护他人的力量……"
 		]
 	},
     "HollowMod:Radiance":{
         "MOVES" : [
-			"Rising Dusk",
-			"Breaking Dawn",
-			"Sword Wall",
-			"Sword Rain",
-			"Charging Light",
-			"Burning Sun",
-			"Last Light"
+			"升起黄昏",
+			"破晓",
+			"剑墙",
+			"剑雨",
+			"冲击光",
+			"太阳燃烧",
+			"最后之光"
 		],
-        "NAME" : "The Radiance",
+        "NAME" : "辐光",
         "DIALOG": [
-		"[#FFA200]...ANCIENT [#FFA200]ENEMY...",
-		"[#FFA200]...DAWN [#FFA200]WILL [#FFA200]BREAK...",
-		"[#FFA200]...THIS [#FFA200]LIGHT [#FFA200]CANNOT [#FFA200]BE [#FFA200]CONSUMED...",
-		"[#FFA200]...I [#FFA200]WILL [#FFA200]NOT [#FFA200]BE [#FFA200]FORGOTTEN..."
+		"[#FFA200]……永久的敌人……",
+		"[#FFA200]……黎明会破碎的……",
+		"[#FFA200]……光是不会被吞噬的……",
+		"[#FFA200]……我是不会被忘却的……"
 		
 		]
     },
 	"HollowMod:StalkingDevout":{
 		"MOVES" : [],
-		"NAME" : "Stalking Devout",
+		"NAME" : "跟踪虔诚",
 		"DIALOG": []
 	},
 	"HollowMod:LittleWeaver":{
 		"MOVES" : [],
-		"NAME" : "Little Weaver",
+		"NAME" : "小编制者",
 		"DIALOG": []
 	},
 	"HollowMod:MossKnight":{
 		"MOVES" : [
-			"Spit",
-			"Ready Stance",
-			"Leaf Me Alone",
-			"Recovery"
+			"吐",
+			"准备站姿",
+			"离开我",
+			"回复"
 		],
-		"NAME" : "Moss Knight",
+		"NAME" : "苔癣骑士",
 		"DIALOG": [
-			"So... Tired... NL Let us rest...",
-			"...New light, in our leaves...",
-			"Unn... Protect us..."
+			"好累…… NL 让我们休息吧……",
+			"……新光，在我们叶子里……",
+			"乌恩…… 保护我们……"
 		]
 	},
 	"HollowMod:HuskWarrior":{
 		"MOVES" : [],
-		"NAME" : "Husk Warrior",
+		"NAME" : "虚壳战士",
 		"DIALOG": []
 	},
 	"HollowMod:HuskSentry":{
 		"MOVES" : [],
-		"NAME" : "Husk Sentry",
+		"NAME" : "虚壳哨兵",
 		"DIALOG": []
 	},
 	"HollowMod:ViolentHusk":{
 		"MOVES" : [
-			"Charge",
-			"Burst",
-			"Swell"
+			"冲锋",
+			"爆裂",
+			"膨胀"
 		],
-		"NAME" : "Violent Husk",
+		"NAME" : "狂暴虚壳",
 		"DIALOG": []
 	},
 	"HollowMod:SlobberingHusk":{
 		"MOVES" : [
-			"Hop",
-			"Burst",
-			"Spew"
+			"跳",
+			"爆",
+			"吐"
 		],
-		"NAME" : "Slobbering Husk",
+		"NAME" : "流口水的虚壳",
 		"DIALOG": []
 	},
 	"HollowMod:Flukemon":{
@@ -124,7 +124,7 @@
 		"MOVES" : [
 			""
 		],
-		"NAME" : "Nosk",
+		"NAME" : "诺斯克",
 		"DIALOG": [
 			""
 

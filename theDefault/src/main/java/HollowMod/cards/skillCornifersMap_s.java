@@ -68,7 +68,7 @@ public class skillCornifersMap_s extends AbstractHollowCard {
     // /STAT DECLARATION/
 
     public skillCornifersMap_s() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, getimg(AbstractDungeon.ascensionLevel), COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.hollowFocusCost = (hollowBaseFocusCost = FOCUSCOST);
         this.magicNumber = this.baseMagicNumber = CARDDRAW;
         this.SetCardHeader(CardHeaders.AllySpell);
@@ -76,6 +76,15 @@ public class skillCornifersMap_s extends AbstractHollowCard {
         this.tags.add(CardTagEnum.SPELL);
         this.tags.add(CardTagEnum.SOULFOCUS);
 
+    }
+
+    private static String getimg(int alevel){
+
+        String IMG1 = IMG;
+        if (alevel >=17){
+            IMG1 = makeCardPath("skillCornifersMap2.png");
+        }
+        return IMG1;
     }
 
     // Actions the card should do.

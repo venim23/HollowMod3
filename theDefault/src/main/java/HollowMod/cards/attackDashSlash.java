@@ -69,13 +69,22 @@ public class attackDashSlash extends AbstractHollowCard {
 
 
     public attackDashSlash() {// This one and the one right under the imports are the most important ones, don't forget them
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, getimg(AbstractDungeon.ascensionLevel), COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.SetCardHeader(CardHeaders.Dash);
         this.baseDamage = DAMAGE;
         this.baseBlock = BLOCK;
 
         this.tags.add(CardTagEnum.DASH);
 
+    }
+
+    private static String getimg(int alevel){
+
+        String IMG1 = IMG;
+        if (alevel >=10){
+            IMG1 = makeCardPath("attackDashSlash2.png");
+        }
+        return IMG1;
     }
 
 

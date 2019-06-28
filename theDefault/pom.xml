@@ -3,7 +3,7 @@
     <groupId>Venim</groupId>
     <artifactId>HollowMod</artifactId>
     <!--<version>1.4.0</version>-->
-    <version>1.1.6</version>
+    <version>1.5</version>
     <name>HollowMod</name>
 
     <properties>

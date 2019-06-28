@@ -45,8 +45,17 @@ public class powerGrubsong extends AbstractHollowCard {
     // /STAT DECLARATION/
 
     public powerGrubsong() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, getimg(AbstractDungeon.ascensionLevel), COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         magicNumber = (baseMagicNumber = TIMES_ATTACKED);
+    }
+
+    private static String getimg(int alevel){
+
+        String IMG1 = IMG;
+        if (alevel >=19){
+            IMG1 = makeCardPath("powerGrubsong2.png");
+        }
+        return IMG1;
     }
 
     // Actions the card should do.

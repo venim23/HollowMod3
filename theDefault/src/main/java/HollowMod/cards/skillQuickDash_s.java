@@ -65,13 +65,21 @@ public class skillQuickDash_s extends AbstractHollowCard {
 
 
     public skillQuickDash_s() {// This one and the one right under the imports are the most important ones, don't forget them
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, getimg(AbstractDungeon.ascensionLevel), COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
         this.SetCardHeader(CardHeaders.Dash);
         tags.add(BaseModCardTags.BASIC_DEFEND);
         tags.add(CardTagEnum.DASH);
     }
 
+    private static String getimg(int alevel){
+
+        String IMG1 = IMG;
+        if (alevel >=6){
+            IMG1 = makeCardPath("skillQuickDash2.png");
+        }
+        return IMG1;
+    }
 
     // Actions the card should do.
     @Override

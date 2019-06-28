@@ -57,11 +57,19 @@ public class attackAwokenDreamNail extends CustomCard {
 
 
     public attackAwokenDreamNail() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, getimg(AbstractDungeon.ascensionLevel), COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.tags.add(CardTagEnum.SOULFOCUS);
     }
 
+    private static String getimg(int alevel){
+
+        String IMG1 = IMG;
+        if (alevel >=20){
+            IMG1 = makeCardPath("attackAwokenDreamNail2.png");
+        }
+        return IMG1;
+    }
 
     // Actions the card should do.
     @Override

@@ -1,212 +1,244 @@
 {
   "HollowMod:BaldurShellPower": {
-    "NAME": "博德之门 贝壳",
+    "NAME": "巴德尔之壳",
     "DESCRIPTIONS": [
-      "每次使用 [#EFFAFF]集中 #y心灵， 得到 #b",
-      " 点 #y格挡。"
+      "每当你 [#EFFAFF]聚集 #y灵魂,获得 #b",
+      " 点格挡。"
     ]
   },
   "HollowMod:BrokenVesselPower": {
-    "NAME": "破 容器",
+    "NAME": "残破容器",
     "DESCRIPTIONS": [
-      "每当你从 [#FFA200]感染 受到伤害时， 对所有敌人造成同样的伤害。"
+      "每当你收到 [#FFA200]感染 伤害时：对所有敌人造成同样的伤害。"
     ]
   },
   "HollowMod:DungDefenderPower": {
-    "NAME": "粪 辩护人 灵气",
+    "NAME": "粪虫防御者",
     "DESCRIPTIONS": [
-      "每受到一次 #y攻击 这一轮 ，将 #b", " 中毒 应用于攻击者 。"
+      "这回合，每当你收到伤害时：给与攻击者 #b", " 层 中毒 。"
     ]
   },
   "HollowMod:ElderbugPower": {
-    "NAME": "老甲虫 智慧",
+    "NAME": "虫长老的智慧",
     "DESCRIPTIONS": [
-      "你每打出一张 牌 #b盟友牌 ， 抽 #b1 张牌。"
+      "每当你用一张 #同伴 牌，抓 #b1 张牌。"
     ]
   },
   "HollowMod:FlameCastPower": {
-    "NAME": "充电 火焰铸造",
+    "NAME": "准备火焰释放",
     "DESCRIPTIONS": [
-      "很快所有区块都会受到伤害。"
+      "在聚能后， 格林 会吸收剩余的格挡，然后照成那么多伤害。"
     ]
   },
   "HollowMod:FlameCloakPower": {
     "NAME": "火焰披风",
     "DESCRIPTIONS": [
-      "每受到一次 #y攻击 ，造成 #b",
-      " 点反伤。 每轮失去一半的积分。"
+      "每当你收到伤害时：对攻击者造成 #b",
+      " 点伤害。每回合失去一半层数。"
     ]
   },
   "HollowMod:FlukenestPower": {
-    "NAME": "Flukenest",
+    "NAME": "吸虫之巢",
     "DESCRIPTIONS": [
-      "",
-      ""
+      "每当你使用一张 #b法术牌 ：对 #b",
+      " 个随机敌人造成 #b1 点伤害。"
     ]
   },
   "HollowMod:GrimmGiftPower": {
-    "NAME": "严肃 礼物",
+    "NAME": "格林的礼物",
     "DESCRIPTIONS": [
-      "给予 #b1 #y易伤  每次你在这一轮造成伤害。"
+      "给每个这回合攻击过的敌人 #b1 点 #y易伤。"
     ]
   },
   "HollowMod:GrubsongPower": {
-    "NAME": "蝤 歌曲",
+    "NAME": "幼虫之歌",
     "DESCRIPTIONS": [
-      "第 #b",
-      " 轮我第一次第一次受伤， 获取 #b1 #y心灵。",
-      " 次我每回合都受伤了， 获取 #b1 #y心灵。"
+      "每回合前 #b",
+      " 次受到伤害时：获得1个 #y灵魂。",
+      " 次受到伤害时：获得1个 #y灵魂。"
     ]
   },
   "HollowMod:InfectionPower": {
-    "NAME": "感染 量",
+    "NAME": "感染",
     "DESCRIPTIONS": [
-      "在你的回合结束时，受到 #b",
-      " 点伤害。 在你的回合结束时，失去 #b2 [#FFA200]感染 点 。"
+      "在回合结束时：收到 #b",
+      " 点伤害，然后将 [#FFA200]感染 [#FFA200]层数减少 #b2 。"
     ]
   },
   "HollowMod:LifeCocoonPower": {
-    "NAME": "人生血 茧",
+    "NAME": "生命血之茧",
     "DESCRIPTIONS": [
-      "你每打出一张 #y攻击牌 ， 获得 #b",
-      " #b暂时性生命。"
+      "这回合内，每当你使用一张攻击牌，获得 #b",
+      " 点 #b暂时 #b血量 。"
     ]
   },
   "HollowMod:LifeHeartPower": {
-    "NAME": "Lifeblood Heart",
+    "NAME": "生命血之心",
     "DESCRIPTIONS": [
-      "",
-      ""
+      "这回合内，如果你没有收到未被格挡的伤害，下回合获得 #b",
+      " 点 #b暂时 #b血量 。"
     ]
   },
   "HollowMod:MonarchWingsPower": {
-    "NAME": "君主的翅膀",
+    "NAME": "帝王之翼",
     "DESCRIPTIONS": [
-      "对你造成 #b",
-      " 点伤害。来自 #b突 牌 的 #y格挡 的数量加倍。"
+      "在下 #b",
+      " 回合内，所有 #b冲刺 牌的格挡翻倍。"
     ]
   },
   "HollowMod:MothsMistakePower": {
-    "NAME": "蛀 误",
+    "NAME": "飞蛾的错误",
     "DESCRIPTIONS": [
-      "在你的回合开始时， 给予所有敌人 #b",
-      " 层 #y中毒 ， 得到 [#FFA200]感染 #b",
-      " 点。"
+      "在你的回合开始时：给与所有敌人 #b",
+      " 层中毒，你得到 #b",
+      " 层 [#FFA200]感染。"
     ]
   },
   "HollowMod:NailsmithPower": {
-    "NAME": "钉 主",
+    "NAME": "钉子匠",
     "DESCRIPTIONS": [
-      "你在这回合每打出一张攻击牌， 升级那张卡。"
+      "这回合内，每当你使用一张攻击牌， #y升级 这张牌。"
     ]
   },
   "HollowMod:OverflowingPower": {
     "NAME": "满溢",
     "DESCRIPTIONS": [
-      "在你的回合开始时， 花 #b", " #y心灵 获得 #b", " 点 #y力量。 如果你不能付钱， 失去这种力量并获得了 #y力量。 NL 在你的回合结束时， 点上升 #b1 。"
+      "在你的回合开始时：使用 #b", " 个 #y灵魂来获得 #b", " 点力量。 如果说你没有足够的灵魂，失去这个能力和所有得到的力量。 NL 在你的回合结束时：此能力+ #b1 层。"
     ]
   },
   "HollowMod:ShadesPower": {
-    "NAME": "影子之王",
+    "NAME": "暗影之主",
     "DESCRIPTIONS": [
-      "虽然你有 [#696969]虚， 获得 1 荆棘 每一个 2 #y格挡 点， 在你的回合结束时， 失去 50% 荆棘"
+      "当你拥有 [#696969]虚空 时：每得到2点格挡，获得1点荆棘。在回合结束时：失去一半的荆棘。"
     ]
   },
   "HollowMod:SharpenedShadowsPower": {
-    "NAME": "尖锐的阴影",
+    "NAME": "尖锐影子",
     "DESCRIPTIONS": [
-      "虽然你有 [#696969]虚， 你每打出一张 #y突， 对一名随机敌人造成 #b",
-      " 点伤害。"
+      "当你拥有 [#696969]虚空 时：每使用一张 #y冲刺 牌，对一个随机敌人造成 #b", " 点伤害。"
     ]
   },
   "HollowMod:SiblingSoulPower": {
-    "NAME": "兄弟 的精神",
+    "NAME": "兄妹之魂",
     "DESCRIPTIONS": [
-      "你打出的下一张技能或攻牌会打出复制。"
+      "你的下一个攻击或者技能牌会被复制到手中。"
     ]
   },
   "HollowMod:SlysStrikesPower": {
-    "NAME": "Sly 的罢工",
+    "NAME": "斯莱之击",
     "DESCRIPTIONS": [
-      "在你的回合开始时， 获得 #b",
-      " 点 #y力量 。"
+      "在你的回合开始时：获得 #b",
+      " 点力量。"
     ]
   },
   "HollowMod:SoulEaterPower": {
-    "NAME": "心灵 吃",
+    "NAME": "噬魂者",
     "DESCRIPTIONS": [
-      "你每打出一张  #y攻击牌， 获得 #b",
-      " #y心灵。 (不是 #y盟友 牌 或 #y咒语 牌)。"
+      "每当你使用一张攻击牌，多获得 #b",
+      " #y灵魂。（ #y同伴 和 #y法术 攻击除外）"
     ]
   },
   "HollowMod:SoulMasterPower": {
-    "NAME": "心灵 捻线机",
+    "NAME": "灵魂掌控者",
     "DESCRIPTIONS": [
-      "#y心灵 #b魅力 成本低 #b",
-      "  #y心灵  (最少1)。 [#696969]虚 魅力 得到 #b",
-      " 额外[#696969]虚"
+      "#y灵魂 #b法术 少需要 #b",
+      " 个 #y灵魂 （最低为1）。 [#696969]虚空 法术 多给你 #b",
+      " 点 [#696969]虚空。"
     ]
   },
   "HollowMod:SoulPower": {
-    "NAME": "心灵 仪表",
+    "NAME": "灵魂",
     "DESCRIPTIONS": [
-      "收集的 #y心灵 数量 。 花这个 #bSpells 使用 。 NL 当前值 #y心灵: ",
-      " NL 当前最大值: #b",
-      " #y心灵。"
+      "收集的 #y灵魂 数量。用来使用 #b法术。 NL 目前 #y灵魂 数量： ",
+      " NL 目前 #y灵魂 容量: #b",
+      " 。"
     ]
   },
   "HollowMod:SoulVialPower": {
-    "NAME": "心灵 容器",
+    "NAME": "灵魂容器",
     "DESCRIPTIONS": [
-      "将 #y心灵 的限制提高 #b",
-      " 点 。"
+      "允许你多储存 #b",
+      " 个 #y灵魂。"
     ]
   },
   "HollowMod:UnnPower": {
-    "NAME": "Unn 的形状",
+    "NAME": "乌恩之型",
     "DESCRIPTIONS": [
-      "你每打出一张 牌 #b魅力 牌 ， 将弃牌堆中的一 #b",
-      " #b突 张牌放入你的手牌。",
-      " #b突 张牌放入你的手牌。"
+      "每当你使用一张 #b法术，将 #b",
+      " 张 #b冲刺 牌从你的弃牌堆放入你的手里。",
+      " 张 #b冲刺 牌从你的弃牌堆放入你的手里。"
     ]
   },
   "HollowMod:VoidPower": {
-    "NAME": "虚",
+    "NAME": "虚空",
     "DESCRIPTIONS": [
-      "使 [#696969]虚 伤害提高 #b",
-      "点 。 受到的伤害提高 #r50％。 NL 在回合的开始，合减1。"
+      "你的 [#696969]虚空 牌多造成 #b",
+      " 点伤害。多收到 #r50% 伤害。 NL 你每回合开始时：此能力- #b1 层。"
     ]
   },
   "HollowMod:VoidDashPower": {
-    "NAME": "暗影斗篷",
+    "NAME": "暗影披风",
     "DESCRIPTIONS": [
-      "每受到一次 #y攻击 ，造成 #b",
-      " 点反伤  给予敌人 #b2 #y虚弱。"
+      "这回合内，每当你格挡一次攻击，反伤 #b", " 然后给攻击者 #b2 层 #y虚弱。"
     ]
   },
   "HollowMod:WeaverSongPower": {
-    "NAME": "韦弗 歌曲",
+    "NAME": "编制者之歌",
     "DESCRIPTIONS": [
-      "你每打出一张  #y攻击牌， 对一名随机敌人造成 #b",
+      "每当你使用一张攻击牌，对一个随机的敌人造成 #b",
       " 点伤害。"
     ]
   },
   "HollowMod:WhiteLadyPower": {
-    "NAME": "白女士们的祝福",
+    "NAME": "白色夫人的祝福",
     "DESCRIPTIONS": [
-      "虽然你有 [#696969]虚，  你可以用 #y集中， 该卡将被 #y消耗。"
+      "当你拥有 [#696969]虚空 时，你可以使用 #y聚集 ，但是会 #y消耗 掉那张卡。"
     ]
   },
   "HollowMod:NewGlowingWombPower": {
-    "NAME": "发光的子宫",
+    "NAME": "发光子宫",
     "DESCRIPTIONS": [
-      "在你的回合开始时， 如果你有 [#FFA200]感染， 得到 #b",
-      " #y格挡 (包括 #y敏捷)， 失去 #b",
-      " [#FFA200]感染 点 。"
+      "每当你回合开始时：如果你有 [#FFA200]感染 ，获得 #b",
+      " 点格挡（敏捷有效），然后失去 #b",
+      " 点 [#FFA200]感染 。"
+    ]
+  },
+  
+  
+  
+  "HollowMod:NestPower": {
+    "NAME": "赫拉之巢",
+    "DESCRIPTIONS": [
+      "在回合开始时，将 #b",
+      " #y雏儿 放入你的手中。本回合内，你每使用一张 #y同伴 牌，此数字+ #b1 。"
+    ]
+  },
+  "HollowMod:InfNestPower": {
+    "NAME": "感染赫拉之巢",
+    "DESCRIPTIONS": [
+      "在回合开始时，将 #b",
+      " #y感染雏儿 放入你的手中。本回合内，你每使用一张 #y同伴 牌，此数字+ #b1 。"
+    ]
+  },
+  "HollowMod:DarkNestPower": {
+    "NAME": "黑暗赫拉之巢",
+    "DESCRIPTIONS": [
+      "在回合开始时，将 #b",
+      " #y黑暗雏儿 放入你的手中。本回合内，你每使用一张 #y同伴 牌，此数字+ #b1 。"
+    ]
+  },
+  "HollowMod:ZoteNestPower": {
+    "NAME": "佐特之巢",
+    "DESCRIPTIONS": [
+      "在回合开始时，将 #b",
+      " #y佐特雏儿 放入你的手中。本回合内，你每使用一张 #y同伴 牌，此数字+ #b1 。"
+    ]
+  },
+  "HollowMod:SoulNestPower": {
+    "NAME": "幽灵赫拉之巢",
+    "DESCRIPTIONS": [
+      "在回合开始时，将 #b",
+      " #y幽灵雏儿 放入你的手中。本回合内，你每使用一张 #y同伴 牌，此数字+ #b1 。"
     ]
   }
-
-
-
-
 }

@@ -202,9 +202,43 @@
       " Block (scaling with Dexterity), and lose #b",
       " [#FFA200]Infection."
     ]
+  },
+
+
+
+  "HollowMod:NestPower": {
+    "NAME": "Herrah's Nest",
+    "DESCRIPTIONS": [
+      "At the start of next turn, add #b",
+      " #yNestlings to your hand.  Whenever you play an #bAlly this turn, increase this amount by #b1."
+    ]
+  },
+  "HollowMod:InfNestPower": {
+    "NAME": "Herrah's Infected Nest",
+    "DESCRIPTIONS": [
+      "At the start of next turn, add #b",
+      " #yInfectlings to your hand.  Whenever you play an #bAlly this turn, increase this amount by #b1."
+    ]
+  },
+  "HollowMod:DarkNestPower": {
+    "NAME": "Herrah's Dark Nest",
+    "DESCRIPTIONS": [
+      "At the start of next turn, add #b",
+      " #yDark #yNestlings to your hand. Whenever you play an #bAlly this turn, increase this amount by #b1."
+    ]
+  },
+  "HollowMod:ZoteNestPower": {
+    "NAME": "Zote's Nest",
+    "DESCRIPTIONS": [
+      "At the start of next turn, add #b",
+      " #yZotelings to your hand.  Whenever you play an #bAlly this turn, increase this amount by #b1."
+    ]
+  },
+  "HollowMod:SoulNestPower": {
+    "NAME": "Herrah's Spirit Nest",
+    "DESCRIPTIONS": [
+      "At the start of next turn, add #b",
+      " #ySpirit #yNestlings to your hand.  Whenever you play an #bAlly this turn, increase this amount by #b1."
+    ]
   }
-
-
-
-
 }

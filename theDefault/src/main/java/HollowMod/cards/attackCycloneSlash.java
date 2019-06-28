@@ -68,10 +68,19 @@ public class attackCycloneSlash extends AbstractHollowCard {
 
 
     public attackCycloneSlash() { // public attackCycloneSlash() - This one and the one right under the imports are the most important ones, don't forget them
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, getimg(AbstractDungeon.ascensionLevel), COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
         this.isMultiDamage = true;
 
+    }
+
+    private static String getimg(int alevel){
+
+        String IMG1 = IMG;
+        if (alevel >=12){
+            IMG1 = makeCardPath("attackCycloneSlash2.png");
+        }
+        return IMG1;
     }
 
 

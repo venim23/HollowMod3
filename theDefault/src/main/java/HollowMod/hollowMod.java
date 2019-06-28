@@ -606,6 +606,14 @@ public class hollowMod implements
         BaseMod.addCard(new attackHerrahsAnger());
 
 
+
+        BaseMod.addCard(new attackSoulNestling());
+        BaseMod.addCard(new attackInfectling());
+        BaseMod.addCard(new attackDarkNestling());
+        BaseMod.addCard(new attackZoteling());
+        BaseMod.addCard(new attackNestling());
+
+
         //Skills
         BaseMod.addCard(new skillCloakDash());
         BaseMod.addCard(new skillInfectedGuardian());
@@ -819,10 +827,12 @@ public class hollowMod implements
 
         String language = null;
         switch (Settings.language) {
-           /* case ZHS: {
+            case ZHS: {
                 language = "zhs";
                 break;
             }
+
+            /*
             case ZHT: {
                 language = "zht";
                 break;
@@ -830,11 +840,12 @@ public class hollowMod implements
             case FRA: {
                 language = "fra";
                 break;
-            } */
+            }
             case JPN: {
                 language = "jpn";
                 break;
             }
+            */
             default: {
                 language = "eng";
                 break;
@@ -894,10 +905,11 @@ public class hollowMod implements
         // In Keyword-Strings.json you would have PROPER_NAME as A Long Keyword and the first element in NAMES be a long keyword, and the second element be a_long_keyword
         String language = null;
         switch (Settings.language) {
-           /* case ZHS: {
+           case ZHS: {
                 language = "zhs";
                 break;
             }
+             /*
             case ZHT: {
                 language = "zht";
                 break;
@@ -905,11 +917,12 @@ public class hollowMod implements
             case FRA: {
                 language = "fra";
                 break;
-            } */
+            }
             case JPN: {
                 language = "jpn";
                 break;
             }
+            */
             default: {
                 language = "eng";
                 break;

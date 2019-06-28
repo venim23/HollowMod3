@@ -41,7 +41,6 @@ public class attackPogoStrike extends AbstractHollowCard {
 
     public static final String ID = hollowMod.makeID("PogoStrike"); // DefaultMod.makeID("attackNailStrike");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-
     public static final String IMG = makeCardPath("attackPogoStrike.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
@@ -70,13 +69,22 @@ public class attackPogoStrike extends AbstractHollowCard {
     // /STAT DECLARATION/
 
 
-    public attackPogoStrike() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+    public attackPogoStrike() {
+        // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
+        super(ID, NAME, getimg(AbstractDungeon.ascensionLevel), COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.tags.add(CardTags.STRIKE);
         magicNumber = (baseMagicNumber = CARDS);
     }
 
+    private static String getimg(int alevel){
+
+        String IMG1 = IMG;
+        if (alevel >=2){
+            IMG1 = makeCardPath("attackPogoStrike2.png");
+        }
+        return IMG1;
+    }
 
     // Actions the card should do.
     @Override

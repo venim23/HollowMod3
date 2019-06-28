@@ -25,5 +25,14 @@
       "Spell"
     ],
     "DESCRIPTION": "[#60CFFF]Dash , [#60CFFF]Ally and [#60CFFF]Spell have no innate effects, but may be given effects from other sources."
+  },
+  {
+    "PROPER_NAME": "Nestlings",
+    "NAMES": [
+      "nestlings",
+      "Nestlings",
+      "Nestling"
+    ],
+    "DESCRIPTION": "Nestlings are #b0 cost Attack cards which Exhaust. NL Nestlings have different effects depending on the player model."
   }
 ]
