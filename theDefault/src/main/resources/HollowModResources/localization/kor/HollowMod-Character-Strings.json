@@ -1,0 +1,13 @@
+{
+  "HollowMod:BugKnightCharacter": {
+    "NAMES": [
+      "벌레 기사",
+      "벌레 기사"
+    ],
+    "TEXT": [
+      "창백한 왕으로부터 만들어진 공허로 채워진 그릇 NL 작은 키의 조용한 이 기사는 보기보다 강합니다.",
+      "NL 당신은 심장을 꿰뚫습니다.",
+      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~'Small you may be, but join us, and your bite will be feared..'"
+    ]
+  }
+}

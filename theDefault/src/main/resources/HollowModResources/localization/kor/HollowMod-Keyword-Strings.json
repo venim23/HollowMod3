@@ -1,0 +1,43 @@
+[
+  {
+    "DESCRIPTION": "[#EFFAFF]집중 에 소모해 특정 [#60CFFF]주문 을 사용 할 수 있는 자원입니다.",
+    "PROPER_NAME": "[#EFFAFF]영혼",
+    "NAMES": [
+      "soul",
+      "Soul",
+      "영혼"
+    ]
+  },
+  {
+    "DESCRIPTION": "수집한 [#EFFAFF]영혼 을 보관합니다. 기본적으로 [#EFFAFF]영혼 을 #b6 개 까지 저장 할 수 있습니다.",
+    "PROPER_NAME": "[#EFFAFF]영혼 [#EFFAFF]용량",
+    "NAMES": [
+      "Meter",
+      "meter",
+      "용량"
+    ]
+  },
+  {
+    "DESCRIPTION": "[#60CFFF]Dash , [#60CFFF]Ally, [#60CFFF]Spell 은 그 자체로 효과를 발휘하지 않지만, 다른 효과에 영향을 줍니다.",
+    "PROPER_NAME": "[#60CFFF]대시 , [#60CFFF]Ally , [#60CFFF]주문",
+    "NAMES": [
+      "ally",
+      "Ally",
+      "dash",
+      "spell",
+      "Spell",
+      "주문",
+      "대시"
+    ]
+  },
+  {
+    "DESCRIPTION": "사용 시 소멸되는 비용이 #b0 인 공격 카드입니다. NL 사용자의 상황에 따라 다른 효과를 냅니다.",
+    "PROPER_NAME": "Nestlings",
+    "NAMES": [
+      "nestlings",
+      "Nestlings",
+      "Nestling",
+      "새끼"
+    ]
+  }
+]

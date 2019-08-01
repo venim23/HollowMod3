@@ -1,0 +1,42 @@
+{
+  "HollowMod:Focus":
+  {
+    "TEXT": [
+      "[#EFFAFF]집중",
+      "이 카드를 사용하기위해 #y영혼 을 소모합니다."
+    ]
+  },
+  "HollowMod:Void":
+  {
+    "TEXT": [
+      "[#696969]공허",
+      "[#696969]공허 는 #y영혼 을 제거하고 [#EFFAFF]집중 을 막습니다. NL [#696969]공허 는 [#696969]공허 [#60CFFF]Spell 카드의 피해량을 증가시킵니다. NL #y공격 으로부터  #b50% 더 많은 피해를 받습니다. NL 턴 종료 시 1 감소합니다."
+    ]
+  },
+
+  "HollowMod:Infection":
+  {
+    "TEXT": [
+      "[#FFA200]감염",
+      "플레이어에게 부정적인 효과로, 턴 종료 시 [#FFA200]감염 수치 만큼 피해를 받고 #b2 만큼 감소합니다."
+    ]
+  },
+  "HollowMod:CardHeaders":
+  {
+    "TEXT":
+    [
+      "[none]",
+      "Dash",
+      "Spell",
+      "Ally",
+      "Ally Dash",
+      "Dash Spell",
+      "Ally Spell",
+      "Ally Dash Spell"
+    ]
+  },
+  "HollowMod:DisableEnemies": {
+    "TEXT": ["커스텀 적 비활성화. (게임을 재시작해야 합니다, 조트 이벤트의 적 포함.) "
+    ]
+  }
+}
