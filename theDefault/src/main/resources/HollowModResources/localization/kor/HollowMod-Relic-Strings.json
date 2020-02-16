@@ -1,0 +1,133 @@
+{
+  "HollowMod:VesselMask": {
+    "NAME": "기사의 가면",
+    "FLAVOR": "모든 그릇은 가면을 지닌다",
+    "DESCRIPTIONS": [
+      "공격 카드를 사용할 때마다 #y영혼 을 #b1 얻습니다. ( #bSpell , #bAlly 카드 제외 )"
+    ]
+  },
+  "HollowMod:PlaceholderRelic": {
+    "NAME": "Placeholder Energy Relic",
+    "FLAVOR": "The snake is a friend.",
+    "DESCRIPTIONS": [
+      "Gain #b1 [E]."
+    ]
+  },
+  "HollowMod:PlaceholderRelic2": {
+    "NAME": "Placeholder Relic 2",
+    "FLAVOR": "You feel stronger.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b1 #yStrength."
+    ]
+  },
+  "HollowMod:DefaultClickableRelic": {
+    "NAME": "Right-Clicky Relic",
+    "FLAVOR": "The more you right-click it, the more orbs you've evoked in your lifetime.",
+    "DESCRIPTIONS": [
+      "[#2aecd7]Usable [#2aecd7]once [#2aecd7]per [#2aecd7]turn.[] NL #yEvoke your rightmost Orb.",
+      "YOU ARE MINE!"
+    ]
+  },
+  "HollowMod:BottledPlaceholderRelic": {
+    "NAME": "Bottled Placeholder",
+    "FLAVOR": "What is this?",
+    "DESCRIPTIONS": [
+      "Choose a card. Whenever you take play any card, draw the chosen card.",
+      "Whenever you play a card, draw ",
+      ".",
+      "Select a card to bottle for "
+    ]
+  },
+  "HollowMod:VoidIdolRelic": {
+    "NAME": "공허의 우상",
+    "FLAVOR": "심연에서 온 액체로 만들어진 가면, 완벽합니다.",
+    "DESCRIPTIONS": [
+      "[#CCCCCC]기사의 [#CCCCCC]가면 또는 [#D2D2D2]왕의 [#D2D2D2]영혼 과 교체됩니다. 더이상 #y영혼 을 얻을 수 없습니다. [#696969]공허[] 카드가 #y소멸 되지 않습니다. 전투 시작 시 #y힘 과 #y민첩 을 #r1 #r잃습니다."
+    ]
+  },
+  "HollowMod:QueensCombRelic": {
+    "NAME": "벌집의 정수",
+    "FLAVOR": "벌집의 꿀이 굳어 형성된 귀중한 황금색 덩어리.",
+    "DESCRIPTIONS": [
+      "획득 시 #y최대 #y체력 을 #r50% #r잃습니다. 각 전투에서 체력을 입기 전까지 턴 시작시 #g체력 을 #g",
+      " 회복합니다."
+    ]
+  },
+  "HollowMod:LifeEnderRelic": {
+    "NAME": "생명 종결자",
+    "FLAVOR": "생명 종결자가 또 다른 바보를 베어 죽이고...",
+    "DESCRIPTIONS": [
+      "공격 카드를 #b5 장 사용할 때마다 카드를 #b1 장 뽑습니다."
+    ]
+  },
+  "HollowMod:MillibellesNoteRelic": {
+    "NAME": "밀리벨의 노트",
+    "FLAVOR": "아직도 관심이 없나요? 당신은 너무 주저하는군요.",
+    "DESCRIPTIONS": [
+      "전투 시작 시 #y영혼 을 #b2 얻습니다."
+    ]
+  },
+  "HollowMod:MantisClawRelic": {
+    "NAME": "사마귀 갈고리",
+    "FLAVOR": "갈고리는 뼈로 조각되었습니다.",
+    "DESCRIPTIONS": [
+      "한 턴에 [#60CFFF]Dash 카드를 #b3 장 사용할 때마다, [E] 을 얻습니다."
+    ]
+  },
+  "HollowMod:JonisBlessing": {
+    "NAME": "조니의 축복",
+    "FLAVOR": "친절한 이교도인 조니의 축복. 생명체의 유체를 파란 생명혈로 변이 시킵니다.",
+    "DESCRIPTIONS": [
+      "전투 시작 시 #b임시 #b체력 을 #b15 얻습니다. 전투에서 회복 시 대신 #b임시 #b체력 을 얻습니다."
+    ]
+  },
+  "HollowMod:IsmasTear": {
+    "NAME": "이스마의 눈물",
+    "FLAVOR": "눈물 한 방울이 굳어서 형성된 과일.",
+    "DESCRIPTIONS": [
+      "[#FFA200]감염 으로 피해를 받을때 #b1 적게 받습니다."
+    ]
+  },
+  "HollowMod:DelicateFlower": {
+    "NAME": "연약한 꽃",
+    "FLAVOR": "회색 애도자는 그녀의 사랑을 보냅니다.",
+    "DESCRIPTIONS": [
+      "체력이 가득 차 있으면, 매 턴 시작 시 #y영혼 을 모두 채웁니다."
+    ]
+  },
+  "HollowMod:KingsBrand": {
+    "NAME": "왕의 표식",
+    "FLAVOR": "신성둥지 고대 장소들의 문을 열 수 있습니다.",
+    "DESCRIPTIONS": [
+      "[#FFA200]감염[] 이 충분할때, [#EFFAFF]집중[] 이 #y영혼 대신 [#FFA200]감염[] 을 소모합니다."
+    ]
+  },
+  "HollowMod:StagPassRelic": {
+    "NAME": "사슴벌레 탑승권",
+    "FLAVOR": "종 소리는 항상 나를 다시 부를 거다.",
+    "DESCRIPTIONS": [
+      "상점에서 카드를 구입할 때마다 그 카드를 #y강화 합니다."
+    ]
+  },
+  "HollowMod:KingsSoulRelic": {
+    "NAME": "왕의 영혼",
+    "FLAVOR": "고귀한 존재들 사이의 연합을 상징하는 신성한 부적",
+    "DESCRIPTIONS": [
+      "[#CCCCCC]기사의 [#CCCCCC]가면 또는 [#696969]공허의[] [#696969]우상[] 과 교체됩니다. 전투 시작 시 #y영혼 을 #b3 얻습니다. #y영혼 #y용량 제한이 #b2 증가합니다."
+    ]
+  },
+  "HollowMod:GodTunerRelic": {
+    "NAME": "신조율기",
+    "FLAVOR": "큰 힘을 가진 이들에게 공명을 느끼는 장치",
+    "DESCRIPTIONS": [
+      "매 턴 [E] 을 얻습니다. #y영혼 #y용량 제한이 #b3 감소합니다"
+    ]
+  },
+  "HollowMod:GreatKnightMask": {
+    "NAME": "위대한 기사의 가면",
+    "FLAVOR": "이봐, 두려워하지 마... 너의 죽음은 신속할 것이니",
+    "DESCRIPTIONS": [
+      "조트에게 유물은 필요없습니다."
+    ]
+  }
+}

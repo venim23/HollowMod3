@@ -1,0 +1,18 @@
+{
+        "HollowMod:VoidPotion": {
+                "NAME": "공허 포션",
+                "DESCRIPTIONS": ["공허 를 ", " 얻습니다."]
+        },
+        "HollowMod:SoulPotion": {
+                "NAME": "영혼 포션",
+                "DESCRIPTIONS": ["영혼 을 ", " 얻습니다."]
+        },
+        "HollowMod:LifebloodPotion": {
+                "NAME": "생명혈 포션",
+                "DESCRIPTIONS": ["임시 체력을 ", " 얻습니다."]
+        },
+        "HollowMod:InfectionPotion": {
+                "NAME": "감염 포션",
+                "DESCRIPTIONS": ["중독 을 ", " 부여합니다, 감염 을 ", " 얻습니다."]
+        }
+}

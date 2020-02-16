@@ -1,0 +1,246 @@
+{
+  "HollowMod:BaldurShellPower": {
+    "NAME": "발더의 껍질",
+    "DESCRIPTIONS": [
+      "[#EFFAFF]집중[] 할 때마다, 방어도 를 #b",
+      "얻습니다."
+    ]
+  },
+  "HollowMod:BrokenVesselPower": {
+    "NAME": "Broken Vessel",
+    "DESCRIPTIONS": [
+      "[#FFA200]감염[] 피해를 받으면, 모든 적에게 같은 피해를 줍니다."
+    ]
+  },
+  "HollowMod:DungDefenderPower": {
+    "NAME": "수호기사의 아우라",
+    "DESCRIPTIONS": [
+      "이번 턴에 적을 공격 할 때마다 대상에게 중독을 #b",
+      "부여합니다."
+    ]
+  },
+  "HollowMod:ElderbugPower": {
+    "NAME": "장로벌레의 지혜",
+    "DESCRIPTIONS": [
+      "[#60CFFF]Ally 카드를 사용할 때마다 카드를 #b1 장 뽑습니다."
+    ]
+  },
+  "HollowMod:FlameCastPower": {
+    "NAME": "화염 주문 준비",
+    "DESCRIPTIONS": [
+      "충전 후, 그림은 남은 #y방어도 를 흡수하고 그만큼 피해를 줍니다."
+    ]
+  },
+  "HollowMod:FlameCloakPower": {
+    "NAME": "화염 망토",
+    "DESCRIPTIONS": [
+      "피해를 받으면, 공격자는 피해를 #b",
+      " 입습니다. 각 턴마다 절반씩 감소합니다."
+    ]
+  },
+  "HollowMod:FlukenestPower": {
+    "NAME": "흡충 둥지",
+    "DESCRIPTIONS": [
+      "#b집중 할 때마다, 무작위 #b",
+      " 마리 적에게 피해를 #b1 줍니다."
+    ]
+  },
+  "HollowMod:GrimmGiftPower": {
+    "NAME": "그림의 선물",
+    "DESCRIPTIONS": [
+      "이번 턴에 적을 공격 할 때마다 대상에게 취약을 #b1 부여합니다."
+    ]
+  },
+  "HollowMod:GrubsongPower": {
+    "NAME": "에벌래 노래",
+    "DESCRIPTIONS": [
+      "처음 #b",
+      " 피해를 입으면, #y영혼 을 1 얻습니다.",
+      " 번 피해를 입으면, #y영혼 을 1 얻습니다."
+    ]
+  },
+  "HollowMod:InfectionPower": {
+    "NAME": "감염",
+    "DESCRIPTIONS": [
+      "턴 종료 시 피해를 #b",
+      " 입고 2 감소합니다."
+    ]
+  },
+  "HollowMod:LifeCocoonPower": {
+    "NAME": "생명혈 고치",
+    "DESCRIPTIONS": [
+      "이번 턴에 공격 카드를 사용할 때마다 #b임시 #b체력 을 !M! #b",
+      " 얻습니다."
+    ]
+  },
+  "HollowMod:LifeHeartPower": {
+    "NAME": "생명혈 심장",
+    "DESCRIPTIONS": [
+      "If you take no Unblocked damage this turn, gain #b",
+      " #bTemporary #bHealth next round."
+    ]
+  },
+  "HollowMod:MonarchWingsPower": {
+    "NAME": "제왕의 날개",
+    "DESCRIPTIONS": [
+      "다음 #b",
+      " 턴 동안, #bDashe 카드로 얻는 방어도 가 두배가 됩니다."
+    ]
+  },
+  "HollowMod:MothsMistakePower": {
+    "NAME": "모쓰의 실수",
+    "DESCRIPTIONS": [
+      "매 턴 시작 시 적 전체에게 #b",
+      " 의 #y중독 을 부여합니다. 매 턴 시작 시 [#FFA200]감염 을 #b",
+      " 받습니다."
+    ]
+  },
+  "HollowMod:NailsmithPower": {
+    "NAME": "대못제련공",
+    "DESCRIPTIONS": [
+      "이번 턴에 공격 카드를 사용할 때마다, 그 카드를 전투가 끝날 때까지 #y강화 합니다."
+    ]
+  },
+  "HollowMod:OverflowingPower": {
+    "NAME": "범람",
+    "DESCRIPTIONS": [
+      "턴 시작 시, [#EFFAFF]영혼 을 #b",
+      " 지불하고 힘 을 #b",
+      " 얻습니다. 매 턴 지불하는 양이 1 늘어납니다."
+    ]
+  },
+  "HollowMod:ShadesPower": {
+    "NAME": "그림자 군주",
+    "DESCRIPTIONS": [
+      "[#696969]공허[]를 가지고 있을때, 방어도 를 2 얻을 때마다 가시 를 1 얻습니다. 매 턴 종료 시 가시 를 절반 잃습니다."
+    ]
+  },
+  "HollowMod:SharpenedShadowsPower": {
+    "NAME": "날카로운 그림자",
+    "DESCRIPTIONS": [
+      "[#696969]공허[]를 가지고 있을때, #yDash 카드를 사용할 때마다 무작위 적에게 피해를 #b",
+      " 줍니다."
+    ]
+  },
+  "HollowMod:SiblingSoulPower": {
+    "NAME": "친족의 영혼",
+    "DESCRIPTIONS": [
+      "다음에 사용하는 공격 또는 스킬 카드를 복사합니다."
+    ]
+  },
+  "HollowMod:SlysStrikesPower": {
+    "NAME": "슬라이의 타격",
+    "DESCRIPTIONS": [
+      "턴 시작 시 힘을 #b",
+      " 얻습니다."
+    ]
+  },
+  "HollowMod:SoulEaterPower": {
+    "NAME": "영혼 포식자",
+    "DESCRIPTIONS": [
+      "공격 카드를 사용할 때마다, #y영혼 을 #b",
+      " 더 얻습니다. (#yAlly , #ySpell 카드 제외)."
+    ]
+  },
+  "HollowMod:SoulMasterPower": {
+    "NAME": "Soul Twister",
+    "DESCRIPTIONS": [
+      "#y영혼 #bSpell 카드의 #y영혼 비용이 #b",
+      " 줄어듭니다. (최소 1) NL [#696969]공허 Spell 카드로부터 [#696969]공허 를 #b",
+      " 더 얻습니다."
+    ]
+  },
+  "HollowMod:SoulPower": {
+    "NAME": "영혼 용량",
+    "DESCRIPTIONS": [
+      "#bSpell 카드를 사용하는데 소모하는 #y영혼 의 양입니다. NL 현재 #y영혼: ",
+      " NL 현재 제한: #b",
+      " #y영혼"
+    ]
+  },
+  "HollowMod:SoulVialPower": {
+    "NAME": "영혼 그릇",
+    "DESCRIPTIONS": [
+      " #ySoul 을 ",
+      " 더 보유할 수 있습니다."
+    ]
+  },
+  "HollowMod:UnnPower": {
+    "NAME": "우운의 형상",
+    "DESCRIPTIONS": [
+      "[#60CFFF]Spell 카드를 사용할 때마다 버린 카드 더미에서 #bDash 카드 ",
+      " 장을 선택해서 손으로 가져옵니다.",
+      " 장을 선택해서 손으로 가져옵니다."
+    ]
+  },
+  "HollowMod:VoidPower": {
+    "NAME": "공허",
+    "DESCRIPTIONS": [
+      "[#696969]공허 카드의 피해량이 #b",
+      " 증가합니다. #y공격 으로부터  #b50% 더 많은 피해를 받습니다. NL 턴 종료 시 #b1 감소합니다."
+    ]
+  },
+  "HollowMod:VoidDashPower": {
+    "NAME": "그림자 망토",
+    "DESCRIPTIONS": [
+      "이번 턴에 공격을 받을 때마다 공격한 대상에게 피해를 #b",
+      " 주고 #y약화 를 #b2 부여합니다."
+    ]
+  },
+  "HollowMod:WeaverSongPower": {
+    "NAME": "엮는 이의 노래",
+    "DESCRIPTIONS": [
+      "공격 카드를 사용할 때마다 무작위 적에게 피해를 #b",
+      " 줍니다."
+    ]
+  },
+  "HollowMod:WhiteLadyPower": {
+    "NAME": "백의 여사의 축복",
+    "DESCRIPTIONS": [
+      "[#696969]공허[]를 가지고 있을때, [#EFFAFF]집중[] 을 할 수 있습니다. NL [#60CFFF]Spell 카드를 사용할 때마다 #y소멸 시킵니다."
+    ]
+  },
+  "HollowMod:NewGlowingWombPower": {
+    "NAME": "영롱한 알집",
+    "DESCRIPTIONS": [
+      "턴 시작 시 [#FFA200]감염[]을 가지고 있으면 방어도 를 #b",
+      " 얻고 [#FFA200]감염[] 을 #b",
+      " 잃습니다. NL ( 민첩 효과를 받습니다. )"
+    ]
+  },
+  "HollowMod:NestPower": {
+    "NAME": "헤라의 둥지",
+    "DESCRIPTIONS": [
+      "다음 턴 시작 시, #y새끼 카드를 #b",
+      " 장 얻습니다. 이번 턴 에 #bAlly 카드 를 사용할 때마다 #y새끼 카드를 추가로 얻습니다."
+    ]
+  },
+  "HollowMod:InfNestPower": {
+    "NAME": "헤라의 감염된 둥지",
+    "DESCRIPTIONS": [
+      "다음 턴 시작 시, #y감염된 #y새끼 카드를 #b",
+      " 장 얻습니다. 이번 턴 에 #bAlly 카드 를 사용할 때마다 #y감염된 #y새끼 카드를 추가로 얻습니다."
+    ]
+  },
+  "HollowMod:DarkNestPower": {
+    "NAME": "헤라의 어둠 둥지",
+    "DESCRIPTIONS": [
+      "다음 턴 시작 시, #y어두운 #y새끼 카드를 #b",
+      " 장 얻습니다. 이번 턴 에 #bAlly 카드 를 사용할 때마다 #y어두운 #y새끼 카드를 추가로 얻습니다."
+    ]
+  },
+  "HollowMod:ZoteNestPower": {
+    "NAME": "조트의 둥지",
+    "DESCRIPTIONS": [
+      "다음 턴 시작 시, #y조틀링 카드를 #b",
+      " 장 얻습니다. 이번 턴 에 #bAlly 카드 를 사용할 때마다 #y조틀링 카드를 추가로 얻습니다."
+    ]
+  },
+  "HollowMod:SoulNestPower": {
+    "NAME": "헤라의 영혼 둥지",
+    "DESCRIPTIONS": [
+      "다음 턴 시작 시, #y영혼 #y새끼 카드를 #b",
+      " 장 얻습니다. 이번 턴 에 #bAlly 카드 를 사용할 때마다 #y영혼 #y새끼 카드를 추가로 얻습니다."
+    ]
+  }
+}

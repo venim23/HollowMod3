@@ -1,0 +1,455 @@
+{
+  "HollowMod:STARTINGCARDS": {
+    "NAME": "",
+    "DESCRIPTION": ""
+  },
+  "HollowMod:NailStrikeStart": {
+    "NAME": "대못 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다."
+  },
+  "HollowMod:QuickDashStart": {
+    "NAME": "빠른 대시",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다."
+  },
+  "HollowMod:FocusHealStart": {
+    "NAME": "간단한 집중",
+    "DESCRIPTION": "[#EFFAFF]집중[] !HollowMod:focusCost!: 체력을 !M! 회복합니다. NL 이번 전투동안 이 카드의 회복량이 2 감소합니다. NL 마지막 사용후 소멸 합니다.",
+    "UPGRADE_DESCRIPTION": "체력을 !M! 회복합니다. NL 이번 전투동안 이 카드의 회복량이 2 감소합니다. NL 마지막 사용후 소멸 합니다."
+  },
+  "HollowMod:CornifersMapStart": {
+    "NAME": "코니퍼의 지도",
+    "DESCRIPTION": "[#EFFAFF]집중[] !HollowMod:focusCost! : 카드를 !M! 뽑습니다."
+  },
+  "HollowMod:ATTACKCARDS": {
+    "NAME": "",
+    "DESCRIPTION": ""
+  },
+  "HollowMod:AbyssShriek": {
+    "NAME": "심연의 비명",
+    "DESCRIPTION": "[#696969]공허[] 3: 적 전체에게 피해를 !D! 줍니다. NL 이번 턴에 더이상 공격 카드를 사용할 수 없습니다."
+  },
+  "HollowMod:AwokenDreamNail": {
+    "NAME": "각성한 몽환의 대못",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 전투동안 [#F4D03F]영혼 [#F4D03F]용량 제한이 1 증가 합니다.[#F4D03F]영혼 [#F4D03F]용량 를 모두 채웁니다."
+  },
+  "HollowMod:BlackTendrils": {
+    "NAME": "검은 덩굴손",
+    "DESCRIPTION": "[#696969]공허[] 3: 무작위 적에게 피해를 !D! 줍니다. NL 막히지 않은 피해의 33% 만큼 체력을 회복합니다. NL 소멸",
+    "UPGRADE_DESCRIPTION": "[#696969]공허[] 3: 무작위 적에게 피해를 !D! 줍니다. NL 막히지 않은 피해의 50% 만큼 체력을 회복합니다. NL 소멸"
+  },
+  "HollowMod:CoiledNail": {
+    "NAME": "휘감긴 대못",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 취약 상태면 반복합니다."
+  },
+  "HollowMod:CycloneSlash": {
+    "NAME": "회오리 참격",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 이 카드를 사용할 때마다 이번 전투 동안 이 카드의 피해량이 1 증가합니다."
+  },
+  "HollowMod:DashSlash": {
+    "NAME": "대시 참격",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 피해를 !D! 줍니다."
+  },
+  "HollowMod:DescendingDark": {
+    "NAME": "암흑의 강림",
+    "DESCRIPTION": "[#696969]공허[] 2: 적 전체에게 피해를 !D! 줍니다. NL 소멸"
+  },
+  "HollowMod:DesolateDive": {
+    "NAME": "고독한 강하",
+    "DESCRIPTION": "[#EFFAFF]집중[] !HollowMod:focusCost! : 적 전체에게 피해를 !D! 줍니다."
+  },
+  "HollowMod:FallenFury": {
+    "NAME": "전사자의 분노",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 내 체력이 25% 이하면 !M! 배의 피해를 줍니다."
+  },
+  "HollowMod:FastStrike": {
+    "NAME": "빠른 타격",
+    "DESCRIPTION": "카드를 1장 버립니다. 무작위 적에게 피해를 !D! 주고 취약 을 1 부여합니다."
+  },
+  "HollowMod:GreatSlash": {
+    "NAME": "강력한 참격",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 만큼 !M! 번 줍니다."
+  },
+  "HollowMod:HeavyBlow": {
+    "NAME": "묵직한 타격",
+    "DESCRIPTION": "피해를 !D! 주고 약화 를 !M! 부여합니다."
+  },
+  "HollowMod:HornetsHelp": {
+    "NAME": "호넷의 도움",
+    "DESCRIPTION": "!M! 번 방어도 를 X 얻고 무작위 적에게 피해를 X 줍니다.",
+    "UPGRADE_DESCRIPTION": "!M! 번 방어도 를 X 얻고 무작위 적에게 피해를 X 줍니다.."
+  },
+  "HollowMod:HowlingWraiths": {
+    "NAME": "울부짓는 원혼들",
+    "DESCRIPTION": "[#EFFAFF]집중[] !HollowMod:focusCost!: 적 전체에게 피해를 !D! 줍니다."
+  },
+  "HollowMod:InfectionAssault": {
+    "NAME": "감염 급습",
+    "DESCRIPTION": "피해를 !D! 줍니다. [#FFA200]감염[] 수치만큼 피해량이 !M! 증가합니다. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "( !HollowMod:SecondMagic! 추가 피해 )"
+    ]
+  },
+  "HollowMod:InfectedAttack": {
+    "NAME": "감염 공격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 중독 을 !M! 부여합니다. NL [#FFA200]감염[] !HollowMod:SecondMagic!"
+  },
+  "HollowMod:InfectedCysts": {
+    "NAME": "감염된 포낭",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 주고 중독 을 !M! 부여합니다. NL [#FFA200]감염[] !HollowMod:SecondMagic! NL 소멸"
+  },
+  "HollowMod:MidwifesHunger": {
+    "NAME": "산파의 굶주림",
+    "DESCRIPTION": "덱에 있는 [#60CFFF]Ally 카드 만큼 피해를 !D! 줍니다.",
+    "EXTENDED_DESCRIPTION": [
+      " ( !HollowMod:SecondMagic! 번 반복 )"
+    ]
+  },
+  "HollowMod:PogoStrike": {
+    "NAME": "하단 공격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1장 버립니다. NL 카드를 1장 뽑습니다."
+  },
+  "HollowMod:PureNailStrike": {
+    "NAME": "본연의 대못 타격",
+    "DESCRIPTION": "[#EFFAFF]집중[] X: 피해를 !D! 줍니다. 소모한 [#EFFAFF]영혼 만큼 피해가 !M! 증가합니다.",
+    "EXTENDED_DESCRIPTION": [
+      " ( !HollowMod:SecondMagic! 추가 피해)"
+    ]
+  },
+  "HollowMod:QuirrelsAssistance": {
+    "NAME": "퀴렐의 도움",
+    "DESCRIPTION": "무작위 적에게 피해를 !D! 주고 약화 를 !M! 부여합니다."
+  },
+  "HollowMod:RecoilStrike": {
+    "NAME": "반동 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. 버린 카드 더미에서 [#60CFFF]Dash 카드 한 장을 선택해서 손으로 가져옵니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 버린 카드 더미에서 [#60CFFF]Dash 카드 한 장을 선택해서 손으로 가져옵니다. 이번 턴 동안 그 카드의 비용을 1로 낮춥니다."
+  },
+  "HollowMod:SharpenedNail": {
+    "NAME": "날카로운 대못",
+    "DESCRIPTION": "피해를 !D! 줍니다. 적이 약화 상태면 다른 모든 적에게도 피해를 줍니다."
+  },
+  "HollowMod:SoulStrike": {
+    "NAME": "영혼 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL [#EFFAFF]영혼 을 !M! 얻습니다."
+  },
+  "HollowMod:VengefulSpirit": {
+    "NAME": "복수의 영령",
+    "DESCRIPTION": "[#EFFAFF]집중[] !HollowMod:focusCost!: 피해를 !D! 줍니다."
+  },
+  "HollowMod:VengefulVoid": {
+    "NAME": "복수의 공허",
+    "DESCRIPTION": "[#696969]공허[] 2: 피해를 !D! 만큼 !M! 번 줍니다. NL 소멸"
+  },
+  "HollowMod:WraithStrike": {
+    "NAME": "원혼 타격",
+    "DESCRIPTION": "[#696969]공허[] 1: 피해를 !D! 줍니다. NL 약화 를 !M! 부여합니다. NL [#696969]공허[] 효과가 2 배로 적용됩니다."
+  },
+  "HollowMod:ZotesMagnificence": {
+    "NAME": "조트의 기품",
+    "DESCRIPTION": "피해를 !D! 줍니다. 모든 방어도 를 잃습니다. NL 소멸"
+  },
+  "HollowMod:POWERCARDS": {
+    "NAME": "",
+    "DESCRIPTION": ""
+  },
+  "HollowMod:BaldurShell": {
+    "NAME": "발더의 껍질",
+    "DESCRIPTION": "[#EFFAFF]집중[] 할 때마다, 방어도 를 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성 NL [#EFFAFF]집중[] 할 때마다, 방어도 를 !M! 얻습니다."
+  },
+  "HollowMod:BrokenVessel": {
+    "NAME": "부서진 그릇",
+    "DESCRIPTION": "[#FFA200]감염[] 피해를 받으면, 모든 적에게 같은 피해를 줍니다. NL 이 효과는 누적됩니다.",
+    "UPGRADE_DESCRIPTION": "선천성 NL [#FFA200]감염[] 에 의해 피해를 받으면, 모든 적에게 같은 피해를 줍니다. NL 이 효과는 누적됩니다."
+  },
+  "HollowMod:ElderbugsWisdom": {
+    "NAME": "장로벌레의 지혜",
+    "DESCRIPTION": "[#60CFFF]Ally 카드를 사용할 때마다 카드를 1 장 뽑습니다."
+  },
+  "HollowMod:Flukenest": {
+    "NAME": "흡충 둥지",
+    "DESCRIPTION": "[#60CFFF]Spell 카드를 사용할 때마다 무작위 !M! 마리 적에게 피해를 1 줍니다."
+  },
+  "HollowMod:Grubsong": {
+    "NAME": "에벌래 노래",
+    "DESCRIPTION": "각 턴 처음 피해를 입을 때마다 [#EFFAFF]영혼 을 1 얻습니다.",
+    "UPGRADE_DESCRIPTION": "각 턴 처음 !M! 번 까지 피해를 입을 때마다 [#EFFAFF]영혼 을 1 얻습니다."
+  },
+  "HollowMod:LordofShades": {
+    "NAME": "그림자 군주",
+    "DESCRIPTION": "휘발성 NL [#696969]공허[] !M!: [#696969]공허[]가 활성화 되있다면, 방어도 를 2 얻을 때마다 가시 를 1 얻습니다. 매 턴 종료 시 가시 를 절반 잃습니다."
+  },
+  "HollowMod:MothsMistake": {
+    "NAME": "모쓰의 실수",
+    "DESCRIPTION": "내 턴이 시작할 때, 모든 적에게 중독 을 !M! 부여하고 [#FFA200]감염[] 을 1 받습니다."
+  },
+  "HollowMod:ShapeofUnn": {
+    "NAME": "우운의 형상",
+    "DESCRIPTION": "[#60CFFF]Spell 카드를 사용할 때마다 버린 카드 더미에서 [#60CFFF]Dash 카드 한 장을 선택해서 손으로 가져옵니다."
+  },
+  "HollowMod:SharpenedShadows": {
+    "NAME": "날카로운 그림자",
+    "DESCRIPTION": "[#696969]공허[]를 가지고 있으면, [#60CFFF]Dash 카드를 사용할 때마다 무작위 적에게 피해를 !M! 줍니다."
+  },
+  "HollowMod:SlysStrikes": {
+    "NAME": "슬라이의 타격",
+    "DESCRIPTION": "휘발성 NL 턴 시작시 힘 을 1 얻습니다."
+  },
+  "HollowMod:SoulEater": {
+    "NAME": "영혼 포식자",
+    "DESCRIPTION": "공격 카드를 사용할 때마다, [#F4D03F]영혼 을 1 얻습니다. NL [#60CFFF]Spell , [#60CFFF]Ally 카드는 발동하지 않습니다."
+  },
+  "HollowMod:SoulMaster": {
+    "NAME": "영혼 통달자",
+    "DESCRIPTION": "[#EFFAFF]영혼 [#60CFFF]Spell 카드의 집중 비용이 1 감소합니다. NL [#696969]공허[] [#60CFFF]Spell 카드로부터 [#696969]공허[] 를 1 더 받습니다.",
+    "UPGRADE_DESCRIPTION": "선천성 NL [#EFFAFF]영혼 [#60CFFF]Spell 카드의 집중 비용이 1 감소합니다. NL [#696969]공허[] [#60CFFF]Spell 카드로부터 [#696969]공허[] 를 1 더 받습니다."
+  },
+  "HollowMod:SoulVessel": {
+    "NAME": "영혼 그릇",
+    "DESCRIPTION": "이번 전투동안 NL [#F4D03F]영혼 [#F4D03F]용량 제한이 NL !M! 증가합니다."
+  },
+  "HollowMod:ThornsofAgony": {
+    "NAME": "고통의 가시덩굴",
+    "DESCRIPTION": "가시를 !M! 얻습니다."
+  },
+  "HollowMod:Weaversong": {
+    "NAME": "엮는 이의 노래",
+    "DESCRIPTION": "공격 카드를 사용할 때마다 무작위 적에게 피해를 !M! 줍니다."
+  },
+  "HollowMod:WhiteLadysBlessing": {
+    "NAME": "백의 여사의 축복",
+    "DESCRIPTION": "[#696969]공허[]를 가지고 있을때, [#EFFAFF]집중[] 을 할 수 있습니다. NL [#60CFFF]Spell 카드를 사용할 때마다 소멸 시킵니다."
+  },
+  "HollowMod:SKILLCARDS": {
+    "NAME": "",
+    "DESCRIPTION": ""
+  },
+  "HollowMod:BlackWings": {
+    "NAME": "검은 날개",
+    "DESCRIPTION": "[#696969]공허[] 를 모두 잃고 그 만큼 판금 갑옷 을 얻습니다. NL 소멸"
+  },
+  "HollowMod:ChannelNail": {
+    "NAME": "혈조 파인 대못",
+    "DESCRIPTION": "[#EFFAFF]집중[] 3: 다음턴, [E] 를 얻고 카드를 1장 뽑습니다. NL 소멸",
+    "UPGRADE_DESCRIPTION": "[#EFFAFF]집중[] 3: 다음턴, [E] 를 얻고 카드를 1장 뽑습니다."
+  },
+  "HollowMod:CloakDash": {
+    "NAME": "망토 대시",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 카드를 !M! 장 뽑습니다. NL 소멸",
+    "UPGRADE_DESCRIPTION": "방어도 를 !B! 얻습니다. NL 카드를 !M! 장 뽑습니다. NL 소멸"
+  },
+  "HollowMod:ConfessorsAdvice": {
+    "NAME": "Confessor's Advice",
+    "DESCRIPTION": "NL Play the top card of your deck, add a copy of it to your discard pile. NL it costs 0 until played.",
+    "UPGRADE_DESCRIPTION": "Play the top card of your deck, add 2 copies of it to your discard pile. NL they cost 0 until played."
+  },
+  "HollowMod:CrystalDash": {
+    "NAME": "수정 대시",
+    "DESCRIPTION": "카드를 전부 버립니다. NL 그 수만큼 방어도 를 !B! 얻습니다."
+  },
+  "HollowMod:DreamGate": {
+    "NAME": "꿈의 관문",
+    "DESCRIPTION": "카드를 소멸 시킵니다. 버린 카드 더미 맨 위의 카드를 내 손으로 가져옵니다. NL 소멸",
+    "UPGRADE_DESCRIPTION": "카드를 소멸 시킵니다. 버린 카드 더미 맨 위의 카드 2 장을 내 손으로 가져옵니다. NL 소멸"
+  },
+  "HollowMod:DoubleDash": {
+    "NAME": "더블 대시",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 다음 턴에 방어도 를 !B! 얻습니다."
+  },
+  "HollowMod:DungDefenderAura": {
+    "NAME": "수호기사의 아우라",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. 이번 턴에 적을 공격 할 때마다 대상에게 중독을 !M! 부여합니다."
+  },
+  "HollowMod:EmbracetheVoid": {
+    "NAME": "WIP Embrace the Void ",
+    "DESCRIPTION": "Costs 1 [E] Less for each [#696969]Void[]. Draw Cards until you draw a [#696969]Void[] or draw 5 cards. Exhaust",
+    "UPGRADE_DESCRIPTION": "Costs 1 [E] Less for each [#696969]Void[]. Draw Cards until you draw a [#696969]Void[] or draw 5 cards."
+  },
+  "HollowMod:GoodIntentions": {
+    "NAME": "좋은 의도",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL [#EFFAFF]영혼 을 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "방어도 를 !B! 얻습니다. NL [#EFFAFF]영혼 을 !M! 얻습니다. NL 판금갑옷 을 1 얻습니다."
+  },
+  "HollowMod:GrimmsGift": {
+    "NAME": "그림의 선물",
+    "DESCRIPTION": "이번 턴에 적을 공격 할 때마다 대상에게 취약을 1 부여합니다."
+  },
+  "HollowMod:Hiveblood": {
+    "NAME": "벌집의 정수",
+    "DESCRIPTION": "체력을 !M! 잃습니다. 그 절반 만큼 재생 을 얻습니다. NL 소멸"
+  },
+  "HollowMod:HuntersJournal": {
+    "NAME": "사냥꾼의 일지",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 소멸",
+    "UPGRADE_DESCRIPTION": "카드를 !M! 장 뽑습니다. [E] 를 얻습니다. NL 소멸"
+  },
+  "HollowMod:LifebloodCocoon": {
+    "NAME": "생명혈 고치",
+    "DESCRIPTION": "이번 턴에 공격 카드를 사용할 때마다 [#6666FF]임시 [#6666FF]체력 을 !M! 얻습니다."
+  },
+  "HollowMod:LifebloodCore": {
+    "NAME": "생명혈 핵",
+    "DESCRIPTION": "휘발성 NL 방어도를 모두 잃습니다. NL 그 수만큼 [#6666FF]임시 [#6666FF]체력[] 를 !M! 얻습니다. NL 소멸",
+    "UPGRADE_DESCRIPTION": "방어도를 모두 잃습니다. NL 그 수만큼 [#6666FF]임시 [#6666FF]체력[] 를 !M! 얻습니다. NL 소멸"
+  },
+  "HollowMod:LifebloodHeart": {
+    "NAME": "생명혈 심장-DEPRECATED Lifeblood Heart",
+    "DESCRIPTION": "Gain !M! Temporary_HP, If you take no unblocked damage this turn, repeat this effect next turn. Exhaust."
+  },
+  "HollowMod:LuriensSpire": {
+    "NAME": "루리엔의 첨탑",
+    "DESCRIPTION": "[#FFA200]감염[] 을 모두 제거하고 그 양만큼 [#EFFAFF]영혼 을 얻습니다. NL 소멸",
+    "UPGRADE_DESCRIPTION": "[#696969]공허[] 를 가지고 있다면, 대신 [#696969]공허[] 를 얻습니다. NL 소멸"
+  },
+  "HollowMod:MantisClaw": {
+    "NAME": "사마귀 갈고리-DEPRECATED Mantis Claw",
+    "DESCRIPTION": "Exhaust 3 Cards in your hand. Draw 1 Card and Deal !D! damage to a single enemy for each card Exhausted. Exhaust."
+  },
+  "HollowMod:MantisMark": {
+    "NAME": "사마귀 가면",
+    "DESCRIPTION": "힘 을 !M! 얻습니다. NL 소멸"
+  },
+  "HollowMod:MawleksShell": {
+    "NAME": "몰렉의 껍질",
+    "DESCRIPTION": "민첩 을 !M! 얻습니다. NL [#FFA200]감염[] !HollowMod:SecondMagic!"
+  },
+  "HollowMod:MonarchWings": {
+    "NAME": "제왕의 날개",
+    "DESCRIPTION": "다음 !M! 턴 동안 [#60CFFF]대시 카드로 얻는 방어도 가 두 배가 됩니다.  NL 소멸"
+  },
+  "HollowMod:MonomonsArchive": {
+    "NAME": "모노몬의 기록보관소",
+    "DESCRIPTION": "[#EFFAFF]집중[] 5: 방어도 를 !B! 얻습니다."
+  },
+  "HollowMod:MylasSalvation": {
+    "NAME": "마일라의 구원",
+    "DESCRIPTION": "소멸된 카드를 1장 선택해 가져옵니다. NL 소멸"
+  },
+  "HollowMod:theNailsmith": {
+    "NAME": "대못제련공",
+    "DESCRIPTION": "이번 턴에 [#60CFFF]Spell 카드를 제외한 공격 카드를 사용 할 때마다, 그 카드를 전투가 끝날 때까지 강화합니다."
+  },
+  "HollowMod:Overcharmed": {
+    "NAME": "DEPRECATED Overcharmed",
+    "DESCRIPTION": "Lose 6 HP. Gain !M! Strength until the end of the turn."
+  },
+  "HollowMod:PaleKingsBlessing": {
+    "NAME": "창백한 왕의 축복",
+    "DESCRIPTION": "체력을 !M! 회복합니다. [#FFA200]감염[] 수치만큼 !HollowMod:SecondMagic! 추가로 회복합니다. NL 소멸"
+  },
+  "HollowMod:PerfectDash": {
+    "NAME": "완벽한 대시",
+    "DESCRIPTION": "불가침 을 1 얻습니다. NL 소멸",
+    "UPGRADE_DESCRIPTION": "불가침 을 1 얻습니다. 방어도 를 !B! 얻습니다. NL 소멸"
+  },
+  "HollowMod:PureVessel": {
+    "NAME": "순수한 그릇",
+    "DESCRIPTION": "턴 시작 시, [#EFFAFF]영혼 을 1 지불하고 그만큼 힘 을 얻습니다. 매 턴 지불하는 양이 1 늘어납니다. NL 지불 할 수 없다면 이 효과를 잃습니다.",
+    "UPGRADE_DESCRIPTION": "보존 NL 턴 시작 시, [#EFFAFF]영혼 을 1 지불하고 그만큼 힘 을 얻습니다. 매 턴 지불하는 양이 1 늘어납니다. NL 지불 할 수 없다면 이 효과를 잃습니다."
+  },
+  "HollowMod:RadiancesLament": {
+    "NAME": "광휘의 비탄",
+    "DESCRIPTION": "뽑을 카드 더미, 버린 카드 더미, 소멸된 카드에 있는 모든 [#FFA200]감염[] 카드를 가져옵니다. NL 소멸",
+    "UPGRADE_DESCRIPTION": "뽑을 카드 더미, 버린 카드 더미, 소멸된 카드에 있는 모든 [#FFA200]감염[] 카드를 가져옵니다. 이번 턴 동안 그 카드의 비용을 1로 낮춥니다. NL 소멸"
+  },
+  "HollowMod:ShadowDash": {
+    "NAME": "그림자 대시",
+    "DESCRIPTION": "[#696969]공허[] 2: 방어도 를 2 얻습니다. [#696969]공허[] 수치 만큼 추가로 방어도 를 얻습니다. NL 소멸",
+    "UPGRADE_DESCRIPTION": "[#696969]공허[] 2: 방어도 를 2 얻습니다. [#696969]공허[] 수치 만큼 추가로 방어도 를 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      " ( !M! additional Block.)"
+    ]
+  },
+  "HollowMod:SiblingsShadow": {
+    "NAME": "친족의 그림자",
+    "DESCRIPTION": "소멸된 [#696969]공허[] 카드를 !M! 장 선택해 가져옵니다. NL 소멸"
+  },
+  "HollowMod:SiblingsSouls": {
+    "NAME": "친족의 영혼",
+    "DESCRIPTION": "다음에 사용하는 공격 또는 스킬 카드를 복사합니다. NL 소멸"
+  },
+  "HollowMod:SoulShaman": {
+    "NAME": "영혼 주술사",
+    "DESCRIPTION": "[#EFFAFF]집중[] 5: [E] 을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "[#EFFAFF]집중[] 5: [E] [E] 을 얻습니다."
+  },
+  "HollowMod:SoulSplash": {
+    "NAME": "영혼 참격",
+    "DESCRIPTION": "[#EFFAFF]집중[] !HollowMod:focusCost! : 적 전체에게 취약을 !M! 부여합니다. 카드를 1장 뽑습니다."
+  },
+  "HollowMod:SoulTotem": {
+    "NAME": "DEPRECATED Soul Totem",
+    "DESCRIPTION": "Gain !M! hollowmod:Soul. Draw !HollowMod:SecondMagic! card. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! hollowmod:Soul. Draw !HollowMod:SecondMagic! cards. Exhaust."
+  },
+  "HollowMod:SporeShroom": {
+    "NAME": "WIP Spore Shroom",
+    "DESCRIPTION": "[#EFFAFF]Focus[] 3: Discard up to 3 Cards. Heal 2 HP and Apply 1 Poison to all enemies for each Card Discarded. Exhaust."
+  },
+  "HollowMod:StalwartShell": {
+    "NAME": "DEPRECATED Stalwart Shell",
+    "DESCRIPTION": "Gain !M! #yPlated #yArmor. NL Exhaust."
+  },
+  "HollowMod:TaintedHusks": {
+    "NAME": "오염된 껍질",
+    "DESCRIPTION": "무작위 적들에게 중독 을 2 씩 !M! 번 나누어 부여합니다. NL [#FFA200]감염[] 3."
+  },
+  "HollowMod:VoidDash": {
+    "NAME": "공허 대시",
+    "DESCRIPTION": "[#696969]공허[] 2: 방어도 를 !B! 얻습니다. 이번 턴에 공격을 받을 때마다 공격한 대상에게 피해를 !M! 주고 약화를 2 부여합니다."
+  },
+  "HollowMod:NEWCARDS": {
+    "NAME": "Sorry Fish",
+    "DESCRIPTION": ""
+  },
+  "HollowMod:NewJinnsSoul": {
+    "NAME": "진의 영혼",
+    "DESCRIPTION": "영혼 , [#696969]공허[] , [#FFA200]감염[] 을 모두 잃습니다. 잃은 양만큼 [#6666FF]임시[] [#6666FF]체력[] 을 !M! 얻습니다. NL 소멸"
+  },
+  "HollowMod:NewLittleFool": {
+    "NAME": "작은 바보",
+    "DESCRIPTION": "카드를 1 장 소멸 시킵니다. 피해를 !D! 줍니다."
+  },
+  "HollowMod:NewLastStag": {
+    "NAME": "마지막 사슴벌레",
+    "DESCRIPTION": "뽑을 카드 더미에서 카드 1 장을 골라 손으로 가져옵니다.",
+    "UPGRADE_DESCRIPTION": "뽑을 카드 더미에서 카드 1 장을 골라 손으로 가져옵니다. NL 버린 카드 더미에서 카드 1 장을 골라 손으로 가져옵니다."
+  },
+  "HollowMod:NewGlowingWomb": {
+    "NAME": "영롱한 알집",
+    "DESCRIPTION": "내 턴이 시작할 때, [#FFA200]감염[]을 가지고 있으면 방어도 를 !M! 얻고 [#FFA200]감염[] 을 1 잃습니다. NL 민첩 효과를 받습니다. NL [#FFA200]감염[] !HollowMod:SecondMagic!"
+  },
+  "HollowMod:NewInfectedGuardian": {
+    "NAME": "감염된 수호기사",
+    "DESCRIPTION": "[#FFA200]감염[] 이 !M! 이상일 때만 사용가능합니다. NL 적 전체의 중독 을 2배로 늘립니다. [#FFA200]감염[] 을 2배로 늘립니다. NL 소멸",
+    "UPGRADE_DESCRIPTION": "[#FFA200]감염[] 이 충분하지 않아"
+  },
+  "HollowMod:MORENEWCARDS": {
+    "NAME": "Sorry Amethyst!",
+    "DESCRIPTION": ""
+  },
+  "HollowMod:HerrahsAnger": {
+    "NAME": "헤라의 둥지",
+    "DESCRIPTION": "다음 턴 시작 시, [#F4D03F]새끼 카드를 !M! 장 얻습니다. 이번 턴 에 [#60CFFF]Ally 카드 를 사용할 때마다 [#F4D03F]새끼 카드를 추가로 얻습니다."
+  },
+  "HollowMod:NewNestling": {
+    "NAME": "새끼",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 소멸"
+  },
+  "HollowMod:NewInfectling": {
+    "NAME": "감염",
+    "DESCRIPTION": "중독을 !M! 부여합니다. NL 소멸"
+  },
+  "HollowMod:NewDarkNestling": {
+    "NAME": "어두운 새끼",
+    "DESCRIPTION": "[#696969]공허[] 1: 피해를 !D! 줍니다. For every !M! [#696969]Void[] increase the damage dealt by 1. NL 소멸"
+  },
+  "HollowMod:NewSoulNestling": {
+    "NAME": "영혼 새끼",
+    "DESCRIPTION": "[#EFFAFF]집중[] 1: 피해를 !D! 줍니다. 체력을 !M! 회복합니다. NL 소멸"
+  },
+  "HollowMod:NewZoteling": {
+    "NAME": "조틀링",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !M! 장 뽑습니다. NL 소멸"
+  }
+}
